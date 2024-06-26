@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>SaveHistoryToLYRE</id>
+  <version>1.0.0</version>
+  <category icon="ws.png" id="webservices"/>
+  <input name="cookie" type="java.lang.String"/>
+  <input name="urlWSDL" type="java.lang.String"/>
+  <input name="currentProposition" type="com.sgdbf.model.Proposition"/>
+  <page id="inputPage">
+    <widget xsi:type="definition:Text" id="cookie" inputName="cookie"/>
+    <widget xsi:type="definition:Text" id="urlWSDL" inputName="urlWSDL"/>
+    <widget xsi:type="definition:Text" id="currentProposition" inputName="currentProposition"/>
+  </page>
+</definition:ConnectorDefinition>

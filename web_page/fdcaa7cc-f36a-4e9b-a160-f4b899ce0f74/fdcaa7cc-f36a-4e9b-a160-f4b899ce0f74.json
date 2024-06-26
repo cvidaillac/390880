@@ -1,0 +1,290 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "fdcaa7cc-f36a-4e9b-a160-f4b899ce0f74",
+  "name" : "manageSingleFileReview",
+  "lastUpdate" : 1671627910347,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "My File"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation"
+          },
+          "url" : {
+            "type" : "constant",
+            "value" : "../API/formFileUpload"
+          },
+          "newFile" : {
+            "type" : "variable",
+            "value" : "formInput.oneFileDocumentInput.newFile"
+          },
+          "currentFile" : {
+            "type" : "variable",
+            "value" : "formInput.oneFileDocumentInput.src"
+          },
+          "errorContent" : {
+            "type" : "variable"
+          },
+          "deleteFile" : {
+            "type" : "variable",
+            "value" : "formInput.oneFileDocumentInput.deleteFile"
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "3d7a6423-6d84-4ca5-8f24-83392870d60f",
+        "hasValidationError" : false,
+        "id" : "customFileUpload"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12,
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "Submit"
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Submit task"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "formError"
+          }
+        },
+        "reference" : "3a42268a-cb92-4ee8-855f-6ba844dfbaee",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{formInput}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "ad341ab3-1e80-4035-84c8-f5a53f003d56",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "6af3a1e6-2ec5-4e17-8cd9-f1fad8394613",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "2c01758f-25e5-452e-9848-e829ca3c0c73",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "return {",
+        "  \"oneFileDocumentInput\" : { \"src\": $data.context.oneFile_ref, \"newFile\" :null, \"deleteFile\": false},",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.formInput"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "/bonita/API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "formError" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "fdcaa7cc-f36a-4e9b-a160-f4b899ce0f74",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

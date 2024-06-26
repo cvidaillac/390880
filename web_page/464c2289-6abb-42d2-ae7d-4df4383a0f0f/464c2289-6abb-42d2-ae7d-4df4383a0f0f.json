@@ -1,0 +1,133 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "464c2289-6abb-42d2-ae7d-4df4383a0f0f",
+  "name" : "pop3pSearchPropositionsPageSAV",
+  "lastUpdate" : 1671627888459,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "ebb0f0b7-c3c2-4155-95cd-d6e29498c3eb",
+        "hasValidationError" : false,
+        "id" : "FragmentSearchProposition",
+        "binding" : {
+          "withExportButton" : "true",
+          "withDuplicateButton" : "false",
+          "getSession" : "getSession",
+          "userRole" : "userRole",
+          "authorizedGroups" : "authorizedGroups"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "97c43661-5974-444c-9348-ab6ebe9b6a2c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "5acb7804-c9ad-44d7-a65a-6c4ba7bc9b92",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "4cc14cc3-7b4e-4a0b-9014-28db22fca897",
+      "name" : "export-button.css",
+      "type" : "css",
+      "order" : 5,
+      "external" : false
+    },
+    {
+      "id" : "35e7a411-fdae-4a82-a228-105c4ad54f6d",
+      "name" : "modalPropositionPrint.css",
+      "type" : "css",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "6cb7a959-43ba-49c6-9fd5-40ae0eb4f492",
+      "name" : "excel-icon.png",
+      "type" : "img",
+      "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "31e95f76-be75-4868-8199-48fe6e3d7a9c",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "a0d4e40a-6290-4613-a4b1-b7ee048c33df",
+      "name" : "jquery-confirm[1].css",
+      "type" : "css",
+      "order" : 4,
+      "external" : false
+    },
+    {
+      "id" : "a4956b2e-86b8-4bba-9a29-3f69cf4c50da",
+      "name" : "Logo.png",
+      "type" : "img",
+      "order" : 7,
+      "external" : false
+    },
+    {
+      "id" : "077fa61e-8dd4-4a37-b232-12950953d9c7",
+      "name" : "jquery-confirm[1].js",
+      "type" : "js",
+      "order" : 3,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "authorizedGroups" : {
+      "type" : "json",
+      "value" : [
+        "[\"APP_BPM_SGDB_FRANCE_SAV\"]"
+      ],
+      "exposed" : false
+    },
+    "userRole" : {
+      "type" : "constant",
+      "value" : [
+        "sav"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "464c2289-6abb-42d2-ae7d-4df4383a0f0f",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

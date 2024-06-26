@@ -1,0 +1,1253 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "duplicatePropositionFragment",
+  "name" : "duplicatePropositionFragment",
+  "lastUpdate" : 1671627885312,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "duplicateProposition.length>0"
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Dupliquer proposition"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "right"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Add to collection"
+          },
+          "assign" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "responseStatusCode" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataToSend" : {
+            "type" : "constant"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "closeOnSuccess" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionToModify" : {
+            "type" : "variable",
+            "value" : "duplicateProposition"
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "pop3pSearchPropositionDupl"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "valueToAdd" : {
+            "type" : "expression",
+            "value" : "selectedProposition"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "5c858146-2a68-4128-a5b5-f223c25f2980",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "duplicateProposition.length===0"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "7187eb85-896f-4416-9d1d-bdad4174ae28",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "bg-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Duplication de la proposition {{selectedProposition.persistenceId}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "97f91fb9-e609-495b-b745-3681714cf035",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "duplicationInProgress.length>0"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "c9fb7ec2-c339-41b3-826d-3b71c54f87e6",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "(selectedProposition.propositionAttachments!=null) && (selectedProposition.propositionAttachments.length>0)"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Pas de pièces jointes sur la proposition."
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "ae4218f4-a78f-4690-a8ea-aeefab9c2306",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "(selectedProposition.propositionAttachments==null) || (selectedProposition.propositionAttachments.length==0)"
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "da0547ad-1def-4c91-affa-b32648bc4fb3",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "disabled" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "inline" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Sélectionner les pièces jointes à inclure sur la nouvelle proposition"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "availableValues" : {
+                              "type" : "expression",
+                              "value" : "listDocuments"
+                            },
+                            "displayedKey" : {
+                              "type" : "constant",
+                              "value" : "label"
+                            },
+                            "returnedKey" : {
+                              "type" : "constant",
+                              "value" : "document"
+                            },
+                            "selectedValues" : {
+                              "type" : "variable",
+                              "value" : "attachedDocuments.selectedDocuments"
+                            },
+                            "selectAllLabel" : {
+                              "type" : "constant",
+                              "value" : "Sélectionner tout"
+                            }
+                          },
+                          "reference" : "54d84398-c8db-4863-bc31-2cf3987fc8d1",
+                          "hasValidationError" : false,
+                          "id" : "customChecklistWithSelectAll"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 6,
+                      "sm" : 6,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Confirmer la duplication"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "success"
+                      },
+                      "action1" : {
+                        "type" : "constant",
+                        "value" : "Add to collection"
+                      },
+                      "url" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlPropositionInstanciation}}"
+                      },
+                      "dataToSend" : {
+                        "type" : "expression",
+                        "value" : "{\"propositionsInput\": [formOutputToInstantiate]}"
+                      },
+                      "dataFromSuccess1" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : "duplicationError"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "duplicationInProgress"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "expression",
+                        "value" : "duplicateProposition"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      },
+                      "dataFromSuccess2" : {
+                        "type" : "variable",
+                        "value" : "duplicationResult"
+                      },
+                      "dataFromSuccess3" : {
+                        "type" : "variable",
+                        "value" : "getHumanTaskResult"
+                      },
+                      "action2" : {
+                        "type" : "constant",
+                        "value" : "POST"
+                      },
+                      "action3" : {
+                        "type" : "constant",
+                        "value" : "Get human task"
+                      },
+                      "collectionPositionAdd" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "taskRootCaseId" : {
+                        "type" : "expression",
+                        "value" : "newCaseId"
+                      },
+                      "startProcessDefinitionId" : {
+                        "type" : "constant"
+                      },
+                      "maxDelayForAction" : {
+                        "type" : "constant",
+                        "value" : 20
+                      },
+                      "action4" : {
+                        "type" : "constant",
+                        "value" : "-"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess4" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "collectionPositionRemove" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "collectionRemoveIndex" : {
+                        "type" : "constant"
+                      },
+                      "delayBeforeLastAction" : {
+                        "type" : "constant"
+                      },
+                      "collectionToModify2" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "collection2PositionRemove" : {
+                        "type" : "constant"
+                      },
+                      "maxRetryCount" : {
+                        "type" : "constant",
+                        "value" : 30
+                      }
+                    },
+                    "reference" : "67a6aebb-8014-4846-bad4-f51b40d5c035",
+                    "hasValidationError" : false,
+                    "id" : "customButtonMultipleActions"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 6,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "selectedProposition"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "warning"
+                      },
+                      "label" : {
+                        "type" : "constant",
+                        "value" : "Annuler"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "displayDetailProposition" : {
+                        "type" : "variable",
+                        "value" : "duplicateProposition"
+                      }
+                    },
+                    "reference" : "694406ec-e692-462e-b2a0-db711f34f4bd",
+                    "hasValidationError" : false,
+                    "id" : "customClosePopup"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "duplicationInProgress.length===0"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "2ff52152-5fe6-41ff-83c5-ed93e60f8c21",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 6,
+                      "sm" : 9,
+                      "md" : 10,
+                      "lg" : 10
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "87b49097-2901-42aa-acfb-358f20892240",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 6,
+                      "sm" : 3,
+                      "md" : 2,
+                      "lg" : 2
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "selectedProposition"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "default"
+                      },
+                      "label" : {
+                        "type" : "constant",
+                        "value" : "Fermer"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "displayDetailProposition" : {
+                        "type" : "variable",
+                        "value" : "duplicateProposition"
+                      }
+                    },
+                    "reference" : "c120b4d3-9f2f-4c1b-92ad-9e10a3e831f1",
+                    "hasValidationError" : false,
+                    "id" : "customClosePopup"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "(duplicationResult != null) || (duplicationError  != null)"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Duplication de la proposition en cours{{msgAttachments}}..."
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "be4183e6-34d2-4aef-b302-04ef470e11b7",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "duplicationResult == null"
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "690fb844-4b57-406e-8c48-cf8c135b8e39",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "alert alert-info"
+                            },
+                            "hidden" : {
+                              "type" : "expression",
+                              "value" : "taskId != null"
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Default label"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Proposition dupliquée, initialisation de la nouvelle proposition{{msgAttachments}}..."
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "a54cdbbe-a3d7-472c-8f1f-cb5b79cc8c6b",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "taskId == null"
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "47fdc836-8b2a-44a3-a1b7-27e80ad74f0d",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 6,
+                            "md" : 5,
+                            "lg" : 5
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "alert alert-success"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Default label"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Nouvelle proposition initialisée{{msgAttachments}}, numéro de la proposition : <b>{{ propositionNumber }}</b>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "4601ca3a-f9e6-4e11-ac20-0a79abebb244",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        },
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 6,
+                            "md" : 7,
+                            "lg" : 7
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "expression",
+                              "value" : "taskId==null"
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Tâche de parachèvement : <b><i>{{ taskDisplayName }}</i></b>"
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "task"
+                            },
+                            "targetUrl" : {
+                              "type" : "constant",
+                              "value" : "http://"
+                            },
+                            "pageToken" : {
+                              "type" : "constant"
+                            },
+                            "processName" : {
+                              "type" : "constant"
+                            },
+                            "processVersion" : {
+                              "type" : "constant"
+                            },
+                            "taskId" : {
+                              "type" : "expression",
+                              "value" : "taskId"
+                            },
+                            "caseId" : {
+                              "type" : "constant"
+                            },
+                            "target" : {
+                              "type" : "constant",
+                              "value" : "_self"
+                            },
+                            "appToken" : {
+                              "type" : "constant"
+                            },
+                            "urlParams" : {
+                              "type" : "constant"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "buttonStyle" : {
+                              "type" : "constant",
+                              "value" : "link"
+                            }
+                          },
+                          "reference" : "94ddd4f2-ca1b-4c19-8ff6-203012067359",
+                          "hasValidationError" : false,
+                          "id" : "pbLink"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "alert alert-danger"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "duplicationError == null"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Erreur lors de la duplication {{ duplicationError }}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "9dd7d7a2-6ee3-4666-986b-1ece1a065dce",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "duplicateProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "duplicationInProgress" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "attachedDocuments" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"listDocuments\" : [],",
+        "    \"selectedDocuments\" : []",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "nomProcessADemarrer" : {
+      "type" : "constant",
+      "value" : [
+        "POP3P_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "urlPropositionInstanciation" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition && $data.getProcessDefinition.length > 0){",
+        "   return \"../../newProposition/API/bpm/process/\"+$data.getProcessDefinition[0].id+\"/instantiation\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{nomProcessADemarrer}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "duplicationResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "duplicationError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formOutputToInstantiate" : {
+      "type" : "expression",
+      "value" : [
+        "var dataToSend = {};",
+        "",
+        "dataToSend = angular.copy($data.selectedProposition);",
+        "if(dataToSend.userCommentOptional === undefined) {",
+        "    dataToSend.userCommentOptional = \"\";",
+        "}",
+        "dataToSend.agencyCode = \"\" + dataToSend.agencyCode;",
+        "",
+        "// CFR 13/11/2020 : Make sure new contract field pitchSmart is filled in",
+        "if ((typeof dataToSend.pitchSmart === \"undefined\") || (dataToSend.pitchSmart==null)) {",
+        "    dataToSend.pitchSmart = \"\";",
+        "}",
+        "",
+        "// CFR 13/11/2020 BPM-469 : Manage requestSource field on proposition duplication",
+        "if ((typeof dataToSend.requestSource === \"undefined\") ",
+        "    || (dataToSend.requestSource == null) || (dataToSend.requestSource == \"\")) {",
+        "    // Default is B",
+        "    dataToSend.requestSource = \"B\";",
+        "    ",
+        "} else if ((dataToSend.requestSource == \"S\") || (dataToSend.requestSource == \"R\")) {",
+        "    // Original proposition is from SAV",
+        "    dataToSend.requestSource = \"S\";",
+        "    ",
+        "} else  {",
+        "    // Original proposition is from MobiPop or SMARTE app",
+        "    dataToSend.requestSource = \"B\";",
+        "}",
+        "",
+        "// CFR 19/08/2021 BPM-641 : Add the list of attachments selected",
+        "dataToSend.existingAttachments = [];",
+        "try {",
+        "    if ($data.nbSelectedDocs > 0) {",
+        "        var selected_docs = $data.attachedDocuments.selectedDocuments;",
+        "        console.log(\"Attaching \" + selected_docs.length  + \" selected documents\");",
+        "        for (var i=0; i<selected_docs.length; i++) {",
+        "            var one_doc = selected_docs[i];",
+        "            dataToSend.existingAttachments.push({",
+        "               \"docId\" : one_doc.docId,",
+        "               \"mimeType\" : one_doc.mimeType,",
+        "               \"docFileName\" : one_doc.docFileName,",
+        "               \"status\" : one_doc.status,",
+        "               \"author\" : one_doc.author",
+        "            });",
+        "        }",
+        "        ",
+        "    } else {",
+        "        console.log(\"No selected document to attach to new proposition\");",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error(\"Exception formOutputToInstanticate: \" + e);    ",
+        "}",
+        "",
+        "return dataToSend;"
+      ],
+      "exposed" : false
+    },
+    "newCaseId" : {
+      "type" : "expression",
+      "value" : [
+        "var caseId=null;",
+        "",
+        "try {",
+        "    if ((typeof $data.duplicationResult !== 'undefined')",
+        "        && ($data.duplicationResult !== null)",
+        "        && (typeof $data.duplicationResult.caseId !== 'undefined')) {",
+        "            caseId = $data.duplicationResult.caseId;",
+        "            console.log(\"Found new caseId : \" + caseId);",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception newCaseId: ' + e);",
+        "}",
+        "",
+        "return caseId;"
+      ],
+      "exposed" : false
+    },
+    "getHumanTaskResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "taskDisplayName" : {
+      "type" : "expression",
+      "value" : [
+        "var taskDisplayName='';",
+        "",
+        "try {",
+        "    if ((typeof $data.getHumanTaskResult !== 'undefined')",
+        "        && ($data.getHumanTaskResult !== null)",
+        "        && (typeof $data.getHumanTaskResult.displayName !== 'undefined')) {",
+        "            taskDisplayName = $data.getHumanTaskResult.displayName;",
+        "            console.log(\"Found taskDisplayName: \" + taskDisplayName );",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception taskDisplayName: ' + e);",
+        "}",
+        "",
+        "return taskDisplayName;"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "expression",
+      "value" : [
+        "var taskId=null;",
+        "",
+        "try {",
+        "    if ((typeof $data.getHumanTaskResult !== 'undefined')",
+        "        && ($data.getHumanTaskResult !== null)",
+        "        && (typeof $data.getHumanTaskResult.id !== 'undefined')) {",
+        "            taskId = $data.getHumanTaskResult.id;",
+        "            console.log('Found new Task id = ' + taskId);",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception taskId: ' + e);",
+        "}",
+        "",
+        "return taskId;"
+      ],
+      "exposed" : false
+    },
+    "listDocuments" : {
+      "type" : "expression",
+      "value" : [
+        "var list_docs=$data.attachedDocuments.listDocuments;",
+        "",
+        "try {",
+        "    if ((typeof $data.selectedProposition !== 'undefined')",
+        "        && ($data.selectedProposition !== null)",
+        "        && (typeof $data.selectedProposition.propositionAttachments !== 'undefined')",
+        "        && Array.isArray($data.selectedProposition.propositionAttachments)) {",
+        "            // We have the array of documents from input Proposition",
+        "            var nb_docs = $data.selectedProposition.propositionAttachments.length;",
+        "            console.log(\"listDocuments : found \" + nb_docs + \" documents\");",
+        "            if (nb_docs > list_docs.length) {",
+        "                console.log(\"listDocuments : updating \" + nb_docs + \" documents\");",
+        "                for (var i=list_docs.length; i<nb_docs; i++) {",
+        "                    var one_doc = $data.selectedProposition.propositionAttachments[i];",
+        "                    var doc_label = one_doc.status + ' - ' + one_doc.docFileName;",
+        "                    var new_doc = {\"label\" : doc_label,",
+        "                                    \"document\" : one_doc,",
+        "                                    \"isSelected\" : false};",
+        "                    list_docs.push(new_doc);",
+        "                }",
+        "                $data.attachedDocuments.listDocuments = list_docs;",
+        "            }",
+        "    } else {",
+        "        console.log(\"No attached documents\");",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception listDocuments: ' + e);",
+        "}",
+        "",
+        "return list_docs;"
+      ],
+      "exposed" : false
+    },
+    "propositionNumber" : {
+      "type" : "expression",
+      "value" : [
+        "var proposition_number='';",
+        "",
+        "if (($data.taskDisplayName !== null) && ($data.taskDisplayName !== '')) {",
+        "    var pos_end = $data.taskDisplayName.indexOf(' -');",
+        "    proposition_number = $data.taskDisplayName.substr(0, pos_end);",
+        "}",
+        "",
+        "return proposition_number;"
+      ],
+      "exposed" : false
+    },
+    "nbSelectedDocs" : {
+      "type" : "expression",
+      "value" : [
+        "var nb_selected=0;",
+        "",
+        "try {",
+        "    if (Array.isArray($data.attachedDocuments.selectedDocuments)) {",
+        "        nb_selected = $data.attachedDocuments.selectedDocuments.length;",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception nbSelectedDocs :' + e);",
+        "}",
+        "",
+        "return nb_selected;"
+      ],
+      "exposed" : false
+    },
+    "msgAttachments" : {
+      "type" : "expression",
+      "value" : [
+        "var msg=\"\";",
+        "",
+        "if ($data.nbSelectedDocs > 0) {",
+        "    var pluriel = ($data.nbSelectedDocs > 1) ? 's' : '';",
+        "    msg = \" avec \" + $data.nbSelectedDocs + \" pièce\" + pluriel + \" jointe\" + pluriel;",
+        "}",
+        "",
+        "return msg;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

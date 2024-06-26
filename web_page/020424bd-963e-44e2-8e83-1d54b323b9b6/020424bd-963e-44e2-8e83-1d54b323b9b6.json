@@ -1,0 +1,238 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "020424bd-963e-44e2-8e83-1d54b323b9b6",
+  "name" : "pop3pDisplayDetailProposition",
+  "lastUpdate" : 1671627876241,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 10,
+          "md" : 10,
+          "lg" : 10
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "no-print"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Détail de la proposition n°{{ propositionId }}"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "d0ac226c-dd7e-4b62-a41a-5a56d33d9aec",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 2,
+          "md" : 2,
+          "lg" : 2
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "(! isMaterialDisplayed) && (! isExistingMaterial)"
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Imprimer..."
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "right"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "info"
+          }
+        },
+        "reference" : "6560faca-4787-4628-986a-685e74886720",
+        "hasValidationError" : false,
+        "id" : "customButtonPrint"
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "breadcrumb"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "1be12645-af1f-47b8-b5ba-22d1df617a43",
+        "hasValidationError" : false,
+        "id" : "96ff9112-5e4f-4b05-b18a-ab6d2aced5a2",
+        "binding" : {
+          "displayDetailProposition" : "",
+          "getSession" : "getSession",
+          "propositionInput" : "getSelectedProposition",
+          "selectedProposition" : "getSelectedProposition",
+          "searchCase" : "",
+          "commentValue" : "",
+          "urlAPISendComment" : "",
+          "commentToSend" : "",
+          "addCommentResult" : "",
+          "addCommentError" : "",
+          "getComments" : "getComments",
+          "urlFindPropositionHistory" : "urlFindPropositionHistory",
+          "isMaterialDisplayed" : "isMaterialDisplayed"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "dd4cdc09-c838-4e6a-a8bb-2306c8844dad",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "85b96a87-46c2-4aa9-a2a7-9d1e956435d9",
+      "name" : "propositionPrint.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "1daf23d3-feb3-409e-9453-4354e0b52e09",
+      "name" : "Logo.png",
+      "type" : "img",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "57baf39a-fc0e-401a-b527-f7c813280069",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getCommentsURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionId){\r",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"\r",
+        "        + $data.propositionId\r",
+        "        +\"/comments\";\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getSelectedPropositionURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionId){",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"",
+        "    + $data.propositionId",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getComments" : {
+      "type" : "url",
+      "value" : [
+        "{{ getCommentsURL }}"
+      ],
+      "exposed" : false
+    },
+    "propositionId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "propositionId"
+      ],
+      "exposed" : false
+    },
+    "urlFindPropositionHistory" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/bdm/businessData/com.sgdbf.model.TimeLine?p=0&c=100&\"\r",
+        "+ \"q=getByPropId&f=IdProposition=\"+$data.propositionId;"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "getSelectedProposition" : {
+      "type" : "url",
+      "value" : [
+        "{{getSelectedPropositionURL}}"
+      ],
+      "exposed" : false
+    },
+    "isMaterialDisplayed" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isExistingMaterial" : {
+      "type" : "expression",
+      "value" : [
+        "var is_existing=false;",
+        "",
+        "try {",
+        "    if ($data.getSelectedProposition) {",
+        "        if (typeof $data.getSelectedProposition.existing !== \"undefined\") {",
+        "            is_existing = ($data.getSelectedProposition.existing !== \"newMaterial\") ? false : true;",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isExistingMaterial: \" + e);",
+        "}",
+        "return is_existing;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "020424bd-963e-44e2-8e83-1d54b323b9b6",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

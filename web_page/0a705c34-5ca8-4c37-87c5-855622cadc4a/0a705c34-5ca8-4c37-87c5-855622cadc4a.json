@@ -1,0 +1,92 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "0a705c34-5ca8-4c37-87c5-855622cadc4a",
+  "name" : "AdobeSignHome",
+  "lastUpdate" : 1671627876994,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "1b9c5b79-34d8-4483-9dda-22941c74a08c",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "src" : {
+                  "type" : "constant",
+                  "value" : "https://saintgobain.eu1.echosign.com/account/home"
+                },
+                "resizeToContent" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "a9d13d52-19b4-4d7c-8d9e-5469215d0279",
+              "hasValidationError" : false,
+              "id" : "customLivingApplicationIFrameV2"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "0f317e94-c9f9-4438-a5b5-c2f9dbd040e0",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "a08d931a-56a9-4e3d-b5d3-e1c508379513",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : { },
+  "hasValidationError" : false,
+  "uuid" : "0a705c34-5ca8-4c37-87c5-855622cadc4a",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

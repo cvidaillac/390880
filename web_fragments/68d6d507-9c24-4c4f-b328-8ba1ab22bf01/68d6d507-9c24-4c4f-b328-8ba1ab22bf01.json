@@ -1,0 +1,467 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "68d6d507-9c24-4c4f-b328-8ba1ab22bf01",
+  "name" : "fragOnePropositionComplete",
+  "lastUpdate" : 1671627881046,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "0b0c4f88-4a69-4f40-8b00-ee7e2338ca25",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : ""
+                }
+              },
+              "reference" : "fc3ce9a7-e666-4ec1-b66c-a37da9cee320",
+              "hasValidationError" : false,
+              "id" : "2c88607c-2f92-441f-b733-5ef1b0713fda",
+              "binding" : {
+                "proposition" : "proposition",
+                "listMaterials" : "listMaterials",
+                "index" : "index",
+                "selectedAgency" : "selectedAgency",
+                "codeWorkflow" : "codeWorkflow",
+                "disableFields" : "",
+                "hideFields" : "",
+                "invalidAmounts" : "invalidAmounts",
+                "phaseType" : "phaseType"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "proposition" : {
+                  "type" : "variable",
+                  "value" : "proposition"
+                },
+                "apiUrl" : {
+                  "type" : "interpolation",
+                  "value" : "../API/extension/getParamFin"
+                },
+                "months" : {
+                  "type" : "variable",
+                  "value" : "proposition.nbMonth"
+                },
+                "percentage" : {
+                  "type" : "variable",
+                  "value" : "proposition.percentage"
+                }
+              },
+              "reference" : "574f8c71-14fc-434d-b170-47dc8e74456e",
+              "hasValidationError" : false,
+              "id" : "customGetParamFin"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<i>Partie en dessous : custom pour le formulaire \"Complete\"</i>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "4a7312d5-3b10-4dbf-8971-8618f8ed8d11",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "displayListValideurs"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "a9fe8fc4-ea4a-4b4f-a543-3068aea1f9e3",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 1,
+                      "lg" : 1
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "35b7df52-14f9-459f-9c0a-1933a9b29ed0",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 10,
+                      "lg" : 10
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "519044c3-a8a8-4282-acd7-ec9927733620",
+                    "hasValidationError" : false,
+                    "id" : "7828c640-df52-4969-a8b3-b57cc791526d",
+                    "binding" : {
+                      "codeWorkflow" : "codeWorkflow",
+                      "montantProposition" : "proposition.propositionAmount",
+                      "genreMateriel" : "proposition.materialFamily",
+                      "codeAgence" : "selectedAgency.code",
+                      "listNoeudsExposed" : "",
+                      "isIntra" : "",
+                      "approversList" : ""
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listeMotifsExisting" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    {\"val\":\"Rachat LocFi\",\"disp\":\"Rachat LocFi\"}, \r",
+        "    {\"val\":\"A renouveler\",\"disp\":\"A renouveler\"},\r",
+        "    {\"val\":\"A prolonger\",\"disp\":\"A prolonger\"},\r",
+        "    {\"val\":\"A vendre\",\"disp\":\"A vendre\"},\r",
+        "    {\"val\":\"A restituer\",\"disp\":\"A restituer\"},\r",
+        "    {\"val\":\"A rebuter\",\"disp\":\"A rebuter\"},\r",
+        "    {\"val\":\"Transfert\",\"disp\":\"Transfert\"}\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "BudgetHorsBuget" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {",
+        "        \"label\" : \"Budget\",",
+        "        \"value\" : true",
+        "        ",
+        "    },",
+        "    {",
+        "        \"label\" : \"Hors Buget\",",
+        "        \"value\" : false",
+        "        ",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "isExisting" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "     {\"val\":\"existingMaterial\",\"disp\":\"existant\"},\r",
+        "     {\"val\":\"newMaterial\",\"disp\":\"nouveau\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "displayListValideurs" : {
+      "type" : "expression",
+      "value" : [
+        "var to_return = false;",
+        "if ($data.proposition.propositionAmount === \"\") {",
+        "    to_return =  true;",
+        "}",
+        "",
+        "",
+        "return to_return;"
+      ],
+      "exposed" : false
+    },
+    "index" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "disableFields" : {
+      "type" : "expression",
+      "value" : [
+        "// Cette valeur sert a mettre en mode lecture simple une valeur. ",
+        "// Pour cela : Ajouter la valeur à la variable JSON en temps que ",
+        "// clé et true en temps que valeur",
+        "",
+        "",
+        "// exemple : {\"typeProposition\" : true} va desactiver le champs \"typeProposition\" ",
+        "//          du formulaire ",
+        "",
+        "return {",
+        "    \"typeProposition\" : false",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "codeWorkflow" : {
+      "type" : "constant",
+      "value" : [
+        "BUDGET"
+      ],
+      "exposed" : false
+    },
+    "generalStats" : {
+      "type" : "json",
+      "value" : [
+        "[\"Roulant\", \"Non roulant\"]"
+      ],
+      "exposed" : false
+    },
+    "listMotifsNew" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    {\"val\":\"Nouveau matériel\",\"disp\":\"Nouveau matériel\"},\r",
+        "    {\"val\":\"Nouvel équipement\",\"disp\":\"Nouvel équipement\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listMaterials" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "labelDate" : {
+      "type" : "expression",
+      "value" : [
+        "var returnValue = \"\"",
+        "",
+        "var found = false;",
+        "",
+        "",
+        "if (!$data.proposition.existing) {",
+        "    returnValue = \"livraison\";",
+        "    found = true;",
+        "} else {",
+        "    var dataCorrespondance = ",
+        "    {",
+        "        \"A renouveler\" : \"livraison\",",
+        "        \"Rachat LocFi\" : \"rachat\",",
+        "        \"A vendre\" : \"vente\",",
+        "        \"A restituer\" : \"restitution\",",
+        "        \"A rebuter\" : \"mise au rebut\",",
+        "        \"Transfert\" : \"transfert\"",
+        "    }",
+        "",
+        "    returnValue = dataCorrespondance[$data.proposition.typeProposition];",
+        "    found = true;",
+        "}",
+        "",
+        "",
+        "",
+        "if (found) {",
+        "   returnValue = \"Date de \" + returnValue + \" prévue\"",
+        "}",
+        "",
+        "",
+        "return returnValue;",
+        "",
+        "",
+        "/*RULES : ",
+        "Si \"Nouveau matériel\" ou \"Nouvel équipement\" ou \"A renouveler\" --> ",
+        "\"Date de livraison prévue\"",
+        "Si \"Rachat de LocFi\" --> \"Date de rachat prévue\"",
+        "Si \"A vendre\" --> \"Date de vente prévue\"",
+        "Si \"A restituer\" --> \"Date de restitution prévue\"",
+        "Si \"A rebuter\" --> \"Date de mise au rebut prévue\"",
+        "Si \"Transfert\" --> \"Date de transfert prévue\"",
+        "*/"
+      ],
+      "exposed" : false
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 11; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    },
+    "invalidAmounts" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "phaseType" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

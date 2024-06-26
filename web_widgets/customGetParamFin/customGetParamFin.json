@@ -1,0 +1,40 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Proposition",
+      "name" : "proposition",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "API to call",
+      "name" : "apiUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Result Months",
+      "name" : "months",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Result Percentage",
+      "name" : "percentage",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customGetParamFin",
+  "name" : "GetParamFin",
+  "lastUpdate" : 1671627880345,
+  "template" : "@customGetParamFin.tpl.html",
+  "controller" : "@customGetParamFin.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

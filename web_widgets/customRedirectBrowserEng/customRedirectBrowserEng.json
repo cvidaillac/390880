@@ -1,0 +1,30 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Redirect URL",
+      "name" : "URL",
+      "type" : "text",
+      "defaultValue" : "/",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Wait text",
+      "name" : "waitText",
+      "type" : "text",
+      "defaultValue" : "Please wait...",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customRedirectBrowserEng",
+  "name" : "redirectBrowserEng",
+  "lastUpdate" : 1671627910315,
+  "template" : "@customRedirectBrowserEng.tpl.html",
+  "controller" : "@customRedirectBrowserEng.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

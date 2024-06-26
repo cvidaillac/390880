@@ -1,0 +1,99 @@
+.print-only {
+    display: none;
+}
+
+@media print {
+
+    .layout-header, .layout-header *, .nav-tabs, .pagination * {display : none !important;}
+    
+    .layout-content, .layout-content * {
+        display: block !important;
+        float: none;
+    }
+    .layout-content {
+        left: 0px;
+        position:absolute !important;
+        top: 0px;
+    }
+
+    .dropdown-menu, pb-link, .no-print {display : none !important;}
+    .print-link pb-link, .print-link a.btn { display: block !important; }
+    a[href]:after {
+        content: none !important;
+    }
+
+    img, svg {
+      display: none !important;
+    }
+
+    .print-img img, .print-img svg {
+      display: block !important;
+      max-width: 100% !important;
+    }
+    .print-img.text-center img {
+        margin: auto !important;
+    }
+
+	.tab-content, tab-pane {
+        display: block !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+        width: auto !important;
+        line-height: 1.1 !important;
+    }
+    
+    .tab-content > .tab-pane, .print-only {
+        display: block;
+        break-inside: avoid;
+    }
+
+    .proposition-style {
+        background: whitesmoke !important;
+	    display : block !important;
+	    forced-color-adjust: none;
+        -webkit-print-color-adjust: exact !important; 
+	    width: 100% !important;
+	}
+
+	.btn-group {display : none !important;}
+	.btn {display : none !important;}
+
+	/* Chrome/Opera/Safari */
+	::-webkit-input-placeholder { color: transparent; opacity: 0 !important;}
+  
+	/* Firefox 19+ */
+	::-moz-placeholder { color: transparent; opacity: 0 !important;}
+
+	/* IE 10+ */
+	:-ms-input-placeholder {  color: transparent; opacity: 0 !important;}
+
+	/* Firefox 18- */
+	:-moz-placeholder { color: transparent; opacity: 0 !important;}
+
+
+	.control-label {font-size: 10px !important;}
+	.form-control {font-size: 11px !important;}
+
+    .component {
+        margin-top: 0px !important;
+        margin-bottom: 2px !important;
+    }
+    
+    .print-page-break-after { page-break-after: always;  }
+    .print-page-break-before-row-3 > .row:nth-child(3)  {
+        page-break-before: always;
+    }
+    .print-page-break-after-row-3 > .row:nth-child(3)  {
+        page-break-after: always;
+    }
+    .print-page-break-before-row-1 > .row:first-of-type {
+        page-break-before: always;
+    }
+
+	
+    @page { size: portrait; 
+    }
+}
+

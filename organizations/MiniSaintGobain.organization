@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="MiniSaintGobain">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="dmarie">
+      <firstName>Dervile</firstName>
+      <lastName>Marie</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dsylvain">
+      <firstName>Demarine</firstName>
+      <lastName>Sylvain</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="gfrederic">
+      <firstName>Guillard</firstName>
+      <lastName>Frederic</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="bherve">
+      <firstName>Biancharlli</firstName>
+      <lastName>Herve</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="User">
+      <displayName>User</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Emetteurs">
+      <displayName>Emetteurs</displayName>
+    </group>
+    <group name="Directeurs">
+      <displayName>Directeurs</displayName>
+    </group>
+    <group name="DirecteursRH">
+      <displayName>DirecteursRH</displayName>
+    </group>
+    <group name="MembreCOMEX">
+      <displayName>MembreCOMEX</displayName>
+    </group>
+    <group name="TEST">
+      <displayName>TEST</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>dmarie</userName>
+      <roleName>User</roleName>
+      <groupName>Emetteurs</groupName>
+    </membership>
+    <membership>
+      <userName>dsylvain</userName>
+      <roleName>User</roleName>
+      <groupName>Directeurs</groupName>
+    </membership>
+    <membership>
+      <userName>gfrederic</userName>
+      <roleName>User</roleName>
+      <groupName>MembreCOMEX</groupName>
+    </membership>
+    <membership>
+      <userName>bherve</userName>
+      <roleName>User</roleName>
+      <groupName>DirecteursRH</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

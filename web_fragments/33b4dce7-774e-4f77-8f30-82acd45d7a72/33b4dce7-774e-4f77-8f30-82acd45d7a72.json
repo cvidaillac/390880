@@ -1,0 +1,342 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "33b4dce7-774e-4f77-8f30-82acd45d7a72",
+  "name" : "fragOnePropositionDADR",
+  "lastUpdate" : 1671627895681,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "dfbcad89-0139-4076-9ed3-da2b69330818",
+        "hasValidationError" : false,
+        "id" : "2c88607c-2f92-441f-b733-5ef1b0713fda",
+        "binding" : {
+          "proposition" : "proposition",
+          "listMaterials" : "listMaterials",
+          "index" : "index",
+          "selectedAgency" : "selectedAgency",
+          "codeWorkflow" : "codeWorkflow",
+          "disableFields" : "disableFields",
+          "hideFields" : "hideFields",
+          "requiredFields" : "",
+          "invalidAmounts" : "invalidAmounts"
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<i>Partie en dessous : custom pour le formulaire \"DADR\"</i>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "a4b97893-6cea-45c8-93f4-2428803f73eb",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "displayListValideurs"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "3147b07f-a543-4b8f-87d4-e7ba014c5e15",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 1,
+                "lg" : 1
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "f57fc47a-5077-4939-96e1-f9af2517eab8",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 10,
+                "lg" : 10
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "a83f42bf-25c3-4387-818b-f5d2a022679e",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "1136a1fa-fff9-4278-8e6f-e44eea7c6bdd",
+                    "hasValidationError" : false,
+                    "id" : "7828c640-df52-4969-a8b3-b57cc791526d",
+                    "binding" : {
+                      "codeWorkflow" : "codeWorkflow",
+                      "montantProposition" : "proposition.propositionAmount",
+                      "genreMateriel" : "proposition.materialFamily",
+                      "codeAgence" : "proposition.agencyCode",
+                      "listNoeudsExposed" : "listNoeudsExposed",
+                      "isIntra" : "",
+                      "approversList" : "",
+                      "hierarchyListAPI" : ""
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listNoeudsExposed" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "displayListValideurs" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.selectedAgency || !$data.proposition) {",
+        "    return false;",
+        "}",
+        "",
+        "",
+        "return (!$data.proposition.propositionAmount || !$data.proposition.typeMaterial);"
+      ],
+      "exposed" : false
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "hideFields" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "// Cette partie  spcécifique à la DADR est",
+        "// gérée dans le fragOneProposition dans la valeur",
+        "// updates_dadr",
+        "",
+        "return {};"
+      ],
+      "exposed" : false
+    },
+    "index" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listMaterials" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "updates" : {
+      "type" : "expression",
+      "value" : [
+        "// This value is set to forcebily set some values",
+        "",
+        "if ($data.proposition) {",
+        "    $data.proposition.existing = \"existingMaterial\";",
+        "    $data.proposition.typeAcquisition = \"Comptant\";",
+        "    ",
+        "    ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "disableFields" : {
+      "type" : "expression",
+      "value" : [
+        "// Cette valeur sert a mettre en mode lecture simple une valeur. ",
+        "// Pour cela : Ajouter la valeur à la variable JSON en temps que ",
+        "// clé et true en temps que valeur",
+        "",
+        "// Cette partie spcécifique à la DADR est",
+        "// gérée dans le fragOneProposition dans la valeur",
+        "// updates_dadr",
+        "",
+        "",
+        "return {}"
+      ],
+      "exposed" : false
+    },
+    "codeWorkflow" : {
+      "type" : "constant",
+      "value" : [
+        "DADR"
+      ],
+      "exposed" : false
+    },
+    "propositionForPopup" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "test" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "$data.propositionForPopup = angular.copy($data.proposition);",
+        "",
+        "return \"\";"
+      ],
+      "exposed" : false
+    },
+    "invalidAmounts" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

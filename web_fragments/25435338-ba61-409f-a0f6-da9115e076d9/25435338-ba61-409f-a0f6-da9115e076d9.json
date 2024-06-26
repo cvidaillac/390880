@@ -1,0 +1,167 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "25435338-ba61-409f-a0f6-da9115e076d9",
+  "name" : "fragNewProcess",
+  "lastUpdate" : 1671627887142,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Bouton CREATE CASE si droit OK"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 5"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "6d8b705a-fcb0-4590-8ccd-0275a99b8cfd",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! isAllowedToStart"
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{buttonLabel}}"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "process"
+          },
+          "targetUrl" : {
+            "type" : "constant",
+            "value" : "http://"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "expression",
+            "value" : "nomProcess"
+          },
+          "processVersion" : {
+            "type" : "expression",
+            "value" : "getLatestVersion"
+          },
+          "taskId" : {
+            "type" : "constant"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_self"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "expression",
+            "value" : "prop"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "link"
+          }
+        },
+        "reference" : "816bb59a-70c9-4bd2-8753-d82152caf1ff",
+        "hasValidationError" : false,
+        "id" : "pbLink"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "nomProcess" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{nomProcess}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "isAllowedToStart" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getProcessDefinition!==undefined && $data.getProcessDefinition.length >0"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "getLatestVersion" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition && $data.getProcessDefinition.length>0){",
+        "    return $data.getProcessDefinition[0].version;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "buttonLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

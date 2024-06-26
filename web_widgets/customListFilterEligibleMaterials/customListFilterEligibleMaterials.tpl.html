@@ -1,0 +1,132 @@
+<ng-form name="FilterForm">
+        <div class="row" ng-show="ctrl.isCollapsed">
+            <div class="col form-group col-xs-8  col-sm-8  col-md-3  col-lg-3" ng-if="properties.filtersCheckbox">
+                <i>{{ ctrl.checkboxSummaryText }}</i>
+            </div>
+            <div class="col component col-xs-4  col-sm-4  col-md-2  col-lg-2" >
+                <div class="container center">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-secondary" type="button" ng-show="ctrl.showHideButton" ng-click="ctrl.toggleCollapseButon();">
+                                {{ ctrl.hideButtonLabel }} les filtres</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md component col-md-7  col-lg-7" >
+                 <i>{{ ctrl.filtersSummaryText }}</i>
+             </div>
+        </div>
+        
+        <div class="row" ng-show="! ctrl.isCollapsed">
+            <div class="col form-group col-xs-8  col-sm-8  col-md-3  col-lg-3" ng-if="properties.filtersCheckbox">
+                <div class="container center">
+                    <div class="row">
+                        <label class="control-label col-xs-12 control-label--required"  ng-bind-html="ctrl.chekboxLabel | uiTranslate">
+                        </label>
+                        <div class="col-xs-12">
+                            <div class="container">
+                                <div class="row" ng-repeat="option in properties.filtersCheckbox.choices track by $index">
+                                    <div  class="radio radio-button-margin col-xs-2" >
+                                        <label>
+                                            <input
+                                                    type="checkbox"
+                                                    name="{{ option.data }}"
+                                                    ng-model="option.value"
+                                                    ng-value="option.checkedValue"
+                                                    ng-change="ctrl.updateCheckbox(option, $index)"
+                                                    ng-required="value.length==0">
+                                                {{ option.label | uiTranslate }}
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="container">
+                                            <div class="form-group form-inline" ng-if="option.relatedField.length>0" ng-repeat="relatedField in option.relatedField" ng-show="option.value">
+                                                <label class="col-sm control-label control-label--required" for="{{ relatedField.data }}"> {{ relatedField.label }} </label>
+                                                <select name="{{ relatedField.data }}" class="col-sm form-control" ng-model="searchBuffer[relatedField.data]" >
+                                <!--                        <option ng-repeat="data in relatedField.values" >{{ data }}</option>-->
+                                
+                                                            <option ng-if="data === searchBuffer[relatedField.data]" ng-repeat="data in relatedField.values" selected >{{ data }}</option>
+                                                            <option ng-if="data !== searchBuffer[relatedField.data]" ng-repeat="data in relatedField.values" >{{ data }}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col component col-xs-4  col-sm-4  col-md-2  col-lg-2" >
+                <div class="container form-group">
+                    <div class="row">
+                        <div class="col col-xs-4 col-md-2 text-center">
+                            <button class="btn btn-secondary btn-margin-vertical-10" type="button" ng-show="ctrl.showHideButton" ng-click="ctrl.toggleCollapseButon();">
+                                {{ ctrl.hideButtonLabel }} les filtres</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-xs-4 col-md-2  text-center">
+                            <button ng-click="ctrl.resetFilters()" type="button" class="btn btn-danger btn-margin-vertical-10" ng-disabled="ctrl.isRunning">Effacer les filtres</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-xs-4 col-md-2  text-center">
+                            <button ng-click="ctrl.startFilters()" type="button" class="btn btn-primary btn-margin-vertical-10" ng-disabled="ctrl.isMissingMandatoryFields() || ctrl.isRunning">Calculer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col component col-xs-12  col-sm-12  col-md-7  col-lg-7" >
+                <div class="container center">
+                   <div class="form-group row" >
+                        <div ng-if="!filter.isDisable" ng-repeat="filter in properties.filtersLabels" class="col component col-xs-12  col-sm-12  col-md-6  col-lg-6 ng-scope">
+                            <label for="{{ filter.data }}"> {{ filter.label }} </label>
+                            <span class="badge badge-info" ng-if="filter.operator=='L'"> contient</span>
+                            <span class="badge badge-info" ng-if="filter.operator=='S'"> commence par</span>
+                            <span class="badge badge-info" ng-if="filter.operator !='L' && filter.operator != 'S' && filter.type !='selectMulti'"> égal</span>
+                            <span class="badge badge-error" ng-if="(filter.type==='selectMulti') && (ctrl.multiSelectIndexes) && (ctrl.multiSelectIndexes.length>0)" ng-click="ctrl.resetValueMulti(filter)"> x</span> <span class="badge badge-info" ng-if="(filter.type==='selectMulti') && (ctrl.multiSelectIndexes) && (ctrl.multiSelectIndexes.length>0)" ng-repeat="selectedOption in ctrl.multiSelectIndexes">{{ filter.values[selectedOption].value }}</span>
+                            <span class="badge badge-error" ng-if="(searchBuffer[filter.data]) && (filter.type!=='selectMulti')" ng-click="ctrl.resetValue(filter)"> x</span>
+            
+                            <div ng-if="filter.type==='text' || filter.type==='date'">
+                                <input type="text" class="form-control" name="{{ filter.data }}" placeholder="{{ filter.placeholder }}" 
+                                    ng-model="searchBuffer[filter.data]" >
+                                    <datalist id="{{ filter.data }}">
+                                        <!--availableDatas[filter.data]-->
+                                        <option ng-if="filter.type==='date'" ng-repeat="data in filter.values" > {{data}}</option>
+                                    </datalist>
+                            </div>
+                            <!--auto-complete="ctrl.autoCompleteOptions" to be added in order to have autoComplete feature-->
+                             <div ng-if="filter.type==='selectMulti'">
+            <!--                     ng-init="searchBuffer[filter.data]=1"-->
+                                <select name="{{ filter.data }}" class="form-control" ng-model="ctrl.multiSelectIndexes" multiple>
+            <!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+            
+                                    <option ng-if="data.value === filter.values[0].value" ng-repeat="data in filter.values" value="{{$index}}" >{{ data.label }}</option>
+                                    <option ng-if="data.value !== filter.values[0].value" ng-repeat="data in filter.values" value="{{$index}}">{{ data.label }}</option>
+                                </select>
+                            </div>
+                            
+                            <div ng-if="filter.type==='select'">
+            <!--                     ng-init="searchBuffer[filter.data]=1"-->
+                                <select name="{{ filter.data }}" class="form-control" ng-model="searchBuffer[filter.data]" ng-init="searchBuffer[filter.data]=filter.values[0]" >
+            <!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+            
+            
+                                    <option ng-if="data === filter.values[0]" ng-repeat="data in filter.values" selected >{{ data }}</option>
+                                    <option ng-if="data !== filter.values[0]" ng-repeat="data in filter.values" >{{ data }}</option>
+                                </select>
+                            </div>
+            
+                        </div>
+                         <br/>
+        
+                    </div>
+                </div>
+             </div>
+        </div>
+
+</ng-form>

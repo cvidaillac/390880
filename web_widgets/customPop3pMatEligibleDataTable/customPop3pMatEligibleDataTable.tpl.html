@@ -1,0 +1,72 @@
+<div class="table-responsive">
+    <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table table-striped" ng-class="{'table-hover': ctrl.isSelectable()}">
+        <thead>
+            <tr>
+                <th ng-if="properties.enableSelectCheckbox">Sélection</th>
+                <th>Créer</th>
+                <th>Détail</th>
+                <th ng-repeat="header in properties.headers">
+                    <div ng-if="ctrl.isColumnSortable($index)" bo-sorter="{{properties.columnsKey[$index]}}">
+                            {{ header | uiTranslate }}
+                    </div>
+                    <div ng-if="!ctrl.isColumnSortable($index)">
+                        {{ header | uiTranslate }}
+                    </div>
+                </th>
+ 
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results  track by $index" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}" >
+            <td ng-if="properties.enableSelectCheckbox">
+                <input
+                    type="checkbox"
+                    name="selectRowCheckbox"
+                    ng-model="ctrl.selectedItems[$index + ctrl.pageOffset]"
+                    ng-change="ctrl.updateSelectedValues()"
+                    ng-disabled="false">
+            </td>
+            <td><button class="btn btn-info" ng-click="ctrl.createNewProposition(row, $event, $window)"><span class="glyphicon glyphicon-plus-sign"></span></button> </td>
+            <td><button class="btn btn-warning" ng-click="ctrl.detailProduct(row, $event, $window)"><span class="glyphicon glyphicon-question-sign"></span></button> </td>
+            <td ng-repeat="column in properties.columnsKey track by $index">
+                {{ $eval(column, row) | uiTranslate }}
+            </td>
+        </tr>
+        </tbody>
+        <tbody ng-if="!ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td> {{ row | uiTranslate }}</td>
+        </tr>
+        </tbody>
+    </table>
+   
+    <div class="hidden-xs"
+         ng-repeat="options in [{'maxSize': 5, 'rotate': false}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    <div class="visible-xs text-center"
+         ng-repeat="options in [{'maxSize': 3, 'rotate': true}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+
+    <script type="text/ng-template" id="/dataTable/pagination.html">
+        <pagination ng-if="ctrl.pagination.total > properties.pageSize"
+                    total-items="ctrl.pagination.total"
+                    items-per-page="properties.pageSize"
+                    direction-links="true"
+                    boundary-links="true"
+                    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    rotate="{{options.rotate}}"
+                    max-size="{{options.maxSize}}"
+                    ng-model="ctrl.pagination.currentPage"
+                    ng-change="ctrl.paginationHandler()">
+        </pagination>    
+        <span class="recordCounter"><b> {{ ctrl.displayCounter }}</b></span>
+
+    </script>
+</div>

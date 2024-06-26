@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>bdmCreateProcurementRequest</id>
+  <version>1.0.0</version>
+  <category id="bdm"/>
+  <input mandatory="true" name="summary" type="java.lang.String"/>
+  <input mandatory="true" name="description" type="java.lang.String"/>
+  <output name="request" type="com.company.model.Request"/>
+  <page id="page1">
+    <widget xsi:type="definition:Text" id="summary" inputName="summary"/>
+    <widget xsi:type="definition:Text" id="description" inputName="description"/>
+  </page>
+  <jarDependency>bdm-client-pojo.jar</jarDependency>
+</definition:ConnectorDefinition>

@@ -1,0 +1,21 @@
+.button-export-excel {
+    background-image: url(../img/excel-icon.png); /* 20px x 20px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 20px;           /* make this the size of the image */
+    padding-left: 16px;     /* make text start to the right of the image */
+	padding-right: 10px;	/* Space before following text */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+.exportPanel {
+    position: absolute;
+    width: 30%;
+    overflow-y : auto;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
+}

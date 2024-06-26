@@ -1,0 +1,36 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "expression"
+    },
+    {
+      "label" : "alertStyle",
+      "name" : "alertStyle",
+      "type" : "choice",
+      "defaultValue" : "info",
+      "choiceValues" : [
+        "success",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "id" : "customBootstrapAlert",
+  "name" : "bootstrapAlert",
+  "lastUpdate" : 1671627880322,
+  "template" : "@customBootstrapAlert.tpl.html",
+  "controller" : "@customBootstrapAlert.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

@@ -1,0 +1,989 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "TaskAssignmentToolV2",
+  "name" : "TaskAssignmentToolV2",
+  "lastUpdate" : 1671627901010,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "59d940f4-61a1-4676-8831-89366c852efe",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "ContainerInfoStyle"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Ré-assignation des tâches BudgetPop"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "b44b989c-55a1-4e00-bd8e-95afbbb200bb",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "formContainer",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "447b6c0d-08af-48ac-b267-b75a91dd01bd",
+              "hasValidationError" : false,
+              "id" : "pbFormContainer",
+              "container" : {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : { },
+                "reference" : "b77f2e71-cf4d-436a-ad0e-81a231866f5f",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "ContainerInfoStyle"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "75bc5963-9b97-448a-afab-794cb7d1a318",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 3,
+                              "lg" : 1
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "repeatedCollection" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "8d157800-d5da-407e-b13b-a15399d19e73",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "rows" : [
+                              [ ]
+                            ]
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 2,
+                              "lg" : 4
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Current User"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "prénom nom - SGID"
+                              },
+                              "availableValues" : {
+                                "type" : "constant",
+                                "value" : [
+                                  "listEnabledUsers"
+                                ]
+                              },
+                              "displayedKey" : {
+                                "type" : "interpolation",
+                                "value" : "firstname+spaceVal+lastname+listSpace+userName"
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "selectedCurrentUserTemp"
+                              },
+                              "returnedKey" : {
+                                "type" : "interpolation",
+                                "value" : "firstname+\" \"+lastname+\" - \"+userName"
+                              }
+                            },
+                            "reference" : "a417af57-27a0-4329-b152-2e80a5a2c693",
+                            "hasValidationError" : false,
+                            "id" : "pbAutocomplete"
+                          },
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 2,
+                              "lg" : 2
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "repeatedCollection" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "ae034f91-57c3-4d8e-ad79-021ebdeae2a1",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "rows" : [
+                              [ ]
+                            ]
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 2,
+                              "lg" : 4
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "readOnly" : {
+                                "type" : "expression",
+                                "value" : "listCurrentHumanTasks.length === 0 || listCurrentHumanTasks===undefined"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Target user"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "prénom nom - SGID"
+                              },
+                              "availableValues" : {
+                                "type" : "expression",
+                                "value" : "listEnabledUsers"
+                              },
+                              "displayedKey" : {
+                                "type" : "interpolation",
+                                "value" : "firstname+\" \"+lastname+\" - \"+userName"
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "selectedNewUserTemp"
+                              },
+                              "returnedKey" : {
+                                "type" : "interpolation",
+                                "value" : "firstname+\" \"+lastname+\" - \"+userName"
+                              }
+                            },
+                            "reference" : "6fcae011-01f8-4cd9-85e2-2e39da74f575",
+                            "hasValidationError" : false,
+                            "id" : "pbAutocomplete"
+                          },
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 3,
+                              "lg" : 1
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "repeatedCollection" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "9fd0f1bb-c71c-4d39-817d-e3f80349caeb",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "rows" : [
+                              [ ]
+                            ]
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "ContainerInfoStyle"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "40982f78-bce1-4df8-ae92-46b6380985e8",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "listCurrentHumanTasks.length === 0 || selectedCurrentUserId===null || selectedCurrentUserId===undefined"
+                              },
+                              "headers" : {
+                                "type" : "constant",
+                                "value" : [
+                                  "Proposition Id",
+                                  "Task Id",
+                                  "Name",
+                                  "last update date"
+                                ]
+                              },
+                              "type" : {
+                                "type" : "constant",
+                                "value" : "Variable"
+                              },
+                              "apiUrl" : {
+                                "type" : "constant",
+                                "value" : "../API/"
+                              },
+                              "params" : {
+                                "type" : "constant"
+                              },
+                              "content" : {
+                                "type" : "expression",
+                                "value" : "listData"
+                              },
+                              "columnsKey" : {
+                                "type" : "constant",
+                                "value" : [
+                                  "propositionId",
+                                  "id",
+                                  "displayName",
+                                  "last_update_date|uiDate"
+                                ]
+                              },
+                              "sortColumns" : {
+                                "type" : "constant"
+                              },
+                              "selectedRow" : {
+                                "type" : "variable"
+                              },
+                              "pageSize" : {
+                                "type" : "constant",
+                                "value" : 10
+                              },
+                              "filter" : {
+                                "type" : "constant"
+                              },
+                              "createPropositionURL" : {
+                                "type" : "variable"
+                              },
+                              "numMatSelected" : {
+                                "type" : "variable"
+                              },
+                              "selectedAgencyName" : {
+                                "type" : "variable"
+                              },
+                              "selectedTerritoryName" : {
+                                "type" : "variable"
+                              },
+                              "codeFou" : {
+                                "type" : "variable"
+                              },
+                              "listBCChecked" : {
+                                "type" : "variable",
+                                "value" : "selectedRows"
+                              },
+                              "choix" : {
+                                "type" : "constant"
+                              }
+                            },
+                            "reference" : "6780ac81-d308-4e75-b82c-ecb9cd26740d",
+                            "hasValidationError" : false,
+                            "id" : "customMyAssignToolDataTable"
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : "alert alert-warning"
+                              },
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "listCurrentHumanTasks.length > 0 || selectedCurrentUserId===null || selectedCurrentUserId===undefined"
+                              },
+                              "text" : {
+                                "type" : "interpolation",
+                                "value" : "<br><b>Aucune tache n'est assignée à {{labelCurrentUser}} !<br></b>"
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "center"
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : ""
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              }
+                            },
+                            "reference" : "78f54015-ec8c-411c-a5a9-bda70ccd9b25",
+                            "hasValidationError" : false,
+                            "id" : "pbText"
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "a2c42f40-3278-42bd-8698-1f72721e8bc4",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "selectedNewUserId===null || selectedNewUserId===undefined"
+                },
+                "disabled" : {
+                  "type" : "expression",
+                  "value" : "selectedRows.length===0"
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "{{buttonLabel}}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "POST"
+                },
+                "url" : {
+                  "type" : "interpolation",
+                  "value" : "/bonita/API/bpm/case"
+                },
+                "dataToSend" : {
+                  "type" : "expression",
+                  "value" : "dataToSend"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "dataFromError" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation",
+                  "value" : "/bonita/apps/ReassignationTool/"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : ""
+                }
+              },
+              "reference" : "720ed023-88a2-433f-8925-5c3852c2af2d",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "285a72cc-3f10-41c1-a779-3a35077b2df2",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "selectedCurrentUserId===null || selectedCurrentUserId===undefined"
+                },
+                "disabled" : {
+                  "type" : "expression",
+                  "value" : "selectedRows.length===0"
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Dé-assigner"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "success"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "Submit task"
+                },
+                "url" : {
+                  "type" : "interpolation"
+                },
+                "dataToSend" : {
+                  "type" : "constant"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "dataFromError" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation",
+                  "value" : "/bonita/apps/ReassignationTool/"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "6e21dadf-c07e-47b6-b587-14dfd88cdb9d",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "7b986559-0d45-4b94-9152-2d4798189bcc",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "6d7ce3c4-5176-4f76-801a-dfcfb4156bb3",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "processDefinitionId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getProcessInfo[0].id;"
+      ],
+      "exposed" : false
+    },
+    "getCurrentUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=10&f=userName={{selectedCurrentUserId}}"
+      ],
+      "exposed" : false
+    },
+    "selectedCurrentUserId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.selectedCurrentUserTemp.split(' - ')[1];"
+      ],
+      "exposed" : false
+    },
+    "getProcessInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?f=name=AssignationToolManagement&o=deploymentDate"
+      ],
+      "exposed" : false
+    },
+    "listData" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];\r",
+        "for(var i=0; i<$data.listCurrentHumanTasks.length;i++)\r",
+        "{\r",
+        "\r",
+        "result[i]={};\r",
+        "\r",
+        "result[i].id=$data.listCurrentHumanTasks[i].id;\r",
+        "result[i].displayName=$data.listCurrentHumanTasks[i].displayName.split('-')[0];\r",
+        "result[i].propositionId=$data.listCurrentHumanTasks[i].displayName.split('-')[1];\r",
+        "result[i].last_update_date=$data.listCurrentHumanTasks[i].reached_state_date;\r",
+        "                                                          \r",
+        "\r",
+        "}\r",
+        "result.sort(function(a, b){return a.propositionId - b.propositionId});\r",
+        "return result;\r",
+        "//return JSON.stringify(result);\r",
+        "/*var caseId = $data.listCurrentHumanTasks[i].caseId;\r",
+        "var  returned_data;\r",
+        "var request = new XMLHttpRequest();\r",
+        "request.open(\"GET\", \"/bonita/API/bdm/businessDataReference/\"+caseId+\"/propositions\", false);\r",
+        "request.send();\r",
+        "\r",
+        "if (request.readyState == 4 && request.status == 200) {\r",
+        "\r",
+        "returned_data = JSON.parse(request.responseText);\r",
+        "         }\r",
+        "  result[i].caseId = JSON.stringify(returned_data.storageIds);\r",
+        "  //result[i].caseId = \"test\";\r",
+        "  result[i].last_update_date=$data.listCurrentHumanTasks[i].last_update_date;\r",
+        "    \r",
+        "*/"
+      ],
+      "exposed" : false
+    },
+    "listCurrentHumanTasks" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/humanTask?p=0&c=10000&f=state=ready&f=assigned_id={{getCurrentUser[0].id}}"
+      ],
+      "exposed" : false
+    },
+    "getUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=10&f=userName={{selectedNewUserId}}"
+      ],
+      "exposed" : false
+    },
+    "labelCurrentUser" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getCurrentUser[0].firstname+\" \"+$data.getCurrentUser[0].lastname+\" (\"+$data.getCurrentUser[0].userName+\")\";"
+      ],
+      "exposed" : false
+    },
+    "selectedNewUserTemp" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedNewUserId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.selectedNewUserTemp.split(' - ')[1];"
+      ],
+      "exposed" : false
+    },
+    "buttonLabel" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.selectedNewUserId!==null && $data.selectedNewUserId!==undefined) {",
+        "var labelButton = $data.getUser[0].firstname+\" \"+$data.getUser[0].lastname+\" (\"+$data.getUser[0].userName+\")\";",
+        "",
+        "return \"Assigner à \"+labelButton;",
+        "}",
+        "else",
+        "{",
+        "    ",
+        "    return \"Assigner à ...\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "dataToSend" : {
+      "type" : "expression",
+      "value" : [
+        "var result= {  \r",
+        "  \"processDefinitionId\":$data.processDefinitionId,\r",
+        "  \"variables\":[  \r",
+        "    {  \r",
+        "      \"name\":\"newUserId\",\r",
+        "      \"value\":$data.getUser[0].id\r",
+        "    },\r",
+        "    {  \r",
+        "      \"name\":\"currentUserId\",\r",
+        "      \"value\":$data.getCurrentUser[0].id\r",
+        "    },\r",
+        "    {  \r",
+        "      \"name\":\"listTasksIds\",\r",
+        "      \"value\":$data.selectedRows\r",
+        "    }\r",
+        "  ]\r",
+        "};\r",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "baseURL" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getprocessParameter.value;"
+      ],
+      "exposed" : false
+    },
+    "listEnabledUsers" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=10000&f=enabled%3dtrue"
+      ],
+      "exposed" : false
+    },
+    "selectedCurrentUserTemp" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedRows" : {
+      "type" : "expression",
+      "value" : [
+        "return [];"
+      ],
+      "exposed" : false
+    },
+    "listTest" : {
+      "type" : "expression",
+      "value" : [
+        "var usersList = [];",
+        "var user = \"\";",
+        "// if($data.listEnabledUsers !== undefined){",
+        "// return $data.listEnabledUsers[0].firstname +\" \"+$data.listEnabledUsers[0].lastname+\" - \"+$data.listEnabledUsers[0].username;",
+        "// }",
+        "",
+        "if ($data.listEnabledUsers !== undefined && $data.listEnabledUsers.length > 0)",
+        "{",
+        "    for(var i in $data.listEnabledUsers) ",
+        "    {",
+        "       user = $data.listEnabledUsers[i].firstName +\" \"+$data.listEnabledUsers[i].lastName+\" - \"+$data.listEnabledUsers[i].userName;",
+        "       usersList.push(user);",
+        "    }",
+        " }   ",
+        "",
+        "return usersList;"
+      ],
+      "exposed" : false
+    },
+    "listSpace" : {
+      "type" : "expression",
+      "value" : [
+        "var val = \"\";",
+        "if ($data.listEnabledUsers !== undefined){",
+        "    val = \" - \";",
+        "}",
+        "return val;"
+      ],
+      "exposed" : false
+    },
+    "spaceVal" : {
+      "type" : "expression",
+      "value" : [
+        "var val = \"\";",
+        "if ($data.listEnabledUsers !== undefined){",
+        "    val = \" \";",
+        "}",
+        "return val;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "e93c177a-8c71-4788-8395-f8cb39309608",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

@@ -1,0 +1,69 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Style",
+      "name" : "buttonStyle",
+      "type" : "choice",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger",
+        "link"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Alignment",
+      "name" : "alignment",
+      "type" : "choice",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "displayDetailProposition",
+      "name" : "displayDetailProposition",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customClosePopup",
+  "name" : "closePopup",
+  "lastUpdate" : 1671627883213,
+  "template" : "@customClosePopup.tpl.html",
+  "controller" : "@customClosePopup.ctrl.js",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "7c1962ad-4260-448a-9539-269e0e617d83",
+      "name" : "closeModale.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

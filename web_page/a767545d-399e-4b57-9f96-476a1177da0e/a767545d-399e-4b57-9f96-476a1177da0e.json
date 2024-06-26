@@ -1,0 +1,198 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "a767545d-399e-4b57-9f96-476a1177da0e",
+  "name" : "pop3pDetailMaterialPage",
+  "lastUpdate" : 1671627901725,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "btn-close-pop-up"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Fermer"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "right"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "danger"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Add to collection"
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataToSend" : {
+            "type" : "constant"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionToModify" : {
+            "type" : "variable",
+            "value" : "askToOpenData"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "valueToAdd" : {
+            "type" : "expression",
+            "value" : "addToAskClose"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "172e91a0-7ded-4aa0-b93e-dc6ebeb3d8a6",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "0abf68a1-660e-405a-9544-9f6a285d2929",
+        "hasValidationError" : false,
+        "id" : "403b7ad7-a3c1-42a0-815c-39a640d30929",
+        "binding" : {
+          "selectedMaterial" : "selectedMaterial"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "797b3d5f-716b-49d6-a05e-f58846940520",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "d6af0ec7-047c-479d-8988-3926c290d4dd",
+      "name" : "POP3pDetailMaterialPage.css",
+      "type" : "css",
+      "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "236b84a4-e922-4206-a9ac-9e21960c91b1",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "4d1be355-5478-479d-9657-4692559ec7f6",
+      "name" : "detectWhenUserQuite.js",
+      "type" : "js",
+      "order" : 5,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlDetailMaterial" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.materialId && $data.materialId.length>0){",
+        "    return \"../API/extension/pop3pclientSoap?method=getMaterialDetails&f=lyreNumber=\"+$data.materialId; ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedMaterial" : {
+      "type" : "url",
+      "value" : [
+        "{{ urlDetailMaterial }}"
+      ],
+      "exposed" : false
+    },
+    "askToOpenData" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "askToOpen" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.askToOpenData.length === 1){\r",
+        "// regarder detectWhenUserQuite.js pour les evenements de fermeture\r",
+        "\r",
+        "    window.top.close();\r",
+        "}\r",
+        "\r",
+        "\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "materialId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "materialId"
+      ],
+      "exposed" : false
+    },
+    "addToAskClose" : {
+      "type" : "json",
+      "value" : [
+        "{ \"close\" : \"true\" }\t"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "a767545d-399e-4b57-9f96-476a1177da0e",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

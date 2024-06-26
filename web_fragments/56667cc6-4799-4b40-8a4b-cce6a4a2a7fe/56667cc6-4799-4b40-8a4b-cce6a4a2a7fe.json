@@ -1,0 +1,214 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "56667cc6-4799-4b40-8a4b-cce6a4a2a7fe",
+  "name" : "selectGenreOld",
+  "lastUpdate" : 1671627914617,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "editGenre==false"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Genre du matériel"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listGenres"
+          },
+          "displayedKey" : {
+            "type" : "constant"
+          },
+          "returnedKey" : {
+            "type" : "constant"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedGenre"
+          }
+        },
+        "reference" : "cca9e865-4604-4f78-8471-2cb85886119a",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "!selectedGenre ||selectedGenre.length==0"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Sous-genre"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listSousGenres"
+          },
+          "displayedKey" : {
+            "type" : "constant"
+          },
+          "returnedKey" : {
+            "type" : "constant"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedSousGenre"
+          }
+        },
+        "reference" : "e43d929a-5372-4f18-a785-655902a67286",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "selectedGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listSousGenres" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.genresSousGenres[$data.selectedGenre]"
+      ],
+      "exposed" : false
+    },
+    "editGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listGenres" : {
+      "type" : "expression",
+      "value" : [
+        "return Object.keys($data.genresSousGenres)"
+      ],
+      "exposed" : false
+    },
+    "genresSousGenres" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "\t\"\":\"\",\r",
+        "\t\"ACC_CAM\": [\"BENNE_CAM\", \"BRAS\", \"CAMERA\", \"FOURCHES_CAM\", \"GOULOTTE\", \"LEVPAL\", \"PLATEAU\", \"PORTE_MADRIER\", \"PTE CONT\", \"RID\"],\r",
+        "\t\"ACC_CHAR\": [\"ANNEAU DE LEVAGE \", \"BALAYEUSE_ACC\", \"BAT\", \"BENNE\", \"CADRE\", \"CE_LEVAGE\", \"CHEV\", \"CROCHET\", \"ECARTEUR\", \"EPERON\", \"FOURCHES\", \"FOURREAUX\", \"GODET\", \"INVERSEUR\", \"LAME\", \"MEGABALAI\", \"PALONNIER\", \"PELLE\", \"PESAGE\", \"PESEE_EMBARQUE\", \"PIGNOLE\", \"PINCE A BORDURE\", \"PINCE A REGARDS\", \"PINCE A TUYAU\", \"PINCE_AUTRE\", \"PINCE_BUSE\", \"PLAFONNIER\", \"PLATEAU MOBILE\", \"POSITIONNEUR\", \"POTENCE\", \"PREHENSEUR\", \"RALLONGE DE FOURCHE\", \"REHAUSSE DE FOURCHE\", \"RETOURNEUR\", \"SABLEUSE\", \"SALEUSE\", \"STOP_CHUTE\", \"TDL\", \"TE_MANUTENTION\", \"TREMIE\"],\r",
+        "\t\"BAND\" : [\"BAND\"],\r",
+        "\t\"CAM\":[\"12T\",\"13T\",\"14T\",\"15T\",\"16T\",\"19T\",\"19T4*4\",\"19TBG\",\"19TBH\",\"26T\",\"26TBG\",\"32T\",\"34T\",\"38T\",\"7T5\",\"APP.CH.6X4\",\"APP.CH.8X4\",\"CHANTIER 6X4\",\"CHANTIER 8X4\",\"INTERMED.\",\"MALAX. 4X2\",\"MALAX. 6X4\",\"MALAX. 8X4\",\"ROUTIER 6X4\"],\r",
+        "\t\"CHAR\":[\"EMBARQUE\",\"FRONTAL\",\"GERBEUR\",\"LATERAL\",\"MANISCOPIQ\",\"MANISCOPIQUE\",\"MIXTE\",\"MULTIDIREC\",\"NACELLE\",\"PREP_CDE\",\"RETRACTAL\",\"TABLE\",\"TELESCOPIC\"],\r",
+        "\t\"CHAR_EMB\" : [\"CHAR_EMB\"],\r",
+        "\t\"CHAR_LAV\" : [\"ACC\",\"AUTOPRTE\",\"AUTOTRTE\",\"BALAYEUSE\"],\r",
+        "\t\"CHARGEUSE\" : [\"CHARGEUSE\"],\r",
+        "\t\"CTTE\":[\"3T500\",\"DERIVP\",\"FOURGON\",\"VASP\"],\r",
+        "\t\"ENGIN_CHANTIER\":[\"BRISE_ROCHE\",\"DUMPER\",\"FOREUSE\",\"PELLE-CHAINE\"],\r",
+        "\t\"GRUE\":[\"ELINGUES\",\"GRUE\"],\r",
+        "\t\"HAYON\" : [\"HAYON\"],\r",
+        "\t\"NACELLE\" : [\"CISEAUX\",\"MAT VERTICAL\"],\r",
+        "\t\"REM\" : [\"REMORQUE_LEG\",\"REMORQUE_LOURD\"],\r",
+        "\t\"RESM\" : [\"PORTENG\",\"REMORQUE\",\"SEMIREMOR\"],\r",
+        "\t\"TABLES_FIXES\" : [\"CIS\"],\r",
+        "\t\"TAPIS\" : [\"TAPIS\"],\r",
+        "\t\"TOUPIE\" : [\"TOUPIE\"],\r",
+        "\t\"TRANSPAL\" : [\"TRANSCISEAU\",\"TRANSPAL\"],\r",
+        "\t\"TRR\" : [\"19T_TRR\",\"26T_TRR\",\"TRACTEURS\",\"TRANSPALET\"],\r",
+        "\t\"VASP\" : [\"DERIVVP\"],\r",
+        "\t\"VP\" : [\"VP\"],\r",
+        "\t\"AUTR\" : [\"AUTRE\"]\r",
+        "}\r"
+      ],
+      "exposed" : false
+    },
+    "selectedSousGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

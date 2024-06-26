@@ -1,0 +1,34 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "alignment",
+      "name" : "alignment",
+      "type" : "choice",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "iconSize",
+      "name" : "iconSize",
+      "help" : "Taille en 'em'",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customLoadingSpinner",
+  "name" : "loadingSpinner",
+  "lastUpdate" : 1671627875408,
+  "template" : "@customLoadingSpinner.tpl.html",
+  "controller" : "@customLoadingSpinner.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

@@ -1,0 +1,195 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "FragmentCheckAuthorization",
+  "name" : "FragmentCheckAuthorization",
+  "lastUpdate" : 1671627885160,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "659de627-e2c0-4f7d-9ab3-995b0d55c445",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "authorizationCheckDone"
+                },
+                "alignment" : {
+                  "type" : "constant"
+                },
+                "iconSize" : {
+                  "type" : "constant"
+                }
+              },
+              "reference" : "db284bc8-d096-42bc-811b-d60a6a014f44",
+              "hasValidationError" : false,
+              "id" : "customLoadingSpinner"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "(isAuthorized === true) || (authorizationCheckDone == null)"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<font color='red'><span class=\"glyphicon glyphicon-info-sign\"></span> Ce compte utilisateur n'est pas autorisé à accéder à cette page. En cas d'anomalie, veuillez contacter votre administrateur technique."
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "8f73933b-7448-4d2a-8be4-ff2b876fc6fd",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "authorizationCheckDone" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "authorizedGroups" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "isAuthorized" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlCheckMemberships" : {
+      "type" : "expression",
+      "value" : [
+        "var url;",
+        "",
+        "if (($data.getSession) && (typeof $data.getSession.user_id !== \"undefined\")) {",
+        "    url = \"../API/identity/membership?p=0&c=10&f=user_id%3d\" + $data.getSession.user_id + \"&d=group_id\";",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "listMemberships" : {
+      "type" : "url",
+      "value" : [
+        "{{urlCheckMemberships}}"
+      ],
+      "exposed" : false
+    },
+    "setAuthorization" : {
+      "type" : "expression",
+      "value" : [
+        "if (($data.listMemberships) && (! $data.authorizationCheckDone)) {",
+        "    var is_authorized = false;",
+        "    var nb_memberships = $data.listMemberships.length;",
+        "    for (var i=0; i<nb_memberships; i++) {",
+        "        var one_membership = $data.listMemberships[i];",
+        "        var group_name = one_membership.group_id.name;",
+        "        if ($data.authorizedGroups.indexOf(group_name) >= 0) {",
+        "            is_authorized = true;",
+        "            break;",
+        "        }",
+        "    }",
+        "    ",
+        "    $data.isAuthorized = is_authorized;",
+        "    $data.authorizationCheckDone = true;   ",
+        "    ",
+        "    return is_authorized;",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

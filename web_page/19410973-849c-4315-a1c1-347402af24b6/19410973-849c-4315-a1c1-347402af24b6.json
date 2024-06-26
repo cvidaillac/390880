@@ -1,0 +1,568 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "19410973-849c-4315-a1c1-347402af24b6",
+  "name" : "ExportDataForm",
+  "lastUpdate" : 1671627882306,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "bg-primary"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Export records"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 4"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "a1ce1a29-9aca-46c4-91cc-15f915c99bf8",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Format du fichier d'export :"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "inline" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "LOVExportFormat"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "label"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "value"
+          },
+          "selectedValue" : {
+            "type" : "variable",
+            "value" : "formInput.contractOutputFormat"
+          }
+        },
+        "reference" : "9ae65459-9191-4aff-bffc-9abeabf03932",
+        "hasValidationError" : false,
+        "id" : "pbRadioButtons"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Enregistrements exportés :"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "inline" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "LOVRowsExported"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "label"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "value"
+          },
+          "selectedValue" : {
+            "type" : "variable",
+            "value" : "formInput.contractRowsExported"
+          }
+        },
+        "reference" : "449770b3-df58-495d-aa13-b7fa19590a2e",
+        "hasValidationError" : false,
+        "id" : "pbRadioButtons"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "text-danger"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "formSubmitError==null"
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Erreur: {{ formSubmitError }}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "289d4e74-3f39-4eff-ac94-7e2f2ade5fc0",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Cancel"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "right"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "warning"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Add to collection"
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataToSend" : {
+            "type" : "constant"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionToModify" : {
+            "type" : "variable",
+            "value" : "formSubmitSuccess"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "valueToAdd" : {
+            "type" : "constant",
+            "value" : "CANCEL"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "79961ed8-713e-4f59-a0dc-578146a0b686",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 6
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "success"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "Export"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : "formSubmitSuccess"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "formSubmitError"
+          }
+        },
+        "reference" : "5a4561e9-d32e-42aa-b739-4cf3a546a423",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "timeToWait" : {
+            "type" : "constant",
+            "value" : 1000
+          },
+          "submitButtonSuccessfulResponseValue" : {
+            "type" : "expression",
+            "value" : "formSubmitSuccess"
+          },
+          "numberOfRetries" : {
+            "type" : "constant",
+            "value" : 45
+          },
+          "bonitaWebAppName" : {
+            "type" : "constant",
+            "value" : "bonita"
+          },
+          "taskId" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "messageDisplayed" : {
+            "type" : "constant",
+            "value" : "Exporting records"
+          },
+          "closeDialogWindow" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "fallbackURL" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "noMoreTask" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "showProgress" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "showProgressProcessVariable" : {
+            "type" : "constant",
+            "value" : "progressMessage"
+          },
+          "progressVariableInChildProcess" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "37f21ddd-300b-4f55-b93a-8cdfb69bfb21",
+        "hasValidationError" : false,
+        "id" : "customRedirectNextTask"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "29035c21-37ab-465a-a90e-74b3b14a0f2b",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "pageCount" : {
+      "type" : "urlparameter",
+      "value" : [
+        "pageCount"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "  \"contractOutputFormat\" : \"ALL_FIELDS\",",
+        "  \"contractRowsExported\" : \"ALL\"",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "queryCriteria" : {
+      "type" : "urlparameter",
+      "value" : [
+        "queryCriteria"
+      ],
+      "exposed" : false
+    },
+    "LOVExportFormat" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {\"label\":\"Export de tous les champs\", \"value\":\"ALL_FIELDS\"}, ",
+        "    {\"label\": \"Export des champs de l'entête uniquement\", \"value\": \"HEADER_FIELDS\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "LOVRowsExported" : {
+      "type" : "json",
+      "value" : [
+        "[{\"label\": \"Tous les enregisrements du filtre courrant\", \"value\": \"ALL\"},",
+        "{\"label\": \"Uniquement les enregistrements de la page affichée\", \"value\": \"PAGE\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "pageSize" : {
+      "type" : "urlparameter",
+      "value" : [
+        "pageSize"
+      ],
+      "exposed" : false
+    },
+    "formSubmitSuccess" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formSubmitError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "\t'contractObjectName': decodeURIComponent($data.objectName),",
+        "\t'contractQueryName': decodeURIComponent($data.queryName),",
+        "\t'contractQueryCriteria': decodeURIComponent($data.queryCriteria),",
+        "\t 'contractPageCount' : $data.pageCount,",
+        "     'contractPageSize' : $data.pageSize,",
+        "\t'contractOutputFormat': $data.formInput.contractOutputFormat,",
+        "\t\"contractRowsExported\" : $data.formInput.contractRowsExported,",
+        "\t\"contractApplicationPage\": decodeURIComponent($data.applicationPage),",
+        "\t\"contractQueryListIds\" : [],",
+        "\t\"contractExportDataRows\" : []",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "objectName" : {
+      "type" : "urlparameter",
+      "value" : [
+        "objectName"
+      ],
+      "exposed" : false
+    },
+    "queryName" : {
+      "type" : "urlparameter",
+      "value" : [
+        "queryName"
+      ],
+      "exposed" : false
+    },
+    "applicationPage" : {
+      "type" : "urlparameter",
+      "value" : [
+        "applicationPage"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "19410973-849c-4315-a1c1-347402af24b6",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

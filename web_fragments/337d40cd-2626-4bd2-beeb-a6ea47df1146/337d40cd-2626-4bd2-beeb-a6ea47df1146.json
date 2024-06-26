@@ -1,0 +1,219 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "337d40cd-2626-4bd2-beeb-a6ea47df1146",
+  "name" : "fragInfoRequested",
+  "lastUpdate" : 1671627890480,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "bc81aada-1a6e-455f-ba54-80f5563372bb",
+        "hasValidationError" : false,
+        "id" : "0abf7199-360e-47e1-aa75-ef64b002da21",
+        "binding" : {
+          "proposition" : "proposition"
+        }
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "7b0dbbc6-57f9-4547-a990-7db8ed52905d",
+        "hasValidationError" : false,
+        "id" : "2c88607c-2f92-441f-b733-5ef1b0713fda",
+        "binding" : {
+          "proposition" : "proposition",
+          "listMaterials" : "",
+          "index" : "",
+          "selectedAgency" : "selectedAgency",
+          "codeWorkflow" : "codeWorkflow",
+          "disableFields" : "disableFields",
+          "hideFields" : "hideFields",
+          "invalidAmounts" : ""
+        }
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listeMotifsExisting" : {
+      "type" : "expression",
+      "value" : [
+        "return [\r",
+        "    {\"val\":\"Rachat LocFi\",\"disp\":\"Rachat LocFi\"}, \r",
+        "    {\"val\":\"A renouveler\",\"disp\":\"A renouveler\"},\r",
+        "    {\"val\":\"A vendre\",\"disp\":\"A vendre\"},\r",
+        "    {\"val\":\"A restituer\",\"disp\":\"A restituer\"},\r",
+        "    {\"val\":\"A rebuter\",\"disp\":\"A rebuter\"},\r",
+        "    {\"val\":\"Transfert\",\"disp\":\"Transfert\"},\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listeBudgetRespected" : {
+      "type" : "json",
+      "value" : [
+        " [\r",
+        "     {\"val\":true,\"disp\":\"Budget\"},\r",
+        "     {\"val\":false,\"disp\":\"Hors budget\"}\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "isExisting" : {
+      "type" : "json",
+      "value" : [
+        " [\r",
+        "     {\"val\":\"existingMaterial\",\"disp\":\"existant\"},\r",
+        "     {\"val\":\"newMaterial\",\"disp\":\"nouveau\"}\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "hideFields" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "disableFields" : {
+      "type" : "json",
+      "value" : [
+        "{\"typeProposition\" : true}"
+      ],
+      "exposed" : false
+    },
+    "codeWorkflow" : {
+      "type" : "expression",
+      "value" : [
+        "return ($data.proposition && $data.proposition.typeWorkflow) ? $data.proposition.typeWorkflow : \"\";"
+      ],
+      "exposed" : false
+    },
+    "listTypesAcquisition" : {
+      "type" : "expression",
+      "value" : [
+        "var result  = ",
+        "\t\t[",
+        "\t\t\"A définir\",",
+        "\t\t\"Comptant\", ",
+        "\t\t\"Location Financière\",",
+        "\t\t\"Location Longue Durée\",",
+        "\t\t\"Location Longue Durée Avec Chauffeur\",",
+        "\t\t\"Crédit-Bail\"",
+        "\t\t]",
+        "",
+        "",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listeMotifsNew" : {
+      "type" : "expression",
+      "value" : [
+        "return [\r",
+        "    {\"val\":\"Nouveau matériel\",\"disp\":\"Nouveau matériel\"},\r",
+        "    {\"val\":\"Nouvel équipement\",\"disp\":\"Nouvel équipement\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 10; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

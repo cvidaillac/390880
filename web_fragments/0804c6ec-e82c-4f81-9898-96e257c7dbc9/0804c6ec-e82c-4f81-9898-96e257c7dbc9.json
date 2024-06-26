@@ -1,0 +1,134 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "0804c6ec-e82c-4f81-9898-96e257c7dbc9",
+  "name" : "setTypeAcquisitionFrag",
+  "lastUpdate" : 1671627913605,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "acquisitionEmpty"
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Type d'acquisition"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "getListTypes"
+          },
+          "displayedKey" : {
+            "type" : "constant"
+          },
+          "returnedKey" : {
+            "type" : "constant"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "typeAcquisition"
+          }
+        },
+        "reference" : "53244f25-ae4a-4046-abb7-ca9725f780a0",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "acquisitionEmpty" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.typeProposition == \"A vendre\" ",
+        "    || $data.typeProposition == \"A restituer\" ",
+        "    || $data.typeProposition == \"A rebuter\" ",
+        "    ){",
+        "    return true",
+        "}else{",
+        "    return false",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "typeProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "motifProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "typeAcquisition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getListTypes" : {
+      "type" : "expression",
+      "value" : [
+        "var result = []\r",
+        "if ($data.motifProposition !== \"existingMaterial\" || $data.typeProposition ==\"A renouveler\" || $data.typeProposition ==\"Transfert\"){\r",
+        "\tresult = [\"A définir\",\"Comptant\", \"LocFi\",\"LLD\",\"LLDAC\",\"Crédit-Bail\"];\r",
+        "}else if ($data.typeProposition ==\"Rachat LocFi\"){\r",
+        "\t$data.typeAcquisition = \"Comptant\"\r",
+        "\tresult =[\"Comptant\"];\r",
+        "}else {\r",
+        "\t$data.typeAcquisition = \"\"\r",
+        "\tresult =[];\r",
+        "}\r",
+        "\r",
+        "return result"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

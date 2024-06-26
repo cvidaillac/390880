@@ -1,0 +1,328 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "4f433e79-e11c-4a67-b275-7100ec3825c1",
+  "name" : "selectGenre",
+  "lastUpdate" : 1671627886664,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "editGenre==false"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Genre du matériel"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listGenres"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "label"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "key"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedGenreKey"
+          }
+        },
+        "reference" : "f602f535-53d7-49c9-b659-09f51b1486f1",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "(disableSSGenre) || !selectedGenre ||selectedGenre.length==0"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Sous-genre"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listSousGenres"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "label"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "key"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedSousGenreKey"
+          }
+        },
+        "reference" : "c949dd82-64e1-429e-a4d0-a621bee969ab",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "selectedGenreKey" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getSelectedMateriel[0].genreID;"
+      ],
+      "exposed" : false
+    },
+    "selectedSousGenreName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "materielNumber" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "genresSousGenresWithLabel" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/materialTypeFamilies"
+      ],
+      "exposed" : false
+    },
+    "genresSousGenres" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "\t\"\":\"\",\r",
+        "\t\"ACC_CAM\": [\"BENNE_CAM\", \"BRAS\", \"CAMERA\", \"FOURCHES_CAM\", \"GOULOTTE\", \"LEVPAL\", \"PLATEAU\", \"PORTE_MADRIER\", \"PTE CONT\", \"RID\"],\r",
+        "\t\"ACC_CHAR\": [\"ANNEAU DE LEVAGE \", \"BALAYEUSE_ACC\", \"BAT\", \"BENNE\", \"CADRE\", \"CE_LEVAGE\", \"CHEV\", \"CROCHET\", \"ECARTEUR\", \"EPERON\", \"FOURCHES\", \"FOURREAUX\", \"GODET\", \"INVERSEUR\", \"LAME\", \"MEGABALAI\", \"PALONNIER\", \"PELLE\", \"PESAGE\", \"PESEE_EMBARQUE\", \"PIGNOLE\", \"PINCE A BORDURE\", \"PINCE A REGARDS\", \"PINCE A TUYAU\", \"PINCE_AUTRE\", \"PINCE_BUSE\", \"PLAFONNIER\", \"PLATEAU MOBILE\", \"POSITIONNEUR\", \"POTENCE\", \"PREHENSEUR\", \"RALLONGE DE FOURCHE\", \"REHAUSSE DE FOURCHE\", \"RETOURNEUR\", \"SABLEUSE\", \"SALEUSE\", \"STOP_CHUTE\", \"TDL\", \"TE_MANUTENTION\", \"TREMIE\"],\r",
+        "\t\"BAND\" : [\"BAND\"],\r",
+        "\t\"CAM\":[\"12T\",\"13T\",\"14T\",\"15T\",\"16T\",\"19T\",\"19T4*4\",\"19TBG\",\"19TBH\",\"26T\",\"26TBG\",\"32T\",\"34T\",\"38T\",\"7T5\",\"APP.CH.6X4\",\"APP.CH.8X4\",\"CHANTIER 6X4\",\"CHANTIER 8X4\",\"INTERMED.\",\"MALAX. 4X2\",\"MALAX. 6X4\",\"MALAX. 8X4\",\"ROUTIER 6X4\"],\r",
+        "\t\"CHAR\":[\"EMBARQUE\",\"FRONTAL\",\"GERBEUR\",\"LATERAL\",\"MANISCOPIQ\",\"MANISCOPIQUE\",\"MIXTE\",\"MULTIDIREC\",\"NACELLE\",\"PREP_CDE\",\"RETRACTAL\",\"TABLE\",\"TELESCOPIC\"],\r",
+        "\t\"CHAR_EMB\" : [\"CHAR_EMB\"],\r",
+        "\t\"CHAR_LAV\" : [\"ACC\",\"AUTOPRTE\",\"AUTOTRTE\",\"BALAYEUSE\"],\r",
+        "\t\"CHARGEUSE\" : [\"CHARGEUSE\"],\r",
+        "\t\"CTTE\":[\"3T500\",\"DERIVP\",\"FOURGON\",\"VASP\"],\r",
+        "\t\"ENGIN_CHANTIER\":[\"BRISE_ROCHE\",\"DUMPER\",\"FOREUSE\",\"PELLE-CHAINE\"],\r",
+        "\t\"GRUE\":[\"ELINGUES\",\"GRUE\"],\r",
+        "\t\"HAYON\" : [\"HAYON\"],\r",
+        "\t\"NACELLE\" : [\"CISEAUX\",\"MAT VERTICAL\"],\r",
+        "\t\"REM\" : [\"REMORQUE_LEG\",\"REMORQUE_LOURD\"],\r",
+        "\t\"RESM\" : [\"PORTENG\",\"REMORQUE\",\"SEMIREMOR\"],\r",
+        "\t\"TABLES_FIXES\" : [\"CIS\"],\r",
+        "\t\"TAPIS\" : [\"TAPIS\"],\r",
+        "\t\"TOUPIE\" : [\"TOUPIE\"],\r",
+        "\t\"TRANSPAL\" : [\"TRANSCISEAU\",\"TRANSPAL\"],\r",
+        "\t\"TRR\" : [\"19T_TRR\",\"26T_TRR\",\"TRACTEURS\",\"TRANSPALET\"],\r",
+        "\t\"VASP\" : [\"DERIVVP\"],\r",
+        "\t\"VP\" : [\"VP\"],\r",
+        "\t\"AUTR\" : [\"AUTRE\"]\r",
+        "}\r"
+      ],
+      "exposed" : false
+    },
+    "selectedSousGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedGenreName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listSousGenres" : {
+      "type" : "expression",
+      "value" : [
+        "var i;",
+        "var listSousgenre = [];",
+        "for (i in $data.genresSousGenresWithLabel.data) {",
+        "    if ($data.genresSousGenresWithLabel.data[i].key === $data.selectedGenre) {",
+        "        return angular.copy($data.genresSousGenresWithLabel.data[i].ssG);",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "editGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setResultSousGenre" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.listSousGenres !== undefined) {",
+        "    for(var i = 0 ; i < $data.listSousGenres.length ; i++ ) {",
+        "        var findSousGenre = false;",
+        "        if($data.listSousGenres[i].key === $data.selectedSousGenreKey) {",
+        "            $data.selectedSousGenreName = $data.listSousGenres[i].label;",
+        "            $data.selectedSousGenre = $data.selectedSousGenreKey;",
+        "            $data.selectedFamille = $data.listSousGenres[i].famille;",
+        "            findSousGenre = true;",
+        "            break;",
+        "        }",
+        "        if(!findSousGenre) {",
+        "           $data.selectedSousGenreName = null;",
+        "            $data.selectedFamille = \"AUTRE\";",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedFamille" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedSousGenreKey" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getSelectedMateriel[0].ssGenreID;"
+      ],
+      "exposed" : false
+    },
+    "setResultGenre" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.listGenres !== undefined) {",
+        "    for(var i = 0 ; i < $data.listGenres.length ; i++ ) {",
+        "        var findGenre = false;",
+        "        if($data.listGenres[i].key === $data.selectedGenre) {",
+        "            $data.selectedGenreName = $data.listGenres[i].label;",
+        "            findGenre = true;",
+        "            break;",
+        "        }",
+        "        if(!findGenre) {",
+        "           $data.selectedGenreName = null;",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listGenres" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.genresSousGenresWithLabel.data;"
+      ],
+      "exposed" : false
+    },
+    "disableSSGenre" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getSelectedMateriel" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/pop3pclientSoap?method=getMaterialDetails&f=lyreNumber={{materielNumber}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

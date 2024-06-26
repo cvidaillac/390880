@@ -1,0 +1,505 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "8454f05e-85e7-4464-a3a1-27c224300744",
+  "name" : "PropositionForm",
+  "lastUpdate" : 1671627896339,
+  "rows" : [
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "c8981a67-33f7-41a6-acbe-5d7a8421c93c",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "7268a195-b47a-4afa-89a0-3ca8262993e8",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "fragment",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "54228303-1782-4b55-818b-2a15016193e0",
+                "hasValidationError" : false,
+                "id" : "ac197fac-ccc7-4f45-9fab-66746024d748",
+                "binding" : {
+                  "session" : "getSession",
+                  "selectedTerritory" : "selectedTerritory",
+                  "selectedAgency" : "selectedAgency",
+                  "formInput" : "formInput",
+                  "formOutput" : "formOutput",
+                  "existingProp" : "existingPropParam",
+                  "selectedTerritoryName" : "selectedTerritoryName",
+                  "selectedAgencyName" : "selectedAgencyName",
+                  "selectedEntityCode" : "selectedEntityCode",
+                  "selectedAgencyLabel" : "selectedAgencyLabel"
+                }
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 6,
+                  "sm" : 6,
+                  "xs" : 12,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "widgetId" : {
+                    "type" : "constant",
+                    "value" : "pbButton"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "isDisplayed" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "constant",
+                    "value" : "Enregistrer en mode brouillon"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readonly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita/apps/pop3p"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Start process"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid || formOutput.propositionsInput.length ==0"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "class" : {
+                    "type" : "constant",
+                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "aed3ac36-72e6-41f6-9d1c-a6bc9c0611c7",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 6,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Annuler"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "page"
+                  },
+                  "targetUrl" : {
+                    "type" : "expression",
+                    "value" : "windowsLoc"
+                  },
+                  "pageToken" : {
+                    "type" : "constant",
+                    "value" : "homePage"
+                  },
+                  "processName" : {
+                    "type" : "constant"
+                  },
+                  "processVersion" : {
+                    "type" : "constant"
+                  },
+                  "taskId" : {
+                    "type" : "constant"
+                  },
+                  "caseId" : {
+                    "type" : "constant"
+                  },
+                  "target" : {
+                    "type" : "constant",
+                    "value" : "_blank"
+                  },
+                  "appToken" : {
+                    "type" : "constant"
+                  },
+                  "urlParams" : {
+                    "type" : "constant"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "danger"
+                  }
+                },
+                "reference" : "e585a09b-1f20-4b3c-8b7e-83e391f606cf",
+                "hasValidationError" : false,
+                "id" : "pbLink"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "4f586298-26e4-408d-8046-94a84aca7852",
+      "name" : "POP3pDetailMaterialPage.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "71352c8f-4623-497b-99f5-8850683ccd1a",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "f660e987-0ce4-429e-8c08-144e6bb1c59d",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "898a1e0e-5dc4-480e-a795-cb48db87415f",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "var result= {\r",
+        "\t'propositionsInput': []\r",
+        "};\r",
+        "\r",
+        "var territoryName = \"\";\r",
+        "if ($data.uniqueTerritoryName) {\r",
+        "    territoryName = decodeURIComponent(($data.uniqueTerritoryName+'').replace(/\\+/g, '%20'));\r",
+        "} else {\r",
+        "    territoryName = $data.selectedTerritory.name;\r",
+        "}\r",
+        "\r",
+        "if ($data.materialIdParam &&  $data.selectedAgency && $data.selectedTerritory){\r",
+        "    result.propositionsInput.push(\r",
+        "            {\"materialNumber\": $data.materialIdParam,\r",
+        "            \"existing\": \"existingMaterial\",\r",
+        "            \"agencyCode\": $data.selectedAgency,\r",
+        "            \"agencyName\" : decodeURIComponent(($data.uniqueAgencyName+'').replace(/\\+/g, '%20')),\r",
+        "            \"territoryCode\": $data.selectedTerritory.code,\r",
+        "            \"territoryName\" : territoryName,\r",
+        "            \"commentSmart\":\"\",\r",
+        "            \"userCommentOptional\":\"\",\r",
+        "            \"existingProp\":true,\r",
+        "            \"pitchSmart\":\"\"     // CFR 10/12/2020 - Added new field\r",
+        "            }\r",
+        "        )\r",
+        "}else {\r",
+        "     result.propositionsInput.push(\r",
+        "            {\r",
+        "            \"commentSmart\":\"\",\r",
+        "            \"userCommentOptional\":\"\",\r",
+        "            \"pitchSmart\":\"\"     // CFR 10/12/2020 - Added new field\r",
+        "            }\r",
+        "        )\r",
+        "}\r",
+        "\r",
+        "return \tresult;"
+      ],
+      "exposed" : false
+    },
+    "selectedAgencyName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "materialIdParam" : {
+      "type" : "urlparameter",
+      "value" : [
+        "materialId"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "urlparameter",
+      "value" : [
+        "selectedTerritory"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "windowsLoc" : {
+      "type" : "expression",
+      "value" : [
+        "return window.location.pathname;"
+      ],
+      "exposed" : false
+    },
+    "isInitForm" : {
+      "type" : "expression",
+      "value" : [
+        "return true;"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "urlparameter",
+      "value" : [
+        "selectedAgency"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var listPropositions = $data.formInput.propositionsInput",
+        "if (listPropositions !== undefined && listPropositions.length>0){",
+        "    for (var i = 0; i < listPropositions.length; i++) {",
+        "        if (listPropositions[i].typeMaterial === undefined){",
+        "              listPropositions[i].typeMaterial =  \"\"",
+        "        }",
+        "        if (listPropositions[i].existing === \"newMaterial\"){",
+        "              listPropositions[i].materialNumber =  \"\"",
+        "        }",
+        "        if (listPropositions[i].agencyName === undefined ",
+        "            && $data.uniqueAgencyName.length>0){",
+        "              listPropositions[i].agencyName = $data.uniqueAgencyName.replace(/\\+/, \" \")",
+        "        }",
+        "        if (listPropositions[i].territoryName === undefined ",
+        "            && $data.uniqueTerritoryName.length>0){",
+        "              listPropositions[i].territoryName = $data.uniqueTerritoryName.replace(/\\+/, \" \")",
+        "        }",
+        "        ",
+        "        // CFR 10/12/2020 - Add new field requestSource",
+        "        listPropositions[i].requestSource = 'B';",
+        "        ",
+        "        // CFR 23/08/2021 - Add new contract field existingAttachments",
+        "        listPropositions[i].existingAttachments = [];",
+        "    }",
+        "}",
+        "",
+        "",
+        "return {",
+        "\t'propositionsInput': listPropositions",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "uniqueAgencyName" : {
+      "type" : "urlparameter",
+      "value" : [
+        "uniqueAgencyName"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "existingPropParam" : {
+      "type" : "urlparameter",
+      "value" : [
+        "existingProp"
+      ],
+      "exposed" : false
+    },
+    "uniqueTerritoryName" : {
+      "type" : "urlparameter",
+      "value" : [
+        "uniqueTerritoryName"
+      ],
+      "exposed" : false
+    },
+    "selectedEntityCode" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlGetAgencies" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedTerritory){\r",
+        "    return \"../API/extension/lyreClient?method=getTerritoryAgencies&territoryId=\"+$data.selectedTerritory;\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listAgenciesByTerritory" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetAgencies}}"
+      ],
+      "exposed" : false
+    },
+    "setEntityCode" : {
+      "type" : "expression",
+      "value" : [
+        "try {",
+        "    if (($data.listAgenciesByTerritory !== undefined)",
+        "        && ($data.selectedAgency !== undefined)",
+        "        && Array.isArray($data.listAgenciesByTerritory)",
+        "        && ($data.listAgenciesByTerritory.length > 0)",
+        "        && ($data.selectedEntityCode==null)) {",
+        "        console.log(\"Checking agency \" + $data.selectedAgency + \" against \" + $data.listAgenciesByTerritory.length + \" territoty agencies\");",
+        "        var findAgency = false;",
+        "        for(var i = 0 ; i < $data.listAgenciesByTerritory.length ; i++ ) {",
+        "            var one_agence = $data.listAgenciesByTerritory[i];",
+        "            if (one_agence.agencyCode == $data.selectedAgency) {",
+        "                $data.selectedAgencyName = one_agence.agencyName;",
+        "                if (typeof one_agence.entityCode !== 'undefined') {",
+        "                    console.log(\"Agency is \" + $data.selectedAgency + \" with entity \" + one_agence.entityCode);",
+        "                    $data.selectedEntityCode = one_agence.entityCode;",
+        "                }",
+        "                if (typeof one_agence.entityName !== 'undefined') {",
+        "                    $data.selectedEntityName = one_agence.entityName;",
+        "                }",
+        "                findAgency = true;",
+        "                break;",
+        "            }",
+        "        }",
+        "        return findAgency;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception setEntityCodet: \" + e);",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedAgencyLabel" : {
+      "type" : "expression",
+      "value" : [
+        "var agency_label = $data.selectedAgency;",
+        "",
+        "try {",
+        "    if ((typeof $data.selectedAgencyName !== \"undefined\")",
+        "        && ($data.selectedAgencyName != null)",
+        "        && ($data.selectedAgencyName != \"\")) {",
+        "            agency_label = $data.selectedAgencyName + \" - \" + agency_label;",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error(\"Exception selectedAgencyLabel: \" + e);",
+        "}",
+        "",
+        "return agency_label;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "8454f05e-85e7-4464-a3a1-27c224300744",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

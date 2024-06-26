@@ -1,0 +1,230 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "8d760923-81bf-40c7-8c02-0e447fd82543",
+  "name" : "BudgetProposalsTable",
+  "lastUpdate" : 1671627896551,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! formatedResult"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "f4c2ae9b-cd38-4cd8-8258-02db3cd6233d",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "data" : {
+                  "type" : "expression",
+                  "value" : "formatedResult"
+                },
+                "theme" : {
+                  "type" : "constant",
+                  "value" : "black"
+                },
+                "toolbar" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Class"
+                  ]
+                },
+                "fields" : {
+                  "type" : "expression",
+                  "value" : "fields"
+                },
+                "rows" : {
+                  "type" : "expression",
+                  "value" : "rows"
+                },
+                "columns" : {
+                  "type" : "constant"
+                },
+                "columnData" : {
+                  "type" : "constant"
+                }
+              },
+              "reference" : "6b513938-2418-45c0-bb76-b09ecab52f8e",
+              "hasValidationError" : false,
+              "id" : "customPivotTable"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "propositionsList : <pre>{{propositionsList|json}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "811affa4-6763-4846-bbaf-3194b5c4e4d3",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "13cd6749-8e6a-493e-9600-99243888ead6",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "6d4121ba-d469-49dc-81f9-4d5b618435be",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formatedResult" : {
+      "type" : "expression",
+      "value" : [
+        "var result=[]",
+        "",
+        "if ($data.propositionsList !== undefined",
+        "    && $data.propositionsList.length>0){",
+        "    for (var i=0; i<$data.propositionsList.length; i++){",
+        "          console.log(\"Traitement de chaque proposition\")",
+        "          var currentProp = $data.propositionsList[i];",
+        "          var formatedLine = []",
+        "          formatedLine.push(\"\"+currentProp.budgetYear)",
+        "          formatedLine.push(currentProp.territoryName)",
+        "          formatedLine.push(currentProp.sectorName)",
+        "          formatedLine.push(currentProp.siteName)",
+        "          formatedLine.push(currentProp.agencyName)",
+        "          formatedLine.push(currentProp.propositionAmount)",
+        "          ",
+        "          result.push(formatedLine)",
+        "    }",
+        "    ",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    },
+    "fields" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    { \"name\": \"0\", \"caption\": \"Année\" },\r",
+        "    { \"name\": \"1\", \"caption\": \"Territoire\" },\r",
+        "    { \"name\": \"2\", \"caption\": \"Secteur\" },\r",
+        "    { \"name\": \"3\", \"caption\": \"Site\" },\r",
+        "    { \"name\": \"4\", \"caption\": \"Agence\" },\r",
+        "    {\r",
+        "        \"name\": \"5\",\r",
+        "        \"caption\": \"Amount\",\r",
+        "        \"dataSettings\": {\r",
+        "              \"aggregateFunc\": \"sum\"\r",
+        "        }\r",
+        "    }\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "rows" : {
+      "type" : "json",
+      "value" : [
+        "[ \"Année\", \"Territoire\",\"Secteur\", \"Site\", \"Agence\"]"
+      ],
+      "exposed" : false
+    },
+    "propositionsList" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.sgdbf.model.Proposition?q=find&p=0&c=100"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "8d760923-81bf-40c7-8c02-0e447fd82543",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

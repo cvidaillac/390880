@@ -1,0 +1,766 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "32555053-f1bd-4265-980c-63e0efd4ce1f",
+  "name" : "fragMaterialDetail",
+  "lastUpdate" : 1671627876206,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!urlGetMaterial || (selectedMaterial && selectedMaterial[0] && selectedMaterial[0].hasOwnProperty('lyreNumber'))"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "iconSize" : {
+            "type" : "constant",
+            "value" : "2"
+          }
+        },
+        "reference" : "f8047d95-82c1-4612-a882-d70ffa2ebd2f",
+        "hasValidationError" : false,
+        "id" : "customLoadingSpinner"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "materialPanel"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! selectedMaterial[0].hasOwnProperty('lyreNumber');"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "0ceedcb4-e469-4f7e-a0c0-fb8789642ab0",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "print-only proposition-style"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Détail du matériel"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "70a32a41-edd3-4104-85c7-6152e80ad735",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<table>\n    <tr>\n        <td><p>Genre : </p></td>\n        <td><p><b>{{selectedMaterial[0].genreLabel}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Sous-genre : &nbsp</p></td>\n        <td><p><b>{{selectedMaterial[0].ssGenreLabel}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Marque : </p></td>\n        <td><p><b>{{selectedMaterial[0].marqueID}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Modèle : </p></td>\n        <td><p><b>{{selectedMaterial[0].modelName}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Carosserie : &nbsp</p></td>\n        <td><p><b>{{selectedMaterial[0].carrosserie}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>PTAC : </p></td>\n        <td><p><b>{{selectedMaterial[0].cg.PTAC}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Energie : </p></td>\n        <td><p><b>{{energyLibelleAndCode}}</b></p></td>\n    </tr>\n<tr>\n        <td><p>Biocarburant: </p></td>\n        <td><p><b>{{biofuelDetails}}</b></p></td>\n    </tr>\n<tr>\n        <td><p>Retrofitable: </p></td>\n        <td><p><b>{{retrofitDetails}}</b></p></td>\n    </tr>\n</table>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "8a5f1d72-4d5b-40b0-9edd-265169241b96",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<table>\n    <tr>\n        <td><p>Immatriculation : </p></td>\n        <td><p><b>{{selectedMaterial[0].plateNumber}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Date 1ère mise en circulation : &nbsp</p></td>\n        <td><p><b>{{selectedMaterial[0].dtMisc| date : \"dd/MM/yyyy\"}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Date d'entrée : </p></td>\n        <td><p><b>{{selectedMaterial[0].entryDate}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Heures / Kilomètres : </p></td>\n        <td><p><b>{{selectedMaterial[0].derRelev}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Date dernier relevé : </p></td>\n        <td><p><b>{{selectedMaterial[0].dtDerRelev | date : \"dd/MM/yyyy\"}}</b></p></td>\n    </tr>\n  <tr>\n        <td><p>Agence de localisation : </p></td>\n        <td><p><b>{{getAgencyLocation}}</b></p></td>\n    </tr>\n<tr>\n        <td><p>ZFE: </p></td>\n        <td><p><b>{{zfeDetails}}</b></p></td>\n    </tr>\n<tr>\n        <td><p>Crit'Air: </p></td>\n        <td><p><b>{{critairDetails}}</b></p></td>\n    </tr>\n\n</table>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "16bf0567-b962-4809-aca8-36cb543a02f0",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<table>\n    <tr>\n        <td><p>Type d'achat : </p></td>\n        <td><p><b>{{selectedMaterial[0].contratacqui.typeAcqui}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Date fin contrat : </p></td>\n        <td><p><b>{{selectedMaterial[0].contratacqui.dtFinContrat}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Fournisseur : </p></td>\n        <td><p><b>{{selectedMaterial[0].contratacqui.nomTiersFinanceur}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Type de contrat d'entretien : </p></td>\n        <td><p><b>{{selectedMaterial[0].contratmaint.contratType }}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Nom du tiers : </p></td>\n        <td><p><b>{{selectedMaterial[0].contratmaint.nomTiers }}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Valeur en fin de LocFi : </p></td>\n        <td><p><b>{{selectedMaterial[0].valeurFinLOCFI_str }}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Cumul coûts contrat : </p></td>\n        <td><p><b>{{selectedMaterial[0].cumulCtsContrats_str}}</b></p></td>\n    </tr>\n    <tr>\n        <td><p>Cumul coûts hors-contrat : &nbsp</p></td>\n        <td><p><b>{{selectedMaterial[0].cumulCtsHorsContrats_str}}</b></p></td>\n\n    </tr>\n</table>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "02ae200f-6c10-45c3-8728-2f9f4fc5bcba",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "fd6f361c-7cdc-4822-ad51-6ffe3357d900",
+              "hasValidationError" : false,
+              "id" : "7aa274b7-3318-42b0-98d9-e6b1d22e16a1",
+              "binding" : {
+                "keyEnergie" : "selectedMaterial[0].caracteristiques.ENERGIE",
+                "ValueEnergie" : "selectedMaterial[0].caracteristiques.ValueEnergie",
+                "keyGenre" : "selectedMaterial[0].genreID",
+                "valueGenre" : "selectedMaterial[0].genreLabel",
+                "keySSGenre" : "selectedMaterial[0].ssGenreID",
+                "valueSSGenre" : "selectedMaterial[0].ssGenreLabel"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Afficher plus de détail"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "success"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "Add to collection"
+                },
+                "url" : {
+                  "type" : "interpolation"
+                },
+                "dataToSend" : {
+                  "type" : "constant"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable"
+                },
+                "dataFromError" : {
+                  "type" : "variable"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "collectionToModify" : {
+                  "type" : "variable",
+                  "value" : "askCollToOpenNewWindow"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "expression",
+                  "value" : "addToAskClose"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                },
+                "assign" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "responseStatusCode" : {
+                  "type" : "variable"
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : ""
+                }
+              },
+              "reference" : "9cef75d1-44fb-41bd-9459-5ba412fa24ab",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "convertCurrencyToTexte" : {
+      "type" : "expression",
+      "value" : [
+        "var returnText = function test(dataInput) {\r",
+        "\r",
+        "    var string = dataInput;\r",
+        "    var stringFrance = string.replace(\",\",\".\");\r",
+        "    var number = parseFloat(stringFrance);\r",
+        "    var numberRound = number.toFixed(2);\r",
+        "    var currency = numberRound.toString().replace(\".\",\",\");\r",
+        "    var space = currency.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \" \");\r",
+        "    var euro = \" €\";\r",
+        "    var result = space + euro;\r",
+        "\r",
+        "    return result;\r",
+        "}\r",
+        "\r",
+        "return returnText;"
+      ],
+      "exposed" : false
+    },
+    "convertValues" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedMaterial && $data.selectedMaterial.length > 0) {\r",
+        "    $data.selectedMaterial[0].cumulCtsContrats_str = ($data.selectedMaterial[0].cumulCtsContrats) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].cumulCtsContrats) : \"\";\r",
+        "    $data.selectedMaterial[0].cumulCtsHorsContrats_str = ($data.selectedMaterial[0].cumulCtsHorsContrats) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].cumulCtsHorsContrats) : \"\";\r",
+        "    $data.selectedMaterial[0].valeurFinLOCFI_str = ($data.selectedMaterial[0].valeurFinLOCFI) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].valeurFinLOCFI) : \"\";\r",
+        "\r",
+        "    $data.dataToSend = {};\r",
+        "    $data.dataToSend.valeurFinLOCFI = parseFloat($data.selectedMaterial[0].valeurFinLOCFI.replace(',', '.'));\r",
+        "\r",
+        "    // acquisition + maintenance + conducteur \r",
+        "    var monthlyAmount = 0.0;\r",
+        "\r",
+        "    // maintenance\r",
+        "    if ($data.selectedMaterial[0].contratmaint && $data.selectedMaterial[0].contratmaint.montantMens)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratmaint.montantMens.replace(',', '.'));\r",
+        "\r",
+        "    // conducteur\r",
+        "    if ($data.selectedMaterial[0].contratacqui && $data.selectedMaterial[0].contratacqui.montantMensCond)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratacqui.montantMensCond.replace(',', '.'));\r",
+        "\r",
+        "    // maintenance + conducteur \r",
+        "    var monthlyPropositionAmount = monthlyAmount;\r",
+        "\r",
+        "    //acquisition\r",
+        "    if ($data.selectedMaterial[0].contratacqui && $data.selectedMaterial[0].contratacqui.montantMens)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratacqui.montantMens.replace(',', '.'));\r",
+        "\r",
+        "\r",
+        "    $data.dataToSend.monthlyAmount = parseFloat(monthlyAmount.toFixed(2));\r",
+        "    $data.dataToSend.monthlyPropositionAmount = parseFloat(monthlyPropositionAmount.toFixed(2));\r",
+        "\r",
+        "    // CFR 07/10/2021 : return material displayed\r",
+        "    $data.isMaterialDisplayed = true;\r",
+        "    \r",
+        "    // BPM-807 : Return energy fields to be stored on Proposition\r",
+        "    $data.dataToSend.currentEnergyCode = $data.selectedMaterial[0].caracteristiques.ENERGIE;\r",
+        "    $data.dataToSend.currentEnergyName = $data.selectedMaterial[0].caracteristiques.ValueEnergie;\r",
+        "    $data.dataToSend.currentBiofuelB100 = $data.selectedMaterial[0].b100;\r",
+        "    $data.dataToSend.currentBiofuelXTL = $data.selectedMaterial[0].xtl;\r",
+        "    $data.dataToSend.currentRetrofitable = $data.selectedMaterial[0].retrofitB100;\r",
+        "    \r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "materielType" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "askToOpenPopUpData" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "askToOpenPopUpDataEmpty" : {
+      "type" : "expression",
+      "value" : [
+        "return ($data.askToOpenPopUpData.length === 0);"
+      ],
+      "exposed" : false
+    },
+    "setGenre" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedMaterial && $data.selectedMaterial[0] && $data.selectedMaterial[0].hasOwnProperty('lyreNumber') && $data.once === \"false\"){",
+        "    $data.materielType = $data.selectedMaterial[0].genreID",
+        "    $data.oldMaterialID = $data.materialId",
+        "",
+        "    // If the sub Gender is already set, does not override him",
+        "    if (typeof $data.materielSubType === \"undefined\" ||  $data.materielSubType === \"\") {",
+        "        $data.materielSubType = $data.selectedMaterial[0].ssGenreID",
+        "    }",
+        "    ",
+        "//    $data.typeAcquisition = $data.selectedMaterial[0].typeACqui",
+        "    $data.once = \"true\"",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "materialId" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "addToAskClose" : {
+      "type" : "json",
+      "value" : [
+        "{ \"close\" : \"true\" }"
+      ],
+      "exposed" : false
+    },
+    "getAgencyLocation" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.selectedMaterial[0].locationAgencyCode!==$data.selectedMaterial[0].agencyCode)",
+        "{",
+        "    return $data.selectedMaterial[0].agencyCode;",
+        "}",
+        "else",
+        "{",
+        "    return \"\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "materielSubType" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "dataToSend" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlGetMaterial" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.materialId && $data.materialId.length>0){\r",
+        "    return \"../API/extension/pop3pclientSoap?method=getMaterialDetails&f=lyreNumber=\"+$data.materialId;\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "oldMaterialID" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedMaterial" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetMaterial}}"
+      ],
+      "exposed" : false
+    },
+    "urlMoreInfos" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/apps/displayDetail/detailMaterialPage/?materialId=\" + $data.materialId"
+      ],
+      "exposed" : false
+    },
+    "once" : {
+      "type" : "constant",
+      "value" : [
+        "false"
+      ],
+      "exposed" : false
+    },
+    "askCollToOpenNewWindow" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "askToOpen" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.askCollToOpenNewWindow.length === 1){\r",
+        "    window.open($data.urlMoreInfos, \"Détail\", \"width=1500,height=750\");\r",
+        "    $data.askCollToOpenNewWindow = []\r",
+        "}\r",
+        "\r",
+        "\r",
+        "\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "sentToDetail" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "    \"materialId\" : $data.materialId",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "typeAcquisition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setIsNew" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.oldMaterialID !== $data.materialId){",
+        "    $data.once = \"false\"",
+        "    $data.oldMaterialID = $data.materialId",
+        "    $data.selectedMaterial = {}",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "isMaterialDisplayed" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "retrofitDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var retrofit_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.retrofitB100 !== 'undefined') {",
+        "            var is_retrofitable = material.retrofitB100;",
+        "            retrofit_details = (is_retrofitable === true) ? 'Oui' : 'Non';",
+        "        }",
+        "        if (typeof material.montantRetrofit !== 'undefined') {",
+        "            var montant_retrofit = material.montantRetrofit;",
+        "            if (montant_retrofit) {",
+        "                retrofit_details += ', montant retrofit: ' + montant_retrofit;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception retrofitDetails: ' + e);",
+        "}",
+        "return retrofit_details;"
+      ],
+      "exposed" : false
+    },
+    "biofuelDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var biofuel_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.b100 !== 'undefined') {",
+        "            var is_b100 = material.b100;",
+        "            biofuel_details = 'B100 : ' + ((is_b100 === true) ? 'Oui' : 'Non');",
+        "        }",
+        "        if (typeof material.xtl !== 'undefined') {",
+        "            var is_xtl = material.xtl;",
+        "            biofuel_details += ' - XTL : ' + ((is_b100 === true) ? 'Oui' : 'Non');",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception biofuelDetails: ' + e);",
+        "}",
+        "return biofuel_details;"
+      ],
+      "exposed" : false
+    },
+    "zfeCritairDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var zfe_critair_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.zfe !== 'undefined') {",
+        "            var is_zfe = material.zfe;",
+        "            zfe_critair_details = (is_zfe === true) ? 'Oui' : 'Non';",
+        "        }",
+        "        if (typeof material.critair !== 'undefined') {",
+        "            var critair = material.critair;",
+        "            if (critair) {",
+        "                zfe_critair_details += ', Crit\\'Air:' + critair;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception zfeCritairDetails: ' + e);",
+        "}",
+        "return zfe_critair_details;"
+      ],
+      "exposed" : false
+    },
+    "zfeDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var zfe_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.zfe !== 'undefined') {",
+        "            var is_zfe = material.zfe;",
+        "            var zfe_name = (material.zfeName) ? material.zfeName : 'Oui';",
+        "            zfe_details = (is_zfe === true) ? zfe_name : 'Non';",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception zfeDetails: ' + e);",
+        "}",
+        "return zfe_details;"
+      ],
+      "exposed" : false
+    },
+    "critairDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var critair_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.critair !== 'undefined') {",
+        "            if (material.critair) {",
+        "                critair_details = material.critair;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception critairDetails: ' + e);",
+        "}",
+        "return critair_details;"
+      ],
+      "exposed" : false
+    },
+    "energyLibelleAndCode" : {
+      "type" : "expression",
+      "value" : [
+        "var res=\"\";",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var mat = $data.selectedMaterial[0];",
+        "        if (typeof mat.caracteristiques !== 'undefined') {",
+        "            res = mat.caracteristiques.ValueEnergie;",
+        "            if ((res) && (mat.caracteristiques.ENERGIE)) {",
+        "                res += \" (\" + mat.caracteristiques.ENERGIE + \")\";",
+        "            }",
+        "        }",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error(\"Exception energyLibelleAndCode: \" + e);",
+        "}",
+        "",
+        "return res;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

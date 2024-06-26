@@ -1,0 +1,787 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "78ebf69a-88b5-48ea-afcd-0d7b3812116a",
+  "name" : "pop3pBudgetPlanifForm",
+  "lastUpdate" : 1671627892888,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "d7fffb20-5671-4b0d-b8cc-214ff4cee243",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbTitle"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "constant"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "ff7d8811-803a-442a-88a8-cefa55a18a0a",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbText"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "constant"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "6a73b5c9-d4c3-409f-a07d-f4e2e84acea5",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "a44e69ee-7440-419b-8074-ceee22ba4553",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "La proposition <b>{{proposition.persistenceId}}  </b>concerne l'exercice <b>{{proposition.budgetYear}} </b>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "f16e5713-15c3-4386-abad-c7b84e9e25f3",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 1,
+          "lg" : 1
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "a4105154-991a-46ea-ad9c-33c1ec8554bc",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [ ]
+        ]
+      },
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! selectedBudgetYear"
+          }
+        },
+        "reference" : "2b8215c6-ba1a-40dd-90e2-c7a35c463a5e",
+        "hasValidationError" : false,
+        "id" : "04a8218f-9853-4126-bb17-68d313c19b75",
+        "binding" : {
+          "readOnly" : "false",
+          "selectedTerritory" : "selectedTerritory",
+          "selectedBudgetYear" : "selectedBudgetYear",
+          "selectedAgency" : "selectedAgency",
+          "returnedDates" : "",
+          "displayPopUp" : "displayPopUp",
+          "formInput" : "payload",
+          "rfDates" : "rfDates",
+          "datesPlanning" : ""
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{ datePlanningToSend}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "7d3cc351-aebc-4e10-8502-c09bb442df1d",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{ datesPlanning }}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "c68a6729-adb7-4468-804f-b3bad00b573c",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "eba9070d-b7b9-4bcb-a46f-4de2a29cc15f",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "1ec2ba3e-3c5a-491f-af08-42b1fd6106dd",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Valider ces dates"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
+                  },
+                  "url" : {
+                    "type" : "interpolation",
+                    "value" : "{{ urlAPIUpdatePlannings }}"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita/apps/pop3p"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "urlAPI" : {
+                    "type" : "variable",
+                    "value" : "{{ urlAPIUpdatePlannings }}"
+                  }
+                },
+                "reference" : "2d18b18f-3391-4934-94ca-c2d571b6aaa8",
+                "hasValidationError" : false,
+                "id" : "customButtonCallAPIAndSubmit"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Retour"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "page"
+                  },
+                  "targetUrl" : {
+                    "type" : "constant",
+                    "value" : "http://"
+                  },
+                  "pageToken" : {
+                    "type" : "constant",
+                    "value" : "homePage"
+                  },
+                  "processName" : {
+                    "type" : "constant"
+                  },
+                  "processVersion" : {
+                    "type" : "constant"
+                  },
+                  "taskId" : {
+                    "type" : "constant"
+                  },
+                  "caseId" : {
+                    "type" : "constant"
+                  },
+                  "target" : {
+                    "type" : "constant",
+                    "value" : "_self"
+                  },
+                  "appToken" : {
+                    "type" : "constant"
+                  },
+                  "urlParams" : {
+                    "type" : "constant"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "warning"
+                  }
+                },
+                "reference" : "1f811ee8-26bb-4c0e-aef9-3426b2561bd3",
+                "hasValidationError" : false,
+                "id" : "pbLink"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "bbc81636-469e-4ad7-b89b-90579300243d",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "20ba6ad2-4021-4b1f-9757-bef64d358957",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "f596b6d5-25a2-4d3a-b9b0-458ba1a49182",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlAPIUpdatePlannings" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/API/extension/updateDates\";"
+      ],
+      "exposed" : false
+    },
+    "datePlanningToSend" : {
+      "type" : "expression",
+      "value" : [
+        "var value_payload = [];",
+        "",
+        "if(",
+        "    $data.datesPlanning ",
+        "    && $data.datesPlanning.length > 0",
+        "    && $data.getOnce === \"false\"",
+        "    ) {",
+        "    ",
+        "    value_payload = angular.copy($data.datesPlanning);",
+        "    $data.getOnce = \"true\";",
+        "//    console.log(value_payload)",
+        "}",
+        "",
+        "",
+        "return value_payload;"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.proposition !== undefined){",
+        "    return  $data.proposition.territoryCode",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "readOnly" : {
+      "type" : "json",
+      "value" : [
+        "[{\"isReadOnly\":true}]"
+      ],
+      "exposed" : false
+    },
+    "rfDates" : {
+      "type" : "expression",
+      "value" : [
+        "return {};"
+      ],
+      "exposed" : false
+    },
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.proposition !== undefined){",
+        "    return  $data.proposition.agencyCode",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getOnce" : {
+      "type" : "constant",
+      "value" : [
+        "false"
+      ],
+      "exposed" : false
+    },
+    "payload" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "selectedBudgetYear" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.proposition !== undefined){",
+        "    return  $data.proposition.budgetYear",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var myPayload = {\r",
+        "    budget : [],\r",
+        "    dates : {},\r",
+        "    anneeBudget : null\r",
+        "};\r",
+        "\r",
+        "\r",
+        "if ($data.payload && $data.payload.length > 0){\r",
+        "    myPayload.budget = angular.copy($data.payload);\r",
+        "    \r",
+        "    for(var i in $data.payload) {\r",
+        "        myPayload.budget[i].nomNoeud = $data.payload[i].nomNoeud;\r",
+        "        myPayload.budget[i].codeNoeud = $data.payload[i].codeNoeud;\r",
+        "        myPayload.budget[i].enveloppeBudget = String($data.payload[i].enveloppeBudget);\r",
+        "        myPayload.budget[i].niveau = $data.payload[i].niveau;\r",
+        "        myPayload.budget[i].intitule = $data.payload[i].intitule;\r",
+        "        myPayload.budget[i].datePresentation = $data.payload[i].datePresentation;\r",
+        "    }\r",
+        "} else {\r",
+        "    myPayload.budget = []\r",
+        "}\r",
+        "if ($data.rfDates){\r",
+        "\r",
+        "    myPayload.dates = {};\r",
+        "    \r",
+        "    myPayload.dates.rf1 = $data.rfDates.rf1\r",
+        "    myPayload.dates.rf2 = $data.rfDates.rf2\r",
+        "    myPayload.dates.rf3 = $data.rfDates.rf3\r",
+        "    myPayload.dates.rf4 = $data.rfDates.rf4\r",
+        "}\r",
+        "\r",
+        "if($data.selectedBudgetYear) {\r",
+        "    myPayload.anneeBudget = $data.selectedBudgetYear;\r",
+        "}\r",
+        "\r",
+        "\r",
+        "return myPayload;"
+      ],
+      "exposed" : false
+    },
+    "proposition" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.currentProposition_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "urlGetDatesPlanning" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedAgency && $data.selectedBudgetYear){",
+        "    return \"../API/extension/pop3pclientSoap?method=getBudgetPlanning&f=codeAgence=\"+$data.selectedAgency+\"&f=anneeBudget=\"+$data.selectedBudgetYear;",
+        "}else {",
+        "    return \"\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "constant",
+      "value" : [
+        "500179"
+      ],
+      "exposed" : false
+    },
+    "datesPlanning" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetDatesPlanning}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "78ebf69a-88b5-48ea-afcd-0d7b3812116a",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

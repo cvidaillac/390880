@@ -1,0 +1,100 @@
+
+<!--start filters -->
+<div>
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseFilters" aria-controls="collapseFilters">
+    Afficher / Masquer les filtres
+  </button>
+
+    <div class="collapse " id="collapseFilters" >
+
+        <div class="row" >
+            <div ng-if="!filter.isDisable" ng-repeat="filter in properties.filtersLabels" class="col component col-xs-12  col-sm-12  col-md-4  col-lg-4 ng-scope">
+                <label for="{{ filter.data }}"> {{ filter.label }} </label>
+                
+                <div ng-if="filter.type==='text' || filter.type==='date'">
+                    <input type="text" class="form-control" name="{{ filter.data }}" placeholder="{{ filter.placeholder }}" 
+                        list="{{ filter.data }}" ng-model="searchBuffer[filter.data]" >
+                        <datalist id="{{ filter.data }}">
+                            <option ng-if="filter.type==='text'" ng-repeat="data in availableDatas[filter.data]" >{{data}}</option>
+                            <option ng-if="filter.type==='date'" ng-repeat="data in availableDatas[filter.data]" > {{data}}</option>
+                        </datalist>
+                </div>
+
+                <div ng-if="filter.type==='select'">
+                    <select name="{{ filter.data }}" class="form-control" ng-model="searchBuffer[filter.data]" >
+                        <option ng-repeat="data in availableDatas[filter.data]" >{{data }}</option>      
+                    </select>
+                </div>
+
+            </div>
+            <br/>
+
+    </div>
+    
+    <button ng-click="ctrl.startFilters()" type="button" class="btn btn-primary">Filtrer</button>
+    <button ng-click="ctrl.resetFilters()" type="button" class="btn btn-danger">Effacer les filtres</button>
+</div>
+<!--
+    <button type="button" class="btn btn-primary" ng-repeat="(key, value) in finalSearch" ng-if="value" ng-model="finalSearch[key]">
+        {{ key }}   <span class="badge"> {{value}} </span>
+    </button><br/>
+-->
+
+</div>
+<!--End filters -->
+
+<div class="table-responsive">
+    <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table table-striped" ng-class="{'table-hover': ctrl.isSelectable()}">
+        <thead>
+            <tr>
+                <th ng-repeat="header in properties.headers">
+                    <div ng-if="ctrl.isColumnSortable($index)" bo-sorter="{{properties.columnsKey[$index]}}">
+                            {{ header | uiTranslate }}
+                    </div>
+                    <div ng-if="!ctrl.isColumnSortable($index)">
+                        {{ header | uiTranslate }}
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results | filter:finalSearch" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td ng-repeat="column in properties.columnsKey track by $index">
+                {{ $eval(column, row) | uiTranslate }}
+            </td>
+        </tr>
+        </tbody>
+        <tbody ng-if="!ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td> {{ row | uiTranslate }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="hidden-xs"
+         ng-repeat="options in [{'maxSize': 5, 'rotate': false}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    <div class="visible-xs text-center"
+         ng-repeat="options in [{'maxSize': 3, 'rotate': true}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+
+    <script type="text/ng-template" id="/dataTable/pagination.html">
+        <pagination ng-if="ctrl.pagination.total > properties.pageSize"
+                    total-items="ctrl.pagination.total"
+                    items-per-page="properties.pageSize"
+                    direction-links="true"
+                    boundary-links="true"
+                    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    rotate="{{options.rotate}}"
+                    max-size="{{options.maxSize}}"
+                    ng-model="ctrl.pagination.currentPage"
+                    ng-change="ctrl.paginationHandler()">
+        </pagination>
+    </script>
+</div>

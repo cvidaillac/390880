@@ -1,0 +1,37 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "val",
+      "name" : "val",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Style",
+      "name" : "buttonStyle",
+      "type" : "choice",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger",
+        "link"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "id" : "customMenuDiv",
+  "name" : "menuDiv",
+  "lastUpdate" : 1671627887124,
+  "template" : "@customMenuDiv.tpl.html",
+  "controller" : "@customMenuDiv.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

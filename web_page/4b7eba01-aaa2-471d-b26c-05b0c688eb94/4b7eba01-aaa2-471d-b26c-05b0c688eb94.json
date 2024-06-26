@@ -1,0 +1,245 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "4b7eba01-aaa2-471d-b26c-05b0c688eb94",
+  "name" : "pocOrbjsInit",
+  "lastUpdate" : 1671627888722,
+  "rows" : [
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "7e649713-3967-4800-b35e-25db5217200a",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "d8a127a4-61d7-458a-8fe2-7a0c0a0ca3b8",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "data" : {
+                    "type" : "expression",
+                    "value" : "sampleData"
+                  },
+                  "theme" : {
+                    "type" : "constant",
+                    "value" : "blue"
+                  },
+                  "toolbar" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "fields" : {
+                    "type" : "expression",
+                    "value" : "fields"
+                  },
+                  "rows" : {
+                    "type" : "expression",
+                    "value" : "rows"
+                  },
+                  "columns" : {
+                    "type" : "constant"
+                  },
+                  "columnData" : {
+                    "type" : "constant"
+                  }
+                },
+                "reference" : "53cd5573-84a5-48af-b149-8f4b60f22918",
+                "hasValidationError" : false,
+                "id" : "customPivotTable"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "widgetId" : {
+                    "type" : "constant",
+                    "value" : "pbButton"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "isDisplayed" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "constant",
+                    "value" : "Submit"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readonly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Start process"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "class" : {
+                    "type" : "constant",
+                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "5f411c4d-4d35-47e5-9ae7-351e3be8769c",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "cf870f9f-3a6a-491b-8bfa-66932cda13ca",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "c40864f9-d2a3-4a34-847a-816c596a8511",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "sampleData" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "[\"2014\",\"Secteur Est\",\"Site Plateform\",\"4374\",\"Plateform 1\",\"Charlot\", \"9012724\", \"SMT1-0000073-01\", \"G1X336S01529\", \"(vide)\", \"A renouveler\", \"Validation\", \"Commande\", \"(vide)\", 509.55],\r",
+        "[\"2014\",\"Secteur Est\",\"Site Plateform\",\"4374\",\"Plateform 1\",\"Charlot\", \"9012725\", \"SMT1-0000074-01\", \"G1X336S01533\", \"(vide)\", \"A renouveler\", \"Projet\", \"Commande\", \"(vide)\", 351],\r",
+        "[\"2014\",\"Secteur Est\",\"Site Plateform\",\"4374\",\"Plateform 1\",\"Charlot\", \"9012717\", \"SMT1-0000075-01\", \"G1X336S01529\", \"(vide)\", \"A renouveler\", \"Projet\", \"Commande\", \"(vide)\", 4163.67],\r",
+        "[\"2014\",\"Secteur Est\",\"Site Plateform\",\"4556\",\"Gestion Site\",\"Charlot\", \"9012832\", \"SMT1-0000090-01\", \"G1X336M0O629\", \"(vide)\", \"A renouveler\", \"Demande\", \"Termine\", \"(vide)\", 2038.1],\r",
+        "[\"2014\",\"Secteur Est\",\"Loiret 45\",\"3475\",\"Orleans Inc\",\"Charlot\", \"9012720\", \"SMT1-0001318-01\", \"7260ZJ45\", \"(vide)\", \"A transferer\", \"CE Chariot\", \"Termine\", \"(vide)\", 419.65],\r",
+        "[\"2014\",\"Secteur Est\",\"Loiret 45\",\"5131\",\"Plateform 2\",\"Charlot\", \"9012941\", \"SMT1-0001321-01\", \"36R00558C\", \"(vide)\", \"A sortir\", \"Renouvelteme\", \"Accepte\", \"(vide)\", 381.15],\r",
+        "[\"2014\",\"Secteur Est\",\"Aube-Yonne\",\"1250\",\"Troyes\",\"Charlot\", \"9012563\", \"SMT1-0001122-01\", \"H2X393U07028\", \"(vide)\", \"A renouveler\", \"Achat Retrace\", \"Workflow valide\", \"(vide)\", 391.05],\r",
+        "[\"2014\",\"Secteur Ouest\",\"Indre et Loire\",\"3366\",\"Chambray\",\"Charlot\", \"9012726\", \"SMT1-0000073-01\", \"14036\", \"(vide)\", \"Nouveau materiel\", \"Achar Charge\", \"Commande\", \"(vide)\", 2038.1],\r",
+        "[\"2014\",\"Secteur Ouest\",\"BT-Aube\",\"1252\",\"Gaye BPE\",\"Charlot\", \"9012799\", \"SMT1-0001319-01\", \"36S01539C\", \"(vide)\", \"A renouveler\", \"Validation\", \"Workflow envoy\", \"(vide)\", 549.05],\r",
+        "[\"2014\",\"Secteur Ouest\",\"BT-Aube\",\"1252\",\"Gaye BPE\",\"Charlot\", \"9012798\", \"SMT1-0001586-01\", \"(vide)\", \"(vide)\", \"A renouveler\", \"Validation\", \"Commande\", \"(vide)\", 425.1],\r",
+        "[\"2014\",\"Secteur Ouest\",\"Indre et Grenoble\",\"1356\",\"Bonita\",\"Charlot\", \"(vide)\", \"SMT1-0000099-01\", \"(vide)\", \"(vide)\", \"A renouveler\", \"Validation\", \"Commande\", \"(vide)\", 4416.15]\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "fields" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    { \"name\": \"0\", \"caption\": \"Budget exercise\" },",
+        "    { \"name\": \"1\", \"caption\": \"Secteur\" },",
+        "    { \"name\": \"2\", \"caption\": \"Site nom\" },",
+        "    { \"name\": \"3\", \"caption\": \"Agence\" },",
+        "    { \"name\": \"4\", \"caption\": \"Agence nom\" },",
+        "    { \"name\": \"5\", \"caption\": \"Genre\" },",
+        "    { \"name\": \"6\", \"caption\": \"No. materiel\" },",
+        "    { \"name\": \"7\", \"caption\": \"Ref budget\" },",
+        "    { \"name\": \"8\", \"caption\": \"Immat pere\" },",
+        "    { \"name\": \"9\", \"caption\": \"Observations et arch\" },",
+        "    { \"name\": \"10\", \"caption\": \"Motif demande\" },",
+        "    { \"name\": \"11\", \"caption\": \"Argumentaire\" },",
+        "    { \"name\": \"12\", \"caption\": \"Statut demande\" },",
+        "    { \"name\": \"13\", \"caption\": \"Motivation\" },",
+        "    {",
+        "        \"name\": \"14\",",
+        "        \"caption\": \"Amount\",",
+        "        \"dataSettings\": {",
+        "              \"aggregateFunc\": \"sum\"",
+        "        }",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "rows" : {
+      "type" : "json",
+      "value" : [
+        "[ \"Budget exercise\", \"Secteur\", \"Site nom\", \"Agence\", \"Agence nom\", \"Genre\", \"No materiel\" ]"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "4b7eba01-aaa2-471d-b26c-05b0c688eb94",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

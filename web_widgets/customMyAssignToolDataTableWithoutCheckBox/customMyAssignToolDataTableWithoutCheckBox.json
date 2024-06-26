@@ -1,0 +1,209 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Headers",
+      "name" : "headers",
+      "caption" : "Comma-separated list",
+      "help" : "If you specify an expression, the result must be an array of strings",
+      "type" : "collection",
+      "defaultValue" : [
+        "Id",
+        "Name",
+        "Description",
+        "Date"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Data source",
+      "name" : "type",
+      "help" : "Variable for frontend paging and ordering or Bonita REST API URL for backend paging and ordering",
+      "type" : "choice",
+      "defaultValue" : "Bonita API",
+      "choiceValues" : [
+        "Variable",
+        "Bonita API"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "URL",
+      "name" : "apiUrl",
+      "caption" : "A Bonita BPM REST API URL",
+      "showFor" : "properties.type.value === 'Bonita API'",
+      "type" : "text",
+      "defaultValue" : "../API/",
+      "bond" : "expression"
+    },
+    {
+      "label" : "API request parameters",
+      "name" : "params",
+      "help" : "Additional request parameters added to the query string",
+      "showFor" : "properties.type.value === 'Bonita API'",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Content",
+      "name" : "content",
+      "help" : "Array used to populate the table. Can be a list of objects. Use 'Column keys' to refine content",
+      "showFor" : "properties.type.value === 'Variable'",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Columns key",
+      "name" : "columnsKey",
+      "caption" : "Use <a href=\"javascript:void(0);\" open-help=\"filters\" editor-mode=\"page\">Filters</a> to format the data (e.g. <span ng-non-bindable>columnKey|uiDate</span>)",
+      "help" : "When 'Content' is a list of objects, specifies the attributes to display in the table columns",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Sortable columns",
+      "name" : "sortColumns",
+      "caption" : "List from column keys",
+      "help" : "BDM APIs are not yet sortable. For other APIs, test in the preview or refer to the BonitaBPM documentation 'REST API' pages",
+      "showFor" : "properties.type.value === 'Bonita API'",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Selected Row",
+      "name" : "selectedRow",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Page size",
+      "name" : "pageSize",
+      "type" : "integer",
+      "defaultValue" : 10,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Filter",
+      "name" : "filter",
+      "help" : "Bind to a Variable to filter the table 'Content'",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "createPropositionURL",
+      "name" : "createPropositionURL",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "numMatSelected",
+      "name" : "numMatSelected",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "selectedAgencyName",
+      "name" : "selectedAgencyName",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "selectedTerritoryName",
+      "name" : "selectedTerritoryName",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Code fournisseur",
+      "name" : "codeFou",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "listBCChecked",
+      "name" : "listBCChecked",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "choix",
+      "name" : "choix",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customMyAssignToolDataTableWithoutCheckBox",
+  "name" : "MyAssignToolDataTableWithoutCheckBox",
+  "lastUpdate" : 1671627917396,
+  "template" : "@customMyAssignToolDataTableWithoutCheckBox.tpl.html",
+  "icon" : "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'><g><path fill='#868695' d='M36,15v2h11v-2H36z M40,10v2h7v-2H40z M11,10v2h14v-2H11z M3,10v2h3v-2H3z M11,15v2h17v-2H11z M3,15v2h3 v-2H3z'/><path fill='#424251' d='M1,19V1h48v18H1z M0,0v20h50V0H0z'/><path fill='#A7A8B7' d='M1,7v1h7v11h1V8h22v11h1V8h17V7H32V1h-1v6H9V1H8v6H1z'/><path fill='none' stroke='#424251' d='M35,3h12v2H35V3z M11,3h13v2H11V3z M3,3h3v2H3V3z'/></g></svg>",
+  "controller" : "@customMyAssignToolDataTableWithoutCheckBox.ctrl.js",
+  "description" : "Custom DataTable with pagination, filtering capabilities and actions to approve Propositions",
+  "custom" : true,
+  "order" : 16,
+  "assets" : [
+    {
+      "id" : "52d1a378-3668-4211-8573-0e592c5647ee",
+      "name" : "bonita-lib-0.5.21.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "1621b976-f4b7-4b50-9b9e-8e22e536c119",
+      "name" : "bootstrap.css",
+      "type" : "css",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "b58ae787-bb1a-4838-b5ef-4b02d5beff21",
+      "name" : "jquery-confirm.js",
+      "type" : "js",
+      "order" : 4,
+      "external" : false
+    },
+    {
+      "name" : "bonita-lib-tpl-0.5.21.js",
+      "type" : "js",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "name" : "bonita-lib-0.5.21.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "9a63acaa-63d4-41c5-9aca-210b8e3a5a7c",
+      "name" : "jquery-confirm.css",
+      "type" : "css",
+      "order" : 5,
+      "external" : false
+    },
+    {
+      "id" : "d9512f03-c5e4-44c4-a01c-5b53ecb0b81d",
+      "name" : "jquery-3.3.0.min.js",
+      "type" : "js",
+      "order" : -1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "org.bonitasoft.templates",
+    "ui.bootstrap.pagination",
+    "template/pagination/pagination.html",
+    "org.bonitasoft.bonitable",
+    "org.bonitasoft.bonitable.sortable"
+  ],
+  "type" : "widget",
+  "hasHelp" : false
+}

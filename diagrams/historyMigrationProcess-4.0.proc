@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_979SsKPAEem_G-RwSUEqAw" name="historyMigrationProcess" version="4.0" author="A1073231" bonitaVersion="7.14.6" bonitaModelVersion="7.12.0-004" configId="ACED0005740027686973746F72794D6967726174696F6E50726F63657373372E382E332D303031372E382E347370">
+    <elements xmi:type="process:Pool" xmi:id="_979SsaPAEem_G-RwSUEqAw" name="historyMigrationProcess" version="4.0">
+      <elements xmi:type="process:Lane" xmi:id="_979SsqPAEem_G-RwSUEqAw" name="SMART" actor="_9796BaPAEem_G-RwSUEqAw">
+        <elements xmi:type="process:StartEvent" xmi:id="_979Ss6PAEem_G-RwSUEqAw" name="Start1" outgoing="_9795_qPAEem_G-RwSUEqAw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_979StaPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_979StqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_979St6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:CallActivity" xmi:id="_979SuKPAEem_G-RwSUEqAw" documentation="Process To Call depends on variable &quot;statusMacroEtapes&quot; " name="Proposition Process" outgoing="_9795-6PAEem_G-RwSUEqAw" incoming="_9796AaPAEem_G-RwSUEqAw" type="PARALLEL" collectionDataToMultiInstantiate="_97950qPAEem_G-RwSUEqAw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_979SuqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_979Su6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_979SvKPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_979SvaPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_979SvqPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_979Sv6PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_979SwKPAEem_G-RwSUEqAw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="com.sgdbf.model.Proposition" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_979SwaPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979SwqPAEem_G-RwSUEqAw" subprocessTarget="currentProposition" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979Sw6PAEem_G-RwSUEqAw" name="multiInstanceIterator" content="multiInstanceIterator" type="TYPE_VARIABLE" returnType="com.sgdbf.model.Proposition">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_979SxKPAEem_G-RwSUEqAw" name="multiInstanceIterator" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979SxaPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_host" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979SxqPAEem_G-RwSUEqAw" name="bonita_server_host" content="bonita_server_host" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979Sx6PAEem_G-RwSUEqAw" name="bonita_server_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979SyKPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_port" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979SyaPAEem_G-RwSUEqAw" name="bonita_server_port" content="bonita_server_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_979SyqPAEem_G-RwSUEqAw" name="bonita_server_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979Sy6PAEem_G-RwSUEqAw" subprocessTarget="bonita_server_tenant" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979SzKPAEem_G-RwSUEqAw" name="bonita_server_tenant" content="bonita_server_tenant" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979SzaPAEem_G-RwSUEqAw" name="bonita_server_tenant" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979SzqPAEem_G-RwSUEqAw" subprocessTarget="isDev" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979Sz6PAEem_G-RwSUEqAw" name="isDev" content="isDev" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S0KPAEem_G-RwSUEqAw" name="isDev" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S0aPAEem_G-RwSUEqAw" subprocessTarget="noReplyMail" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S0qPAEem_G-RwSUEqAw" name="noReplyMail" content="noReplyMail" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S06PAEem_G-RwSUEqAw" name="noReplyMail" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S1KPAEem_G-RwSUEqAw" subprocessTarget="pop3_app" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S1aPAEem_G-RwSUEqAw" name="pop3_app" content="pop3_app" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S1qPAEem_G-RwSUEqAw" name="pop3_app" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S16PAEem_G-RwSUEqAw" subprocessTarget="smtp_host" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S2KPAEem_G-RwSUEqAw" name="smtp_host" content="smtp_host" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S2aPAEem_G-RwSUEqAw" name="smtp_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S2qPAEem_G-RwSUEqAw" subprocessTarget="smtp_port" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S26PAEem_G-RwSUEqAw" name="smtp_port" content="smtp_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S3KPAEem_G-RwSUEqAw" name="smtp_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S3aPAEem_G-RwSUEqAw" subprocessTarget="smtp_username" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S3qPAEem_G-RwSUEqAw" name="smtp_username" content="smtp_username" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S36PAEem_G-RwSUEqAw" name="smtp_username" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S4KPAEem_G-RwSUEqAw" subprocessTarget="smtp_userpassword" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S4aPAEem_G-RwSUEqAw" name="smtp_userpassword" content="smtp_userpassword" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S4qPAEem_G-RwSUEqAw" name="smtp_userpassword" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S46PAEem_G-RwSUEqAw" subprocessTarget="test" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S5KPAEem_G-RwSUEqAw" name="test" content="test" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S5aPAEem_G-RwSUEqAw" name="test" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S5qPAEem_G-RwSUEqAw" subprocessTarget="urlWsdlLyre" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S56PAEem_G-RwSUEqAw" name="urlWsdlLyre" content="urlWsdlLyre" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S6KPAEem_G-RwSUEqAw" name="urlWsdlLyre" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S6aPAEem_G-RwSUEqAw" subprocessTarget="smarteInitiatorId" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S6qPAEem_G-RwSUEqAw" name="smarteInitiatorId" content="smarteInitiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_979S66PAEem_G-RwSUEqAw" name="smarteInitiatorId" dataType="_97-hG6PAEem_G-RwSUEqAw"/>
+            </processSource>
+          </inputMappings>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_979S7KPAEem_G-RwSUEqAw" subprocessTarget="propositions" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_979S7aPAEem_G-RwSUEqAw" name="setListProposition" content="def list =[];&#xD;&#xA;list.add(multiInstanceIterator);&#xD;&#xA;return list;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_979S7qPAEem_G-RwSUEqAw" name="multiInstanceIterator" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+            </processSource>
+          </inputMappings>
+          <calledActivityName xmi:type="expression:Expression" xmi:id="_979S76PAEem_G-RwSUEqAw" name="Intermediare" content="Intermediare" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_979S8KPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_979S8aPAEem_G-RwSUEqAw" name="End1" incoming="_9795-6PAEem_G-RwSUEqAw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_979S86PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_979S9KPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_979S9aPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_979S9qPAEem_G-RwSUEqAw" name="Step1" outgoing="_9796AaPAEem_G-RwSUEqAw" incoming="_9795_qPAEem_G-RwSUEqAw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_979S-KPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_979S-aPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_979S-qPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_979S-6PAEem_G-RwSUEqAw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_979S_KPAEem_G-RwSUEqAw" name="proposition" content="proposition" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_979S_aPAEem_G-RwSUEqAw" name="proposition" multiple="true" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_9795wKPAEem_G-RwSUEqAw" name="Proposition.find" content="SELECT p&#xA;FROM Proposition p&#xA;ORDER BY p.persistenceId" type="TYPE_QUERY_BUSINESS_DATA" returnType="java.util.List">
+              <referencedElements xmi:type="expression:Expression" xmi:id="_9795waPAEem_G-RwSUEqAw" name="startIndex" content="startIndex" type="QUERY_PARAM_TYPE" returnType="java.lang.Integer" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_9795wqPAEem_G-RwSUEqAw" name="0" content="0" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </referencedElements>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_9795w6PAEem_G-RwSUEqAw" name="maxResults" content="maxResults" type="QUERY_PARAM_TYPE" returnType="java.lang.Integer" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_9795xKPAEem_G-RwSUEqAw" name="2000" content="2000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_9795xaPAEem_G-RwSUEqAw" type="CREATE_BUSINESS_DATA"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_9795xqPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_9795x6PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_9795yKPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_9795yaPAEem_G-RwSUEqAw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_9795yqPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_97950qPAEem_G-RwSUEqAw" name="proposition" multiple="true" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979506PAEem_G-RwSUEqAw" name="" content="" interpreter="GROOVY"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97951KPAEem_G-RwSUEqAw" name="bonita_server_tenant" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97951aPAEem_G-RwSUEqAw" name="1" content="1"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97951qPAEem_G-RwSUEqAw" name="smtp_host" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979516PAEem_G-RwSUEqAw" name="smtpauth.mail.saint-gobain.net" content="smtpauth.mail.saint-gobain.net"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97952KPAEem_G-RwSUEqAw" name="noReplyMail" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97952aPAEem_G-RwSUEqAw" name="noreply-POPB@saint-gobain.com" content="noreply-POPB@saint-gobain.com"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97952qPAEem_G-RwSUEqAw" name="isDev" dataType="_97-hGKPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979526PAEem_G-RwSUEqAw" name="false" content="false" returnType="java.lang.Boolean"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97953KPAEem_G-RwSUEqAw" name="bonita_server_host" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97953aPAEem_G-RwSUEqAw" name="bpm.saint-gobain.com" content="bpm.saint-gobain.com"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97953qPAEem_G-RwSUEqAw" name="smtp_port" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979536PAEem_G-RwSUEqAw" name="25" content="25" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97954KPAEem_G-RwSUEqAw" name="pop3_app" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97954aPAEem_G-RwSUEqAw" name="pop3p" content="pop3p"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97954qPAEem_G-RwSUEqAw" name="test" dataType="_97-hGKPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979546PAEem_G-RwSUEqAw" name="true" content="true" returnType="java.lang.Boolean"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97955KPAEem_G-RwSUEqAw" name="bonita_server_port" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97955aPAEem_G-RwSUEqAw" name="443" content="443" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97955qPAEem_G-RwSUEqAw" name="smtp_userpassword" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979556PAEem_G-RwSUEqAw" name="p/b23.NE" content="p/b23.NE"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97956KPAEem_G-RwSUEqAw" name="smtp_username" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97956aPAEem_G-RwSUEqAw" name="CFRsvc-smtp-POPB" content="CFRsvc-smtp-POPB"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97956qPAEem_G-RwSUEqAw" name="nbrPropositionList" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979566PAEem_G-RwSUEqAw" content="" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97957KPAEem_G-RwSUEqAw" name="caseIdToUpdate" dataType="_97-hG6PAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97957aPAEem_G-RwSUEqAw" content="" returnType="java.lang.Long"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97957qPAEem_G-RwSUEqAw" name="urlWsdlLyre" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979576PAEem_G-RwSUEqAw" name="http://10.155.42.77:8080/Locprobin/Locpro.dll/WSDL?Module=BUDGEPOP" content="http://10.155.42.77:8080/Locprobin/Locpro.dll/WSDL?Module=BUDGEPOP"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97958KPAEem_G-RwSUEqAw" name="smarteInitiatorId" dataType="_97-hG6PAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97958aPAEem_G-RwSUEqAw" name="428" content="428" returnType="java.lang.Long"/>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_97959aPAEem_G-RwSUEqAw" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_97959qPAEem_G-RwSUEqAw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_9795-KPAEem_G-RwSUEqAw" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_9795-aPAEem_G-RwSUEqAw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9795-6PAEem_G-RwSUEqAw" target="_979S8aPAEem_G-RwSUEqAw" source="_979SuKPAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9795_KPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9795_aPAEem_G-RwSUEqAw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9795_qPAEem_G-RwSUEqAw" target="_979S9qPAEem_G-RwSUEqAw" source="_979Ss6PAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9795_6PAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9796AKPAEem_G-RwSUEqAw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9796AaPAEem_G-RwSUEqAw" target="_979SuKPAEem_G-RwSUEqAw" source="_979S9qPAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9796AqPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9796A6PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_9796BKPAEem_G-RwSUEqAw" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_9796BaPAEem_G-RwSUEqAw" name="SMART"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_9796BqPAEem_G-RwSUEqAw" name="sgdbf-uat" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_9796B6PAEem_G-RwSUEqAw">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_9796CKPAEem_G-RwSUEqAw" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_9796CaPAEem_G-RwSUEqAw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_9796CqPAEem_G-RwSUEqAw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_9796C6PAEem_G-RwSUEqAw"/>
+            <users xmi:type="actormapping:Users" xmi:id="_9796DKPAEem_G-RwSUEqAw"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_9796DaPAEem_G-RwSUEqAw" name="SMART">
+            <groups xmi:type="actormapping:Groups" xmi:id="_9796DqPAEem_G-RwSUEqAw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_9796D6PAEem_G-RwSUEqAw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_9796EKPAEem_G-RwSUEqAw"/>
+            <users xmi:type="actormapping:Users" xmi:id="_9796EaPAEem_G-RwSUEqAw"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796EqPAEem_G-RwSUEqAw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796E6PAEem_G-RwSUEqAw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796FKPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796FaPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796FqPAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796F6PAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796GKPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796GaPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796GqPAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796G6PAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxsN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxsd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxst-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxs9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxtN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxtd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxtt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxt9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxuN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxud-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcEG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcEW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcEm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcE2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcFG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcFW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcFm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcF2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796HKPAEem_G-RwSUEqAw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796HaPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796HqPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796H6PAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796IKPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796IaPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796IqPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796I6PAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796JKPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxut-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxu9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxvN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxvd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxvt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxv9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxwN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxwd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxwt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqWxw9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcGG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcGW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcGm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcG2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcHG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcHW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcHm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcH2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796JaPAEem_G-RwSUEqAw" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796JqPAEem_G-RwSUEqAw" id="OTHER"/>
+      </configurations>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_9796J6PAEem_G-RwSUEqAw" name="sgdbf-prod" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_9796KKPAEem_G-RwSUEqAw">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_9796KaPAEem_G-RwSUEqAw" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_9796KqPAEem_G-RwSUEqAw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_9796K6PAEem_G-RwSUEqAw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_9796LKPAEem_G-RwSUEqAw"/>
+            <users xmi:type="actormapping:Users" xmi:id="_9796LaPAEem_G-RwSUEqAw"/>
+          </actorMapping>
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_9796LqPAEem_G-RwSUEqAw" name="SMART">
+            <groups xmi:type="actormapping:Groups" xmi:id="_9796L6PAEem_G-RwSUEqAw"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_9796MKPAEem_G-RwSUEqAw"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_9796MaPAEem_G-RwSUEqAw"/>
+            <users xmi:type="actormapping:Users" xmi:id="_9796MqPAEem_G-RwSUEqAw"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796M6PAEem_G-RwSUEqAw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796NKPAEem_G-RwSUEqAw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796NaPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796NqPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796N6PAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796OKPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796OaPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796OqPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796O6PAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796PKPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqMN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqMd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqMt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqM9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqNN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqNd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqNt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqN9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqON-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqOd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcIG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcIW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcIm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcI2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcJG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcJW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcJm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcJ2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796PaPAEem_G-RwSUEqAw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796PqPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796P6PAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796QKPAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796QaPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796QqPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796Q6PAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796RKPAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_9796RaPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqOt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqO9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqPN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqPd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqPt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqP9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqQN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqQd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqQt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_VqbqQ9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcKG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcKW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcKm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcK2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcLG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcLW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcLm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmVcL2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796RqPAEem_G-RwSUEqAw" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_9796R6PAEem_G-RwSUEqAw" id="OTHER"/>
+      </configurations>
+      <contract xmi:type="process:Contract" xmi:id="_9796SKPAEem_G-RwSUEqAw"/>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_9796SaPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_9796SqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_9796S6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_9796TKPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_9796TaPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_9796TqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_9796T6PAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_9796UKPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_9796UaPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_9796UqPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_9796U6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_9796VKPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_9796VaPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_9796VqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_9796V6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <elements xmi:type="process:Pool" xmi:id="_9796WKPAEem_G-RwSUEqAw" name="Intermediare" version="4.0">
+      <elements xmi:type="process:StartEvent" xmi:id="_9796WaPAEem_G-RwSUEqAw" name="Start2" outgoing="_97-g0aPAEem_G-RwSUEqAw">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_9796W6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_9796XKPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_9796XaPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:EndTerminatedEvent" xmi:id="_9796XqPAEem_G-RwSUEqAw" name="End2" incoming="_9796_6PAEem_G-RwSUEqAw _9797AqPAEem_G-RwSUEqAw _9796-KPAEem_G-RwSUEqAw">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_9796YKPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_9796YaPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_9796YqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:XORGateway" xmi:id="_9796Y6PAEem_G-RwSUEqAw" name="Check MacroStatut" outgoing="_9796-KPAEem_G-RwSUEqAw _9796-6PAEem_G-RwSUEqAw _9797BaPAEem_G-RwSUEqAw" incoming="_97-g0aPAEem_G-RwSUEqAw">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_9796ZaPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_9796ZqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_9796Z6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:CallActivity" xmi:id="_9796aKPAEem_G-RwSUEqAw" name="CALL DXX Proposition" outgoing="_9797AqPAEem_G-RwSUEqAw" incoming="_9797BaPAEem_G-RwSUEqAw">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_9796aqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_9796a6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_9796bKPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <loopCondition xmi:type="expression:Expression" xmi:id="_9796baPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <loopMaximum xmi:type="expression:Expression" xmi:id="_9796bqPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <cardinalityExpression xmi:type="expression:Expression" xmi:id="_9796b6PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <iteratorExpression xmi:type="expression:Expression" xmi:id="_9796cKPAEem_G-RwSUEqAw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+        <completionCondition xmi:type="expression:Expression" xmi:id="_9796caPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796cqPAEem_G-RwSUEqAw" subprocessTarget="currentProposition" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796c6PAEem_G-RwSUEqAw" name="currentProposition" content="currentProposition" type="TYPE_VARIABLE" returnType="com.sgdbf.model.Proposition">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_9796dKPAEem_G-RwSUEqAw" name="currentProposition" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796daPAEem_G-RwSUEqAw" subprocessTarget="smarteInitiatorId" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796dqPAEem_G-RwSUEqAw" name="smarteInitiatorId" content="smarteInitiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796d6PAEem_G-RwSUEqAw" name="smarteInitiatorId" dataType="_97-hG6PAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796eKPAEem_G-RwSUEqAw" subprocessTarget="test" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796eaPAEem_G-RwSUEqAw" name="test" content="test" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796eqPAEem_G-RwSUEqAw" name="test" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796e6PAEem_G-RwSUEqAw" subprocessTarget="bonita_server_host" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796fKPAEem_G-RwSUEqAw" name="bonita_server_host" content="bonita_server_host" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796faPAEem_G-RwSUEqAw" name="bonita_server_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796fqPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_port" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796f6PAEem_G-RwSUEqAw" name="bonita_server_port" content="bonita_server_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796gKPAEem_G-RwSUEqAw" name="bonita_server_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796gaPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_tenant" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796gqPAEem_G-RwSUEqAw" name="bonita_server_tenant" content="bonita_server_tenant" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796g6PAEem_G-RwSUEqAw" name="bonita_server_tenant" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796hKPAEem_G-RwSUEqAw" subprocessTarget="noReplySender" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796haPAEem_G-RwSUEqAw" name="noReplyMail" content="noReplyMail" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796hqPAEem_G-RwSUEqAw" name="noReplyMail" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796h6PAEem_G-RwSUEqAw" subprocessTarget="pop3_app" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796iKPAEem_G-RwSUEqAw" name="pop3_app" content="pop3_app" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796iaPAEem_G-RwSUEqAw" name="pop3_app" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796iqPAEem_G-RwSUEqAw" subprocessTarget="smtpHost" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796i6PAEem_G-RwSUEqAw" name="smtp_host" content="smtp_host" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796jKPAEem_G-RwSUEqAw" name="smtp_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796jaPAEem_G-RwSUEqAw" subprocessTarget="smtpPort" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796jqPAEem_G-RwSUEqAw" name="smtp_port" content="smtp_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796j6PAEem_G-RwSUEqAw" name="smtp_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796kKPAEem_G-RwSUEqAw" subprocessTarget="url_wsdl_lyre" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796kaPAEem_G-RwSUEqAw" name="urlWsdlLyre" content="urlWsdlLyre" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796kqPAEem_G-RwSUEqAw" name="urlWsdlLyre" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796k6PAEem_G-RwSUEqAw" subprocessTarget="isDev" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796lKPAEem_G-RwSUEqAw" name="isDev" content="isDev" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796laPAEem_G-RwSUEqAw" name="isDev" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <calledActivityName xmi:type="expression:Expression" xmi:id="_9796lqPAEem_G-RwSUEqAw" name="POP3P_DxxProposition" content="POP3P_DxxProposition" returnTypeFixed="true"/>
+        <calledActivityVersion xmi:type="expression:Expression" xmi:id="_9796l6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:CallActivity" xmi:id="_9796mKPAEem_G-RwSUEqAw" name="CALL Budget Proposition" outgoing="_9796_6PAEem_G-RwSUEqAw" incoming="_9796-6PAEem_G-RwSUEqAw">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_9796mqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_9796m6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_9796nKPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <loopCondition xmi:type="expression:Expression" xmi:id="_9796naPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <loopMaximum xmi:type="expression:Expression" xmi:id="_9796nqPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <cardinalityExpression xmi:type="expression:Expression" xmi:id="_9796n6PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <iteratorExpression xmi:type="expression:Expression" xmi:id="_9796oKPAEem_G-RwSUEqAw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+        <completionCondition xmi:type="expression:Expression" xmi:id="_9796oaPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796oqPAEem_G-RwSUEqAw" subprocessTarget="propositions" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796o6PAEem_G-RwSUEqAw" name="propositions" content="propositions" type="TYPE_VARIABLE" returnType="java.util.List">
+            <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_9796pKPAEem_G-RwSUEqAw" name="propositions" multiple="true" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796paPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_host" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796pqPAEem_G-RwSUEqAw" name="bonita_server_host" content="bonita_server_host" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796p6PAEem_G-RwSUEqAw" name="bonita_server_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796qKPAEem_G-RwSUEqAw" subprocessTarget="bonita_server_port" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796qaPAEem_G-RwSUEqAw" name="bonita_server_port" content="bonita_server_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796qqPAEem_G-RwSUEqAw" name="bonita_server_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796q6PAEem_G-RwSUEqAw" subprocessTarget="bonita_server_tenant" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796rKPAEem_G-RwSUEqAw" name="bonita_server_tenant" content="bonita_server_tenant" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796raPAEem_G-RwSUEqAw" name="bonita_server_tenant" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796rqPAEem_G-RwSUEqAw" subprocessTarget="noReplySender" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796r6PAEem_G-RwSUEqAw" name="noReplyMail" content="noReplyMail" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796sKPAEem_G-RwSUEqAw" name="noReplyMail" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796saPAEem_G-RwSUEqAw" subprocessTarget="pop3_app" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796sqPAEem_G-RwSUEqAw" name="pop3_app" content="pop3_app" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796s6PAEem_G-RwSUEqAw" name="pop3_app" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796tKPAEem_G-RwSUEqAw" subprocessTarget="test" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796taPAEem_G-RwSUEqAw" name="test" content="test" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796tqPAEem_G-RwSUEqAw" name="test" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796t6PAEem_G-RwSUEqAw" subprocessTarget="smtp_host" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796uKPAEem_G-RwSUEqAw" name="smtp_host" content="smtp_host" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796uaPAEem_G-RwSUEqAw" name="smtp_host" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796uqPAEem_G-RwSUEqAw" subprocessTarget="smtp_port" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796u6PAEem_G-RwSUEqAw" name="smtp_port" content="smtp_port" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796vKPAEem_G-RwSUEqAw" name="smtp_port" dataType="_97-hGqPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796vaPAEem_G-RwSUEqAw" subprocessTarget="smarteInitiatorId" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796vqPAEem_G-RwSUEqAw" name="smarteInitiatorId" content="smarteInitiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796v6PAEem_G-RwSUEqAw" name="smarteInitiatorId" dataType="_97-hG6PAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796wKPAEem_G-RwSUEqAw" subprocessTarget="url_wsdl_lyre" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796waPAEem_G-RwSUEqAw" name="urlWsdlLyre" content="urlWsdlLyre" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796wqPAEem_G-RwSUEqAw" name="urlWsdlLyre" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796w6PAEem_G-RwSUEqAw" subprocessTarget="isDev" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796xKPAEem_G-RwSUEqAw" name="isDev" content="isDev" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796xaPAEem_G-RwSUEqAw" name="isDev" dataType="_97-hGKPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796xqPAEem_G-RwSUEqAw" subprocessTarget="smtp_username" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796x6PAEem_G-RwSUEqAw" name="smtp_username" content="smtp_username" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796yKPAEem_G-RwSUEqAw" name="smtp_username" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <inputMappings xmi:type="process:InputMapping" xmi:id="_9796yaPAEem_G-RwSUEqAw" subprocessTarget="smtp_userpassword" assignationType="Data">
+          <processSource xmi:type="expression:Expression" xmi:id="_9796yqPAEem_G-RwSUEqAw" name="smtp_userpassword" content="smtp_userpassword" type="TYPE_VARIABLE">
+            <referencedElements xmi:type="process:Data" xmi:id="_9796y6PAEem_G-RwSUEqAw" name="smtp_userpassword" dataType="_97-hHaPAEem_G-RwSUEqAw"/>
+          </processSource>
+        </inputMappings>
+        <calledActivityName xmi:type="expression:Expression" xmi:id="_9796zKPAEem_G-RwSUEqAw" name="POP3P_BudgetProposition" content="POP3P_BudgetProposition" returnTypeFixed="true"/>
+        <calledActivityVersion xmi:type="expression:Expression" xmi:id="_9796zaPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_97960KPAEem_G-RwSUEqAw" name="currentProposition" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97960aPAEem_G-RwSUEqAw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_97960qPAEem_G-RwSUEqAw" name="propositions" multiple="true" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979606PAEem_G-RwSUEqAw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97961KPAEem_G-RwSUEqAw" name="bonita_server_host" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97961aPAEem_G-RwSUEqAw" name="bpm.saint-gobain.com" content="bpm.saint-gobain.com"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97961qPAEem_G-RwSUEqAw" name="bonita_server_port" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979616PAEem_G-RwSUEqAw" name="443" content="443" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97962KPAEem_G-RwSUEqAw" name="bonita_server_tenant" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97962aPAEem_G-RwSUEqAw" name="1" content="1"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97962qPAEem_G-RwSUEqAw" name="smtp_host" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979626PAEem_G-RwSUEqAw" name="smtpauth.mail.saint-gobain.net" content="smtpauth.mail.saint-gobain.net"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97963KPAEem_G-RwSUEqAw" name="noReplyMail" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97963aPAEem_G-RwSUEqAw" name="noreply-POPB@saint-gobain.com" content="noreply-POPB@saint-gobain.com"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97963qPAEem_G-RwSUEqAw" name="isDev" dataType="_97-hGKPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979636PAEem_G-RwSUEqAw" name="false" content="false" returnType="java.lang.Boolean"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97964KPAEem_G-RwSUEqAw" name="smtp_port" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97964aPAEem_G-RwSUEqAw" name="25" content="25" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97964qPAEem_G-RwSUEqAw" name="pop3_app" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979646PAEem_G-RwSUEqAw" name="pop3p" content="pop3p"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97965KPAEem_G-RwSUEqAw" name="test" dataType="_97-hGKPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97965aPAEem_G-RwSUEqAw" name="true" content="true" returnType="java.lang.Boolean"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97965qPAEem_G-RwSUEqAw" name="smtp_userpassword" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979656PAEem_G-RwSUEqAw" name="p/b23.NE" content="p/b23.NE"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97966KPAEem_G-RwSUEqAw" name="smtp_username" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97966aPAEem_G-RwSUEqAw" name="CFRsvc-smtp-POPB" content="CFRsvc-smtp-POPB"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97966qPAEem_G-RwSUEqAw" name="smarteInitiatorId" dataType="_97-hG6PAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979666PAEem_G-RwSUEqAw" content="" returnType="java.lang.Long"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97967KPAEem_G-RwSUEqAw" name="nbrPropositionList" dataType="_97-hGqPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_97967aPAEem_G-RwSUEqAw" content="" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_97967qPAEem_G-RwSUEqAw" name="urlWsdlLyre" dataType="_97-hHaPAEem_G-RwSUEqAw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_979676PAEem_G-RwSUEqAw" content=""/>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_97968qPAEem_G-RwSUEqAw" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_979686PAEem_G-RwSUEqAw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_97969aPAEem_G-RwSUEqAw" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_97969qPAEem_G-RwSUEqAw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9796-KPAEem_G-RwSUEqAw" target="_9796XqPAEem_G-RwSUEqAw" source="_9796Y6PAEem_G-RwSUEqAw" isDefault="true">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9796-aPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9796-qPAEem_G-RwSUEqAw" name="" content="" interpreter="GROOVY" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9796-6PAEem_G-RwSUEqAw" target="_9796mKPAEem_G-RwSUEqAw" source="_9796Y6PAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9796_KPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9796_aPAEem_G-RwSUEqAw" name="checkMacroStatus" content="if(currentProposition.statusMacroEtapes==&quot;budgeter&quot; &amp;&amp; currentProposition.getPersistenceId()>1771)&#xD;&#xA;&#xD;&#xA;{&#xD;&#xA;return true;&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;return false;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_9796_qPAEem_G-RwSUEqAw" name="currentProposition" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+        </condition>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9796_6PAEem_G-RwSUEqAw" target="_9796XqPAEem_G-RwSUEqAw" source="_9796mKPAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9797AKPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9797AaPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9797AqPAEem_G-RwSUEqAw" target="_9796XqPAEem_G-RwSUEqAw" source="_9796aKPAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9797A6PAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9797BKPAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_9797BaPAEem_G-RwSUEqAw" target="_9796aKPAEem_G-RwSUEqAw" source="_9796Y6PAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9797BqPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_9797B6PAEem_G-RwSUEqAw" name="statutACommander" content="if(currentProposition.statusMacroEtapes==&quot;commander&quot; &amp;&amp; currentProposition.getPersistenceId()>1771)&#xD;&#xA;&#xD;&#xA;{&#xD;&#xA;return true;&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;return false;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_97-g0KPAEem_G-RwSUEqAw" name="currentProposition" dataType="_97-hIKPAEem_G-RwSUEqAw" className="com.sgdbf.model.Proposition"/>
+        </condition>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_97-g0aPAEem_G-RwSUEqAw" target="_9796Y6PAEem_G-RwSUEqAw" source="_9796WaPAEem_G-RwSUEqAw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_97-g0qPAEem_G-RwSUEqAw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_97-g06PAEem_G-RwSUEqAw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_97-g1KPAEem_G-RwSUEqAw" name="sgdbf-prod" version="7.12.0-004" username="walter.bates" password="bpm">
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g1aPAEem_G-RwSUEqAw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g1qPAEem_G-RwSUEqAw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g16PAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g2KPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g2aPAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g2qPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g26PAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g3KPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g3aPAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g3qPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4UN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Ud-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Ut-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4U9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4VN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Vd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Vt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4V9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4WN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Wd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtgG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtgW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtgm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtg2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZthG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZthW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZthm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZth2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g36PAEem_G-RwSUEqAw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g4KPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g4aPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g4qPAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g46PAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g5KPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g5aPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g5qPAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g56PAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Wt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4W9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4XN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Xd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Xt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4X9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4YN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Yd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Yt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Y9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtiG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtiW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtim-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZti2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtjG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtjW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtjm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtj2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g6KPAEem_G-RwSUEqAw" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g6aPAEem_G-RwSUEqAw" id="OTHER"/>
+      </configurations>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_97-g6qPAEem_G-RwSUEqAw" name="sgdbf-uat" version="7.12.0-004" username="walter.bates" password="bpm">
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g66PAEem_G-RwSUEqAw" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g7KPAEem_G-RwSUEqAw" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g7aPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g7qPAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g76PAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g8KPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g8aPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g8qPAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g86PAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g9KPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4ZN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Zd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Zt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4Z9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4aN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4ad-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4at-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4a9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4bN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4bd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtkG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtkW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtkm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtk2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtlG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtlW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtlm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtl2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g9aPAEem_G-RwSUEqAw" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g9qPAEem_G-RwSUEqAw" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g96PAEem_G-RwSUEqAw" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g-KPAEem_G-RwSUEqAw" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g-aPAEem_G-RwSUEqAw" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g-qPAEem_G-RwSUEqAw" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g-6PAEem_G-RwSUEqAw" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g_KPAEem_G-RwSUEqAw" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_97-g_aPAEem_G-RwSUEqAw" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4bt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4b9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4cN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4cd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4ct-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4c9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4dN-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4dd-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4dt-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_Vqc4d9-7EeuuQZxShlTcMw" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtmG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtmW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtmm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtm2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtnG-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtnW-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtnm-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vmZtn2-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g_qPAEem_G-RwSUEqAw" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_97-g_6PAEem_G-RwSUEqAw" id="OTHER"/>
+      </configurations>
+      <contract xmi:type="process:Contract" xmi:id="_97-hAKPAEem_G-RwSUEqAw"/>
+      <documents xmi:type="process:Document" xmi:id="_97-hAaPAEem_G-RwSUEqAw" name="fileExcel" defaultValueIdOfDocumentStore="SONEN DIEPPE guisnel.xlsx" documentType="INTERNAL">
+        <mimeType xmi:type="expression:Expression" xmi:id="_97-hAqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_97-hA6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_97-hBKPAEem_G-RwSUEqAw" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_97-hBaPAEem_G-RwSUEqAw" name="fichierPdf" defaultValueIdOfDocumentStore="Etude X 158 BS3   Benne 5500 mm projet Normandie.pdf" documentType="INTERNAL">
+        <mimeType xmi:type="expression:Expression" xmi:id="_97-hBqPAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_97-hB6PAEem_G-RwSUEqAw" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_97-hCKPAEem_G-RwSUEqAw" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_97-hCaPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_97-hCqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_97-hC6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_97-hDKPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_97-hDaPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_97-hDqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_97-hD6PAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_97-hEKPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_97-hEaPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_97-hEqPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_97-hE6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_97-hFKPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_97-hFaPAEem_G-RwSUEqAw">
+        <name xmi:type="expression:Expression" xmi:id="_97-hFqPAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_97-hF6PAEem_G-RwSUEqAw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_97-hGKPAEem_G-RwSUEqAw" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_97-hGaPAEem_G-RwSUEqAw" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_97-hGqPAEem_G-RwSUEqAw" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_97-hG6PAEem_G-RwSUEqAw" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_97-hHKPAEem_G-RwSUEqAw" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_97-hHaPAEem_G-RwSUEqAw" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_97-hHqPAEem_G-RwSUEqAw" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_97-hH6PAEem_G-RwSUEqAw" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_97-hIKPAEem_G-RwSUEqAw" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_97-hIaPAEem_G-RwSUEqAw" type="Process" element="_979SsKPAEem_G-RwSUEqAw" name="MyDiagram6" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_97-hIqPAEem_G-RwSUEqAw" type="2007" element="_979SsaPAEem_G-RwSUEqAw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hI6PAEem_G-RwSUEqAw" type="5008" element="_979SsaPAEem_G-RwSUEqAw"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hJKPAEem_G-RwSUEqAw" type="7001" element="_979SsaPAEem_G-RwSUEqAw">
+        <children xmi:type="notation:Node" xmi:id="_97-hJaPAEem_G-RwSUEqAw" type="3007" element="_979SsqPAEem_G-RwSUEqAw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hJqPAEem_G-RwSUEqAw" type="5007" element="_979SsqPAEem_G-RwSUEqAw"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hJ6PAEem_G-RwSUEqAw" type="7002" element="_979SsqPAEem_G-RwSUEqAw">
+            <children xmi:type="notation:Shape" xmi:id="_97-hKKPAEem_G-RwSUEqAw" type="3002" element="_979Ss6PAEem_G-RwSUEqAw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_97-hKaPAEem_G-RwSUEqAw" type="5024" element="_979Ss6PAEem_G-RwSUEqAw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hKqPAEem_G-RwSUEqAw" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hK6PAEem_G-RwSUEqAw" x="62" y="110"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_97-hLKPAEem_G-RwSUEqAw" type="3063" element="_979SuKPAEem_G-RwSUEqAw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_97-hLaPAEem_G-RwSUEqAw" type="5093" element="_979SuKPAEem_G-RwSUEqAw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hLqPAEem_G-RwSUEqAw" x="499" y="87" width="152" height="76"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_97-hL6PAEem_G-RwSUEqAw" type="3062" element="_979S8aPAEem_G-RwSUEqAw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_97-hMKPAEem_G-RwSUEqAw" type="5090" element="_979S8aPAEem_G-RwSUEqAw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hMaPAEem_G-RwSUEqAw" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hMqPAEem_G-RwSUEqAw" x="936" y="103"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_97-hM6PAEem_G-RwSUEqAw" type="3027" element="_979S9qPAEem_G-RwSUEqAw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_97-hNKPAEem_G-RwSUEqAw" type="5017" element="_979S9qPAEem_G-RwSUEqAw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hNaPAEem_G-RwSUEqAw" x="195" y="95" width="121" height="60"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_97-hNqPAEem_G-RwSUEqAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_97-hN6PAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_97-hOKPAEem_G-RwSUEqAw"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_97-hOaPAEem_G-RwSUEqAw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hOqPAEem_G-RwSUEqAw"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_97-hO6PAEem_G-RwSUEqAw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hPKPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_97-hPaPAEem_G-RwSUEqAw"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_97-hPqPAEem_G-RwSUEqAw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hP6PAEem_G-RwSUEqAw" width="1126" height="250"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_97-hQKPAEem_G-RwSUEqAw" type="2007" element="_9796WKPAEem_G-RwSUEqAw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hQaPAEem_G-RwSUEqAw" type="5008" element="_9796WKPAEem_G-RwSUEqAw"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hQqPAEem_G-RwSUEqAw" type="7001" element="_9796WKPAEem_G-RwSUEqAw">
+        <children xmi:type="notation:Shape" xmi:id="_97-hQ6PAEem_G-RwSUEqAw" type="3002" element="_9796WaPAEem_G-RwSUEqAw" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hRKPAEem_G-RwSUEqAw" type="5024" element="_9796WaPAEem_G-RwSUEqAw">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hRaPAEem_G-RwSUEqAw" y="5"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hRqPAEem_G-RwSUEqAw" x="255" y="163"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_97-hR6PAEem_G-RwSUEqAw" type="3062" element="_9796XqPAEem_G-RwSUEqAw" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hSKPAEem_G-RwSUEqAw" type="5090" element="_9796XqPAEem_G-RwSUEqAw">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hSaPAEem_G-RwSUEqAw" y="5"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hSqPAEem_G-RwSUEqAw" x="996" y="173"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_97-hS6PAEem_G-RwSUEqAw" type="3008" element="_9796Y6PAEem_G-RwSUEqAw" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hTKPAEem_G-RwSUEqAw" type="5026" element="_9796Y6PAEem_G-RwSUEqAw">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hTaPAEem_G-RwSUEqAw" x="-65" y="-63"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hTqPAEem_G-RwSUEqAw" x="407" y="156" width="43" height="43"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_97-hT6PAEem_G-RwSUEqAw" type="3063" element="_9796aKPAEem_G-RwSUEqAw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hUKPAEem_G-RwSUEqAw" type="5093" element="_9796aKPAEem_G-RwSUEqAw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hUaPAEem_G-RwSUEqAw" x="756" y="42" width="130" height="65"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_97-hUqPAEem_G-RwSUEqAw" type="3063" element="_9796mKPAEem_G-RwSUEqAw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+          <children xmi:type="notation:DecorationNode" xmi:id="_97-hU6PAEem_G-RwSUEqAw" type="5093" element="_9796mKPAEem_G-RwSUEqAw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hVKPAEem_G-RwSUEqAw" x="768" y="251" width="133" height="65"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_97-hVaPAEem_G-RwSUEqAw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hVqPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_97-hV6PAEem_G-RwSUEqAw"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_97-hWKPAEem_G-RwSUEqAw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_97-hWaPAEem_G-RwSUEqAw" width="1126" height="376"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_97-hWqPAEem_G-RwSUEqAw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hW6PAEem_G-RwSUEqAw" type="4001" element="_9795-6PAEem_G-RwSUEqAw" source="_97-hLKPAEem_G-RwSUEqAw" target="_97-hL6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hXKPAEem_G-RwSUEqAw" type="6001" element="_9795-6PAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hXaPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hXqPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-hX6PAEem_G-RwSUEqAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hYKPAEem_G-RwSUEqAw" type="4001" element="_9795_qPAEem_G-RwSUEqAw" source="_97-hKKPAEem_G-RwSUEqAw" target="_97-hM6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hYaPAEem_G-RwSUEqAw" type="6001" element="_9795_qPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hYqPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hY6PAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-hZKPAEem_G-RwSUEqAw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hZaPAEem_G-RwSUEqAw" type="4001" element="_9796AaPAEem_G-RwSUEqAw" source="_97-hM6PAEem_G-RwSUEqAw" target="_97-hLKPAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hZqPAEem_G-RwSUEqAw" type="6001" element="_9796AaPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hZ6PAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-haKPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-haaPAEem_G-RwSUEqAw" points="[0, -7, -198, -12]$[182, -7, -16, -12]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97-haqPAEem_G-RwSUEqAw" id="(1.0,0.6)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97-ha6PAEem_G-RwSUEqAw" id="(0.10526315789473684,0.6447368421052632)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hbKPAEem_G-RwSUEqAw" type="4001" element="_9796-KPAEem_G-RwSUEqAw" source="_97-hS6PAEem_G-RwSUEqAw" target="_97-hR6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hbaPAEem_G-RwSUEqAw" type="6001" element="_9796-KPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hbqPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hb6PAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-hcKPAEem_G-RwSUEqAw" points="[22, 0, -561, -11]$[572, 0, -11, -11]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hcaPAEem_G-RwSUEqAw" type="4001" element="_9796-6PAEem_G-RwSUEqAw" source="_97-hS6PAEem_G-RwSUEqAw" target="_97-hUqPAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hcqPAEem_G-RwSUEqAw" type="6001" element="_9796-6PAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hc6PAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hdKPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-hdaPAEem_G-RwSUEqAw" points="[0, 22, -406, -84]$[0, 101, -406, -5]$[340, 101, -66, -5]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hdqPAEem_G-RwSUEqAw" type="4001" element="_9796_6PAEem_G-RwSUEqAw" source="_97-hUqPAEem_G-RwSUEqAw" target="_97-hR6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hd6PAEem_G-RwSUEqAw" type="6001" element="_9796_6PAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-heKPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-heaPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-heqPAEem_G-RwSUEqAw" points="[0, -1, -110, 94]$[109, -1, -1, 94]$[109, -81, -1, 14]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97-he6PAEem_G-RwSUEqAw" id="(1.0,0.5)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hfKPAEem_G-RwSUEqAw" type="4001" element="_9797AqPAEem_G-RwSUEqAw" source="_97-hT6PAEem_G-RwSUEqAw" target="_97-hR6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hfaPAEem_G-RwSUEqAw" type="6001" element="_9797AqPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hfqPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97-hf6PAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97-hgKPAEem_G-RwSUEqAw" points="[0, 0, -488, -82]$[492, 0, 4, -82]$[492, 79, 4, -3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97-hgaPAEem_G-RwSUEqAw" id="(1.0,0.47692307692307695)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97-hgqPAEem_G-RwSUEqAw" id="(0.3333333333333333,0.1)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97-hg6PAEem_G-RwSUEqAw" type="4001" element="_9797BaPAEem_G-RwSUEqAw" source="_97-hS6PAEem_G-RwSUEqAw" target="_97-hT6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97-hhKPAEem_G-RwSUEqAw" type="6001" element="_9797BaPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97-hhaPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97_H4KPAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97_H4aPAEem_G-RwSUEqAw" points="[-22, -31, -342, 89]$[-22, -107, -342, 13]$[306, -107, -14, 13]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97_H4qPAEem_G-RwSUEqAw" id="(1.0,0.7209302325581395)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97_H46PAEem_G-RwSUEqAw" id="(0.1076923076923077,0.38461538461538464)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_97_H5KPAEem_G-RwSUEqAw" type="4001" element="_97-g0aPAEem_G-RwSUEqAw" source="_97-hQ6PAEem_G-RwSUEqAw" target="_97-hS6PAEem_G-RwSUEqAw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_97_H5aPAEem_G-RwSUEqAw" type="6001" element="_97-g0aPAEem_G-RwSUEqAw">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_97_H5qPAEem_G-RwSUEqAw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_97_H56PAEem_G-RwSUEqAw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_97_H6KPAEem_G-RwSUEqAw" points="[0, -16, -505, 3]$[501, -20, -4, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97_H6aPAEem_G-RwSUEqAw" id="(1.0,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_97_H6qPAEem_G-RwSUEqAw" id="(0.13953488372093023,0.4418604651162791)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

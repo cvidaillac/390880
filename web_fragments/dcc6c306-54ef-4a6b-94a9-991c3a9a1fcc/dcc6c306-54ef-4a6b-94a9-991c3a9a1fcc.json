@@ -1,0 +1,524 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "dcc6c306-54ef-4a6b-94a9-991c3a9a1fcc",
+  "name" : "selectAgency",
+  "lastUpdate" : 1671627885796,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "hidden==true"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "433d390f-5c4b-4574-8277-b94b97b1bd55",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "expression",
+                  "value" : "! listTerritories || listTerritories.length==0"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Territoire concerné"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 6
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Sélectionner une région"
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "listTerritories"
+                },
+                "displayedKey" : {
+                  "type" : "constant",
+                  "value" : "territoryName"
+                },
+                "returnedKey" : {
+                  "type" : "constant",
+                  "value" : "territoryID"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedTerritory"
+                }
+              },
+              "reference" : "40b21ed0-19d2-4657-bd29-90a9c6c44481",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "655c82aa-107c-48ac-9431-41be287164b0",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "!selectedTerritory || ( selectedTerritory && listAgenciesByTerritory && listAgenciesByTerritory.length>0)"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "iconSize" : {
+                        "type" : "constant"
+                      }
+                    },
+                    "reference" : "1f3f782d-8d30-47c8-863e-33759c2a91a6",
+                    "hasValidationError" : false,
+                    "id" : "customLoadingSpinner"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "listAgenciesByTerritory==undefined"
+                      },
+                      "readOnly" : {
+                        "type" : "expression",
+                        "value" : "selectedTerritory ==null"
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Agence concernée"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "availableValues" : {
+                        "type" : "expression",
+                        "value" : "listAgenciesByTerritory"
+                      },
+                      "displayedKey" : {
+                        "type" : "interpolation",
+                        "value" : "agencyLabel"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "agency"
+                      },
+                      "selectedObject" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "1fe14bb1-e83e-4d02-9888-eefd728d8973",
+                    "hasValidationError" : false,
+                    "id" : "customAutocompleteWithoutAutoSuggestion"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "apiUrl" : {
+                  "type" : "interpolation",
+                  "value" : "{{ urlListTerritories }}"
+                },
+                "successResponse" : {
+                  "type" : "variable",
+                  "value" : "listTerritories"
+                },
+                "errorResponse" : {
+                  "type" : "variable",
+                  "value" : "errorTerritories"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Aucun territoire trouvé !"
+                },
+                "errorText" : {
+                  "type" : "interpolation",
+                  "value" : "Erreur : Récupération des territoires impossible, échec de la connexion à Lyre"
+                }
+              },
+              "reference" : "354a4c23-ce3d-42fe-b31e-a8ed2167ccc3",
+              "hasValidationError" : false,
+              "id" : "customShowEligibleMaterialLoader"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "alert alert-danger"
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "(errorTerritories != null) || ( listTerritories == null) || (detailedLyreError == \"\")"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Erreur : Récupération des territoires impossible, échec de la connexion à Lyre {{ detailedLyreError }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "2129e009-a005-45c9-a611-86bdb2d81119",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listTerritories" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "selectedAgencyName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "agency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "setResult" : {
+      "type" : "expression",
+      "value" : [
+        "try {",
+        "    if ($data.selectedTerritory) {",
+        "        if (($data.listAgenciesByTerritory !== undefined)",
+        "            && ($data.agency !== undefined)",
+        "            && Array.isArray($data.listAgenciesByTerritory)",
+        "            && ($data.listAgenciesByTerritory.length > 0)) {",
+        "                console.log(\"Checking agency \" + $data.agency);",
+        "            var findAgency = false;",
+        "            for(var i = 0 ; i < $data.listAgenciesByTerritory.length ; i++ ) {",
+        "                if (($data.listAgenciesByTerritory[i].agencyLabel === $data.agency)",
+        "                    || ($data.listAgenciesByTerritory[i].agencyCode === $data.agency)) {",
+        "                    $data.selectedAgency = $data.listAgenciesByTerritory[i].agencyCode;",
+        "                    $data.selectedAgencyName = $data.listAgenciesByTerritory[i].agencyName;",
+        "                    if (typeof $data.listAgenciesByTerritory[i].entityCode !== 'undefined') {",
+        "                        console.log(\"Agency is \" + $data.agency + \" with entity \" + $data.listAgenciesByTerritory[i].entityCode);",
+        "                        $data.selectedEntityCode = $data.listAgenciesByTerritory[i].entityCode;",
+        "                    }",
+        "                    if (typeof $data.listAgenciesByTerritory[i].entityName !== 'undefined') {",
+        "                        $data.selectedEntityName = $data.listAgenciesByTerritory[i].entityName;",
+        "                    }",
+        "                    findAgency = true;",
+        "                    break;",
+        "                }",
+        "            }",
+        "            if(!findAgency) {",
+        "                $data.selectedAgency = null;",
+        "                $data.selectedAgencyName = null;",
+        "                $data.selectedEntityCode = null;",
+        "                $data.selectedEntityName = null;",
+        "            }",
+        "            return findAgency;",
+        "        }",
+        "    } else {",
+        "        // Territory is not selected",
+        "        console.log(\"Territory not selected\");",
+        "        $data.agency = null;",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedEntityCode = null;",
+        "        $data.selectedEntityName = null;",
+        "        ",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception selectAgency.setResult: \" + e);",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setResultTerritory" : {
+      "type" : "expression",
+      "value" : [
+        "if (($data.listTerritories !== undefined)",
+        "    && Array.isArray($data.listTerritories)) {",
+        "    for(var i = 0 ; i < $data.listTerritories.length ; i++ ) {",
+        "        var findTerritory = false;",
+        "        if($data.listTerritories[i].territoryID === $data.selectedTerritory) {",
+        "            $data.selectedTerritoryName = $data.listTerritories[i].territoryName;",
+        "            findTerritory = true;",
+        "            break;",
+        "        }",
+        "        if(!findTerritory) {",
+        "           $data.selectedTerritoryName = null;",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listAgenciesByTerritory" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetAgencies}}"
+      ],
+      "exposed" : false
+    },
+    "urlGetAgencies" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedTerritory){\r",
+        "    return \"../API/extension/lyreClient?method=getTerritoryAgencies&territoryId=\"+$data.selectedTerritory;\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "detailedLyreError" : {
+      "type" : "expression",
+      "value" : [
+        "var error_msg=\"\";",
+        "",
+        "try {",
+        "    if ($data.listTerritories != null) {",
+        "        console.debug(\"detailedLyreError : listTerritories is not null\");",
+        "        if ((typeof $data.listTerritories === \"object\")",
+        "            && (!Array.isArray($data.listTerritories))) {",
+        "            console.debug(\"detailedLyreError : listTerritories is an object\");",
+        "            if ((typeof $data.listTerritories.message !== \"undefined\")",
+        "                && ($data.listTerritories.message != \"\")) {",
+        "                error_msg = \" (\" + $data.listTerritories.message + \")\";",
+        "                console.info(\"detailedLyreError : \" + error_msg);",
+        "            }",
+        "        }",
+        "    } else {",
+        "        console.debug(\"detailedLyreError : listTerritories is null\");",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception detailedLyreError: \" + e);",
+        "}",
+        "",
+        "return error_msg;"
+      ],
+      "exposed" : false
+    },
+    "selectedEntityCode" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedEntityName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlListTerritories" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/lyreClient?method=getTerritories"
+      ],
+      "exposed" : false
+    },
+    "errorTerritories" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "hidden" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

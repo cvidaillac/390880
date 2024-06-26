@@ -1,0 +1,91 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "filtersLabels",
+      "name" : "filtersLabels",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "urlGenerate",
+      "name" : "urlGenerate",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "multipleSelect",
+      "name" : "multipleSelect",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Show filters initially",
+      "name" : "showFilters",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Trigger the query",
+      "name" : "triggerQuery",
+      "help" : "Set to true by widget when the query should be executed",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Filters displayed as checkboxes",
+      "name" : "filtersCheckbox",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show the hide button",
+      "name" : "showButtonHide",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Allow only one checkbox",
+      "name" : "allowOnlyOneCheckbox",
+      "help" : "When true, only one checkbox can be selected at the same time",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customListFilterEligibleMaterials",
+  "name" : "listFilterEligibleMaterials",
+  "lastUpdate" : 1671627905618,
+  "template" : "@customListFilterEligibleMaterials.tpl.html",
+  "controller" : "@customListFilterEligibleMaterials.ctrl.js",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "e056de4a-2f4e-4bdb-990a-83be12c8d7c1",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "a2f8f20f-b16e-4c82-8187-40b939bcf336",
+      "name" : "jquery.min.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "39bee233-99e5-4c2d-800e-55040ab6e05d",
+      "name" : "bootstrap.min.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

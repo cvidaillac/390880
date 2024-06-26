@@ -1,0 +1,308 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "b233da24-0390-4deb-84df-2d33002a9150",
+  "name" : "selectAgencyTransfert",
+  "lastUpdate" : 1671627881058,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "! listTerritories || listTerritories.length==0"
+          },
+          "required" : {
+            "type" : "expression",
+            "value" : "isMandatory"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Territoire concerné"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "Sélectionner une région"
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listTerritories"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "territoryName"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "territoryID"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "proposition.transferTerritoryCode"
+          }
+        },
+        "reference" : "16813808-81e5-4063-b988-e0c6f17e7f20",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "61a9f91a-e6f1-4f33-a4e8-c0ab245deadc",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!selectedTerritory || ( selectedTerritory && listAgenciesByTerritory && listAgenciesByTerritory.length>0)"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "iconSize" : {
+                  "type" : "constant"
+                }
+              },
+              "reference" : "ac91445e-af12-42bd-8741-e8a32c1511ab",
+              "hasValidationError" : false,
+              "id" : "customLoadingSpinner"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "listAgenciesByTerritory==undefined"
+                },
+                "readOnly" : {
+                  "type" : "expression",
+                  "value" : "proposition.transferTerritoryCode ==null"
+                },
+                "required" : {
+                  "type" : "expression",
+                  "value" : "isMandatory"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Agence concernée"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "listAgenciesByTerritory"
+                },
+                "displayedKey" : {
+                  "type" : "interpolation",
+                  "value" : "agencyLabel"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedAgency"
+                },
+                "returnedKey" : {
+                  "type" : "interpolation",
+                  "value" : "agencyLabel"
+                }
+              },
+              "reference" : "953e6848-a793-4ab2-8e7f-171682b2e425",
+              "hasValidationError" : false,
+              "id" : "pbAutocomplete"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listTerritories" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/lyreClient?method=getTerritories"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "expression",
+      "value" : [
+        "if(!$data.proposition.transferAgencyName) {",
+        "return \"\";",
+        "    ",
+        "} else {",
+        "    return $data.proposition.transferAgencyName + \" - \" + $data.proposition.transferAgencyCode;",
+        "",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "setResult" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "if($data.listAgenciesByTerritory) {",
+        "    ",
+        "    var label = $data.transferAgencyCode + \" - \" + $data.transferAgencyName;",
+        "    for(var i = 0 ; i < $data.listAgenciesByTerritory.length ; i++ ) {",
+        "        var findAgency = false;",
+        "        ",
+        "        if($data.listAgenciesByTerritory[i].agencyLabel === $data.selectedAgency) {",
+        "",
+        "            $data.proposition.transferAgencyCode = $data.listAgenciesByTerritory[i].agencyCode;",
+        "            $data.proposition.transferAgencyName = $data.listAgenciesByTerritory[i].agencyName;",
+        "            findAgency = true;",
+        "            break;",
+        "        }",
+        "        if(!findAgency) {",
+        "           $data.proposition.transferAgencyCode = \"\";",
+        "           $data.proposition.transferAgencyName = \"\";",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "once" : {
+      "type" : "expression",
+      "value" : [
+        "return true;"
+      ],
+      "exposed" : false
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "updates" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "",
+        "// Set the \"transferTerritoryName\" value",
+        "if ($data.proposition.transferTerritoryCode) {",
+        "    for (var territory in $data.listTerritories) {",
+        "        if ($data.listTerritories[territory].territoryID === $data.proposition.transferTerritoryCode) {",
+        "            ",
+        "            $data.proposition.transferTerritoryName = $data.listTerritories[territory].territoryName;",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "isMandatory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listAgenciesByTerritory" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetAgencies}}"
+      ],
+      "exposed" : false
+    },
+    "urlGetAgencies" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.proposition.transferTerritoryCode){\r",
+        "    return \"../API/extension/lyreClient?method=getTerritoryAgencies&territoryId=\"+$data.proposition.transferTerritoryCode;\r",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

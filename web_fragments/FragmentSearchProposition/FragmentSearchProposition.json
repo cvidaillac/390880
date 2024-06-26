@@ -1,0 +1,1006 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "FragmentSearchProposition",
+  "name" : "FragmentSearchProposition",
+  "lastUpdate" : 1671627885547,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "no-print"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Liste des propositions"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 3"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "ea3192df-85d2-4273-9848-b1c6e3f1936d",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "db4d07b2-5190-40b1-86a7-d541690fddaf",
+        "hasValidationError" : false,
+        "id" : "FragmentCheckAuthorization",
+        "binding" : {
+          "getSession" : "getSession",
+          "authorizedGroups" : "authorizedGroups",
+          "isAuthorized" : "isAuthorized"
+        }
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "no-print"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! isAuthorized"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "6c9751dc-0f70-4f45-82e3-a558f6e22e8b",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "d205fa0f-e894-4329-b8fb-8e0c55021cc3",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 10,
+                      "lg" : 10
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "! withExportButton"
+                      }
+                    },
+                    "reference" : "e2728906-a328-402b-a64c-dcbd0c331e88",
+                    "hasValidationError" : false,
+                    "id" : "ExportExcelFragment",
+                    "binding" : {
+                      "ButtonLabel" : "\"Export Excel\"",
+                      "getSession" : "getSession",
+                      "exportProcessData" : "exportDataParameters",
+                      "exportWindowTitle" : "\"Export des propositions\"",
+                      "Button2Label" : "",
+                      "exportProcessData2" : "",
+                      "button2Disabled" : "",
+                      "buttonsAlignment" : "\"right\""
+                    }
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 6,
+                      "md" : 2,
+                      "lg" : 2
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-refresh\"></span> Recharger"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "default"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "GET"
+                      },
+                      "url" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlListPropositions}}"
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable",
+                        "value" : "listPropositionTasks"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "constant"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      },
+                      "assign" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "responseStatusCode" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "closeOnSuccess" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "modalId" : {
+                        "type" : "constant",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "53d444eb-af2b-4478-ab86-261e5b65c3c5",
+                    "hasValidationError" : false,
+                    "id" : "pbButton"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "filtersLabels" : {
+                        "type" : "expression",
+                        "value" : "listFilters"
+                      },
+                      "urlGenerate" : {
+                        "type" : "variable",
+                        "value" : "urlFilters"
+                      },
+                      "multipleSelect" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "disableFilter" : {
+                        "type" : "expression",
+                        "value" : "listPropositionTasks === \"undefined\" || listPropositionTasks === null"
+                      }
+                    },
+                    "reference" : "d882f4c3-4fb3-41a2-96ba-e4a65a2d5f1e",
+                    "hasValidationError" : false,
+                    "id" : "customListFilters"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "2eceba0e-6ab4-42bb-95d4-3dbb7865ef08",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "headers" : {
+                        "type" : "constant",
+                        "value" : [
+                          "Id",
+                          "Exercice",
+                          "Matériel concerné",
+                          "Montant",
+                          "Entité",
+                          "Secteur",
+                          "Site",
+                          "Agence",
+                          "Type",
+                          "Initiateur",
+                          "Statut",
+                          "Date de saisie"
+                        ]
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Variable"
+                      },
+                      "apiUrl" : {
+                        "type" : "expression",
+                        "value" : "urlListPropositions"
+                      },
+                      "params" : {
+                        "type" : "constant"
+                      },
+                      "content" : {
+                        "type" : "expression",
+                        "value" : "listPropositionTasks"
+                      },
+                      "columnsKey" : {
+                        "type" : "constant",
+                        "value" : [
+                          "persistenceId",
+                          "budgetYear",
+                          "materialNumber",
+                          "propositionAmount | currency:'€':2",
+                          "entiteName",
+                          "sectorName",
+                          "siteName",
+                          "agencyName",
+                          "typeProposition",
+                          "creatorName",
+                          "status",
+                          "creationDate"
+                        ]
+                      },
+                      "sortColumns" : {
+                        "type" : "constant"
+                      },
+                      "selectedRow" : {
+                        "type" : "variable",
+                        "value" : "selectedProposition"
+                      },
+                      "pageSize" : {
+                        "type" : "constant",
+                        "value" : 10
+                      },
+                      "filter" : {
+                        "type" : "constant"
+                      },
+                      "striped" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "condensed" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "bordered" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "6f76cb0e-699f-40fe-81c5-1c5d8d302ef1",
+                    "hasValidationError" : false,
+                    "id" : "customSearchPropositionDatatable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "apiUrl" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlListPropositions}}"
+                      },
+                      "successResponse" : {
+                        "type" : "variable",
+                        "value" : "listPropositionTasks"
+                      },
+                      "errorResponse" : {
+                        "type" : "variable",
+                        "value" : "errorQuery"
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<br><b>Aucune proposition ne correspond<br> à votre recherche !</b>"
+                      },
+                      "errorText" : {
+                        "type" : "interpolation",
+                        "value" : "Impossible d'afficher les propositions"
+                      },
+                      "triggerQuery" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "73b1270d-2b02-437f-948a-9d28f7f1f8c6",
+                    "hasValidationError" : false,
+                    "id" : "customShowEligibleMaterialLoader"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!getSelectedProposition[0].hasOwnProperty('persistenceId')"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "c7c73434-fcfe-41dc-9854-be7f4c0f8722",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "Modal-overlay"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "6eb2b403-6de1-48a7-90e0-f06742f34539",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "Modal-content"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "duplicateProposition.length > 0"
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "e05e8439-a7c4-4181-905a-641f7ef5f118",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "fragment",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "957772a4-661a-4667-8241-af7acae569ba",
+                          "hasValidationError" : false,
+                          "id" : "8f295046-3d4f-48e4-b674-1a27b4ab2738",
+                          "binding" : {
+                            "getSession" : "getSession",
+                            "propositionInput" : "getSelectedProposition[0]",
+                            "selectedProposition" : "selectedProposition",
+                            "displayDetailProposition" : ""
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "withExportButton" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "withDuplicateButton" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "duplicateProposition" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "exportDataParameters" : {
+      "type" : "expression",
+      "value" : [
+        "var url_params = {\"contractObjectName\" : \"Proposition\", ",
+        "    \"contractQueryName\" : \"findByListOfPersistenceIds\", ",
+        "    \"contractQueryCriteria\" : \"listOfPersistenceIds=\", ",
+        "    \"contractOutputFormat\" : \"ALL_FIELDS\", ",
+        "    \"contractRowsExported\" : \"ALL\", ",
+        "    \"contractPageCount\": 0,      // First page",
+        "    \"contractPageSize\": 0,      // No limit",
+        "    \"contractApplicationPage\" : \"searchPropositions\", ",
+        "    \"contractQueryListIds\" : [],",
+        "    \"contractExportDataRows\" : []};",
+        "",
+        "try {",
+        "    if (($data.listPropositionTasks) && Array.isArray($data.listPropositionTasks)) {",
+        "        var list_ids = [];",
+        "        for (var i=0; i<$data.listPropositionTasks.length ; i++) {",
+        "            var one_id = \"\" + $data.listPropositionTasks[i].persistenceId;",
+        "            list_ids.push(one_id);",
+        "        }",
+        "        url_params.contractQueryListIds = list_ids;",
+        "        console.debug(\"exportDataParameters: nb propositions=\" + list_ids.length);",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception exportDataParameters: ' + e);",
+        "}",
+        "return url_params;"
+      ],
+      "exposed" : false
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear();",
+        "year = year-5;",
+        "result.push(\"\");",
+        "",
+        "for (var i = 0; i < 11; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "getSelectedProposition" : {
+      "type" : "url",
+      "value" : [
+        "{{getSelectedPropositionURL}}"
+      ],
+      "exposed" : false
+    },
+    "getSelectedPropositionURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedProposition && $data.selectedProposition.hasOwnProperty('persistenceId')){",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition?q=findByPersistenceId&p=0&c=1&f=persistenceId=\"",
+        "    + $data.selectedProposition.persistenceId;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "idProposition" : {
+      "type" : "urlparameter",
+      "value" : [
+        "idProposition"
+      ],
+      "exposed" : false
+    },
+    "isInAppSAV" : {
+      "type" : "expression",
+      "value" : [
+        "var path = window.location.pathname;",
+        "var split = path.split(\"/\");",
+        "",
+        "for(var i= 0; i < split.length; i++) {",
+        "    if (split[i] === \"SAV\") {",
+        "        return true;",
+        "    }",
+        "}",
+        "",
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "listFilters" : {
+      "type" : "expression",
+      "value" : [
+        "var default_notReceptionner = ($data.isInAppBoOrLacOrGeemco) ? \"Masquer\" : \"Afficher\";",
+        "",
+        "var result= ",
+        "[",
+        "\t{",
+        "\t\t\"data\" : \"persistenceId\",",
+        "\t\t\"label\" : \"Id\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"E\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\": \"budgetYear\",",
+        "\t\t\"label\": \"Exercice\",",
+        "\t\t\"type\": \"select\",",
+        "\t\t\"operator\": \"E\", //changed from L to E by Amit for BPM-40",
+        "\t\t\"values\": $data.getBudgetYears",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"materialNumber\",",
+        "\t\t\"label\" : \"Matériel\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"creatorName\",",
+        "\t\t\"label\" : \"Initiateur\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t// Fin ligne 1",
+        "\t{",
+        "\t\t\"data\" : \"territoryName\",",
+        "\t\t\"label\" : \"Territoire\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"entiteName\",",
+        "\t\t\"label\" : \"Entité\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"sectorName\",",
+        "\t\t\"label\" : \"Secteur\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"siteName\",",
+        "\t\t\"label\" : \"Site\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"agencyName\",",
+        "\t\t\"label\" : \"Agence\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t// Fin ligne 2",
+        "\t{",
+        "\t\t\"data\" : \"budgeter\",",
+        "\t\t\"label\" : \"A budgéter\",",
+        "\t\t\"type\" : \"select\",",
+        "\t    \"searchKey\" : \"s\",",
+        "\t\t\"operator\":\"E\",",
+        "\t\t\"values\": [\"Afficher\", \"Masquer\"],",
+        "\t\t\"defaultValue\" : default_notReceptionner",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"commander\",",
+        "\t\t\"label\" : \"A commander\",",
+        "\t\t\"type\" : \"select\",",
+        "\t    \"searchKey\" : \"s\",",
+        "\t\t\"operator\":\"E\",",
+        "\t\t\"values\": [\"Afficher\", \"Masquer\"],",
+        "\t\t\"defaultValue\" : default_notReceptionner",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"receptionner\",",
+        "\t\t\"label\" : \"A réceptionner\",",
+        "\t\t\"type\" : \"select\",",
+        "\t    \"searchKey\" : \"s\",",
+        "\t\t\"operator\":\"E\",",
+        "\t\t\"values\": [\"Afficher\", \"Masquer\"]",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"terminee\",",
+        "\t\t\"label\" : \"Terminées\",",
+        "\t\t\"type\" : \"select\",",
+        "\t    \"searchKey\" : \"s\",",
+        "\t\t\"operator\":\"E\",",
+        "\t\t\"values\": [\"Afficher\", \"Masquer\"],",
+        "\t\t\"defaultValue\" : default_notReceptionner",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"propositionstatus\",",
+        "\t\t\"label\" : \"Statut\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t}",
+        "];",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "listPropositionTasks" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "selectedProposition" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "selectedPropositionFromUrl" : {
+      "type" : "url",
+      "value" : [
+        "{{urlSelectedProposition}}"
+      ],
+      "exposed" : false
+    },
+    "selectGetStatus" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "setSelectedProposition" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.selectedPropositionFromUrl && $data.selectedPropositionFromUrl != {} ) {",
+        "    $data.selectedProposition = $data.selectedPropositionFromUrl;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlFilters" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlListPropositions" : {
+      "type" : "expression",
+      "value" : [
+        "var url;",
+        "",
+        "if (($data.searchRole) && ($data.isAuthorized == true)) {",
+        "    url = \"../API/extension/listBudgetProposition?role=\" + $data.searchRole;",
+        "    ",
+        "    if ($data.urlFilters) {",
+        "        //Add UserSelected filters",
+        "        url+=$data.urlFilters;",
+        "        ",
+        "    } else if ($data.isInAppBoOrLacOrGeemco) {",
+        "        // Add default filters to hide unwanted status",
+        "        url+= \"&s=budgeter=Masquer=E&s=commander=Masquer=E&s=receptionner=Afficher=E&s=terminee=Masquer=E\";",
+        "    }",
+        "    ",
+        "    if ($data.isInAppSAV) {",
+        "        url+= \"&f=typeWorkflow=DADR\";",
+        "    }",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "searchRole" : {
+      "type" : "expression",
+      "value" : [
+        "var search_role=\"unknown\";",
+        "",
+        "try {",
+        "    if (($data.userRole === \"smarte\") ",
+        "        || ($data.userRole === \"sav\")",
+        "        || ($data.userRole === \"bo\")",
+        "        || ($data.userRole === \"lac\") ",
+        "        || ($data.userRole === \"geemco\")) {",
+        "        // No visibility check needed for these apps",
+        "        // Group of the user will however be double checked within REST-API to ensure there is no bypass of visibility restrictions",
+        "        search_role = \"User\";",
+        "    } else {",
+        "        // Set search role to client to trigger visibility check",
+        "        search_role = \"Client\";",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception searchRole: \" + e);    ",
+        "}",
+        "",
+        "return search_role;"
+      ],
+      "exposed" : false
+    },
+    "userRole" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlRefresh" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.urlListPropositions+ \"&c=10&p=0\";"
+      ],
+      "exposed" : false
+    },
+    "urlSelectedProposition" : {
+      "type" : "expression",
+      "value" : [
+        "var url;",
+        "",
+        "if($data.idProposition) {",
+        "   url = \"../API/bdm/businessData/com.sgdbf.model.Proposition/\" + $data.idProposition ; ",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "authorizedGroups" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "isAuthorized" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "errorQuery" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isInAppBoOrLacOrGeemco" : {
+      "type" : "expression",
+      "value" : [
+        "var path = window.location.pathname;",
+        "var split = path.split(\"/\");",
+        "",
+        "for(var i= 0; i < split.length; i++) {",
+        "    if ((split[i] === \"BO\") || (split[i] === \"lac\") || (split[i] === \"geemco\")) {",
+        "        return true;",
+        "    }",
+        "}",
+        "",
+        "return false;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

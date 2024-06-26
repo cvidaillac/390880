@@ -1,0 +1,1411 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "ExportExcelFragment",
+  "name" : "ExportExcelFragment",
+  "lastUpdate" : 1671627885132,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 6,
+          "sm" : 6,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "(Button2Label==null) || (Button2Label== '')"
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "(exportProcessId == null) || (exportStarted.length > 0) || (button2Disabled == true)"
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "<span class=\"button-export-excel\"></span>{{ Button2Label }}"
+          },
+          "alignment" : {
+            "type" : "expression",
+            "value" : "buttonsAlignment"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "default"
+          },
+          "action1" : {
+            "type" : "constant",
+            "value" : "Add to collection"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "dataFromSuccess2" : {
+            "type" : "variable",
+            "value" : "case"
+          },
+          "dataFromSuccess3" : {
+            "type" : "variable",
+            "value" : "getHumanTaskResult"
+          },
+          "action2" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "action3" : {
+            "type" : "constant",
+            "value" : "Get human task"
+          },
+          "collectionToModify" : {
+            "type" : "variable",
+            "value" : "exportStarted"
+          },
+          "valueToAdd" : {
+            "type" : "expression",
+            "value" : "Button2Label"
+          },
+          "collectionPositionAdd" : {
+            "type" : "constant",
+            "value" : "First"
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "exportProcessData2"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "errorDetected"
+          },
+          "dataFromSuccess1" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "taskRootCaseId" : {
+            "type" : "expression",
+            "value" : "caseId"
+          },
+          "startProcessDefinitionId" : {
+            "type" : "expression",
+            "value" : "exportProcessId"
+          },
+          "maxDelayForAction" : {
+            "type" : "constant",
+            "value" : 90
+          },
+          "action4" : {
+            "type" : "constant",
+            "value" : "Get task context"
+          },
+          "taskId" : {
+            "type" : "expression",
+            "value" : "taskId"
+          },
+          "dataFromSuccess4" : {
+            "type" : "variable",
+            "value" : "taskContext"
+          },
+          "collectionPositionRemove" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "collectionRemoveIndex" : {
+            "type" : "constant"
+          },
+          "delayBeforeLastAction" : {
+            "type" : "constant"
+          },
+          "collectionToModify2" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "collection2PositionRemove" : {
+            "type" : "constant"
+          },
+          "maxRetryCount" : {
+            "type" : "constant",
+            "value" : 60
+          },
+          "valueToSet" : {
+            "type" : "constant"
+          },
+          "parameterName" : {
+            "type" : "constant"
+          },
+          "processNamesList" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "82ae5842-34b2-4d27-9b4e-dc9e354878ce",
+        "hasValidationError" : false,
+        "id" : "customButtonMultipleActions"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 6,
+          "sm" : 6,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "(exportProcessId == null) || (exportStarted.length > 0)"
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "<span class=\"button-export-excel\"></span>{{ ButtonLabel }}"
+          },
+          "alignment" : {
+            "type" : "expression",
+            "value" : "buttonsAlignment"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "default"
+          },
+          "action1" : {
+            "type" : "constant",
+            "value" : "Add to collection"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "dataFromSuccess2" : {
+            "type" : "variable",
+            "value" : "case"
+          },
+          "dataFromSuccess3" : {
+            "type" : "variable",
+            "value" : "getHumanTaskResult"
+          },
+          "action2" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "action3" : {
+            "type" : "constant",
+            "value" : "Get human task"
+          },
+          "collectionToModify" : {
+            "type" : "variable",
+            "value" : "exportStarted"
+          },
+          "valueToAdd" : {
+            "type" : "expression",
+            "value" : "ButtonLabel"
+          },
+          "collectionPositionAdd" : {
+            "type" : "constant",
+            "value" : "First"
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "exportProcessData"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "errorDetected"
+          },
+          "dataFromSuccess1" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "taskRootCaseId" : {
+            "type" : "expression",
+            "value" : "caseId"
+          },
+          "startProcessDefinitionId" : {
+            "type" : "expression",
+            "value" : "exportProcessId"
+          },
+          "maxDelayForAction" : {
+            "type" : "constant",
+            "value" : 90
+          },
+          "action4" : {
+            "type" : "constant",
+            "value" : "Get task context"
+          },
+          "taskId" : {
+            "type" : "expression",
+            "value" : "taskId"
+          },
+          "dataFromSuccess4" : {
+            "type" : "variable",
+            "value" : "taskContext"
+          },
+          "collectionPositionRemove" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "collectionRemoveIndex" : {
+            "type" : "constant"
+          },
+          "delayBeforeLastAction" : {
+            "type" : "constant"
+          },
+          "collectionToModify2" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "collection2PositionRemove" : {
+            "type" : "constant"
+          },
+          "maxRetryCount" : {
+            "type" : "constant",
+            "value" : 60
+          },
+          "valueToSet" : {
+            "type" : "constant"
+          },
+          "parameterName" : {
+            "type" : "constant"
+          },
+          "processNamesList" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "0cbe5a5d-cbb9-4b3c-8aaf-1d4b3ac6be3d",
+        "hasValidationError" : false,
+        "id" : "customButtonMultipleActions"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "Modal-overlay"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "exportStarted.length === 0"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "d82f53e6-2c25-4dca-b207-d3cbb88ce5e8",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "exportPanel"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "16e62d95-c299-4c7e-8b37-358d7f83b061",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "panel-group"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "651c9357-6a47-45e1-bc9c-10ededc20905",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "panel-footer"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "14326555-53f2-42e0-acb5-e51fd5acdb13",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "panel-heading bg-primary"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "{{ windowTitle}}"
+                                  },
+                                  "level" : {
+                                    "type" : "constant",
+                                    "value" : "Level 4"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  }
+                                },
+                                "reference" : "8ce93d4b-35e2-43ff-8451-e2b3403f51e0",
+                                "hasValidationError" : false,
+                                "id" : "pbTitle"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "container",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "panel-body"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "repeatedCollection" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  }
+                                },
+                                "reference" : "964bfdf6-d509-4dad-b50a-c57220eaf370",
+                                "hasValidationError" : false,
+                                "id" : "pbContainer",
+                                "rows" : [
+                                  [
+                                    {
+                                      "type" : "component",
+                                      "dimension" : {
+                                        "xs" : 12,
+                                        "sm" : 12,
+                                        "md" : 12,
+                                        "lg" : 12
+                                      },
+                                      "propertyValues" : {
+                                        "cssClasses" : {
+                                          "type" : "constant",
+                                          "value" : "alert alert-info"
+                                        },
+                                        "hidden" : {
+                                          "type" : "expression",
+                                          "value" : "(taskId != null) || (errorDetected != null)"
+                                        },
+                                        "labelHidden" : {
+                                          "type" : "constant",
+                                          "value" : true
+                                        },
+                                        "label" : {
+                                          "type" : "interpolation",
+                                          "value" : "Default label"
+                                        },
+                                        "labelPosition" : {
+                                          "type" : "constant",
+                                          "value" : "top"
+                                        },
+                                        "labelWidth" : {
+                                          "type" : "constant",
+                                          "value" : 4
+                                        },
+                                        "allowHTML" : {
+                                          "type" : "constant",
+                                          "value" : true
+                                        },
+                                        "text" : {
+                                          "type" : "interpolation",
+                                          "value" : "{{ progressMessageText }}"
+                                        },
+                                        "alignment" : {
+                                          "type" : "constant",
+                                          "value" : "left"
+                                        }
+                                      },
+                                      "reference" : "e4842682-235f-40ce-8ee1-7f6b9066bf52",
+                                      "hasValidationError" : false,
+                                      "id" : "pbText"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "type" : "container",
+                                      "dimension" : {
+                                        "xs" : 12,
+                                        "sm" : 12,
+                                        "md" : 12,
+                                        "lg" : 12
+                                      },
+                                      "propertyValues" : {
+                                        "cssClasses" : {
+                                          "type" : "constant",
+                                          "value" : ""
+                                        },
+                                        "hidden" : {
+                                          "type" : "expression",
+                                          "value" : "taskId == null"
+                                        },
+                                        "repeatedCollection" : {
+                                          "type" : "variable",
+                                          "value" : ""
+                                        }
+                                      },
+                                      "reference" : "1233e9ff-c71c-4ad7-97fc-7de300539dfe",
+                                      "hasValidationError" : false,
+                                      "id" : "pbContainer",
+                                      "rows" : [
+                                        [
+                                          {
+                                            "type" : "container",
+                                            "dimension" : {
+                                              "xs" : 12,
+                                              "sm" : 12,
+                                              "md" : 12,
+                                              "lg" : 12
+                                            },
+                                            "propertyValues" : {
+                                              "cssClasses" : {
+                                                "type" : "constant",
+                                                "value" : ""
+                                              },
+                                              "hidden" : {
+                                                "type" : "expression",
+                                                "value" : "isErrorTask"
+                                              },
+                                              "repeatedCollection" : {
+                                                "type" : "variable",
+                                                "value" : ""
+                                              }
+                                            },
+                                            "reference" : "6c29f7e3-810a-4555-b8ff-7e0fda4c6ea0",
+                                            "hasValidationError" : false,
+                                            "id" : "pbContainer",
+                                            "rows" : [
+                                              [
+                                                {
+                                                  "type" : "component",
+                                                  "dimension" : {
+                                                    "xs" : 12,
+                                                    "sm" : 12,
+                                                    "md" : 12,
+                                                    "lg" : 12
+                                                  },
+                                                  "propertyValues" : {
+                                                    "cssClasses" : {
+                                                      "type" : "constant",
+                                                      "value" : "alert alert-success"
+                                                    },
+                                                    "hidden" : {
+                                                      "type" : "constant",
+                                                      "value" : false
+                                                    },
+                                                    "labelHidden" : {
+                                                      "type" : "constant",
+                                                      "value" : true
+                                                    },
+                                                    "label" : {
+                                                      "type" : "interpolation",
+                                                      "value" : "Default label"
+                                                    },
+                                                    "labelPosition" : {
+                                                      "type" : "constant",
+                                                      "value" : "top"
+                                                    },
+                                                    "labelWidth" : {
+                                                      "type" : "constant",
+                                                      "value" : 4
+                                                    },
+                                                    "allowHTML" : {
+                                                      "type" : "constant",
+                                                      "value" : true
+                                                    },
+                                                    "text" : {
+                                                      "type" : "interpolation",
+                                                      "value" : "Export des données terminé avec succès, document Excel généré :"
+                                                    },
+                                                    "alignment" : {
+                                                      "type" : "constant",
+                                                      "value" : "left"
+                                                    }
+                                                  },
+                                                  "reference" : "0e87498e-3e6d-403e-9f11-22d86f5223f5",
+                                                  "hasValidationError" : false,
+                                                  "id" : "pbText"
+                                                }
+                                              ],
+                                              [
+                                                {
+                                                  "type" : "component",
+                                                  "dimension" : {
+                                                    "xs" : 12,
+                                                    "sm" : 12,
+                                                    "md" : 12,
+                                                    "lg" : 12
+                                                  },
+                                                  "propertyValues" : {
+                                                    "cssClasses" : {
+                                                      "type" : "constant",
+                                                      "value" : ""
+                                                    },
+                                                    "hidden" : {
+                                                      "type" : "expression",
+                                                      "value" : "documentUrl === \"\""
+                                                    },
+                                                    "text" : {
+                                                      "type" : "interpolation",
+                                                      "value" : "{{ documentName }}"
+                                                    },
+                                                    "type" : {
+                                                      "type" : "constant",
+                                                      "value" : "URL"
+                                                    },
+                                                    "targetUrl" : {
+                                                      "type" : "expression",
+                                                      "value" : "documentUrl"
+                                                    },
+                                                    "pageToken" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "processName" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "processVersion" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "taskId" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "caseId" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "target" : {
+                                                      "type" : "constant",
+                                                      "value" : "_blank"
+                                                    },
+                                                    "appToken" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "urlParams" : {
+                                                      "type" : "constant"
+                                                    },
+                                                    "alignment" : {
+                                                      "type" : "constant",
+                                                      "value" : "left"
+                                                    },
+                                                    "buttonStyle" : {
+                                                      "type" : "constant",
+                                                      "value" : "link"
+                                                    }
+                                                  },
+                                                  "reference" : "51f0c171-d1e4-4576-9def-f9b35193c350",
+                                                  "hasValidationError" : false,
+                                                  "id" : "pbLink"
+                                                }
+                                              ]
+                                            ]
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "type" : "component",
+                                      "dimension" : {
+                                        "xs" : 12,
+                                        "sm" : 12,
+                                        "md" : 12,
+                                        "lg" : 12
+                                      },
+                                      "propertyValues" : {
+                                        "cssClasses" : {
+                                          "type" : "constant",
+                                          "value" : "alert alert-danger"
+                                        },
+                                        "hidden" : {
+                                          "type" : "expression",
+                                          "value" : "(errorDetected == null) && (! isErrorTask)"
+                                        },
+                                        "labelHidden" : {
+                                          "type" : "constant",
+                                          "value" : true
+                                        },
+                                        "label" : {
+                                          "type" : "interpolation",
+                                          "value" : "Default label"
+                                        },
+                                        "labelPosition" : {
+                                          "type" : "constant",
+                                          "value" : "top"
+                                        },
+                                        "labelWidth" : {
+                                          "type" : "constant",
+                                          "value" : 4
+                                        },
+                                        "allowHTML" : {
+                                          "type" : "constant",
+                                          "value" : true
+                                        },
+                                        "text" : {
+                                          "type" : "interpolation",
+                                          "value" : "Echec de l'export : {{ errorMsg}}"
+                                        },
+                                        "alignment" : {
+                                          "type" : "constant",
+                                          "value" : "left"
+                                        }
+                                      },
+                                      "reference" : "0d657c6a-2c0c-4d3e-968f-3d66e90ed3f6",
+                                      "hasValidationError" : false,
+                                      "id" : "pbText"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "panel-footer"
+                                  },
+                                  "hidden" : {
+                                    "type" : "expression",
+                                    "value" : "taskId != null"
+                                  },
+                                  "disabled" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "constant",
+                                    "value" : "Annuler"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "center"
+                                  },
+                                  "buttonStyle" : {
+                                    "type" : "constant",
+                                    "value" : "warning"
+                                  },
+                                  "action1" : {
+                                    "type" : "constant",
+                                    "value" : "Remove from collection"
+                                  },
+                                  "targetUrlOnSuccess" : {
+                                    "type" : "interpolation"
+                                  },
+                                  "collectionPosition" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "dataFromSuccess2" : {
+                                    "type" : "variable",
+                                    "value" : "getHumanTaskResult"
+                                  },
+                                  "dataFromSuccess3" : {
+                                    "type" : "variable",
+                                    "value" : "errorDetected"
+                                  },
+                                  "action2" : {
+                                    "type" : "constant",
+                                    "value" : "Clear previous data"
+                                  },
+                                  "action3" : {
+                                    "type" : "constant",
+                                    "value" : "Set value"
+                                  },
+                                  "collectionToModify" : {
+                                    "type" : "variable",
+                                    "value" : "exportStarted"
+                                  },
+                                  "valueToAdd" : {
+                                    "type" : "constant"
+                                  },
+                                  "collectionPositionAdd" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "url" : {
+                                    "type" : "interpolation"
+                                  },
+                                  "dataToSend" : {
+                                    "type" : "constant"
+                                  },
+                                  "dataFromError" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "dataFromSuccess1" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "taskRootCaseId" : {
+                                    "type" : "constant"
+                                  },
+                                  "startProcessDefinitionId" : {
+                                    "type" : "constant"
+                                  },
+                                  "maxDelayForAction" : {
+                                    "type" : "constant",
+                                    "value" : 5
+                                  },
+                                  "action4" : {
+                                    "type" : "constant",
+                                    "value" : "-"
+                                  },
+                                  "taskId" : {
+                                    "type" : "constant"
+                                  },
+                                  "dataFromSuccess4" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "collectionPositionRemove" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "collectionRemoveIndex" : {
+                                    "type" : "constant"
+                                  },
+                                  "removeItem" : {
+                                    "type" : "variable"
+                                  },
+                                  "delayBeforeLastAction" : {
+                                    "type" : "constant"
+                                  },
+                                  "collectionToModify2" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "collection2PositionRemove" : {
+                                    "type" : "constant"
+                                  },
+                                  "maxRetryCount" : {
+                                    "type" : "constant",
+                                    "value" : 20
+                                  },
+                                  "valueToSet" : {
+                                    "type" : "expression",
+                                    "value" : "null"
+                                  },
+                                  "parameterName" : {
+                                    "type" : "constant"
+                                  },
+                                  "processNamesList" : {
+                                    "type" : "constant"
+                                  }
+                                },
+                                "reference" : "546f3086-9017-430a-b3ea-6e608cc6d608",
+                                "hasValidationError" : false,
+                                "id" : "customButtonMultipleActions"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "expression",
+                                    "value" : "taskId == null"
+                                  },
+                                  "disabled" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "Fermer"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "center"
+                                  },
+                                  "buttonStyle" : {
+                                    "type" : "constant",
+                                    "value" : "default"
+                                  },
+                                  "action1" : {
+                                    "type" : "constant",
+                                    "value" : "Remove from collection"
+                                  },
+                                  "targetUrlOnSuccess" : {
+                                    "type" : "interpolation"
+                                  },
+                                  "collectionPosition" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "removeItem" : {
+                                    "type" : "variable"
+                                  },
+                                  "dataFromSuccess2" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "dataFromSuccess3" : {
+                                    "type" : "variable",
+                                    "value" : "case"
+                                  },
+                                  "action2" : {
+                                    "type" : "constant",
+                                    "value" : "Submit task"
+                                  },
+                                  "action3" : {
+                                    "type" : "constant",
+                                    "value" : "Clear previous data"
+                                  },
+                                  "collectionToModify" : {
+                                    "type" : "variable",
+                                    "value" : "exportStarted"
+                                  },
+                                  "valueToAdd" : {
+                                    "type" : "constant"
+                                  },
+                                  "collectionPositionAdd" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "url" : {
+                                    "type" : "interpolation"
+                                  },
+                                  "dataToSend" : {
+                                    "type" : "expression",
+                                    "value" : "{}"
+                                  },
+                                  "dataFromError" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "dataFromSuccess1" : {
+                                    "type" : "variable",
+                                    "value" : "taskContext"
+                                  },
+                                  "taskRootCaseId" : {
+                                    "type" : "constant"
+                                  },
+                                  "startProcessDefinitionId" : {
+                                    "type" : "constant"
+                                  },
+                                  "maxDelayForAction" : {
+                                    "type" : "constant",
+                                    "value" : 5
+                                  },
+                                  "action4" : {
+                                    "type" : "constant",
+                                    "value" : "-"
+                                  },
+                                  "taskId" : {
+                                    "type" : "expression",
+                                    "value" : "taskId"
+                                  },
+                                  "dataFromSuccess4" : {
+                                    "type" : "variable",
+                                    "value" : "getHumanTaskResult"
+                                  },
+                                  "collectionPositionRemove" : {
+                                    "type" : "constant",
+                                    "value" : "Last"
+                                  },
+                                  "collectionRemoveIndex" : {
+                                    "type" : "constant"
+                                  },
+                                  "delayBeforeLastAction" : {
+                                    "type" : "constant"
+                                  },
+                                  "collectionToModify2" : {
+                                    "type" : "variable",
+                                    "value" : ""
+                                  },
+                                  "collection2PositionRemove" : {
+                                    "type" : "constant"
+                                  },
+                                  "maxRetryCount" : {
+                                    "type" : "constant",
+                                    "value" : 20
+                                  },
+                                  "valueToSet" : {
+                                    "type" : "constant"
+                                  },
+                                  "parameterName" : {
+                                    "type" : "constant"
+                                  },
+                                  "processNamesList" : {
+                                    "type" : "constant"
+                                  }
+                                },
+                                "reference" : "307fcf95-b314-42ff-ae3b-5cddc2b66d6c",
+                                "hasValidationError" : false,
+                                "id" : "customButtonMultipleActions"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "exportProcessName" : {
+      "type" : "constant",
+      "value" : [
+        "ExportDataToExcel"
+      ],
+      "exposed" : false
+    },
+    "ButtonLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "exportProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{exportProcessName}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "exportProcessId" : {
+      "type" : "expression",
+      "value" : [
+        "var process_id=null",
+        "",
+        "if ((typeof $data.exportProcessDefinition !== 'undefined')",
+        "    && Array.isArray($data.exportProcessDefinition)",
+        "    && ($data.exportProcessDefinition.length > 0)",
+        "    && (typeof $data.exportProcessDefinition[0].id !== 'undefined')) {",
+        "        process_id = $data.exportProcessDefinition[0].id;",
+        "    }",
+        "",
+        "return process_id;"
+      ],
+      "exposed" : false
+    },
+    "exportProcessData" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "exportStarted" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "caseId" : {
+      "type" : "expression",
+      "value" : [
+        "var case_id=null;",
+        "",
+        "if ((typeof $data.case !== 'undefined')",
+        "    && ($data.case !== null)",
+        "    && $data.case.hasOwnProperty('caseId')) {",
+        "    case_id = $data.case.caseId;",
+        "}",
+        "",
+        "return case_id;"
+      ],
+      "exposed" : false
+    },
+    "errorDetected" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "exportWindowTitle" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "progressMessageText" : {
+      "type" : "expression",
+      "value" : [
+        "var msg = \"Démarrage de l'export Excel ...\";",
+        "",
+        "if ($data.caseId != null) {",
+        "    msg = \"Export en cours\";",
+        "    if ((typeof $data.nbExportedRows !== 'undefined') ",
+        "        && ($data.nbExportedRows > 0)) {",
+        "        msg += ' de ' + $data.nbExportedRows + \" enregistrement\";",
+        "        if ($data.nbExportedRows > 1) {",
+        "            msg += 's';",
+        "        }",
+        "    }",
+        "    msg += \" ...\";",
+        "}",
+        "",
+        "return msg;"
+      ],
+      "exposed" : false
+    },
+    "getHumanTaskResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "expression",
+      "value" : [
+        "var taskId=null;",
+        "",
+        "try {",
+        "    if ((typeof $data.getHumanTaskResult !== 'undefined')",
+        "        && ($data.getHumanTaskResult !== null)",
+        "        && (typeof $data.getHumanTaskResult.id !== 'undefined')) {",
+        "            taskId = $data.getHumanTaskResult.id;",
+        "            console.log('Found new Task id = ' + taskId);",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception taskId: ' + e);",
+        "}",
+        "",
+        "return taskId;"
+      ],
+      "exposed" : false
+    },
+    "taskUrl" : {
+      "type" : "expression",
+      "value" : [
+        "var url = \"\";",
+        "",
+        "if ($data.taskId !== null) {",
+        "    url = \"/bonita/portal/form/taskInstance/\" + $data.taskId;",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "case" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "taskName" : {
+      "type" : "expression",
+      "value" : [
+        "var taskName=null;",
+        "",
+        "try {",
+        "    if ((typeof $data.getHumanTaskResult !== 'undefined')",
+        "        && ($data.getHumanTaskResult !== null)",
+        "        && (typeof $data.getHumanTaskResult.id !== 'undefined')) {",
+        "            taskName = $data.getHumanTaskResult.name;",
+        "            console.log('Found new Task name = ' + taskName);",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception taskName: ' + e);",
+        "}",
+        "",
+        "return taskName;"
+      ],
+      "exposed" : false
+    },
+    "isErrorTask" : {
+      "type" : "expression",
+      "value" : [
+        "var is_error_task=false;",
+        "",
+        "if ($data.taskName !== null) {",
+        "    if ($data.taskName == \"Display Error\") {",
+        "        is_error_task = true;",
+        "    }",
+        "}",
+        "",
+        "return is_error_task;"
+      ],
+      "exposed" : false
+    },
+    "taskContext" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "documentUrl" : {
+      "type" : "expression",
+      "value" : [
+        "var url = \"\";",
+        "",
+        "try {",
+        "    if ((typeof $data.taskContext !== 'undefined') ",
+        "        && ($data.taskContext !== null)",
+        "        && $data.taskContext.hasOwnProperty('exportFile_ref')) {",
+        "            var doc_ref = $data.taskContext.exportFile_ref;",
+        "            if ((doc_ref !=null) && doc_ref.hasOwnProperty('url')) {",
+        "                url = doc_ref.url;",
+        "            }",
+        "        }",
+        "} catch(e) {",
+        "    console.error('Exception documentUrl: ' + e);",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "documentName" : {
+      "type" : "expression",
+      "value" : [
+        "var doc_name =\"\";",
+        "",
+        "try {",
+        "    if ((typeof $data.taskContext !== 'undefined') ",
+        "        && ($data.taskContext !== null)",
+        "        && $data.taskContext.hasOwnProperty('exportFile_ref')) {",
+        "            var doc_ref = $data.taskContext.exportFile_ref;",
+        "            if ((doc_ref !=null) && doc_ref.hasOwnProperty('fileName')) {",
+        "                doc_name = doc_ref.fileName;",
+        "                console.debug(\"Exported document name: \" + doc_name);",
+        "            }",
+        "        }",
+        "} catch(e) {",
+        "    console.error('Exception documentName: ' + e);",
+        "}",
+        "",
+        "return doc_name;"
+      ],
+      "exposed" : false
+    },
+    "errorMsg" : {
+      "type" : "expression",
+      "value" : [
+        "var msg = \"\";",
+        "",
+        "try {",
+        "    if ($data.errorDetected !== null) {",
+        "        msg = $data.errorDetected;",
+        "    } else if (($data.isErrorTask) ",
+        "            && (typeof $data.getHumanTaskResult !== 'undefined')",
+        "            && $data.getHumanTaskResult.hasOwnProperty(\"description\")",
+        "            && ($data.getHumanTaskResult.description !== null)) {",
+        "        msg = $data.getHumanTaskResult.description;",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception errorMsg: ' + e);",
+        "}",
+        "",
+        "return msg;"
+      ],
+      "exposed" : false
+    },
+    "nbExportedRows" : {
+      "type" : "expression",
+      "value" : [
+        "var nbRows=0;",
+        "",
+        "try {",
+        "    if ($data.exportStarted.length > 0) {",
+        "        var process_data = $data.exportProcessData;",
+        "        if ($data.exportStarted[0] === $data.Button2Label) {",
+        "            process_data = $data.exportProcessData2;",
+        "        }",
+        "        if ((typeof process_data !== 'undefined') ",
+        "            && (process_data !== null)) {",
+        "            if (process_data.hasOwnProperty(\"contractQueryListIds\")",
+        "                && Array.isArray(process_data.contractQueryListIds)",
+        "                && (process_data.contractQueryListIds.length > 0)) {",
+        "                    nbRows = process_data.contractQueryListIds.length;",
+        "    ",
+        "            } else if (process_data.hasOwnProperty(\"contractExportDataRows\")",
+        "                && Array.isArray(process_data.contractExportDataRows)",
+        "                && (process_data.contractExportDataRows.length > 0)",
+        "                && (Array.isArray(process_data.contractExportDataRows[0].records))) {",
+        "                    nbRows = process_data.contractExportDataRows[0].records.length;",
+        "            }    ",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception nbExportedRows\");",
+        "}",
+        "",
+        "return nbRows;"
+      ],
+      "exposed" : false
+    },
+    "Button2Label" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "exportProcessData2" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "windowTitle" : {
+      "type" : "expression",
+      "value" : [
+        "var title = $data.exportWindowTitle;",
+        "",
+        "if ((title !== null) && ($data.Button2Label !== null) && ($data.Button2Label !== \"\") ",
+        "    && ($data.exportStarted !== null) && Array.isArray($data.exportStarted) && ($data.exportStarted.length > 0)) {",
+        "    title += ' - ' + $data.exportStarted[0];",
+        "}",
+        "",
+        "return title;"
+      ],
+      "exposed" : false
+    },
+    "button2Disabled" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "buttonsAlignment" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

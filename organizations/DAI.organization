@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="DAI">
+  <customUserInfoDefinitions/>
+  <users/>
+  <roles>
+    <role name="user">
+      <displayName>user</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="DAI_PointP">
+      <displayName>DAI_PointP</displayName>
+    </group>
+    <group name="Demandeurs" parentPath="/DAI_PointP">
+      <displayName>Demandeurs</displayName>
+    </group>
+    <group name="N1" parentPath="/DAI_PointP">
+      <displayName>N1</displayName>
+    </group>
+    <group name="Resp Fonctionnel" parentPath="/DAI_PointP">
+      <displayName>Resp Fonctionnel</displayName>
+    </group>
+    <group name="DG" parentPath="/DAI_PointP">
+      <displayName>DG</displayName>
+    </group>
+    <group name="DAF" parentPath="/DAI_PointP">
+      <displayName>DAF</displayName>
+    </group>
+  </groups>
+  <memberships/>
+</organization:Organization>

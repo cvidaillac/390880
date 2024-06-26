@@ -1,0 +1,502 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "selectEnergy",
+  "name" : "selectEnergy",
+  "lastUpdate" : 1671627880585,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "isReadOnly || (! listEnergies) || (listEnergies.length==0)"
+          },
+          "required" : {
+            "type" : "expression",
+            "value" : "! isReadOnly"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "{{labelEnergyField}}"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "{{placeholderEnergyField}}"
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listEnergies"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "libelleEnergie"
+          },
+          "returnedKey" : {
+            "type" : "constant"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedEnergy"
+          }
+        },
+        "reference" : "5542ccc6-47e6-4f4e-b8b9-010919e00d4e",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "alert alert-danger"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! errorMsg"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{errorMsg}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "25c91bea-e8f2-4e3d-81af-7ac5552bb87b",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "apiUrl" : {
+            "type" : "interpolation",
+            "value" : "{{ urlGetEnergies }}"
+          },
+          "successResponse" : {
+            "type" : "variable",
+            "value" : "listEnergiesResult"
+          },
+          "errorResponse" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Aucune énergie trouvée !"
+          },
+          "errorText" : {
+            "type" : "interpolation",
+            "value" : "Erreur : Récupération des énergies impossible, échec de la connexion à Lyre"
+          },
+          "triggerQuery" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "896d8c37-eaf1-4932-b932-fe43dbc2d16d",
+        "hasValidationError" : false,
+        "id" : "customShowEligibleMaterialLoader"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 1,
+          "md" : 2,
+          "lg" : 2
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "0c644d32-bb8e-4d90-addd-bab7a2d3fac3",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [ ]
+        ]
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 3,
+          "md" : 2,
+          "lg" : 2
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "isReadOnly"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "{{retrofitLabel}}"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "retrofitValue"
+          }
+        },
+        "reference" : "8a890e74-e769-4782-a661-3e346cd63873",
+        "hasValidationError" : false,
+        "id" : "pbCheckbox"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 4,
+          "md" : 3,
+          "lg" : 3
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "isReadOnly"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "{{b100Label}}"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "b100Value"
+          }
+        },
+        "reference" : "c78f0b2b-54ef-4afc-9818-a8c7938a0976",
+        "hasValidationError" : false,
+        "id" : "pbCheckbox"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 4,
+          "md" : 3,
+          "lg" : 3
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "isReadOnly"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "{{xtlLabel}}"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "xtlValue"
+          }
+        },
+        "reference" : "793dab87-cf29-46f2-9130-bd9cdf349f4d",
+        "hasValidationError" : false,
+        "id" : "pbCheckbox"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlGetEnergies" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/pop3pLyreGetEnergies"
+      ],
+      "exposed" : false
+    },
+    "listEnergiesResult" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "labelEnergyField" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "placeholderEnergyField" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listEnergies" : {
+      "type" : "expression",
+      "value" : [
+        "var list_energies;",
+        "",
+        "try {",
+        "    if (($data.listEnergiesResult) && (typeof $data.listEnergiesResult.energies !== \"undefined\")) {",
+        "            list_energies = $data.listEnergiesResult.energies;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception listEnergies : \" + e);",
+        "}",
+        "",
+        "return list_energies;"
+      ],
+      "exposed" : false
+    },
+    "selectedEnergy" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "errorMsg" : {
+      "type" : "expression",
+      "value" : [
+        "var error_msg='';",
+        "",
+        "try {",
+        "    if ($data.listEnergiesResult) {",
+        "        if ((typeof $data.listEnergiesResult.errorMsg !== 'undefined')",
+        "            && ($data.listEnergiesResult.errorMsg)) {",
+        "            error_msg = $data.listEnergiesResult.errorMsg;",
+        "            ",
+        "            if ((typeof $data.listEnergiesResult.errorNum !== 'undefined')",
+        "            && ($data.listEnergiesResult.errorNum)) {",
+        "                error_msg += '(' + $data.listEnergiesResult.errorNum +')';",
+        "            }",
+        "        }",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception errorMsg: ' + e);",
+        "}",
+        "",
+        "return error_msg;"
+      ],
+      "exposed" : false
+    },
+    "retrofitValue" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "retrofitLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "b100Label" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "b100Value" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "xtlLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "xtlValue" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedEnergyCode" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedEnergyLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setSelectedEnergy" : {
+      "type" : "expression",
+      "value" : [
+        "var selected_energy_code;",
+        "",
+        "try {",
+        "    if ($data.selectedEnergy) {",
+        "        if (typeof $data.selectedEnergy.codeEnergie !== 'undefined') {",
+        "            selected_energy_code = $data.selectedEnergy.codeEnergie;",
+        "            $data.selectedEnergyCode = selected_energy_code;",
+        "            $data.selectedEnergyLabel = $data.selectedEnergy.libelleEnergie;",
+        "        }",
+        "    } else {",
+        "        // Set existing value if any",
+        "        if ($data.selectedEnergyCode) {",
+        "            if ($data.listEnergies) {",
+        "                for (var one_energy of $data.listEnergies) {",
+        "                    if (one_energy.codeEnergie === $data.selectedEnergyCode) {",
+        "                        $data.selectedEnergy = one_energy;",
+        "                        selected_energy_code = $data.selectedEnergy.codeEnergie;",
+        "                    }",
+        "                }",
+        "            }",
+        "        }",
+        "    }",
+        "    ",
+        "} catch(e) {",
+        "    console.error(\"Exception setSelectedEnergy : \" + e);",
+        "}",
+        "",
+        "return selected_energy_code;"
+      ],
+      "exposed" : false
+    },
+    "isReadOnly" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

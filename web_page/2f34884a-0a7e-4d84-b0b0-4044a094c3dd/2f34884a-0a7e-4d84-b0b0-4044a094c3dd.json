@@ -1,0 +1,683 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "2f34884a-0a7e-4d84-b0b0-4044a094c3dd",
+  "name" : "pop3pBudgetPlanning",
+  "lastUpdate" : 1671627885894,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "13277692-dfd2-4aea-b0f8-cef0454c177f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "5fe21e09-140d-4d05-a5ff-11649ff49c48",
+              "hasValidationError" : false,
+              "id" : "dcc6c306-54ef-4a6b-94a9-991c3a9a1fcc",
+              "binding" : {
+                "selectedTerritory" : "selectedTerritory",
+                "selectedAgency" : "selectedAgency",
+                "selectedAgencyName" : "",
+                "selectedTerritoryName" : "",
+                "selectedEntityCode" : "",
+                "selectedEntityName" : "",
+                "hidden" : ""
+              }
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 2,
+                "lg" : 2
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "3b384535-9a14-4414-98c3-5f8205bddc20",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Exercice"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Année budgétaire"
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "getBudgetYears"
+                },
+                "displayedKey" : {
+                  "type" : "constant"
+                },
+                "returnedKey" : {
+                  "type" : "constant"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedBudgetYear"
+                }
+              },
+              "reference" : "1ee5f52f-314b-4fe6-8877-11990b452f22",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "! selectedAgency || ! selectedBudgetYear"
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Rechercher les dates"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "GET"
+          },
+          "url" : {
+            "type" : "interpolation",
+            "value" : "{{urlGetDatesPlanning}}"
+          },
+          "dataToSend" : {
+            "type" : "constant"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : "datesPlanning"
+          },
+          "closeOnSuccess" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "valueToAdd" : {
+            "type" : "constant"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "assign" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "responseStatusCode" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "db1e58ed-63c2-439d-a7fc-332cfe2d61d0",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! selectedAgency || ! selectedBudgetYear"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "d41bbc60-fe7a-4ef2-8d5a-f4355df61a5d",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "datesPlanning.length === 0"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "fa7ab9b4-fb47-4039-aa9d-4907fc1c2c63",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 1,
+                      "lg" : 1
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "1b8bcdf5-d895-4dc2-8719-71067e2c8b7f",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 10,
+                      "lg" : 8
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "f1bcd9a3-e2cb-407f-80ba-80fa60e8a55c",
+                    "hasValidationError" : false,
+                    "id" : "04a8218f-9853-4126-bb17-68d313c19b75",
+                    "binding" : {
+                      "readOnly" : "readOnly",
+                      "selectedTerritory" : "selectedTerritory",
+                      "selectedBudgetYear" : "selectedBudgetYear",
+                      "selectedAgency" : "selectedAgency",
+                      "returnedDates" : "",
+                      "displayPopUp" : "",
+                      "formInput" : "payload",
+                      "rfDates" : "rfDates",
+                      "datesPlanning" : "datesPlanning",
+                      "invalidAmounts" : "invalidAmounts"
+                    }
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "expression",
+                        "value" : "formOutput.budget.length === 0 || invalidAmounts"
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Enregistrer ces dates"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "primary"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "POST"
+                      },
+                      "url" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlAPIUpdatePlannings}}"
+                      },
+                      "dataToSend" : {
+                        "type" : "expression",
+                        "value" : "formOutput"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable",
+                        "value" : "isUpdated"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : "isUpdated"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "constant"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      },
+                      "assign" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "responseStatusCode" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "closeOnSuccess" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "modalId" : {
+                        "type" : "constant",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "f98940ac-82db-4e67-b6cd-398516e811ae",
+                    "hasValidationError" : false,
+                    "id" : "pbButton"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "eae040d0-1cc2-4feb-830b-c6e6a7f322b6",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "e45293bd-ec23-4cf9-84aa-72c5a9ec6b79",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlAPIUpdatePlannings" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/extension/budgetplanning/updatePlanning\";"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "eventUrlChange" : {
+      "type" : "expression",
+      "value" : [
+        "var isEventUrlChange = false;",
+        "",
+        "if($data.urlGetDatesPlanning !== $data.oldUrlGetDatesPlanning) {",
+        "    isEventUrlChange = true;",
+        "    $data.datesPlanning = [];",
+        "    $data.oldUrlGetDatesPlanning = $data.urlGetDatesPlanning",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "isUpdated" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "rfDates" : {
+      "type" : "expression",
+      "value" : [
+        "return {};"
+      ],
+      "exposed" : false
+    },
+    "resetValues" : {
+      "type" : "expression",
+      "value" : [
+        "if (!angular.equals($data.isUpdated, {})) {",
+        "    $data.selectedBudgetYear = null;",
+        "    $data.isUpdated = {};",
+        "    $data.payload = [];",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "payload" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "selectedBudgetYear" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var myPayload = {\r",
+        "    budget : [],\r",
+        "    anneeBudget : 0\r",
+        "};\r",
+        "\r",
+        "\r",
+        "if ($data.payload && $data.payload.length > 0){\r",
+        "    myPayload.budget = angular.copy($data.payload);\r",
+        "    \r",
+        "    for(var i in $data.payload) {\r",
+        "        myPayload.budget[i].nomNoeud = $data.payload[i].nomNoeud;\r",
+        "        myPayload.budget[i].codeNoeud = $data.payload[i].codeNoeud;\r",
+        "        myPayload.budget[i].enveloppeBudget = String($data.payload[i].enveloppeBudget);\r",
+        "        myPayload.budget[i].niveau = $data.payload[i].niveau;\r",
+        "        myPayload.budget[i].intitule = $data.payload[i].intitule;\r",
+        "        myPayload.budget[i].datePresentation = $data.payload[i].datePresentation;\r",
+        "        \r",
+        "        var lastLevel = $data.payload.length-1;\r",
+        "        if(i == lastLevel){\r",
+        "           \r",
+        "            myPayload.budget[i].rf1 = $data.payload[i].rf1;\r",
+        "            myPayload.budget[i].rf2 = $data.payload[i].rf2;\r",
+        "            myPayload.budget[i].rf3 = $data.payload[i].rf3;\r",
+        "            myPayload.budget[i].rf4 = $data.payload[i].rf4;\r",
+        "            \r",
+        "            myPayload.budget[i].enveloppeCamions = String($data.payload[i].enveloppeCamions);\r",
+        "            myPayload.budget[i].enveloppeChariots = String($data.payload[i].enveloppeChariots);\r",
+        "            myPayload.budget[i].enveloppeAccessoires = String($data.payload[i].enveloppeAccessoires);\r",
+        "           \r",
+        "        }         \r",
+        "    }\r",
+        "    \r",
+        "} else {\r",
+        "    myPayload.budget = [];\r",
+        "}\r",
+        "\r",
+        "if($data.selectedBudgetYear) {\r",
+        "    myPayload.anneeBudget = $data.selectedBudgetYear;\r",
+        "}\r",
+        "\r",
+        "\r",
+        "return myPayload;"
+      ],
+      "exposed" : false
+    },
+    "urlGetDatesPlanning" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedAgency && $data.selectedBudgetYear){",
+        "    ",
+        "    return \"../API/extension/budgetplanning/getPlanning?agencyCode=\"+$data.selectedAgency+\"&budgetYear=\"+$data.selectedBudgetYear;",
+        "}else {",
+        "    return \"\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "oldUrlGetDatesPlanning" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 10; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    },
+    "datesPlanning" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "invalidAmounts" : {
+      "type" : "expression",
+      "value" : [
+        "var invalid = false;",
+        "",
+        "if ($data.payload && $data.payload.length > 0)",
+        "{",
+        "    for(var i in $data.payload) ",
+        "    {",
+        "        if($data.payload[i].invalidAmounts === true)",
+        "        {",
+        "            invalid = true;",
+        "            break;",
+        "        }",
+        "    }",
+        "    ",
+        "}",
+        "",
+        "return invalid;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "2f34884a-0a7e-4d84-b0b0-4044a094c3dd",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

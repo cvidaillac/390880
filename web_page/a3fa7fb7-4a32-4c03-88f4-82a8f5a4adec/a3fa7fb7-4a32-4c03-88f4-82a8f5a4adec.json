@@ -1,0 +1,2106 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "a3fa7fb7-4a32-4c03-88f4-82a8f5a4adec",
+  "name" : "pop3pDxxTransmettreBO",
+  "lastUpdate" : 1671627901659,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "2efdfee6-78c6-4fb1-a7a4-331f5bce0c34",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbTitle"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "constant"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "1896c20b-1559-4d54-91ae-dd4410f8d6dd",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "d487262b-238e-4376-aee3-96b0140f7f9f",
+        "hasValidationError" : false,
+        "id" : "96ff9112-5e4f-4b05-b18a-ab6d2aced5a2",
+        "binding" : {
+          "displayDetailProposition" : "",
+          "getSession" : "session",
+          "propositionInput" : "propositionInput",
+          "selectedProposition" : "propositionInput",
+          "searchCase" : "searchCase",
+          "commentValue" : "commentValue",
+          "urlAPISendComment" : "urlAPISendComment",
+          "commentToSend" : "commentToSend",
+          "addCommentResult" : "addCommentResult",
+          "addCommentError" : "addCommentError",
+          "getComments" : "getComments",
+          "urlFindPropositionHistory" : "urlFindPropositionHistory",
+          "isMaterialDisplayed" : ""
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<hr>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "4bcd9532-e550-4a97-90fe-5814b765ed50",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "a3256d49-6879-462c-869f-d191d5544007",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "789e55a6-daf7-42c3-ade0-1cda53d2e421",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "052d3207-4c99-450b-994e-3886bc69c71f",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "fragment",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "dec42c9d-57b8-4be5-93b6-29ba5bdf2bca",
+                      "hasValidationError" : false,
+                      "id" : "selectEnergy",
+                      "binding" : {
+                        "labelEnergyField" : "\"Energie future\"",
+                        "placeholderEnergyField" : "\"Selectionner l'énergie future\"",
+                        "retrofitValue" : "propositionInput.futureRetrofitable",
+                        "retrofitLabel" : "\"Retrofitable futur\"",
+                        "b100Label" : "\"Biocarburant B100 futur\"",
+                        "b100Value" : "propositionInput.futureBiofuelB100",
+                        "xtlLabel" : "\"Biocarburant XTL futur\"",
+                        "xtlValue" : "propositionInput.futureBiofuelXTL",
+                        "selectedEnergyCode" : "propositionInput.futureEnergyCode",
+                        "selectedEnergyLabel" : "propositionInput.futureEnergyName",
+                        "isReadOnly" : ""
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "(! isRenouvellement) || (refusProposition.length>0)"
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "a71143e6-5a4b-4f1f-be47-7db969bc3639",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 8,
+                              "lg" : 6
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "required" : {
+                                "type" : "expression",
+                                "value" : "isRenouvellement && (refusProposition.length == 0)"
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Date planification DDD"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "propositionInput.dddRenewStartDate"
+                              },
+                              "dateFormat" : {
+                                "type" : "constant",
+                                "value" : "dd/MM/yyyy"
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "Saisir une date (dd/mm/yyyy)"
+                              },
+                              "showToday" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "todayLabel" : {
+                                "type" : "interpolation",
+                                "value" : "Aujourd'hui"
+                              }
+                            },
+                            "reference" : "68fe0d69-43e1-4f5d-9b8e-c89db0bc7d4f",
+                            "hasValidationError" : false,
+                            "id" : "pbDatePicker"
+                          },
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 4,
+                              "lg" : 6
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "repeatedCollection" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "b18feaf9-b730-45c8-af8b-2110ebbec826",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "rows" : [
+                              [ ]
+                            ]
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "isPropositionrestituer == true"
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "refusProposition.length>0"
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : 250
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "{{labelComment}}"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "commentaireBO"
+                        }
+                      },
+                      "reference" : "195f2265-8b1e-42f0-b013-3ac2858c0b5b",
+                      "hasValidationError" : false,
+                      "id" : "pbTextarea"
+                    },
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "refusProposition.length>0"
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "f4f4dd88-e079-49e4-a755-1125723be99e",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "container",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "expression",
+                                "value" : "! propositionInput.propositionAttachments || propositionInput.propositionAttachments.length==0"
+                              },
+                              "repeatedCollection" : {
+                                "type" : "variable",
+                                "value" : ""
+                              }
+                            },
+                            "reference" : "657e10ff-fbae-4944-ae70-27c6b3d21cdb",
+                            "hasValidationError" : false,
+                            "id" : "pbContainer",
+                            "rows" : [
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "xs" : 12,
+                                    "sm" : 12,
+                                    "md" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "text" : {
+                                      "type" : "interpolation",
+                                      "value" : "Supprimer des pièces jointes"
+                                    },
+                                    "level" : {
+                                      "type" : "constant",
+                                      "value" : "Level 4"
+                                    },
+                                    "alignment" : {
+                                      "type" : "constant",
+                                      "value" : "left"
+                                    }
+                                  },
+                                  "reference" : "6e201f21-018b-4b31-9a0d-10aee07eac88",
+                                  "hasValidationError" : false,
+                                  "id" : "pbTitle"
+                                }
+                              ],
+                              [
+                                {
+                                  "type" : "container",
+                                  "dimension" : {
+                                    "xs" : 12,
+                                    "sm" : 12,
+                                    "md" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "repeatedCollection" : {
+                                      "type" : "variable",
+                                      "value" : "propositionInput.propositionAttachments"
+                                    }
+                                  },
+                                  "reference" : "5e5d7a61-c199-460d-9d59-58e6655637e5",
+                                  "hasValidationError" : false,
+                                  "id" : "pbContainer",
+                                  "rows" : [
+                                    [
+                                      {
+                                        "type" : "component",
+                                        "dimension" : {
+                                          "xs" : 12,
+                                          "sm" : 12,
+                                          "md" : 9,
+                                          "lg" : 9
+                                        },
+                                        "propertyValues" : {
+                                          "cssClasses" : {
+                                            "type" : "constant",
+                                            "value" : ""
+                                          },
+                                          "hidden" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "text" : {
+                                            "type" : "interpolation",
+                                            "value" : "<b>[{{$item.status}}]</b> - {{$item.docFileName}}"
+                                          },
+                                          "type" : {
+                                            "type" : "constant",
+                                            "value" : "URL"
+                                          },
+                                          "targetUrl" : {
+                                            "type" : "expression",
+                                            "value" : "\"/bonita/portal/\" + $item.docUrl"
+                                          },
+                                          "pageToken" : {
+                                            "type" : "constant"
+                                          },
+                                          "processName" : {
+                                            "type" : "constant"
+                                          },
+                                          "processVersion" : {
+                                            "type" : "constant"
+                                          },
+                                          "taskId" : {
+                                            "type" : "constant"
+                                          },
+                                          "caseId" : {
+                                            "type" : "constant"
+                                          },
+                                          "target" : {
+                                            "type" : "constant",
+                                            "value" : "_self"
+                                          },
+                                          "appToken" : {
+                                            "type" : "constant"
+                                          },
+                                          "urlParams" : {
+                                            "type" : "constant"
+                                          },
+                                          "alignment" : {
+                                            "type" : "constant",
+                                            "value" : "left"
+                                          },
+                                          "buttonStyle" : {
+                                            "type" : "constant",
+                                            "value" : "link"
+                                          }
+                                        },
+                                        "reference" : "aeb52434-8a7d-456b-b363-472e76b9651a",
+                                        "hasValidationError" : false,
+                                        "id" : "pbLink"
+                                      },
+                                      {
+                                        "type" : "component",
+                                        "dimension" : {
+                                          "xs" : 12,
+                                          "sm" : 12,
+                                          "md" : 3,
+                                          "lg" : 3
+                                        },
+                                        "propertyValues" : {
+                                          "cssClasses" : {
+                                            "type" : "constant",
+                                            "value" : ""
+                                          },
+                                          "hidden" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "disabled" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "label" : {
+                                            "type" : "interpolation",
+                                            "value" : "Supprimer"
+                                          },
+                                          "alignment" : {
+                                            "type" : "constant",
+                                            "value" : "left"
+                                          },
+                                          "buttonStyle" : {
+                                            "type" : "constant",
+                                            "value" : "danger"
+                                          },
+                                          "action" : {
+                                            "type" : "constant",
+                                            "value" : "Remove from collection"
+                                          },
+                                          "url" : {
+                                            "type" : "interpolation"
+                                          },
+                                          "dataToSend" : {
+                                            "type" : "constant"
+                                          },
+                                          "dataFromSuccess" : {
+                                            "type" : "variable"
+                                          },
+                                          "dataFromError" : {
+                                            "type" : "variable"
+                                          },
+                                          "targetUrlOnSuccess" : {
+                                            "type" : "interpolation"
+                                          },
+                                          "collectionToModify" : {
+                                            "type" : "variable",
+                                            "value" : "$collection"
+                                          },
+                                          "collectionPosition" : {
+                                            "type" : "constant",
+                                            "value" : "Item"
+                                          },
+                                          "valueToAdd" : {
+                                            "type" : "constant"
+                                          },
+                                          "removeItem" : {
+                                            "type" : "variable",
+                                            "value" : "$item"
+                                          },
+                                          "closeOnSuccess" : {
+                                            "type" : "constant",
+                                            "value" : false
+                                          },
+                                          "modalId" : {
+                                            "type" : "constant",
+                                            "value" : ""
+                                          }
+                                        },
+                                        "reference" : "e0991571-6f76-424d-9e16-5bbab23c95e5",
+                                        "hasValidationError" : false,
+                                        "id" : "pbButton"
+                                      }
+                                    ]
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "fragment",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              }
+                            },
+                            "reference" : "ae40af61-03fd-4d7b-8f89-1d8234a1d2d5",
+                            "hasValidationError" : false,
+                            "id" : "2af238af-344c-4bf1-ad40-978ff7c84974",
+                            "binding" : {
+                              "proposition" : "propositionInput",
+                              "hideViewAttachment" : "true"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 4,
+                  "lg" : 4
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<hr>"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : ""
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  }
+                },
+                "reference" : "4fe75f15-429d-4128-810a-8ad5ba5cb5be",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "refusProposition.length>0"
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "57b7e26a-7b54-4027-b85d-c92af34a9974",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 3,
+                        "lg" : 3
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "!commentaireBO"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Enregistrer sans transmettre"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "success"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutputDraft"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "submitError"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita/apps/pop3p"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "ff6c429b-fdcc-40b8-8df1-c8194935d894",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 3,
+                        "sm" : 6,
+                        "xs" : 6,
+                        "lg" : 3
+                      },
+                      "propertyValues" : {
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "widgetId" : {
+                          "type" : "constant",
+                          "value" : "pbButton"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "primary"
+                        },
+                        "isDisplayed" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "constant",
+                          "value" : "Transmettre au BO"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutput"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "readonly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita/apps/pop3p/"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "valueToAdd" : {
+                          "type" : "expression"
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "($form.$invalid || (!commentaireBO) || missingMandatoryAttachment ) &&  isPropositionrestituer == false"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "class" : {
+                          "type" : "constant",
+                          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "submitError"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "b5a4a393-555e-40a4-a302-a2db9a0ef16f",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 3,
+                        "lg" : 3
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "($form.$invalid || (!commentaireBO) || missingMandatoryAttachment)  &&  isPropositionrestituer == false"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Transmettre au LAC"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "primary"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutputLAC"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "submitError"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita/apps/pop3p/"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "7167627d-6419-4c3f-8979-9146bdf29399",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6,
+                        "sm" : 6,
+                        "md" : 3,
+                        "lg" : 3
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Annuler"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "page"
+                        },
+                        "targetUrl" : {
+                          "type" : "constant",
+                          "value" : "http://"
+                        },
+                        "pageToken" : {
+                          "type" : "constant",
+                          "value" : "homePage"
+                        },
+                        "processName" : {
+                          "type" : "constant"
+                        },
+                        "processVersion" : {
+                          "type" : "constant"
+                        },
+                        "taskId" : {
+                          "type" : "constant"
+                        },
+                        "caseId" : {
+                          "type" : "constant"
+                        },
+                        "target" : {
+                          "type" : "constant",
+                          "value" : "_self"
+                        },
+                        "appToken" : {
+                          "type" : "constant"
+                        },
+                        "urlParams" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "warning"
+                        }
+                      },
+                      "reference" : "db466df1-4506-4bf3-8bdf-bab314f6be67",
+                      "hasValidationError" : false,
+                      "id" : "pbLink"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 3,
+                        "lg" : 3
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "04ee2f36-9758-41e7-80df-22caceb1a8cb",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [ ]
+                      ]
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : "alert alert-danger"
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "((! missingMandatoryAttachment) && commentaireBO ) || isPropositionrestituer == true"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{ errorTransmitBoOrLac }}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : ""
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        }
+                      },
+                      "reference" : "7d43dee5-e687-4304-ab86-77a7cb83a2bf",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "isPropositionrestituer == true"
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Refus"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Add to collection"
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataToSend" : {
+                          "type" : "constant"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "refusProposition"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant",
+                          "value" : "Refus"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "9ba79dfc-d0d3-4f4b-8fa9-ac445237dea9",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "refusProposition.length==0"
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "3bab6083-106b-47a9-bd2f-aaaa6df3354e",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "$form.$invalid"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Confirmer le refus"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutputRefus"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "submitError"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita/apps/pop3p/"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "eee7422a-203f-4937-9cd0-0dbc76af9382",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Annuler"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "warning"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Remove from collection"
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "dataToSend" : {
+                          "type" : "constant"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "refusProposition"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "aca3bc0d-4cbf-450e-a3b2-022dd3dcfde0",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "alert alert-danger"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "submitError == null"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Erreur : impossible d'effectuer la tâche -  Rafraichir la page et essayer à nouveau. <br> {{ submitError }}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "9744f631-1f47-44b0-be4d-7cee9075c636",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "413b5cdf-2fe6-4b33-b18d-762197d2aaf7",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "688d54bf-d580-490e-99d0-ff092f3d32c7",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "userInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{ session.user_id }}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "var result= {",
+        "\t\"propositionInput\": $data.propositionInput,",
+        "    \"commentaireBO\" : $data.commentaireBO,",
+        "    \"user_name\" : $data.session.user_name,",
+        "    \"dddScheduledDate\" : $data.propositionInput.dddRenewStartDate",
+        "};",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "setOnceSubmitComment" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.addCommentResult){",
+        "",
+        "    var d = new Date();",
+        "    var n = d.toLocaleString();",
+        "    var date = n.substring(0, 18);",
+        "    var newComment = {",
+        "        userName : $data.userInfo.firstname + \" \" + $data.userInfo.lastname,",
+        "        dateAdded : date,",
+        "        userComment : $data.commentValue",
+        "    }    ",
+        "    $data.getComments.push(newComment)",
+        "",
+        "    $data.commentValue = \"\";",
+        "    $data.addCommentResult = \"\"",
+        "",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "updates" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput) {",
+        "    if ($data.propositionInput.commentBOTransmettreBO) {",
+        "        if (!$data.update_triggers.updateComments) {",
+        "            $data.update_triggers.updateComments = true;",
+        "            $data.commentaireBO = $data.propositionInput.commentBOTransmettreBO;",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "propositionInput" : {
+      "type" : "url",
+      "value" : [
+        "{{ urlPropositionInput }}"
+      ],
+      "exposed" : false
+    },
+    "formOutputLAC" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.formOutput)",
+        "    return {}",
+        "",
+        "var tempVar = angular.copy($data.formOutput);",
+        "tempVar.destination = \"LAC\";",
+        "",
+        "return tempVar;"
+      ],
+      "exposed" : false
+    },
+    "submitError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "errorTransmitBoOrLac" : {
+      "type" : "expression",
+      "value" : [
+        "var error_msg = \"\";",
+        "",
+        "try {",
+        "    if ($data.missingMandatoryAttachment) {",
+        "        if (! $data.commentaireBO) {",
+        "            error_msg = \"Une pièce jointe et un commentaire sont obligatoires\";",
+        "        } else {",
+        "            error_msg = \"Une pièce jointe est obligatoire\";",
+        "        }",
+        "    } else if (! $data.commentaireBO) {",
+        "        error_msg = \"Un commentaire est obligatoire\";",
+        "    }",
+        "    ",
+        "    if (error_msg !== \"\") {",
+        "        error_msg += \" pour transmettre au BO ou LAC.\";",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception errorTransmitBoOrLac : \" + e);",
+        "}",
+        "",
+        "return error_msg;"
+      ],
+      "exposed" : false
+    },
+    "dddScheduledDate" : {
+      "type" : "expression",
+      "value" : [
+        "var scheduled_date = null;",
+        "",
+        "if ($data.isRenouvellement) {",
+        "    scheduled_date = $data.propositionInput.dddRenewStartDate;",
+        "}",
+        "",
+        "return scheduled_date;"
+      ],
+      "exposed" : false
+    },
+    "update_triggers" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"updateComments\" : false",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "addCommentError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var propTemp = $data.formInput;",
+        "",
+        "if (propTemp && propTemp.propositionInput){",
+        "    ",
+        "    if (!propTemp.propositionInput || !propTemp.propositionInput.attachmentsContract){",
+        "         propTemp.propositionInput.attachmentsContract =  []",
+        "         propTemp.propositionInput.statusAttachments = []",
+        "    }",
+        "    ",
+        "    if (propTemp.propositionInput.propositionAttachments === undefined) {",
+        "        propTemp.propositionInput.propositionAttachments = []",
+        "    }",
+        "",
+        "    if (propTemp.commentaireBO === undefined) {",
+        "        propTemp.commentaireBO = \"\";",
+        "    }",
+        "",
+        "    if (propTemp.propositionInput.attachmentsContract.length !== 0){",
+        "        ",
+        "        propTemp.propositionInput.statusAttachments = [];",
+        "",
+        "        for(var j = 0; j < propTemp.propositionInput.attachmentsContract.length; j++) {",
+        "            if (propTemp.propositionInput.attachmentsContract[j].status === undefined",
+        "                || propTemp.propositionInput.attachmentsContract[j].status === null",
+        "                || propTemp.propositionInput.attachmentsContract[j].status === \"\") {",
+        "                propTemp.propositionInput.statusAttachments.push(\"Autre\");",
+        "            } else {",
+        "                    propTemp.propositionInput.statusAttachments.push(propTemp.propositionInput.attachmentsContract[j].status);",
+        "            }",
+        "        }",
+        "    } else {",
+        "        propTemp.propositionInput.statusAttachments = [];",
+        "    }",
+        "    propTemp.propositionInput.timeLines = [];",
+        "",
+        "    propTemp.inDraftInput = false;",
+        "    propTemp.destination =\"BO\";",
+        "}",
+        "return propTemp;"
+      ],
+      "exposed" : false
+    },
+    "formOutputRefus" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.formOutput)",
+        "    return {}",
+        "",
+        "var tempVar = angular.copy($data.formOutput);",
+        "tempVar.destination = \"REFUS\";",
+        "",
+        "return tempVar;"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "getComments" : {
+      "type" : "url",
+      "value" : [
+        "{{ getCommentsURL }}"
+      ],
+      "exposed" : false
+    },
+    "refusProposition" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "urlFindPropositionHistory" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId)\r",
+        "return \"../API/bdm/businessData/com.sgdbf.model.TimeLine?p=0&c=100&\"\r",
+        "+ \"q=getByPropId&f=IdProposition=\"+$data.propositionInput.persistenceId;"
+      ],
+      "exposed" : false
+    },
+    "isRenouvellement" : {
+      "type" : "expression",
+      "value" : [
+        "var is_renew = false;",
+        "",
+        "try {",
+        "    if ($data.propositionInput) {",
+        "        if ((typeof $data.propositionInput.typeProposition !== \"undefined\") ",
+        "            && ($data.propositionInput.typeProposition == \"A renouveler\")) {",
+        "            is_renew = true;",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isRenouvellement :\" + e);",
+        "}",
+        "",
+        "return is_renew;"
+      ],
+      "exposed" : false
+    },
+    "labelComment" : {
+      "type" : "expression",
+      "value" : [
+        "var label_comment=\"Commentaire destiné au BO ou LAC\";",
+        "",
+        "try {",
+        "    if ($data.refusProposition && ($data.refusProposition.length > 0)) {",
+        "        label_comment = \"Commentaire obligatoire\";",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception labelComment : \" + e);    ",
+        "}",
+        "",
+        "return label_comment;"
+      ],
+      "exposed" : false
+    },
+    "getCommentsURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId){\r",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"\r",
+        "        + $data.propositionInput.persistenceId\r",
+        "        +\"/comments\";\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlAPISendComment" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/sendCommentCustomAPI"
+      ],
+      "exposed" : false
+    },
+    "addCommentResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "searchCase" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/case/{{propositionInput.caseId}}"
+      ],
+      "exposed" : false
+    },
+    "commentToSend" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "if ($data.propositionInput && $data.propositionInput.persistenceId ",
+        "    && $data.commentValue &&$data.propositionInput.caseId){",
+        "    return {",
+        "    \t'propositionId': \"\"+$data.propositionInput.persistenceId,",
+        "    \t'comment': $data.commentValue,",
+        "    \t'caseId' : \"\"+$data.propositionInput.caseId,",
+        "    \t'senderId' : \"\"+$data.session.user_id, ",
+        "    \t'processDefinitionId' : $data.searchCase.processDefinitionId",
+        "    };",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutputDraft" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.formOutput)",
+        "    return {}",
+        "",
+        "var tempVar = angular.copy($data.formOutput);",
+        "tempVar.inDraftInput = true;",
+        "",
+        "return tempVar;"
+      ],
+      "exposed" : false
+    },
+    "missingMandatoryAttachment" : {
+      "type" : "expression",
+      "value" : [
+        "var is_missing = false;",
+        "",
+        "try {",
+        "    // BPM-508 : Attachments mandatory for motif 'A renouveler\", or for a new Material",
+        "    if ($data.propositionInput != null) {",
+        "        var motif = $data.propositionInput.typeProposition;",
+        "        var material_type = $data.propositionInput.existing;",
+        "        if ((motif == \"A renouveler\") || (material_type == \"newMaterial\")) {",
+        "            // Attachemnts mandatory, check if we have one",
+        "            if (($data.propositionInput.propositionAttachments === null)",
+        "                || ($data.propositionInput.propositionAttachments.length === 0)",
+        "                ) {",
+        "                if ((typeof $data.propositionInput.attachmentsContract === \"undefined\")",
+        "                    || ($data.propositionInput.attachmentsContract === null)",
+        "                    || ($data.propositionInput.attachmentsContract.length === 0)) {",
+        "                    is_missing = true;",
+        "                } else {",
+        "                    // Check that we have a filename on new attachments",
+        "                    var first_doc = $data.propositionInput.attachmentsContract[0];",
+        "                    if (! first_doc.hasOwnProperty(\"filename\")) {",
+        "                        is_missing = true;",
+        "                    }",
+        "                } ",
+        "            }",
+        "        }",
+        "    }    ",
+        "    ",
+        "} catch(e) {",
+        "    console.error(\"missingMandatoryAttachment Exception: \" + e);",
+        "}",
+        "",
+        "return is_missing;"
+      ],
+      "exposed" : false
+    },
+    "commentaireBO" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "urlPropositionInput" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.context && $data.context.currentProposition_ref && $data.context.currentProposition_ref.link)",
+        "    return \"../\" + $data.context.currentProposition_ref.link;"
+      ],
+      "exposed" : false
+    },
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "LACTransmission" : {
+      "type" : "expression",
+      "value" : [
+        "$data.formOutput.destination = \"LAC\";",
+        "return $data.formOutput;"
+      ],
+      "exposed" : false
+    },
+    "addAttachments" : {
+      "type" : "expression",
+      "value" : [
+        "return [];"
+      ],
+      "exposed" : false
+    },
+    "commentValue" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "isPropositionrestituer" : {
+      "type" : "expression",
+      "value" : [
+        "var is_restituer = false;",
+        "",
+        "if ($data.propositionInput) {",
+        "        if ((typeof $data.propositionInput.typeProposition !== \"undefined\") ",
+        "            && ($data.propositionInput.typeProposition === \"A restituer\")) {",
+        "            is_restituer = true;",
+        "        }",
+        "    }",
+        "   ",
+        "return is_restituer;"
+      ],
+      "exposed" : false
+    },
+    "showFutureEnergy" : {
+      "type" : "expression",
+      "value" : [
+        "var show_future_energy = false;",
+        "",
+        "try {",
+        "    if ($data.propositionInput) {",
+        "        // Do not show field when initally creating the proposition",
+        "        if ($data.propositionInput.isExistring !== false) {",
+        "            // Show only for new material or motif 'A renouveler'",
+        "            if (($data.propositionInput.existing ==='newMaterial') ",
+        "                || ($data.propositionInput.typeProposition === 'A renouveler')) {",
+        "                    show_future_energy = true;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception showFutureEnergy: ' + e);",
+        "}",
+        "",
+        "return show_future_energy;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "a3fa7fb7-4a32-4c03-88f4-82a8f5a4adec",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

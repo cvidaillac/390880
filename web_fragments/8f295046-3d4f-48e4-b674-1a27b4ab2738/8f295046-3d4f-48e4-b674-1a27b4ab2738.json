@@ -1,0 +1,517 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "8f295046-3d4f-48e4-b674-1a27b4ab2738",
+  "name" : "displaySearchProposition",
+  "lastUpdate" : 1671627885285,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "duplicateProposition.length > 0"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "b0c2d123-f4f2-427c-9f8a-6175c28a202a",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 4,
+                "sm" : 7,
+                "md" : 8,
+                "lg" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "f04244b0-49d6-4fb8-b37a-7493381d1873",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 8,
+                "sm" : 5,
+                "md" : 4,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "form-group"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "6942374d-7454-4f24-98bb-a8c14e0f25ec",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 2,
+                      "sm" : 4,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "8bb1c1b6-d056-43c7-b701-1251a294e55b",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 5,
+                      "sm" : 4,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "top-button"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "expression",
+                        "value" : "(! isMaterialDisplayed) && (! isExistingMaterial)"
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Imprimer"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "info"
+                      }
+                    },
+                    "reference" : "158acd0d-b87d-4e23-8b5c-b1ae481bf199",
+                    "hasValidationError" : false,
+                    "id" : "customButtonPrint"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 5,
+                      "sm" : 4,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "propositionInput"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "default"
+                      },
+                      "label" : {
+                        "type" : "constant",
+                        "value" : "Fermer"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "displayDetailProposition" : {
+                        "type" : "variable",
+                        "value" : "displayDetailProposition"
+                      }
+                    },
+                    "reference" : "983e6e93-49f6-4e96-a1ee-d030f2a71ee3",
+                    "hasValidationError" : false,
+                    "id" : "customClosePopup"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "0ec55acd-921a-4ff3-8df1-1293982137b1",
+              "hasValidationError" : false,
+              "id" : "96ff9112-5e4f-4b05-b18a-ab6d2aced5a2",
+              "binding" : {
+                "displayDetailProposition" : "",
+                "getSession" : "getSession",
+                "propositionInput" : "propositionInput",
+                "selectedProposition" : "selectedProposition",
+                "searchCase" : "searchCase",
+                "commentValue" : "commentValue",
+                "urlAPISendComment" : "urlAPISendComment",
+                "commentToSend" : "commentToSend",
+                "addCommentResult" : "addCommentResult",
+                "addCommentError" : "addCommentError",
+                "getComments" : "getComments",
+                "urlFindPropositionHistory" : "urlFindPropositionHistory",
+                "isMaterialDisplayed" : "isMaterialDisplayed"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "isApprover || idDADR"
+          }
+        },
+        "reference" : "45234b50-7a13-4a80-b098-acdc4ce73fdb",
+        "hasValidationError" : false,
+        "id" : "duplicatePropositionFragment",
+        "binding" : {
+          "duplicateProposition" : "duplicateProposition",
+          "selectedProposition" : "propositionInput",
+          "getSession" : "getSession"
+        }
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getCommentsURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId){",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"",
+        "        + $data.propositionInput.persistenceId",
+        "        +\"/comments\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlAPISendComment" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/sendCommentCustomAPI"
+      ],
+      "exposed" : false
+    },
+    "addCommentResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formOutputToInstantiate" : {
+      "type" : "expression",
+      "value" : [
+        "var dataToSend = {};",
+        "",
+        "dataToSend = angular.copy($data.propositionInput);",
+        "if(dataToSend.userCommentOptional === undefined) {",
+        "    dataToSend.userCommentOptional = \"\";",
+        "}",
+        "dataToSend.agencyCode = \"\" + dataToSend.agencyCode;",
+        "",
+        "// CFR 13/11/2020 : Make sure new contract field pitchSmart is filled in",
+        "if ((typeof dataToSend.pitchSmart === \"undefined\") || (dataToSend.pitchSmart==null)) {",
+        "    dataToSend.pitchSmart = \"\";",
+        "}",
+        "",
+        "// CFR 13/11/2020 BPM-469 : Manage requestSource field on proposition duplication",
+        "if ((typeof dataToSend.requestSource === \"undefined\") ",
+        "    || (dataToSend.requestSource == null) || (dataToSend.requestSource == \"\")) {",
+        "    // Default is B",
+        "    dataToSend.requestSource = \"B\";",
+        "    ",
+        "} else if ((dataToSend.requestSource == \"S\") || (dataToSend.requestSource == \"R\")) {",
+        "    // Original proposition is from SAV",
+        "    dataToSend.requestSource = \"S\";",
+        "    ",
+        "} else  {",
+        "    // Original proposition is from MobiPop or SMARTE app",
+        "    dataToSend.requestSource = \"B\";",
+        "}",
+        "",
+        "return dataToSend;"
+      ],
+      "exposed" : false
+    },
+    "commentToSend" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId ",
+        "    && $data.commentValue &&$data.propositionInput.caseId){",
+        "    return {",
+        "    \t'propositionId': \"\"+$data.propositionInput.persistenceId,",
+        "    \t'comment': $data.commentValue,",
+        "    \t'caseId' : \"\"+$data.propositionInput.caseId,",
+        "    \t'senderId' : \"\"+$data.getSession.user_id, ",
+        "    \t'processDefinitionId' : $data.searchCase.processDefinitionId",
+        "    };",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "searchCase" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/case/{{propositionInput.caseId}}"
+      ],
+      "exposed" : false
+    },
+    "profile" : {
+      "type" : "constant",
+      "value" : [
+        "pop3p"
+      ],
+      "exposed" : false
+    },
+    "urlPropositionInstanciation" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition && $data.getProcessDefinition.length > 0){",
+        "   return \"../../newProposition/API/bpm/process/\"+$data.getProcessDefinition[0].id+\"/instantiation\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "idDADR" : {
+      "type" : "expression",
+      "value" : [
+        "return ($data.propositionInput && $data.propositionInput.typeWorkflow === \"DADR\")"
+      ],
+      "exposed" : false
+    },
+    "nomProcessADemarrer" : {
+      "type" : "constant",
+      "value" : [
+        "POP3P_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "propositionInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "isApprover" : {
+      "type" : "expression",
+      "value" : [
+        "var path = window.location.pathname;",
+        "var split = path.split(\"/\");",
+        "",
+        "for(var i= 0; i < split.length; i++) {",
+        "    if ($data.profile === split[i]) {",
+        "        return false;",
+        "    }",
+        "}",
+        "",
+        "return true;"
+      ],
+      "exposed" : false
+    },
+    "selectedProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlProcessationInstanciation" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition && $data.getProcessDefinition.length > 0){",
+        "   return \"../../newProposition/API/bpm/process/\"+$data.getProcessDefinition[0].id+\"/instantiation\";",
+        "} "
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{nomProcessADemarrer}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "displayDetailProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "commentValue" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "addCommentError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "getComments" : {
+      "type" : "url",
+      "value" : [
+        "{{getCommentsURL}}"
+      ],
+      "exposed" : false
+    },
+    "urlFindPropositionHistory" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/bdm/businessData/com.sgdbf.model.TimeLine?p=0&c=100&\"",
+        "+ \"q=getByPropId&f=IdProposition=\"+$data.propositionInput.persistenceId"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "closePopUp" : {
+      "type" : "expression",
+      "value" : [
+        "$data.selectedProposition={}",
+        "if ($data.addCommentResult){",
+        "    //Comment successfully added",
+        "    $data.propositionInput= {},",
+        "    $data.addCommentResult = \"\"",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "duplicateProposition" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "isMaterialDisplayed" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isExistingMaterial" : {
+      "type" : "expression",
+      "value" : [
+        "var is_existing=false;",
+        "",
+        "try {",
+        "    if ($data.propositionInput) {",
+        "        if (typeof $data.propositionInput.existing !== \"undefined\") {",
+        "            is_existing = ($data.propositionInput.existing !== \"newMaterial\") ? false : true;",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isExistingMaterial: \" + e);",
+        "}",
+        "return is_existing;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

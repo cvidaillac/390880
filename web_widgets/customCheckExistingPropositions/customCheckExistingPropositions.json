@@ -1,0 +1,71 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "List of propositions",
+      "name" : "listOfPropositions",
+      "help" : "List of propositions to check",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Result of check",
+      "name" : "existingPropositionsCheckResult",
+      "help" : "preventSubmit : true if submit should not be enabled\ncheckForEachMaterial : object with key <materialNumber> and value : {\n\"checkDone\" : false,         // Set to true when query done\n\"userOverriden\" : false,  // checkbox to overide by user\n\"hasExisting\" : false,        // true if propositions found\n\"existingPropositions: []\n}",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "API URL to list budget Propositions",
+      "name" : "listBudgetPropositionUrl",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Message displayed while checking",
+      "name" : "checkingMessage",
+      "type" : "text",
+      "defaultValue" : "Vérification des propositions en cours pour le matériel...",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Message displayed when a proposition exists",
+      "name" : "existingPropositionsMessage",
+      "type" : "text",
+      "defaultValue" : "Il existe déjà une proposition en cours pour ce matériel",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label for override checkbox",
+      "name" : "overrideMessage",
+      "type" : "text",
+      "defaultValue" : "Ignorer pour soumettre une nouvelle proposition",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Message displayed when overriding is not enabled",
+      "name" : "blockingMessage",
+      "type" : "text",
+      "defaultValue" : "Doublon de Rachat de LocFi pour le même matériel : la soumission d'une nouvelle proposition de Rachat LocFi est impossible.",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Ignore DADR Propositions",
+      "name" : "ignoreDADR",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customCheckExistingPropositions",
+  "name" : "checkExistingPropositions",
+  "lastUpdate" : 1671627880365,
+  "template" : "@customCheckExistingPropositions.tpl.html",
+  "controller" : "@customCheckExistingPropositions.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

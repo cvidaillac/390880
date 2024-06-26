@@ -1,0 +1,642 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "pop3pDxxProlongationContratBoOrLac",
+  "name" : "pop3pDxxProlongationContratBoOrLac",
+  "lastUpdate" : 1671627911669,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "6bc90915-f701-47f5-bea2-31c2f520e7ec",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "widgetId" : {
+                  "type" : "constant",
+                  "value" : "pbTitle"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "constant"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "68824c93-0d7e-45ed-a0ad-e576a87b72ba",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "breadcrumb"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "bfdbc03b-8fc3-41e5-992b-83d0a4d7e0d4",
+        "hasValidationError" : false,
+        "id" : "96ff9112-5e4f-4b05-b18a-ab6d2aced5a2",
+        "binding" : {
+          "getComments" : "getComments",
+          "urlAPISendComment" : "",
+          "commentToSend" : "",
+          "commentValue" : "",
+          "addCommentResult" : "",
+          "addCommentError" : "",
+          "searchCase" : "",
+          "urlFindPropositionHistory" : "urlFindPropositionHistory",
+          "getSession" : "session",
+          "propositionInput" : "propositionInput",
+          "displayDetailProposition" : "",
+          "selectedProposition" : ""
+        }
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 2,
+          "md" : 2,
+          "lg" : 2
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "3cca42db-b46e-4531-bdba-0604c99e7544",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [ ]
+        ]
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 8,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "alert alert-info"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "propositionInput.commentBOTransmettreBO === \"\" || propositionInput.commentBOTransmettreBO === undefined || propositionInput.commentBOTransmettreBO === null || !isReady"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<b>Commentaire du SMARTE : </b><br>\n{{ htmlEncodedComments }}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "5753a8a1-77fe-4a27-bd62-b41ab7046314",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "bfd5925e-a78a-4841-8618-c9bb513ce25a",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "ced929d1-ee8a-4749-913c-7e7572d149d3",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6,
+                  "sm" : 6,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Terminé"
+                  },
+                  "btnStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "btnAlignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "actionUrl" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita/API/bpm/humanTask/{{taskId}}"
+                  },
+                  "requestPayload" : {
+                    "type" : "expression",
+                    "value" : "assignTaskPayload"
+                  },
+                  "executeUrl" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita/API/bpm/userTask/{{taskId}}/execution"
+                  },
+                  "executePayload" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "successResponse" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "errorResponse" : {
+                    "type" : "variable",
+                    "value" : "submitError"
+                  },
+                  "targetUrl" : {
+                    "type" : "interpolation",
+                    "value" : "{{targetURL}}"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  }
+                },
+                "reference" : "90cd83a9-9e55-4d5e-a80d-3192b37aba51",
+                "hasValidationError" : false,
+                "id" : "customAssignExecuteButton"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 4,
+                  "sm" : 4,
+                  "md" : 4,
+                  "lg" : 4
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Annuler"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "page"
+                  },
+                  "targetUrl" : {
+                    "type" : "constant",
+                    "value" : "http://"
+                  },
+                  "pageToken" : {
+                    "type" : "expression",
+                    "value" : "targetPage"
+                  },
+                  "processName" : {
+                    "type" : "constant"
+                  },
+                  "processVersion" : {
+                    "type" : "constant"
+                  },
+                  "taskId" : {
+                    "type" : "constant"
+                  },
+                  "caseId" : {
+                    "type" : "constant"
+                  },
+                  "target" : {
+                    "type" : "constant",
+                    "value" : "_self"
+                  },
+                  "appToken" : {
+                    "type" : "expression",
+                    "value" : "targetApp"
+                  },
+                  "urlParams" : {
+                    "type" : "constant"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "warning"
+                  }
+                },
+                "reference" : "41bcb46e-6e7b-406b-9a5c-858633bcd4bb",
+                "hasValidationError" : false,
+                "id" : "pbLink"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "alert alert-danger"
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "submitError == null"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Erreur : impossible d'effectuer la tâche -  Rafraichir la page et essayer à nouveau. <br> {{ submitError }}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : ""
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  }
+                },
+                "reference" : "2091d5ce-9eb2-4e30-9cf1-b731a9205d7c",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "413b5cdf-2fe6-4b33-b18d-762197d2aaf7",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "688d54bf-d580-490e-99d0-ff092f3d32c7",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getCommentsURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId){\r",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"\r",
+        "        + $data.propositionInput.persistenceId\r",
+        "        +\"/comments\";\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getprocessParameter" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/processParameter/{{processId}}/baseURL"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{ }"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "isReady" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.context.exception!==undefined && $data.context.exception===\"class org.bonitasoft.engine.bpm.flownode.UserTaskNotFoundException\")",
+        "{",
+        "    return false;",
+        "}",
+        "else",
+        "{",
+        "    return true;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlPropositionInput" : {
+      "type" : "expression",
+      "value" : [
+        "//return \"../\" + $data.context.commentedProposition_ref.link;",
+        "",
+        "",
+        "",
+        "",
+        "return \"../\" + $data.context.currentProposition_ref.link;"
+      ],
+      "exposed" : false
+    },
+    "getCurrentProcessInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s=POP3P_DxxSpecificTasks&o=deploymentDate%20DESC&c=1"
+      ],
+      "exposed" : false
+    },
+    "propositionInput" : {
+      "type" : "url",
+      "value" : [
+        "{{ urlPropositionInput }}"
+      ],
+      "exposed" : false
+    },
+    "submitError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "baseURL" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getprocessParameter.value;"
+      ],
+      "exposed" : false
+    },
+    "targetApp" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.task.displayName.includes(\"LAC\")) {\r",
+        "    return \"lac\";\r",
+        "} else {\r",
+        "    return \"BO\";\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "processId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getCurrentProcessInfo[0].id;"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "    \"user_name\" : $data.session.user_name",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "getComments" : {
+      "type" : "url",
+      "value" : [
+        "{{ getCommentsURL }}"
+      ],
+      "exposed" : false
+    },
+    "htmlEncodedComments" : {
+      "type" : "expression",
+      "value" : [
+        "// created by Amit for BPM-496",
+        "",
+        "var comments = \"\";",
+        "var boComments = $data.propositionInput.commentBOTransmettreBO;",
+        "",
+        "if(boComments !== null)",
+        "{",
+        "    comments = boComments.replace(/&/g, \"&amp;\").replace(/>/g, \"&gt;\").replace(/</g, \"&lt;\").replace(/\"/g, \"&quot;\");",
+        "}",
+        "",
+        "return comments;"
+      ],
+      "exposed" : false
+    },
+    "urlFindPropositionHistory" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/bdm/businessData/com.sgdbf.model.TimeLine?p=0&c=100&\"\r",
+        "+ \"q=getByPropId&f=IdProposition=\"+$data.propositionInput.persistenceId;"
+      ],
+      "exposed" : false
+    },
+    "assignTaskPayload" : {
+      "type" : "expression",
+      "value" : [
+        "return { 'assigned_id' : $data.session.user_id };"
+      ],
+      "exposed" : false
+    },
+    "targetURL" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.task.displayName.includes(\"LAC\")) {\r",
+        "    return \"/bonita/apps/lac/homePageLac/\";\r",
+        "} else {\r",
+        "    return \"/bonita/apps/BO/homePage/\";\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "targetPage" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.task.displayName.includes(\"LAC\")) {\r",
+        "    return \"homePageLac\";\r",
+        "} else {\r",
+        "    return \"homePage\";\r",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "1a6e1f93-f2b0-42e8-a181-97d65911295e",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

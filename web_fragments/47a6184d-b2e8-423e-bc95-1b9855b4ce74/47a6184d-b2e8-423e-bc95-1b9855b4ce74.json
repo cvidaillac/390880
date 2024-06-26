@@ -1,0 +1,201 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "47a6184d-b2e8-423e-bc95-1b9855b4ce74",
+  "name" : "fragCompleteTransition",
+  "lastUpdate" : 1671627900602,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "0cb823ee-6fda-44ec-a64e-e1864df04816",
+        "hasValidationError" : false,
+        "id" : "0abf7199-360e-47e1-aa75-ef64b002da21",
+        "binding" : {
+          "proposition" : "proposition"
+        }
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "4d8c3aaf-6eaf-4de7-95a5-69457dc1e0e2",
+        "hasValidationError" : false,
+        "id" : "573fe995-2039-43b7-b09f-fd047fd94cbf",
+        "binding" : {
+          "proposition" : "proposition",
+          "listMaterials" : "listMaterials",
+          "index" : "",
+          "selectedAgency" : "selectedAgency",
+          "invalidAmounts" : "invalidAmounts"
+        }
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlGetMaterials" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.proposition && $data.proposition.agencyCode){",
+        "    return \"../API/extension/pop3pclientSoap?method=getAgencyMaterials&f=agencyCode=\" + $data.agencyCode    ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listNoeudsExposedSecond" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "listNoeudsExposedFirst" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "DAD" : {
+      "type" : "constant",
+      "value" : [
+        "DAD"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "isSelectedTransfertAgency" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.proposition) {",
+        "    return false;",
+        "}",
+        "",
+        "$data.isSelectedTransfertAgencyExposed = $data.proposition.transferAgencyCode && $data.proposition.transferAgencyCode.length > 0;",
+        "",
+        "var isTransfertInter = $data.proposition.transferAgencyCode && $data.proposition.transferAgencyCode.length > 0;",
+        "var isRenouveler = $data.proposition.typeProposition === \"A renouveler\";",
+        "",
+        "var displayDADApprovers = isTransfertInter || isRenouveler;",
+        "return  displayDADApprovers;"
+      ],
+      "exposed" : false
+    },
+    "isHiddenSecondApprover" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.proposition || !$data.proposition.typeProposition) {\r",
+        "    return true;\r",
+        "}\r",
+        "\r",
+        "if (($data.proposition.typeProposition === \"Transfert\" || $data.proposition.typeProposition === \"A renouveler\")) {\r",
+        "\treturn false;\r",
+        "} else {\r",
+        "\treturn true;\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listMaterials" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetMaterials}}"
+      ],
+      "exposed" : false
+    },
+    "selectedTypeWorkFlow" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.proposition && $data.proposition.existing) {\r",
+        "    // CFR 14/10/2020 - BPM-384 : New motif 'A prolonger'\r",
+        "    if (($data.proposition.existing == \"newMaterial\")\r",
+        "    \t|| ($data.proposition.typeProposition === \"Rachat LocFi\")\r",
+        "    \t|| ($data.proposition.typeProposition === \"A prolonger\")) {\r",
+        "    \treturn \"DAD\";\r",
+        "    } else if ($data.proposition.typeProposition === \"A vendre\") {\r",
+        "    \treturn \"DAV\";\r",
+        "    } else if ($data.proposition.typeProposition === \"A restituer\"\r",
+        "    \t|| $data.proposition.typeProposition === \"A rebuter\"\r",
+        "    \t|| $data.proposition.typeProposition === \"A renouveler\"\r",
+        "    \t|| ($data.proposition.typeProposition === \"Transfert\" \r",
+        "    \t//&& $data.proposition.agencyCode != $data.proposition.transferAgencyCode\r",
+        "    \t)) {\r",
+        "    \t\treturn \"DDD\"\r",
+        "    }\r",
+        "\r",
+        "}\r"
+      ],
+      "exposed" : false
+    },
+    "invalidAmounts" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

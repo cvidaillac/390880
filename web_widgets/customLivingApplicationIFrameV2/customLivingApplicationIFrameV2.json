@@ -1,0 +1,30 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Source",
+      "name" : "src",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "resizeToContent",
+      "name" : "resizeToContent",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "constant"
+    }
+  ],
+  "id" : "customLivingApplicationIFrameV2",
+  "name" : "livingApplicationIFrameV2",
+  "lastUpdate" : 1671627876986,
+  "template" : "@customLivingApplicationIFrameV2.tpl.html",
+  "controller" : "@customLivingApplicationIFrameV2.ctrl.js",
+  "description" : "IFrame to display the pages targeted by the LivingApplicationMenu.",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

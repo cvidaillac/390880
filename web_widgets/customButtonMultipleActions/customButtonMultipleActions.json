@@ -1,0 +1,349 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Disabled",
+      "name" : "disabled",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Submit",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Alignment",
+      "name" : "alignment",
+      "help" : "Possible values: left, center, right",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Style",
+      "name" : "buttonStyle",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger",
+        "link"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Action 1",
+      "name" : "action1",
+      "type" : "choice",
+      "defaultValue" : "Submit task",
+      "choiceValues" : [
+        "Add to collection",
+        "Remove from collection",
+        "Remove from collection 2",
+        "Submit task",
+        "Start process",
+        "Get human task",
+        "Get task context",
+        "Clear previous data",
+        "Set value",
+        "Set process parameter",
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Target URL on success",
+      "name" : "targetUrlOnSuccess",
+      "help" : "Next page to display, for applications. In the Portal, it is ignored as navigation is managed automatically",
+      "showFor" : "['POST', 'PUT', 'DELETE', 'Submit task', 'Start process'].indexOf(properties.action.value) > -1",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Remove",
+      "name" : "collectionPosition",
+      "showFor" : "properties.action.value === 'Remove from collection'",
+      "type" : "choice",
+      "defaultValue" : "Last",
+      "choiceValues" : [
+        "First",
+        "Item",
+        "Last"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Successful response value for second action",
+      "name" : "dataFromSuccess2",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Successful response value for third action",
+      "name" : "dataFromSuccess3",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Action 2",
+      "name" : "action2",
+      "type" : "choice",
+      "choiceValues" : [
+        "Add to collection",
+        "Remove from collection",
+        "Remove from collection 2",
+        "Submit task",
+        "Start process",
+        "Get human task",
+        "Get task context",
+        "Clear previous data",
+        "Set value",
+        "Set process parameter",
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Action 3",
+      "name" : "action3",
+      "type" : "choice",
+      "choiceValues" : [
+        "Add to collection",
+        "Remove from collection",
+        "Remove from collection 2",
+        "Submit task",
+        "Start process",
+        "Get human task",
+        "Get task context",
+        "Clear previous data",
+        "Set value",
+        "Set process parameter",
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE",
+        "-"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Collection",
+      "name" : "collectionToModify",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Value to add",
+      "name" : "valueToAdd",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Add position",
+      "name" : "collectionPositionAdd",
+      "type" : "choice",
+      "defaultValue" : "Last",
+      "choiceValues" : [
+        "First",
+        "Last"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "URL called",
+      "name" : "url",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Data sent on click",
+      "name" : "dataToSend",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Failed response value",
+      "name" : "dataFromError",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Successful response value for first action",
+      "name" : "dataFromSuccess1",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Root case id for action 'Get human task'",
+      "name" : "taskRootCaseId",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Process definition id for Start Process action",
+      "name" : "startProcessDefinitionId",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Maximum delay to wait for an action to complete in seconds",
+      "name" : "maxDelayForAction",
+      "type" : "integer",
+      "defaultValue" : 5,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Action 4",
+      "name" : "action4",
+      "type" : "choice",
+      "defaultValue" : "-",
+      "choiceValues" : [
+        "Add to collection",
+        "Remove from collection",
+        "Remove from collection 2",
+        "Submit task",
+        "Start process",
+        "Get human task",
+        "Get task context",
+        "Clear previous data",
+        "Set value",
+        "Set process parameter",
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE",
+        "-"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Task id",
+      "name" : "taskId",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Data from success 4",
+      "name" : "dataFromSuccess4",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Position of item to remove in collection",
+      "name" : "collectionPositionRemove",
+      "type" : "choice",
+      "defaultValue" : "Last",
+      "choiceValues" : [
+        "First",
+        "Last",
+        "Index",
+        "Item"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Index of item to remove in collection",
+      "name" : "collectionRemoveIndex",
+      "type" : "integer",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Item to remove",
+      "name" : "removeItem",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Delay in seconds before executing the last action",
+      "name" : "delayBeforeLastAction",
+      "help" : "Leave empty for no delay",
+      "type" : "integer",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Collection 2",
+      "name" : "collectionToModify2",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Position of item to remove in collection 2",
+      "name" : "collection2PositionRemove",
+      "type" : "choice",
+      "choiceValues" : [
+        "First",
+        "Last",
+        "Index",
+        "Item"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Maximum number of retries for a request",
+      "name" : "maxRetryCount",
+      "type" : "integer",
+      "defaultValue" : 20,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value to set",
+      "name" : "valueToSet",
+      "help" : "Value used with action Set Value",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Parameter to set on processes",
+      "name" : "parameterName",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "List of processes",
+      "name" : "processNamesList",
+      "type" : "collection",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customButtonMultipleActions",
+  "name" : "ButtonMultipleActions",
+  "lastUpdate" : 1671627885028,
+  "template" : "@customButtonMultipleActions.tpl.html",
+  "icon" : "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'><g><path fill='#CBD5E1' d='M47,15.2c0,0.7-1.7,1.8-1.7,1.8S4.8,17,3.7,17c-1.6,0-3.6-1.9-3.6-1.9s0.7,4.8,4,5c2.4,0.1,42.4,0,42.4,0 s3.5-0.2,3.5-3.6c0-1.3,0.1-11.5,0.1-12.4c-0.1-2-4-4-4-4L47,1.8C47,1.8,47,14.5,47,15.2z'/><path fill='#fff' d='M3.9,1h40.3C45.7,1,47,2.2,47,3.6v10.8c0,1.4-1.3,2.6-2.9,2.6H3.9C2.3,17,1,15.8,1,14.4V3.6 C1,2.2,2.3,1,3.9,1z M3,0C1.3,0,0,1.3,0,3v12c0,1.7,1.3,3,3,3h42c1.7,0,3-1.3,3-3V3c0-1.7-1.3-3-3-3H3z'/></g></svg>",
+  "controller" : "@customButtonMultipleActions.ctrl.js",
+  "description" : "Trigger for an action in a page or form",
+  "custom" : true,
+  "order" : 12,
+  "assets" : [
+    {
+      "id" : "3a3f5675-d932-4091-bf56-8eef3b126be3",
+      "name" : "button_style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

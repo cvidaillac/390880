@@ -1,0 +1,840 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "FragPlanningDates",
+  "name" : "FragPlanningDates",
+  "lastUpdate" : 1671627885816,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 6,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "[{{ noeud.intitule }}] {{ noeud.codeNoeud}} - {{ noeud.nomNoeud}}"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 5
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "noeud.datePresentation"
+          },
+          "dateFormat" : {
+            "type" : "constant",
+            "value" : "dd/MM/yyyy"
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "Enter a date (mm/dd/yyyy)"
+          },
+          "showToday" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "todayLabel" : {
+            "type" : "interpolation",
+            "value" : "Today"
+          }
+        },
+        "reference" : "1b977a8a-7346-4ecc-b975-916011d6dfb0",
+        "hasValidationError" : false,
+        "id" : "pbDatePicker"
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 6,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "showDatesAndBudgets"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "c7a6a45c-3726-4870-adb2-08c2086abe7f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "envelopBudget"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "valueToSave" : {
+                  "type" : "variable",
+                  "value" : "noeud.enveloppeBudget"
+                },
+                "haveDefaultVal" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "invalidNum" : {
+                  "type" : "variable",
+                  "value" : "invalidEnveloppeBudget"
+                }
+              },
+              "reference" : "dc420dd8-0b72-434c-bc4e-9f9fc8b67571",
+              "hasValidationError" : false,
+              "id" : "customFrenchNumberFormatText"
+            }
+          ]
+        ]
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!showDatesAndBudgets"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "3b2246c3-dbec-4c96-90b5-98cc3a17028b",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "envelopTrucks"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Camions"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 3
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "valueToSave" : {
+                  "type" : "variable",
+                  "value" : "noeud.enveloppeCamions"
+                },
+                "haveDefaultVal" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "invalidNum" : {
+                  "type" : "variable",
+                  "value" : "invalidEnvelopTrucks"
+                }
+              },
+              "reference" : "d5bcb47d-38a5-418b-88de-81c1d83c7787",
+              "hasValidationError" : false,
+              "id" : "customFrenchNumberFormatText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!showDatesAndBudgets"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "cfab0d8b-07c8-4329-ab2b-b7adcdc6d93e",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "RF1"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "noeud.rf1"
+                },
+                "dateFormat" : {
+                  "type" : "constant",
+                  "value" : "dd/MM/yyyy"
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Enter a date (mm/dd/yyyy)"
+                },
+                "showToday" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "todayLabel" : {
+                  "type" : "interpolation",
+                  "value" : "Today"
+                }
+              },
+              "reference" : "445a9b5b-814f-448f-9931-1e7736158d5e",
+              "hasValidationError" : false,
+              "id" : "pbDatePicker"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "RF2"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "noeud.rf2"
+                },
+                "dateFormat" : {
+                  "type" : "constant",
+                  "value" : "dd/MM/yyyy"
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Enter a date (mm/dd/yyyy)"
+                },
+                "showToday" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "todayLabel" : {
+                  "type" : "interpolation",
+                  "value" : "Today"
+                }
+              },
+              "reference" : "e4c53c68-6aa9-4005-9d98-f304c2a4eca3",
+              "hasValidationError" : false,
+              "id" : "pbDatePicker"
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "b1c69489-38d4-4675-a3fc-2aa226c26522",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "envelopForklifts"
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "readOnly" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Chartiots"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 3
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "valueToSave" : {
+                        "type" : "variable",
+                        "value" : "noeud.enveloppeChariots"
+                      },
+                      "haveDefaultVal" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "invalidNum" : {
+                        "type" : "variable",
+                        "value" : "invalidEnvelopForklifts"
+                      }
+                    },
+                    "reference" : "5f703b53-81d4-499a-8082-dd929aa166d0",
+                    "hasValidationError" : false,
+                    "id" : "customFrenchNumberFormatText"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "RF3"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "noeud.rf3"
+                },
+                "dateFormat" : {
+                  "type" : "constant",
+                  "value" : "dd/MM/yyyy"
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Enter a date (mm/dd/yyyy)"
+                },
+                "showToday" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "todayLabel" : {
+                  "type" : "interpolation",
+                  "value" : "Today"
+                }
+              },
+              "reference" : "d1692a89-c240-4506-87d7-d0b0744f80b5",
+              "hasValidationError" : false,
+              "id" : "pbDatePicker"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "RF4"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "noeud.rf4"
+                },
+                "dateFormat" : {
+                  "type" : "constant",
+                  "value" : "dd/MM/yyyy"
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Enter a date (mm/dd/yyyy)"
+                },
+                "showToday" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "todayLabel" : {
+                  "type" : "interpolation",
+                  "value" : "Today"
+                }
+              },
+              "reference" : "5d611686-19eb-4f56-9c0c-919969fb75ed",
+              "hasValidationError" : false,
+              "id" : "pbDatePicker"
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "5ddfc897-3fd2-409c-b29e-c038fdbfbb53",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "envelopAccessories"
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "readOnly" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Accessoires"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 3
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "valueToSave" : {
+                        "type" : "variable",
+                        "value" : "noeud.enveloppeAccessoires"
+                      },
+                      "haveDefaultVal" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "invalidNum" : {
+                        "type" : "variable",
+                        "value" : "invalidEnvelopAccessories"
+                      }
+                    },
+                    "reference" : "12fb80a7-e8df-4200-b10c-947f50018506",
+                    "hasValidationError" : false,
+                    "id" : "customFrenchNumberFormatText"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "noeud" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "envelopBudget" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "showDatesAndBudgets" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "envelopTrucks" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "envelopForklifts" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "envelopAccessories" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "calculateEnvelopBudget" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.showDatesAndBudgets)",
+        "{",
+        "    $data.noeud.enveloppeBudget = $data.noeud.enveloppeCamions + $data.noeud.enveloppeChariots + $data.noeud.enveloppeAccessoires;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "invalidEnveloppeBudget" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "invalidEnvelopTrucks" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "invalidEnvelopForklifts" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "invalidEnvelopAccessories" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "setAmountFieldValidity" : {
+      "type" : "expression",
+      "value" : [
+        "",
+        "var invalidity =  $data.invalidEnveloppeBudget || $data.invalidEnvelopTrucks || $data.invalidEnvelopForklifts || $data.invalidEnvelopAccessories;",
+        "",
+        "$data.noeud.invalidAmounts = invalidity;",
+        "      "
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

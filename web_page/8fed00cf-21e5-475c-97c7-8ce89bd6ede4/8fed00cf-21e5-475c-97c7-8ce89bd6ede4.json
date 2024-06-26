@@ -1,0 +1,746 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "8fed00cf-21e5-475c-97c7-8ce89bd6ede4",
+  "name" : "PropositionsReporting",
+  "lastUpdate" : 1671627896633,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "50eea315-ce06-431e-ab05-1a6f4289725c",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Reporting"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "c03579d5-3ab2-46e7-82bf-6e7446a4e37e",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Année budget"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Sélectionner une année"
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "getBudgetYears"
+                },
+                "displayedKey" : {
+                  "type" : "constant"
+                },
+                "returnedKey" : {
+                  "type" : "constant"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "budgetYear"
+                }
+              },
+              "reference" : "b6406910-8a30-47a1-97fa-91d4f5ce4b2f",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Type de calcul"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "typeCalcul"
+                },
+                "displayedKey" : {
+                  "type" : "constant",
+                  "value" : "disp"
+                },
+                "returnedKey" : {
+                  "type" : "constant",
+                  "value" : "val"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "type"
+                }
+              },
+              "reference" : "b1d569b2-e788-4d78-a5b4-7a42137c84b6",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "budgetYear && type"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<font color=\"crimson\"><b><i>Veuillez sélectionner l'année et le type de calcul souhaité</i></b></font>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "f3204aae-bc0c-4fad-90f3-25aeb9525e4b",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!budgetYear || !type|| !queryResult || queryResult.listPropositions.length==0"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "7453a650-68ba-4233-9491-6b7d322816cf",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "61ae9160-248c-45b6-8f70-ef1254e3afd4",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "Bar"
+                            },
+                            "data" : {
+                              "type" : "expression",
+                              "value" : "chartValues"
+                            },
+                            "labels" : {
+                              "type" : "expression",
+                              "value" : "chartLabels"
+                            },
+                            "setLabels" : {
+                              "type" : "expression",
+                              "value" : "columnLabels"
+                            },
+                            "legendHidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "colors" : {
+                              "type" : "constant",
+                              "value" : [ ]
+                            },
+                            "options" : {
+                              "type" : "expression",
+                              "value" : "chartOptions"
+                            }
+                          },
+                          "reference" : "9dbeb500-1e74-444c-aadf-de1bf59dd43c",
+                          "hasValidationError" : false,
+                          "id" : "pbChart"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 8,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "minLength" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "maxLength" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "readOnly" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Filtrer les propositions"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "filter"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "text"
+                      },
+                      "min" : {
+                        "type" : "constant"
+                      },
+                      "max" : {
+                        "type" : "constant"
+                      },
+                      "step" : {
+                        "type" : "constant",
+                        "value" : 1
+                      }
+                    },
+                    "reference" : "48715d8f-d6e3-4ddb-b04f-40983b24e165",
+                    "hasValidationError" : false,
+                    "id" : "pbInput"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "headers" : {
+                        "type" : "constant",
+                        "value" : [
+                          "Id",
+                          "Année",
+                          "Territoire",
+                          "Secteur",
+                          "Site",
+                          "Agence",
+                          "Montant",
+                          "Type",
+                          "Statut"
+                        ]
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "Variable"
+                      },
+                      "apiUrl" : {
+                        "type" : "constant",
+                        "value" : "../API/"
+                      },
+                      "params" : {
+                        "type" : "constant"
+                      },
+                      "content" : {
+                        "type" : "expression",
+                        "value" : "queryResult.listPropositions"
+                      },
+                      "columnsKey" : {
+                        "type" : "constant",
+                        "value" : [
+                          "persistenceId",
+                          "budgetYear",
+                          "territoryCode",
+                          "sectorCode",
+                          "siteCode",
+                          "agencyCode",
+                          "propositionAmount",
+                          "typeProposition",
+                          "propositionStatus"
+                        ]
+                      },
+                      "sortColumns" : {
+                        "type" : "constant"
+                      },
+                      "selectedRow" : {
+                        "type" : "variable",
+                        "value" : "selectedRow"
+                      },
+                      "pageSize" : {
+                        "type" : "constant",
+                        "value" : 10
+                      },
+                      "filter" : {
+                        "type" : "expression",
+                        "value" : "filter"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "striped" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "condensed" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "bordered" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "745b98ad-0a3c-490d-8ed9-d3346bcb95e9",
+                    "hasValidationError" : false,
+                    "id" : "pbDataTable"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "d2b9d953-6657-47f3-9fa4-63c49b99aed3",
+      "name" : "custom.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "d7609ba7-dffd-4bfb-a458-e7876a557bb0",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "63ae83ec-0f4d-407f-86df-ec21b4b1f360",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "budgetYear" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "keys" : {
+      "type" : "json",
+      "value" : [
+        "[\"count\", \"sum\"]"
+      ],
+      "exposed" : false
+    },
+    "queryResult" : {
+      "type" : "url",
+      "value" : [
+        "{{queryPropositions}}"
+      ],
+      "exposed" : false
+    },
+    "type" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "filter" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "typeCalcul" : {
+      "type" : "json",
+      "value" : [
+        " [\r",
+        "     {\"val\":\"count\",\"disp\":\"Nombre de propositions\"},\r",
+        "     {\"val\":\"sum\",\"disp\":\"Somme des propositions\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "chartOptions" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "\t\"maintainAspectRatio\":false\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "columnLabels" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.type && $data.type ===\"sum\"){",
+        "   return [",
+        "    \"A présenter en agence\",",
+        "    \"Validées agence\",",
+        "    \"Validées site\",",
+        "    \"Validées secteur\",",
+        "    \"Validées territoire\"]; ",
+        "}else {",
+        "    return [\"Brouillons\",",
+        "    \"A présenter en agence\",",
+        "    \"Validées agence\",",
+        "    \"Validées site\",",
+        "    \"Validées secteur\",",
+        "    \"Validées territoire\",",
+        "    \"Refusées\"];",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "chartValues" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];\r",
+        "var tabDraft = [];\r",
+        "var tabSmarte = [];\r",
+        "var tabAgency = [];\r",
+        "var tabSite = [];\r",
+        "var tabSector = [];\r",
+        "var tabTerritory= [];\r",
+        "var tabRejected= [];\r",
+        "\r",
+        "if ($data.queryResult && $data.queryResult.counts){\r",
+        "    for (var i = 0; i < $data.queryResult.counts.length; i++){\r",
+        "\r",
+        "        var nbLoop = 0;\r",
+        "        for (var key in $data.queryResult.counts[i]) {\r",
+        "            var temp = [];\r",
+        "            tabDraft[nbLoop] =  $data.queryResult.counts[i][key].nbDraft;\r",
+        "            tabSmarte[nbLoop] =  $data.queryResult.counts[i][key].nbValSmarte;\r",
+        "            tabAgency[nbLoop] =  $data.queryResult.counts[i][key].nbValAgency;\r",
+        "            tabSite[nbLoop] =  $data.queryResult.counts[i][key].nbValSite;\r",
+        "            tabSector[nbLoop] =  $data.queryResult.counts[i][key].nbValSector;\r",
+        "            tabTerritory[nbLoop] =  $data.queryResult.counts[i][key].nbValTerritory;\r",
+        "            tabRejected[nbLoop] =  $data.queryResult.counts[i][key].nbRejected;\r",
+        "           \r",
+        "            nbLoop +=1;\r",
+        "        }\r",
+        "\r",
+        "    }\r",
+        "}\r",
+        "\r",
+        "if($data.type == \"sum\"){\r",
+        "    result[0] = tabSmarte;\r",
+        "    result[1] = tabAgency;\r",
+        "    result[2] = tabSite;\r",
+        "    result[3] = tabSector;\r",
+        "    result[4] = tabTerritory;\r",
+        "}else{\r",
+        "    result[0] = tabDraft;\r",
+        "    result[1] = tabSmarte;\r",
+        "    result[2] = tabAgency;\r",
+        "    result[3] = tabSite;\r",
+        "    result[4] = tabSector;\r",
+        "    result[5] = tabTerritory;\r",
+        "    result[6] = tabRejected;\r",
+        "}\r",
+        "\r",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "queryPropositions" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.budgetYear && $data.type){",
+        "    return \"../API/extension/reportingPropositions?budgetYear=\"+$data.budgetYear",
+        "        +\"&type=\"+$data.type;",
+        "}else {",
+        "    return \"\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedRow" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "chartLabels" : {
+      "type" : "expression",
+      "value" : [
+        "var result = new Set();",
+        "if ($data.queryResult && $data.queryResult.counts){",
+        "    for (var i = 0; i < $data.queryResult.counts.length; i++){",
+        "        for (var key in $data.queryResult.counts[i]) {",
+        "            result.add(key);",
+        "        }",
+        "    }",
+        "}",
+        "",
+        "return  Array.from(result);"
+      ],
+      "exposed" : false
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "",
+        "for (var i = 0; i < 5; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "8fed00cf-21e5-475c-97c7-8ce89bd6ede4",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

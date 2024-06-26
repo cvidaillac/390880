@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="pop3p" version="1.0" profile="User" homePage="homePage" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - SMARTE</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pHomePage" token="homePage"/>
+            <applicationPage customPage="custompage_pop3pNewPropositionPage" token="newProposition"/>
+            <applicationPage customPage="custompage_pop3pSearchPropositionsPage" token="searchPropositions"/>
+            <applicationPage customPage="custompage_pop3pEligibleMaterials" token="eligibleMaterials"/>
+            <applicationPage customPage="custompage_pop3pBudgetPlanning" token="budgetPlanning"/>
+            <applicationPage customPage="custompage_pop3pValidatePropositions" token="validatePropositions"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="homePage">
+                <displayName>Liste des taches</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="newProposition">
+                <displayName>Nouvelle proposition</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="searchPropositions">
+                <displayName>Rechercher propositions</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="eligibleMaterials">
+                <displayName>Matériels éligibles</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="budgetPlanning">
+                <displayName>Planning budgétaire</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="validatePropositions">
+                <displayName>Validations en attente</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="approvers" version="1.0" profile="User" homePage="searchPropositions" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - Valideurs</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pSearchPropositionsPage" token="searchPropositions"/>
+            <applicationPage customPage="custompage_pop3pValidatePropositions" token="validatePropositions"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="searchPropositions">
+                <displayName>Rechercher propositions</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="validatePropositions">
+                <displayName>Validations en attente</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="geemco" version="1.0" profile="User" homePage="ApproveGEEMCOHumanTasks" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - Geemco</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pApproveGEEMCOHumanTaskListing" token="ApproveGEEMCOHumanTasks"/>
+            <applicationPage customPage="custompage_pop3pSearchPropositionsPageGEEMCO" token="RechercherProposition"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="ApproveGEEMCOHumanTasks">
+                <displayName>Validations en attente</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="RechercherProposition">
+                <displayName>Rechercher Propositions</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="BO" version="1.0" profile="User" homePage="homePage" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - BO</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pHomePageBO" token="homePage"/>
+            <applicationPage customPage="custompage_pop3pApproveBOHumanTaskListing" token="ApproveBOHumanTasks"/>
+            <applicationPage customPage="custompage_pop3pSearchPropositionsPageBO" token="RechercherProposition"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="ApproveBOHumanTasks">
+                <displayName>Validations en attente</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="RechercherProposition">
+                <displayName>Rechercher Propositions</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="displayDetail" version="1.0" profile="User" homePage="homePage" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - DisplayDetail</displayName>
+        <description>Cette application à pour but de pouvoir afficher des pages sans pourvoir intervenir dessus.</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pDetailMaterialPage" token="detailMaterialPage"/>
+            <applicationPage customPage="custompage_pop3pDisplayDetailHomePage" token="homePage"/>
+            <applicationPage customPage="custompage_pop3pDisplayDetailProposition" token="detailPropositionPage"/>
+        </applicationPages>
+        <applicationMenus/>
+    </application>
+    <application token="SAV" version="1.0" profile="User" homePage="homePage" state="ACTIVATED" layout="custompage_LayoutSGDBFApplication" theme="custompage_themeBonita">
+        <displayName>Pop3p - SAV</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_pop3pDADRHomePage" token="homePage"/>
+            <applicationPage customPage="custompage_pop3pDADRNewPropositionPage" token="newProposition"/>
+            <applicationPage customPage="custompage_pop3pSearchPropositionsPageSAV" token="searchPropositions"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="homePage">
+                <displayName>Liste des taches</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="newProposition">
+                <displayName>Nouvelle proposition</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="searchPropositions">
+                <displayName>Rechercher propositions</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

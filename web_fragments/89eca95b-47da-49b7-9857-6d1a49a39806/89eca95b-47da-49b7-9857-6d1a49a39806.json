@@ -1,0 +1,148 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "89eca95b-47da-49b7-9857-6d1a49a39806",
+  "name" : "boutonPropEligibleMaterial",
+  "lastUpdate" : 1671627904972,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Créer proposition"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "URL"
+          },
+          "targetUrl" : {
+            "type" : "expression",
+            "value" : "encodedURL"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "constant"
+          },
+          "processVersion" : {
+            "type" : "constant"
+          },
+          "taskId" : {
+            "type" : "constant"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_self"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "constant"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "info"
+          }
+        },
+        "reference" : "f735fc5c-4eef-4cf9-813c-49d5396fb7ff",
+        "hasValidationError" : false,
+        "id" : "pbLink"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlStartProposition" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/portal/form/process/\"+$data.processName+\"/\"+$data.getLatestVersion"
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{processName}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "isAllowedToStart" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined){",
+        "    return $data.getProcessDefinition!==undefined && $data.getProcessDefinition.length >0;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "processName" : {
+      "type" : "constant",
+      "value" : [
+        "BudgetProposition"
+      ],
+      "exposed" : false
+    },
+    "materialId" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "encodedURL" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.urlStartProposition + \"?selectedTerritory=PACA\"\r",
+        "    + \"&selectedAgency=4041\"\r",
+        "    + \"&materialId=\"+$data.materialId ;\r",
+        "\r",
+        "\t"
+      ],
+      "exposed" : false
+    },
+    "getLatestVersion" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined){",
+        "    return $data.getProcessDefinition[0].version;",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

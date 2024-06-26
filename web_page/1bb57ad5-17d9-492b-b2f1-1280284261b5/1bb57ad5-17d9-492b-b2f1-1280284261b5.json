@@ -1,0 +1,78 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "1bb57ad5-17d9-492b-b2f1-1280284261b5",
+  "name" : "ValidationNiveau2",
+  "lastUpdate" : 1671627882587,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "52629959-de8d-4826-bf04-7c7f7e6ceeb5",
+        "hasValidationError" : false,
+        "id" : "2b21c4e2-b6eb-44bd-b01e-361cc8766eac",
+        "binding" : { }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "7247a1ae-a349-4a5b-8495-125c78889045",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "9ad2ac34-09bc-4e13-90cd-31a6d0da56f9",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "ficheposteLinkRef" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.fichePoste_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "/bonita/API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "1bb57ad5-17d9-492b-b2f1-1280284261b5",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

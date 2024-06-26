@@ -1,0 +1,313 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "bddb5641-1582-4366-aacc-9a4563ea10a5",
+  "name" : "ManageSingleFileInst",
+  "lastUpdate" : 1671627904614,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12,
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "placeholder" : {
+            "type" : "constant"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileUploadWidget"
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "One File Document Input"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "url" : {
+            "type" : "constant",
+            "value" : "/bonita/API/formFileUpload"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbUpload"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "formInput.oneFileDocumentInput"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          }
+        },
+        "reference" : "195ac757-8504-48fb-aca7-3b11a0888fa1",
+        "hasValidationError" : false,
+        "id" : "pbUpload"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12,
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "Submit"
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "formError"
+          }
+        },
+        "reference" : "b6cf8941-6d05-4bc1-a74f-69e7cc7f21fc",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "failedResponseValue" : {
+            "type" : "expression",
+            "value" : "formError"
+          }
+        },
+        "reference" : "254e55b4-ef3d-404d-8c28-d0ebcb00d713",
+        "hasValidationError" : false,
+        "id" : "customDisplayfailedresponse"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{formOutput}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "4e0622b2-cfe9-4c96-b5ff-e968d3a5a77b",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "adc8e80a-36ca-4234-b113-69e0c01cad12",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "a53071d7-eeeb-485d-ad96-e921dbb96801",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "3d6a5d31-ebe8-4d8b-817e-fefd676395e5",
+      "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"oneFileDocumentInput\" : { }\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "\t'oneFileDocumentInput': $data.formInput.oneFileDocumentInput",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "formError" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "bddb5641-1582-4366-aacc-9a4563ea10a5",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

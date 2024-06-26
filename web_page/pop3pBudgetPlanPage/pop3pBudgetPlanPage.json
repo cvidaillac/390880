@@ -1,0 +1,1267 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "pop3pBudgetPlanPage",
+  "name" : "pop3pBudgetPlanPage",
+  "lastUpdate" : 1671627911375,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : ""
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "5037afd2-760f-404d-a0af-5998fe1662f3",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Plan budgétaire"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "5fb13f55-4b59-44eb-a7cb-821276ff8886",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "46243cbe-2544-4a41-a87b-8771b7a510a0",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "inline-select-radio"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Type de sélection :"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 6
+                      },
+                      "inline" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "availableValues" : {
+                        "type" : "expression",
+                        "value" : "typeSelectionLov"
+                      },
+                      "displayedKey" : {
+                        "type" : "constant",
+                        "value" : "label"
+                      },
+                      "returnedKey" : {
+                        "type" : "constant",
+                        "value" : "value"
+                      },
+                      "selectedValue" : {
+                        "type" : "variable",
+                        "value" : "typeSelection"
+                      }
+                    },
+                    "reference" : "9ccb33b4-2523-4c74-932c-41e65b708000",
+                    "hasValidationError" : false,
+                    "id" : "pbRadioButtons"
+                  }
+                ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 9,
+                "lg" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "7bb5dbf9-fec8-4310-86a9-4e519d130a1b",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "typeSelection !== \"ENTITE\""
+                      }
+                    },
+                    "reference" : "e087b1c9-6ac0-42bc-b423-b1ac9b5d0835",
+                    "hasValidationError" : false,
+                    "id" : "selectEntity",
+                    "binding" : {
+                      "selectedEntity" : "selectedEntity",
+                      "triggerClearEntite" : "triggerClearEntite"
+                    }
+                  }
+                ],
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "typeSelection !== \"REGION\""
+                      }
+                    },
+                    "reference" : "e28da24f-7813-48a8-b193-ec339c73ef49",
+                    "hasValidationError" : false,
+                    "id" : "SelectRegion",
+                    "binding" : {
+                      "selectedRegion" : "selectedRegion",
+                      "triggerClearRegion" : "triggerClearRegion"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!selectedNode"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "7b09a79c-a86e-49b7-92aa-9f80bb3fa3fa",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "formContainer",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "fb43e789-0836-48a7-a3dc-7cfef0cd5849",
+              "hasValidationError" : false,
+              "id" : "pbFormContainer",
+              "container" : {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : { },
+                "reference" : "ead2504a-94d0-4396-ab82-5cc61b7612c8",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "filtersLabels" : {
+                          "type" : "expression",
+                          "value" : "filtersLabels"
+                        },
+                        "urlGenerate" : {
+                          "type" : "variable",
+                          "value" : "urlGenerate"
+                        },
+                        "multipleSelect" : {
+                          "type" : "variable",
+                          "value" : "selectedEnergiesFilter"
+                        },
+                        "showFilters" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "triggerQuery" : {
+                          "type" : "variable",
+                          "value" : "triggerQuery"
+                        },
+                        "filtersCheckbox" : {
+                          "type" : "expression",
+                          "value" : "filtersCheckbox"
+                        },
+                        "showButtonHide" : {
+                          "type" : "expression",
+                          "value" : "isListDisplayed"
+                        },
+                        "allowOnlyOneCheckbox" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "yearStart" : {
+                          "type" : "variable",
+                          "value" : "planPeriod.yearStart"
+                        },
+                        "yearEnd" : {
+                          "type" : "variable",
+                          "value" : "planPeriod.yearEnd"
+                        }
+                      },
+                      "reference" : "7ef781af-7f52-4395-8629-648fd4ae0ec0",
+                      "hasValidationError" : false,
+                      "id" : "customListFilterBudgetPlan"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!selectedNode"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "478fb990-6c4d-4e41-a186-8be9d6c51037",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "apiUrl" : {
+                  "type" : "interpolation",
+                  "value" : "{{urlGetBudgetPlan}}"
+                },
+                "hideLoader" : {
+                  "type" : "variable",
+                  "value" : "hideLoader"
+                },
+                "successResponse" : {
+                  "type" : "variable",
+                  "value" : "budgetPlanResponse"
+                },
+                "errorResponse" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "hideSpinner" : {
+                  "type" : "variable",
+                  "value" : "hideLoader"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ emptyMsgText }}"
+                },
+                "errorText" : {
+                  "type" : "interpolation",
+                  "value" : "Echec de la connexion à Lyre"
+                },
+                "triggerQuery" : {
+                  "type" : "variable",
+                  "value" : "triggerQuery"
+                }
+              },
+              "reference" : "acc00649-049e-4040-bf10-0bca08f707b5",
+              "hasValidationError" : false,
+              "id" : "customShowEligibleMaterialLoader"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "alert alert-danger"
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "! errorMsg"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Erreur : {{errorMsg}}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "44e81fab-4d21-41c3-8685-9061ab33b070",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "(listBudgetPlanYears== null) || (listBudgetPlanYears.length==0 )"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "9321fb49-5f52-45c2-a792-9e2e3cbce07d",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : ""
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : "listBudgetPlanYears"
+                      }
+                    },
+                    "reference" : "c0ee774f-e3aa-423d-a705-7ccdb113f96f",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "fragment",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "5f23cc5f-2c95-4a4a-a9b5-a15775ec0618",
+                          "hasValidationError" : false,
+                          "id" : "fragBudgetPlanYear",
+                          "binding" : {
+                            "getSession" : "session",
+                            "listEligibleMaterials" : "",
+                            "typeSelection" : "typeSelection",
+                            "budgetYear" : "$item"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "line-top"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "70e4d1da-ca13-46e8-8d2b-e1a57b3d9143",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 2,
+                            "sm" : 5,
+                            "md" : 5,
+                            "lg" : 5
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "b840cce9-3418-4d1f-be41-78d35a4e634e",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [ ]
+                          ]
+                        },
+                        {
+                          "type" : "fragment",
+                          "dimension" : {
+                            "xs" : 8,
+                            "sm" : 3,
+                            "md" : 3,
+                            "lg" : 3
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "03e9b173-dc26-41b0-a8f7-55edafeede21",
+                          "hasValidationError" : false,
+                          "id" : "ExportExcelFragment",
+                          "binding" : {
+                            "ButtonLabel" : "\"Exporter synthèse\"",
+                            "getSession" : "session",
+                            "exportProcessData" : "exportSyntheseData",
+                            "exportWindowTitle" : "\"Export de la synthèse du Plan budgétaire\"",
+                            "Button2Label" : "",
+                            "exportProcessData2" : "",
+                            "button2Disabled" : "",
+                            "buttonsAlignment" : "\"center\""
+                          }
+                        },
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 2,
+                            "sm" : 4,
+                            "md" : 4,
+                            "lg" : 4
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "50ddbb10-f4d0-49cf-bc19-fb999a7c639a",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [ ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "eab0b49b-6060-4204-9513-f05afa3c9edb",
+      "name" : "angular_boolean_filters.js",
+      "type" : "js",
+      "order" : 5,
+      "external" : false
+    },
+    {
+      "id" : "a86c4170-1c32-4eb5-b28d-ca2d5c4eff1b",
+      "name" : "planBudgetaire.css",
+      "type" : "css",
+      "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "b4748538-bd4a-4424-84a9-d38ddc0d1529",
+      "name" : "csscloseModale.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "4f503492-8379-4c93-b783-41b1be80f8e1",
+      "name" : "excel-icon.png",
+      "type" : "img",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "e73136b3-2035-4c91-a845-f504d39039cb",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "1176d599-df21-40ff-a482-8d4954063cca",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "c7a23489-cf28-4cef-8e39-5439d2f8b009",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "6961330f-97bc-4bd8-b69b-03548012f72a",
+      "name" : "export-button.css",
+      "type" : "css",
+      "order" : 4,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "filtersLabels" : {
+      "type" : "expression",
+      "value" : [
+        "var filters = [",
+        "\t{",
+        "\t\t\"data\" : \"genre\",",
+        "\t\t\"label\" : \"Genre\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"sousGenre\",",
+        "\t\t\"label\" : \"Sous-Genre\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"codeEnergie\",",
+        "\t\t\"label\" : \"Energie\",",
+        "\t\t\"type\" : \"selectMulti\",",
+        "\t\t\"values\": $data.listEnergiesLabels,",
+        "\t\t\"operator\":\"M\"      // M: Multiple values",
+        "\t},",
+        "\t{",
+        "\t    \"data\" : \"retrofit\",",
+        "\t    \"label\" : \"Retrofitable\",",
+        "\t    \"type\" : \"radio\",",
+        "\t    \"defaultValue\" : \"\",",
+        "\t    \"values\" : [",
+        "\t        {\"label\": \"Rétrofitables uniquement\", \"value\": \"true\"},",
+        "\t        {\"label\": \"Non-rétrofitables uniquement\", \"value\": \"false\"},",
+        "\t        {\"label\": \"Tous\", \"value\" : \"\"}",
+        "\t        ]",
+        "\t}",
+        "];",
+        "",
+        "return filters;"
+      ],
+      "exposed" : false
+    },
+    "emptyTableResult" : {
+      "type" : "expression",
+      "value" : [
+        "if(!$data.selectedNode)",
+        "{",
+        "    $data.budgetPlanResponse = null;",
+        "}",
+        "",
+        "// Clear previous choice when changing the selection type",
+        "if ($data.selectedRegion && ($data.typeSelection != \"REGION\")) {",
+        "    $data.selectedRegion = null;",
+        "}",
+        "if ($data.selectedEntity && ($data.typeSelection != \"ENTITE\")) {",
+        "    $data.selectedEntity = null;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlGenerate" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "typeSelectionLov" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {\"label\": \"Par région\", \"value\": \"REGION\"},",
+        "    {\"label\": \"Par entité\", \"value\": \"ENTITE\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "typeSelection" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedNode" : {
+      "type" : "expression",
+      "value" : [
+        "var selected_node;",
+        "",
+        "if (($data.typeSelection === \"ENTITE\") && $data.selectedEntity) {",
+        "    if ($data.selectedNode !== $data.selectedEntity.entityCode) {",
+        "        $data.listEligibleMaterials = null;",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedRegion = null;",
+        "    }",
+        "    selected_node = $data.selectedEntity.entityCode;",
+        "    ",
+        "} else if (($data.typeSelection === \"REGION\") && $data.selectedRegion) {",
+        "    if ($data.selectedNode !== $data.selectedRegion.regionCode) {",
+        "        $data.listEligibleMaterials = null;",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedEntity = null;",
+        "    }",
+        "    selected_node = $data.selectedRegion.regionCode;",
+        "}",
+        "",
+        "return selected_node;"
+      ],
+      "exposed" : false
+    },
+    "selectedEntity" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "triggerQuery" : {
+      "type" : "constant",
+      "value" : [
+        "No"
+      ],
+      "exposed" : false
+    },
+    "selectedRegion" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "filtersCheckbox" : {
+      "type" : "expression",
+      "value" : [
+        "return { ",
+        "    \"label\" : \"Critères de sélection\",",
+        "    \"choices\": [",
+        "        {   \"data\" : \"contrat\",",
+        "            \"label\" : \"Contrat\",",
+        "            \"checkedValue\" : \"true\",",
+        "            \"uncheckedValue\" : \"false\",",
+        "            \"defaultValue\" : \"true\",",
+        "            \"relatedField\":[]",
+        "        },",
+        "        {   \"data\" : \"rachatLocfi\",",
+        "            \"label\" : \"Rachat de matériel\",",
+        "            \"checkedValue\" : \"true\",",
+        "            \"uncheckedValue\" : \"false\",",
+        "            \"defaultValue\" : \"true\",",
+        "            \"relatedField\":[]",
+        "        }",
+        "    ]",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "listExerciceValues" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 11; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "isListDisplayed" : {
+      "type" : "expression",
+      "value" : [
+        "var is_displayed = false;",
+        "",
+        "try {",
+        "    if ($data.listBudgetPlanYears && Array.isArray($data.listBudgetPlanYears) && ($data.listBudgetPlanYears.length > 0)) {",
+        "        is_displayed = true;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isListDisplayed: \" + e);",
+        "}",
+        "",
+        "return is_displayed;"
+      ],
+      "exposed" : false
+    },
+    "emptyMsgText" : {
+      "type" : "expression",
+      "value" : [
+        "var empty_msg=\"<br><b>Aucun matériel correspondant aux critères n'est éligible <br>pour cette \";",
+        "",
+        "if ($data.typeSelection == \"REGION\") {",
+        "    empty_msg += \"région\";",
+        "    ",
+        "} else if ($data.typeSelection == \"ENTITE\") {",
+        "    empty_msg += \"entité\";",
+        "    ",
+        "} else {",
+        " empty_msg += \"agence\";",
+        "}",
+        "",
+        "empty_msg += \"</b>\";",
+        "return empty_msg;"
+      ],
+      "exposed" : false
+    },
+    "onChangeTypeSelection" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.typeSelection) {",
+        "    if ((typeof $data.onChangeTypeSelection !== \"undefined\")",
+        "        && ($data.typeSelection != $data.onChangeTypeSelection)) {",
+        "        // Type selection has changed, clear all values",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedEntity = null;",
+        "        $data.selectedRegion = null;",
+        "        $data.triggerClearRegion = true;",
+        "        $data.triggerClearEntite = true;",
+        "        console.log(\"typeSelection changed to \" + $data.typeSelection);",
+        "    }",
+        "    ",
+        "    return $data.typeSelection;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "triggerClearRegion" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "triggerClearEntite" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlGetEnergies" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/pop3pLyreGetEnergies"
+      ],
+      "exposed" : false
+    },
+    "listEnergies" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetEnergies}}"
+      ],
+      "exposed" : false
+    },
+    "selectedEnergiesFilter" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "listEnergiesLabels" : {
+      "type" : "expression",
+      "value" : [
+        "var list_energies = [];",
+        "",
+        "try {",
+        "    if (($data.listEnergies) && (typeof $data.listEnergies.energies !== \"undefined\")) {",
+        "        for (var one_energy of $data.listEnergies.energies) {",
+        "            list_energies.push({\"label\": one_energy.libelleEnergie, \"value\": one_energy.codeEnergie});",
+        "        }",
+        "    }",
+        "",
+        "} catch(e) {",
+        "    console.error(\"Exception listEnergiesLabels: \" + e);",
+        "}",
+        "",
+        "return list_energies;"
+      ],
+      "exposed" : false
+    },
+    "planPeriod" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"yearStart\": null,",
+        "    \"yearEnd\":null",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlGetBudgetPlan" : {
+      "type" : "expression",
+      "value" : [
+        "var url = null;",
+        "",
+        "if (($data.typeSelection) && $data.urlGenerate) {",
+        "    var target_node_type=null;",
+        "    var target_node_value=null;",
+        "    if (($data.typeSelection === \"ENTITE\") && $data.selectedEntity) {",
+        "        target_node_type = \"entite\";",
+        "        target_node_value = $data.selectedEntity.entityCode;",
+        "",
+        "    } else if (($data.typeSelection === \"REGION\") && $data.selectedRegion) {",
+        "        target_node_type = \"region\";",
+        "        target_node_value = $data.selectedRegion.regionCode;",
+        "    }",
+        "    if ((target_node_type) && (target_node_value) && ($data.planPeriod.yearStart) && ($data.planPeriod.yearEnd)) {",
+        "        var url_start = \"../API/extension/pop3PLyreBudgetPlan?method=query&yearStart=\" + $data.planPeriod.yearStart + \"&yearEnd=\" + $data.planPeriod.yearEnd;",
+        "        url = url_start + \"&targetNodeType=\" + target_node_type + \"&targetNodeCode=\" + target_node_value",
+        "        + $data.urlGenerate;",
+        "    }",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "listBudgetPlanYears" : {
+      "type" : "expression",
+      "value" : [
+        "var list_budget_years = null;",
+        "",
+        "try {",
+        "    if ($data.budgetPlanResponse) {",
+        "        if (typeof $data.budgetPlanResponse.syntheses !== 'undefined') {",
+        "            list_budget_years = [];",
+        "            var data_budget_years = $data.budgetPlanResponse.syntheses;",
+        "            for (var one_year of data_budget_years) {",
+        "                one_year.showMaterials = false;",
+        "                one_year.requestId = $data.budgetPlanResponse.id;",
+        "                list_budget_years.push(one_year);",
+        "            }        ",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception listBudgetPlanYears: ' + e);",
+        "}",
+        "",
+        "return list_budget_years;"
+      ],
+      "exposed" : false
+    },
+    "budgetPlanResponse" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "errorMsg" : {
+      "type" : "expression",
+      "value" : [
+        "var error_msg = null;",
+        "",
+        "try {",
+        "    if ($data.budgetPlanResponse) {",
+        "        if ((typeof $data.budgetPlanResponse.errorMsg !== 'undefined')",
+        "            && ($data.budgetPlanResponse.errorMsg)) {",
+        "            error_msg = $data.budgetPlanResponse.errorMsg;",
+        "            if ((typeof $data.budgetPlanResponse.errorNum !== 'undefined')",
+        "                && ($data.budgetPlanResponse.errorNum)) {",
+        "                    error_msg += ' (' + $data.budgetPlanResponse.errorNum + ')';",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception errorMsg: ' + e);",
+        "}",
+        "",
+        "return error_msg;"
+      ],
+      "exposed" : false
+    },
+    "exportSyntheseData" : {
+      "type" : "expression",
+      "value" : [
+        "var export_data = {\"contractObjectName\" : \"planBudgetaire\", ",
+        "    \"contractQueryName\" : \"\", ",
+        "    \"contractQueryCriteria\" : \"\", ",
+        "    \"contractOutputFormat\" : \"ALL_FIELDS\", ",
+        "    \"contractRowsExported\" : \"ALL\", ",
+        "    \"contractPageCount\": 0,      // First page",
+        "    \"contractPageSize\": 0,      // No limit",
+        "    \"contractApplicationPage\" : \"planSynthesis\", ",
+        "    \"contractQueryListIds\" : [],",
+        "    \"contractExportDataRows\" : []};",
+        "",
+        "try {",
+        "    if ((typeof $data.budgetPlanResponse !== 'undefined')",
+        "        && ($data.budgetPlanResponse !== null)",
+        "        && (typeof $data.budgetPlanResponse.syntheses !== 'undefined')",
+        "        && (Array.isArray( $data.budgetPlanResponse.syntheses))) {",
+        "            export_data.contractExportDataRows.push(getSynthesisData( $data.budgetPlanResponse.syntheses));",
+        "        }",
+        "    if (($data.planPeriod.yearStart) && ($data.planPeriod.yearEnd)) {",
+        "        export_data.contractApplicationPage = \"planSynthesis_\" + $data.planPeriod.yearStart + \"-\" +  $data.planPeriod.yearEnd;",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception exportSyntheseData: ' + e);",
+        "}",
+        "",
+        "return export_data;",
+        "",
+        "function getSynthesisData(synthese) {",
+        "    var field_names = [];",
+        "    var records = [];",
+        "    ",
+        "    try {",
+        "        for (var i=0; i<synthese.length; i++) {",
+        "            var one_record = synthese[i];",
+        "            if (one_record !== null) {",
+        "                var record_values = [];",
+        "                ",
+        "                // Loop through each field in record",
+        "                Object.keys(one_record).forEach(function(key,index) {",
+        "                    // Handle sub-structures",
+        "                    if (key.endsWith('plans')) {",
+        "                        var plans = one_record[key];",
+        "                        var plan = plans[key.substring(0, key.length -1)];",
+        "                        var plan_prefix = key.substring(0, key.length -5) + '.';",
+        "                        var plan_data = getSynthesisData(plan);",
+        "                        if (i===0) {",
+        "                            for (var one_plan_field of plan_data.fieldNames) {",
+        "                                field_names.push(plan_prefix + one_plan_field);",
+        "                            }",
+        "                        }",
+        "                        var plan_values = plan_data.records[0].values;",
+        "                        for (var one_plan_value of plan_values) {",
+        "                            record_values.push(one_plan_value);",
+        "                        }",
+        "                    } else {",
+        "                        if ((key !== 'showMaterials') && (key !== 'requestId')) {",
+        "                            if (i===0) {",
+        "                                // Get the field names",
+        "                                field_names.push(key);",
+        "                            }",
+        "                            // Get the values",
+        "                            record_values.push(one_record[key]);",
+        "                        }",
+        "                    }",
+        "                });",
+        "                ",
+        "                ",
+        "                records.push({values: record_values});",
+        "            }",
+        "        }",
+        "        ",
+        "    } catch(e) {",
+        "        console.error('Exception getSynthesisData :' + e);",
+        "    }",
+        "    var data = {fieldNames : field_names,",
+        "                records : records };",
+        "                ",
+        "    return data;",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "9788e0dd-ec6f-43fc-9f26-bec104f7d604",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

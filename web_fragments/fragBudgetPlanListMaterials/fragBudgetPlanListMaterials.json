@@ -1,0 +1,801 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "fragBudgetPlanListMaterials",
+  "name" : "fragBudgetPlanListMaterials",
+  "lastUpdate" : 1671627911256,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "! listEligibleMaterials"
+          },
+          "headers" : {
+            "type" : "expression",
+            "value" : "tableColumns"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "Variable"
+          },
+          "apiUrl" : {
+            "type" : "constant",
+            "value" : "../API/"
+          },
+          "params" : {
+            "type" : "constant"
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "listEligibleMaterials"
+          },
+          "columnsKey" : {
+            "type" : "expression",
+            "value" : "tableFields"
+          },
+          "sortColumns" : {
+            "type" : "constant"
+          },
+          "selectedRow" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "pageSize" : {
+            "type" : "constant",
+            "value" : 10
+          },
+          "filter" : {
+            "type" : "constant"
+          },
+          "createPropositionURL" : {
+            "type" : "variable",
+            "value" : "urlStartProposition"
+          },
+          "numMatSelected" : {
+            "type" : "variable",
+            "value" : "numMatSelected"
+          },
+          "selectedAgencyName" : {
+            "type" : "variable",
+            "value" : "selectedAgencyName"
+          },
+          "selectedTerritoryName" : {
+            "type" : "variable",
+            "value" : "selectedTerritoryName"
+          },
+          "enableSelectCheckbox" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "selectedValues" : {
+            "type" : "variable",
+            "value" : "selectedMaterials"
+          },
+          "isAllSelected" : {
+            "type" : "variable",
+            "value" : "isAllSelected.allSelected"
+          },
+          "collectionOfRowsToCreate" : {
+            "type" : "variable",
+            "value" : "showCreationForm"
+          }
+        },
+        "reference" : "7c8852a1-cee1-47db-8648-66f102563961",
+        "hasValidationError" : false,
+        "id" : "customPop3pMatEligibleDataTable"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "isnumMatSelectedEmpty"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "951ed96a-b754-4582-b027-1163d8ff445b",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "Modal-overlay"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "80c0dfcc-32ef-4734-ae3e-72b0a2a210c8",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "Modal-content"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : ""
+                      }
+                    },
+                    "reference" : "3361964b-f450-4abf-8bff-b63975512897",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "numMatSelected"
+                            },
+                            "buttonStyle" : {
+                              "type" : "constant",
+                              "value" : "default"
+                            },
+                            "label" : {
+                              "type" : "constant",
+                              "value" : "Fermer"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "right"
+                            },
+                            "displayDetailProposition" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "a2987e75-0ef1-4b8a-82d0-adb456a42109",
+                          "hasValidationError" : false,
+                          "id" : "customClosePopup"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "fragment",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "bdf035e6-bd8f-4cd0-a46b-7c735e5892a8",
+                          "hasValidationError" : false,
+                          "id" : "32555053-f1bd-4265-980c-63e0efd4ce1f",
+                          "binding" : {
+                            "materialId" : "numMatSelected",
+                            "materielType" : "",
+                            "materielSubType" : "",
+                            "chargeMensuelleActuelle" : "",
+                            "chargeMensuelleFuture" : "",
+                            "dataToSend" : "",
+                            "typeAcquisition" : "",
+                            "isMaterialDisplayed" : ""
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "listEligibleMaterials==null"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "49cc04dc-e0dc-4777-a0f8-2632e11487fb",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 3,
+                "sm" : 3,
+                "md" : 2,
+                "lg" : 2
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "{{ selectAllLabel }}"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "isAllSelected.allSelected"
+                }
+              },
+              "reference" : "2068046c-9c28-4e34-81b2-e705cb898867",
+              "hasValidationError" : false,
+              "id" : "pbCheckbox"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 2,
+                "lg" : 2
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<i>{{ selectedMessage }}</i>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "f26a8dc6-f48f-4139-baea-33ef70972b97",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            },
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 9,
+                "sm" : 9,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "listEligibleMaterials==null"
+                }
+              },
+              "reference" : "4e268ed7-fc40-4a84-82ea-79de38a586be",
+              "hasValidationError" : false,
+              "id" : "ExportExcelFragment",
+              "binding" : {
+                "ButtonLabel" : "\"Exporter tout\"",
+                "getSession" : "getSession",
+                "exportProcessData" : "exportAllEligibleMaterialsData",
+                "exportWindowTitle" : "\"Export des matériels éligibles\"",
+                "Button2Label" : "\"Exporter sélection\"",
+                "exportProcessData2" : "exportSelectedMaterialsData",
+                "button2Disabled" : "isButton2Disabled",
+                "buttonsAlignment" : "\"left\""
+              }
+            },
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "f2333a70-a95a-48c5-a7db-4c2433b10606",
+              "hasValidationError" : false,
+              "id" : "MassPropositionsCreationFragment",
+              "binding" : {
+                "ButtonLabel" : "\"Créer pour la sélection\"",
+                "getSession" : "getSession",
+                "buttonsAlignment" : "\"left\"",
+                "createPropositionsData" : "selectedMaterials",
+                "selectedMaterials" : "selectedMaterials",
+                "selectedAgency" : "selectedAgency",
+                "selectedTerritory" : "selectedTerritory",
+                "selectedAgencyName" : "selectedAgencyName",
+                "selectedTerritoryName" : "selectedTerritoryName",
+                "showCreationForm" : "showCreationForm",
+                "selectedListToUpdate" : "",
+                "listEligibleMaterials" : "listEligibleMaterials"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlStartProposition" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/portal/form/process/\"+$data.processName+\"/\"+$data.getLatestVersion"
+      ],
+      "exposed" : false
+    },
+    "isAllowedToStart" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined && $data.getProcessDefinition !== null){",
+        "    return $data.getProcessDefinition!==undefined && $data.getProcessDefinition.length >0;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{processName}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "processName" : {
+      "type" : "constant",
+      "value" : [
+        "POP3P_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "numMatSelected" : {
+      "type" : "expression",
+      "value" : [
+        "return {};"
+      ],
+      "exposed" : false
+    },
+    "isnumMatSelectedEmpty" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.numMatSelected === null || angular.equals($data.numMatSelected, {});"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listEligibleMaterials" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getLatestVersion" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined && $data.getProcessDefinition !== null){",
+        "    return $data.getProcessDefinition[0].version;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "exportAllEligibleMaterialsData" : {
+      "type" : "expression",
+      "value" : [
+        "var export_data = {\"contractObjectName\" : \"planBudgetaire\", ",
+        "    \"contractQueryName\" : \"\", ",
+        "    \"contractQueryCriteria\" : \"\", ",
+        "    \"contractOutputFormat\" : \"ALL_FIELDS\", ",
+        "    \"contractRowsExported\" : \"ALL\", ",
+        "    \"contractPageCount\": 0,      // First page",
+        "    \"contractPageSize\": 0,      // No limit",
+        "    \"contractApplicationPage\" : \"planMaterials_\" + $data.year, ",
+        "    \"contractQueryListIds\" : [],",
+        "    \"contractExportDataRows\" : []};",
+        "",
+        "try {",
+        "    if ((typeof $data.listEligibleMaterials !== 'undefined')",
+        "        && ($data.listEligibleMaterials !== null)",
+        "        && (Array.isArray($data.listEligibleMaterials))) {",
+        "            export_data.contractExportDataRows.push(getEligibleMaterialsData($data.listEligibleMaterials));",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception exportAllEligibleMaterialsData: ' + e);",
+        "}",
+        "",
+        "return export_data;",
+        "",
+        "function getEligibleMaterialsData(listEligibleMaterials) {",
+        "    var field_names = [];",
+        "    var records = [];",
+        "    ",
+        "    try {",
+        "        for (var i=0; i<listEligibleMaterials.length; i++) {",
+        "            var one_record = listEligibleMaterials[i];",
+        "            if (one_record !== null) {",
+        "                var record_values = [];",
+        "                ",
+        "                // Loop through each field in record",
+        "                Object.keys(one_record).forEach(function(key,index) {",
+        "                    if (i===0) {",
+        "                        // Get the field names",
+        "                        field_names.push(key);",
+        "                    }",
+        "                    // Get the values",
+        "                    record_values.push(one_record[key]);",
+        "                });",
+        "                ",
+        "                ",
+        "                records.push({values: record_values});",
+        "            }",
+        "        }",
+        "        ",
+        "    } catch(e) {",
+        "        console.error('Exception getEligibleMaterialsData :' + e);",
+        "    }",
+        "    var data = {fieldNames : field_names,",
+        "                records : records };",
+        "                ",
+        "    return data;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedMaterials" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "exportSelectedMaterialsData" : {
+      "type" : "expression",
+      "value" : [
+        "var export_data = {\"contractObjectName\" : \"planBudgetaire\", ",
+        "    \"contractQueryName\" : \"\", ",
+        "    \"contractQueryCriteria\" : \"\", ",
+        "    \"contractOutputFormat\" : \"ALL_FIELDS\", ",
+        "    \"contractRowsExported\" : \"SELECTION\", ",
+        "    \"contractPageCount\": 0,      // First page",
+        "    \"contractPageSize\": 0,      // No limit",
+        "    \"contractApplicationPage\" : \"planMaterials_\" + $data.year, ",
+        "    \"contractQueryListIds\" : [],",
+        "    \"contractExportDataRows\" : []};",
+        "",
+        "try {",
+        "    if ((typeof $data.selectedMaterials !== 'undefined')",
+        "        && ($data.selectedMaterials !== null)",
+        "        && (Array.isArray($data.selectedMaterials))) {",
+        "            export_data.contractExportDataRows.push(getEligibleMaterialsData($data.selectedMaterials));",
+        "        }",
+        "    ",
+        "} catch(e) {",
+        "    console.error('Exception exportSelectedMaterialsData: ' + e);",
+        "}",
+        "",
+        "return export_data;",
+        "",
+        "function getEligibleMaterialsData(listEligibleMaterials) {",
+        "    var field_names = [];",
+        "    var records = [];",
+        "    ",
+        "    try {",
+        "        for (var i=0; i<listEligibleMaterials.length; i++) {",
+        "            var one_record = listEligibleMaterials[i];",
+        "            if (one_record !== null) {",
+        "                var record_values = [];",
+        "                ",
+        "                // Loop through each field in record",
+        "                Object.keys(one_record).forEach(function(key,index) {",
+        "                    if (i===0) {",
+        "                        // Get the field names",
+        "                        field_names.push(key);",
+        "                    }",
+        "                    // Get the values",
+        "                    record_values.push(one_record[key]);",
+        "                });",
+        "                ",
+        "                ",
+        "                records.push({values: record_values});",
+        "            }",
+        "        }",
+        "        ",
+        "    } catch(e) {",
+        "        console.error('Exception getEligibleMaterialsData :' + e);",
+        "    }",
+        "    var data = {fieldNames : field_names,",
+        "                records : records };",
+        "                ",
+        "    return data;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "isButton2Disabled" : {
+      "type" : "expression",
+      "value" : [
+        "var is_disabled=true;",
+        "try {",
+        "    if ((typeof $data.selectedMaterials !== 'undefined')",
+        "        && ($data.selectedMaterials !== null) ",
+        "        && Array.isArray($data.selectedMaterials)",
+        "        && ($data.selectedMaterials.length > 0)) {",
+        "        is_disabled = false;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isButton2Disabled: \" + e);",
+        "}",
+        "return is_disabled;"
+      ],
+      "exposed" : false
+    },
+    "selectAllLabel" : {
+      "type" : "expression",
+      "value" : [
+        "var select_all_label = 'Tout sélectionner';",
+        "",
+        "if ((typeof $data.isAllSelected.allSelected !== 'undefined') ",
+        "    && ($data.isAllSelected.allSelected === true)) {",
+        "    select_all_label = 'Tout déselectionner';",
+        "}",
+        "",
+        "return select_all_label;"
+      ],
+      "exposed" : false
+    },
+    "isAllSelected" : {
+      "type" : "json",
+      "value" : [
+        "{\"allSelected\": false}"
+      ],
+      "exposed" : false
+    },
+    "showCreationForm" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "selectedMessage" : {
+      "type" : "expression",
+      "value" : [
+        "var msg=\"\";",
+        "",
+        "if (($data.selectedMaterials != null) && ($data.selectedMaterials.length > 0)) {",
+        "    var plurial = ($data.selectedMaterials.length > 1) ? \"s\" : \"\";",
+        "    ",
+        "    msg = $data.selectedMaterials.length + \" matériel\" + plurial + \" sélectionné\" + plurial;",
+        "}",
+        "",
+        "return msg;"
+      ],
+      "exposed" : false
+    },
+    "tableColumns" : {
+      "type" : "expression",
+      "value" : [
+        "var all_columns = ['Matériel', 'Marque', 'Genre', 'Sous-genre', 'Energie', 'B100', 'XTL', 'Rétrofit.', 'ZFE', 'Cause d\\'éligibilité', 'Type d\\'achat', 'Territoire'];",
+        "var complement;",
+        "",
+        "try {",
+        "    if ($data.typeSelection === 'AGENCE') {",
+        "        complement = ['Entité', 'Région', 'Secteur', 'Site'];",
+        "        ",
+        "    } else if ($data.typeSelection === 'REGION') {",
+        "        complement = ['Entité', 'Secteur', 'Site', 'Agence'];",
+        "        ",
+        "    } else {",
+        "        // ENTITE",
+        "        complement = ['Région', 'Secteur', 'Site', 'Agence'];",
+        "    }",
+        "    all_columns.push(...complement);",
+        "} catch(e) {",
+        "    console.error('Exception tableColumns :' + e);",
+        "}",
+        "return all_columns;"
+      ],
+      "exposed" : false
+    },
+    "typeSelection" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "tableFields" : {
+      "type" : "expression",
+      "value" : [
+        "var all_fields = ['numMat', 'marque', 'libelleGenre', 'libelleSousGenre', 'libelleEnergie', 'b100 | checkMark', 'xtl | checkMark', 'retrofitB100 | checkMark', 'zfe', 'causeEligibilite', 'typeAchat', 'libelleTerritoire'];",
+        "var complement;",
+        "",
+        "try {",
+        "    if ($data.typeSelection === 'AGENCE') {",
+        "        complement = ['libelleEntite', 'libelleSecteur', 'libelleSecteur', 'libelleSite'];",
+        "",
+        "    } else if ($data.typeSelection === 'REGION') {",
+        "        complement = ['libelleEntite', 'libelleSecteur', 'libelleSite', 'libelleAgenceAffectation'];",
+        "        ",
+        "    } else {",
+        "        // ENTITE",
+        "        complement = ['libelleRegion', 'libelleSecteur', 'libelleSite', 'libelleAgenceAffectation'];",
+        "    }",
+        "    all_fields.push(...complement);",
+        "} catch(e) {",
+        "    console.error('Exception tableFields :' + e);",
+        "}",
+        "",
+        "return all_fields;"
+      ],
+      "exposed" : false
+    },
+    "showMaterials" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "triggerQuery" : {
+      "type" : "constant",
+      "value" : [
+        "No"
+      ],
+      "exposed" : false
+    },
+    "year" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

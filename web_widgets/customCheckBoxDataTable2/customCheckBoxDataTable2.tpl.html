@@ -1,0 +1,91 @@
+<div class="table-responsive">
+    <input id="selectAll" type="checkbox" ng-model="selectAll" ng-click="ctrl.checkAll()" />
+    <label for="selectAll">
+    <span ng-if="ctrl.allSelected()">
+       Tout déselectionner
+    </span>
+    <span ng-if="!ctrl.allSelected()">
+        Tout sélectionner
+    </span>
+
+    </label>
+    <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table table-striped" ng-class="{'table-hover': ctrl.isSelectable()}">
+        <thead>
+            <tr>
+                <th></th>
+                <th ng-repeat="header in properties.headers">
+                    <div ng-if="ctrl.isColumnSortable($index)" bo-sorter="{{properties.columnsKey[$index]}}">
+                            {{ header | uiTranslate }}
+                    </div>
+                    <div ng-if="!ctrl.isColumnSortable($index)">
+                        {{ header | uiTranslate }}
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.hasMultiColumns()">
+
+<!--ng-click="ctrl.selectRowHandler(row)"-->
+        
+        <tr ng-repeat="row in ctrl.results" 
+            ng-class="{'info': row === properties.selectedRow}">
+            <!--Adds the checkbox in the first column-->
+            <td>
+                <input type="checkbox" ng-click="ctrl.rowsetting(row.id, $event)" ng-model="row.select">
+            </td>
+
+            <td ng-repeat="column in properties.columnsKey track by $index">
+                {{ $eval(column, row) | uiTranslate }}
+            </td>
+            
+            <!--Adds validation buttons on the last columns
+            <td>
+                <button class="btn btn-success" ng-click="ctrl.popUpApprove(row, $event)"><span class="glyphicon glyphicon-ok"></span>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-warning" ng-click="ctrl.displayProposition(row, $event)"><span class="glyphicon glyphicon-question-sign"></span>
+                </button>
+            </td>
+            -->
+        </tr>
+        </tbody>
+        <tbody ng-if="!ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" 
+            ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td> {{ row | uiTranslate }}</td>
+        </tr>
+        </tbody>
+    </table>
+    
+     <!--Adds validation buttons for the selected columns-->
+    <button class="btn btn-success" ng-click="ctrl.popUpvalidateAllSelected()" ng-disabled="listIds.length==0"><span class="glyphicon glyphicon-ok"></span> Valider</button>
+
+    <div class="hidden-xs"
+         ng-repeat="options in [{'maxSize': 5, 'rotate': false}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    <div class="visible-xs text-center"
+         ng-repeat="options in [{'maxSize': 3, 'rotate': true}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    
+    <script type="text/ng-template" id="/dataTable/pagination.html">
+        <pagination ng-if="ctrl.pagination.total > properties.pageSize"
+                    total-items="ctrl.pagination.total"
+                    items-per-page="properties.pageSize"
+                    direction-links="true"
+                    boundary-links="true"
+                    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    rotate="{{options.rotate}}"
+                    max-size="{{options.maxSize}}"
+                    ng-model="ctrl.pagination.currentPage"
+                    ng-change="ctrl.paginationHandler()">
+        </pagination>
+    </script>
+
+</div>

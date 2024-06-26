@@ -1,0 +1,161 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "446197c5-e09c-4ffe-bfe0-ecbf3e295e97",
+  "name" : "setTypeAcquisition",
+  "lastUpdate" : 1671627881104,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 8,
+          "lg" : 8
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "hideTypeAcquisition"
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "disableTypeAcquisition"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Type d'acquisition"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "getListTypes"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "typeAcquisition"
+          }
+        },
+        "reference" : "04cf0c7a-a9df-457b-9f7a-79449acd39b3",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "hideTypeAcquisition" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "typeProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "motifProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "typeAcquisition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getListTypes" : {
+      "type" : "expression",
+      "value" : [
+        "\r",
+        "// On récupère l'ancienne liste\r",
+        "var result = $data.getListTypes;\r",
+        "\r",
+        "\r",
+        "// La liste est ici car sinon le \"if\" reécrivait la variable typeAcquisition et la metait à null.\r",
+        "// -> Ligne desélectionnée\r",
+        "\r",
+        "\r",
+        "/*\r",
+        "if ($data.typeProposition ==\"A vendre\" || $data.typeProposition ==\"A restituer\" || $data.typeProposition ==\"A rebuter\") {\r",
+        "\t$data.hideTypeAcquisition = true;\r",
+        "} else {\r",
+        "\t$data.hideTypeAcquisition = false;\r",
+        "}\r",
+        "*/\r",
+        "\r",
+        "if ($data.typeProposition ==\"Rachat LocFi\"){\r",
+        "\t$data.typeAcquisition = \"Comptant\";\r",
+        "\tresult =[\"Comptant\"];\r",
+        "\t$data.disableTypeAcquisition = true;\r",
+        "\t\r",
+        "} else if($data.typeProposition ==\"A prolonger\") {\r",
+        "    // CFR 08/10/2020 - BPM-384 : New rule for motif 'A prolonger'\r",
+        "    // CFR 08/10/2020 - BPM-380 : New values LCD and LCDAC\r",
+        "    result = [\"A définir\",\"LLD\",\"LCD\",\"LLDAC\",\"LCDAC\"];\r",
+        "\t$data.disableTypeAcquisition = false;\r",
+        "    \r",
+        "} else {\r",
+        "    // CFR 08/10/2020 - BPM-380 : New values LCD and LCDAC\r",
+        "    // CR  13/10/2022   BPM 852 - Remove LocFi Acquisition Type\r",
+        "    result = [\"A définir\",\"Comptant\",\"LLD\",\"LCD\",\"LLDAC\",\"LCDAC\",\"Crédit-Bail\"];\r",
+        "\t$data.disableTypeAcquisition = false;\r",
+        "} \r",
+        "\r",
+        "\r",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "disableTypeAcquisition" : {
+      "type" : "expression",
+      "value" : [
+        "return false;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

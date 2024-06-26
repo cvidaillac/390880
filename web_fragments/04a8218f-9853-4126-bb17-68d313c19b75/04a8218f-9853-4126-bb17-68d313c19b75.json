@@ -1,0 +1,423 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "04a8218f-9853-4126-bb17-68d313c19b75",
+  "name" : "fragDatesPlanningBudgetaire",
+  "lastUpdate" : 1671627885890,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!(selectedAgency && selectedBudgetYear) || (formInput.length > 0)"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "iconSize" : {
+            "type" : "constant",
+            "value" : "2"
+          }
+        },
+        "reference" : "aafe295d-27e8-478d-83ec-6d7ee48466ce",
+        "hasValidationError" : false,
+        "id" : "customLoadingSpinner"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!(selectedAgency && selectedBudgetYear) || (formInput.length === 0)"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "75a78431-dc33-42c4-8ac1-dd68100da89f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "621917c6-0eb8-4e39-9751-29643b3ffa71",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 4,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "52436267-287a-49e2-84ef-07f6e47eea76",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 4,
+                            "lg" : 4
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "ecdc9e1e-2d17-4923-9224-98c7a2d8148a",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [ ]
+                          ]
+                        },
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 4,
+                            "md" : 4,
+                            "lg" : 4
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Dates de présentations"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 3"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "21b0d128-dcca-4770-b734-5bb30c9cac60",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        },
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 4,
+                            "md" : 4,
+                            "lg" : 4
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Enveloppes budgétaires"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 3"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "cddf9541-13dd-4ed8-9b76-4f223b2869ca",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : "formInput"
+                      }
+                    },
+                    "reference" : "5d699dc4-1b46-4eaa-9ab4-d5b75437a2c8",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "fragment",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "a78a1626-c452-4d71-86f5-c0a0525d546f",
+                          "hasValidationError" : false,
+                          "id" : "FragPlanningDates",
+                          "binding" : {
+                            "noeud" : "$item",
+                            "showDatesAndBudgets" : "$index == $collection.length -1",
+                            "invalidAmounts" : "invalidAmounts"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "5997d4ae-075d-42e9-88b0-f06b94d48be8",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "rfDates" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlAPIUpdatePlannings" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/extension/budgetplanning/updatePlanning\";"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getOnce" : {
+      "type" : "constant",
+      "value" : [
+        "false"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedBudgetYear" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setValuesFormInput" : {
+      "type" : "expression",
+      "value" : [
+        "var payload = [];",
+        "",
+        "if(",
+        "    $data.datesPlanning ",
+        "    && $data.datesPlanning.length > 0",
+        "    && $data.getOnce === \"false\"",
+        "    ) {",
+        "    $data.getOnce = \"true\";",
+        "",
+        "    $data.oldUrlValue = $data.urlGetDatesPlanning;",
+        "    ",
+        "    for (var i in $data.datesPlanning) {",
+        "        var bufferDate = {};",
+        "        bufferDate.nomNoeud = $data.datesPlanning[i].nomNoeud",
+        "        bufferDate.codeNoeud = $data.datesPlanning[i].codeNoeud",
+        "        bufferDate.enveloppeBudget = parseInt($data.datesPlanning[i].enveloppeBudget);",
+        "        bufferDate.niveau = $data.datesPlanning[i].niveau",
+        "        bufferDate.intitule = $data.datesPlanning[i].intitule",
+        "        bufferDate.datePresentation = $data.datesPlanning[i].datePresentation",
+        "        ",
+        "        if(parseInt(i) === ($data.datesPlanning.length-1)) {",
+        "            bufferDate.rf1 = $data.datesPlanning[i].rf1;",
+        "            bufferDate.rf2 = $data.datesPlanning[i].rf2;",
+        "            bufferDate.rf3 = $data.datesPlanning[i].rf3;",
+        "            bufferDate.rf4 = $data.datesPlanning[i].rf4;",
+        "            ",
+        "            bufferDate.enveloppeCamions = parseInt($data.datesPlanning[i].enveloppeCamions);",
+        "            bufferDate.enveloppeChariots = parseInt($data.datesPlanning[i].enveloppeChariots);",
+        "            bufferDate.enveloppeAccessoires = parseInt($data.datesPlanning[i].enveloppeAccessoires);",
+        "        }",
+        "        ",
+        "        payload.push(bufferDate);",
+        "",
+        "        ",
+        "    }",
+        "    $data.formInput = payload;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "datesPlanning" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

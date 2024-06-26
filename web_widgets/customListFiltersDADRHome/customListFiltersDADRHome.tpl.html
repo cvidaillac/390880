@@ -1,0 +1,55 @@
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseFilters" aria-controls="collapseFilters">
+    Afficher / Masquer les filtres
+  </button>
+
+    <div class="collapse " id="collapseFilters" >
+
+        <div class="form-group row" >
+            <div ng-if="!filter.isDisable" ng-repeat="filter in properties.filtersLabels" class="col component col-xs-12  col-sm-12  col-md-3  col-lg-3 ng-scope">
+                <label for="{{ filter.data }}"> {{ filter.label }} </label>
+                <span class="badge badge-info" ng-if="filter.operator=='L'"> contient</span>
+                <span class="badge badge-info" ng-if="filter.operator=='S'"> commence par</span>
+                <span class="badge badge-info" ng-if="filter.operator !='L' && filter.operator != 'S' && filter.type !='selectMulti'"> égal</span>
+                <span class="badge badge-error" ng-if="filter.type==='selectMulti'" ng-click="ctrl.resetValueMulti(filter)"> x</span> 
+                <span class="badge badge-error" ng-if="searchBuffer[filter.data]" ng-click="ctrl.resetValue(filter)"> x</span> 
+
+                <div ng-if="filter.type==='text' || filter.type==='date'">
+                    <input type="text" class="form-control" name="{{ filter.data }}" placeholder="{{ filter.placeholder }}" 
+                        ng-model="searchBuffer[filter.data]" ng-readonly="filter.readOnly">
+                        <datalist id="{{ filter.data }}">
+                            <!--availableDatas[filter.data]-->
+                            <option ng-if="filter.type==='date'" ng-repeat="data in filter.values" > {{data}}</option>
+                        </datalist>
+                </div>
+                <!--auto-complete="ctrl.autoCompleteOptions" to be added in order to have autoComplete feature-->
+                 <div ng-if="filter.type==='selectMulti'">
+<!--                     ng-init="searchBuffer[filter.data]=1"-->
+                    <select name="{{ filter.data }}" class="form-control" ng-model="properties.multipleSelect" multiple>
+<!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+
+                        <option ng-if="data === filter.values[0]" ng-repeat="data in filter.values" >{{ data }}</option>
+                        <option ng-if="data !== filter.values[0]" ng-repeat="data in filter.values" >{{ data }}</option>
+                    </select>
+                </div>
+                
+                <div ng-if="filter.type==='select'">
+<!--                     ng-init="searchBuffer[filter.data]=1"-->
+                    <select name="{{ filter.data }}" class="form-control" ng-model="searchBuffer[filter.data]" ng-init="searchBuffer[filter.data]=filter.values[0]" >
+<!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+
+
+                        <option ng-if="data === filter.values[0]" ng-repeat="data in filter.values" selected >{{ data }}</option>
+                        <option ng-if="data !== filter.values[0]" ng-repeat="data in filter.values" >{{ data }}</option>
+                    </select>
+                </div>
+
+            </div>
+            <br/>
+
+    </div>
+    
+    <button ng-click="ctrl.startFilters()" type="button" class="btn btn-primary">Filtrer</button>
+    <button ng-click="ctrl.resetFilters()" type="button" class="btn btn-danger">Effacer les filtres</button>
+</div>
+
+

@@ -1,0 +1,180 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "f262c6d6-0b6c-44c5-a580-50ead69dc03c",
+  "name" : "fragTaskList",
+  "lastUpdate" : 1671627915810,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Materiels eligibles"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "3bae6de8-eef1-4e56-ac27-7f856b3c8046",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "headers" : {
+            "type" : "constant",
+            "value" : [
+              "Id",
+              "Nom",
+              "Priorité",
+              "Cas",
+              "Processus"
+            ]
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "Variable"
+          },
+          "apiUrl" : {
+            "type" : "constant",
+            "value" : "../API/"
+          },
+          "params" : {
+            "type" : "constant"
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "listTasks"
+          },
+          "columnsKey" : {
+            "type" : "constant",
+            "value" : [
+              "id",
+              "displayName",
+              "priority",
+              "caseId",
+              "rootContainerId.displayName"
+            ]
+          },
+          "sortColumns" : {
+            "type" : "constant"
+          },
+          "selectedRow" : {
+            "type" : "variable"
+          },
+          "pageSize" : {
+            "type" : "constant",
+            "value" : 10
+          },
+          "filter" : {
+            "type" : "constant"
+          },
+          "createPropositionURL" : {
+            "type" : "variable",
+            "value" : "urlStartProposition"
+          }
+        },
+        "reference" : "df4f3500-23f5-48c3-aaa0-28d4f6b48261",
+        "hasValidationError" : false,
+        "id" : "customPop3pMatEligibleDataTable"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlStartProposition" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/portal/form/process/\"+$data.processName+\"/\"+$data.getLatestVersion"
+      ],
+      "exposed" : false
+    },
+    "isAllowedToStart" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined){",
+        "    return $data.getProcessDefinition!==undefined && $data.getProcessDefinition.length >0;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{processName}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "processName" : {
+      "type" : "constant",
+      "value" : [
+        "BudgetProposition"
+      ],
+      "exposed" : false
+    },
+    "listTasks" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/humanTask?c=50&d=rootContainerId&f=state%3Dready&f=user_id%3D4&o=displayName+ASC&p=0"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "getLatestVersion" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition !== undefined){",
+        "    return $data.getProcessDefinition[0].version;",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

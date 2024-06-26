@@ -1,0 +1,640 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "3b8b51c5-9cac-49b1-bed9-f1b5d7f1f42e",
+  "name" : "pop3pNewPropositionPage",
+  "lastUpdate" : 1671627886765,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Créer une nouvelle demande"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 3"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "ea883675-d76a-4430-b950-79eefbfd7393",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "isAllowedToStart"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "4db37413-f911-411e-9408-836cec07c6ce",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<font color='red'><span class=\"glyphicon glyphicon-info-sign\"></span> Ce compte n'est pas autorisé à créer une nouvelle demande de budget. En cas d'anomalie, veuillez contacter votre administrateur technique."
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "729e102e-34ce-4eb3-b498-53834c8367f1",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!isAllowedToStart"
+          }
+        },
+        "reference" : "38a2deb0-bb2f-4cfa-9e16-2acda8d0fb60",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "fda71aa4-88ec-43cf-8c3f-5f94c7e3ca27",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "fragment",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "e1beff50-b074-4967-8d74-b3e37fd30396",
+                "hasValidationError" : false,
+                "id" : "ac197fac-ccc7-4f45-9fab-66746024d748",
+                "binding" : {
+                  "selectedTerritory" : "selectedTerritory",
+                  "selectedAgency" : "selectedAgency",
+                  "formInput" : "formInput",
+                  "formOutput" : "formOutput",
+                  "isInitForm" : "",
+                  "session" : "getSession",
+                  "existingProp" : "existingPropParam",
+                  "selectedAgencyName" : "",
+                  "selectedTerritoryName" : "",
+                  "selectedEntityCode" : "selectedEntityCode",
+                  "selectedAgencyLabel" : "",
+                  "invalidBudgetVal" : "invalidAmount"
+                }
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "619cf070-5a79-418c-9ad3-f9644038d57e",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "$form.$invalid  || invalidAmount || (!selectedAgency) || (formOutput.propositionsInput.length ==0)"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Enregistrer en mode brouillon"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "primary"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "POST"
+                        },
+                        "url" : {
+                          "type" : "interpolation",
+                          "value" : "{{urlProcessInstanciation}}"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutput"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "errorMessage"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "/bonita/apps/pop3p/homePage/"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        }
+                      },
+                      "reference" : "4c6dd139-5e6c-4085-89d4-d7b6233b9fb8",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Annuler"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "page"
+                        },
+                        "targetUrl" : {
+                          "type" : "constant",
+                          "value" : "http://"
+                        },
+                        "pageToken" : {
+                          "type" : "constant",
+                          "value" : "homePage"
+                        },
+                        "processName" : {
+                          "type" : "constant"
+                        },
+                        "processVersion" : {
+                          "type" : "constant"
+                        },
+                        "taskId" : {
+                          "type" : "constant"
+                        },
+                        "caseId" : {
+                          "type" : "constant"
+                        },
+                        "target" : {
+                          "type" : "constant",
+                          "value" : "_self"
+                        },
+                        "appToken" : {
+                          "type" : "constant"
+                        },
+                        "urlParams" : {
+                          "type" : "constant"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        }
+                      },
+                      "reference" : "3a92a9b7-124a-4d98-899c-9ec0f835b8c0",
+                      "hasValidationError" : false,
+                      "id" : "pbLink"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "!errorMessage"
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<font color='red'>Erreur lors de l'enregistrement de la demande : </font><br>{{errorMessage}}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : ""
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  }
+                },
+                "reference" : "186a536d-ef5f-44c1-a4e1-2d4246445b0b",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "f4db064f-c6ea-49c9-99d4-a461080c9160",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "425ddfdb-8e5f-4caf-9300-6af841afbb8c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "5023964f-3414-42cc-a68a-c45e28e76746",
+      "name" : "POP3pDetailMaterialPage.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "6305f889-8b05-4991-8275-98c5139f715f",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [
+    "7d31b813-96c2-4e98-b400-3cd0ecb5692c"
+  ],
+  "variables" : {
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "var result= {",
+        "\t'propositionsInput': []",
+        "};",
+        "",
+        "if ($data.materialIdParam &&  $data.selectedAgency && $data.selectedTerritory){",
+        "    result.propositionsInput.push(",
+        "            {\"persistenceId\" : 1,",
+        "            \"materialNumber\": $data.materialIdParam,",
+        "            \"existing\": \"existingMaterial\",",
+        "            \"agencyCode\": $data.selectedAgency,",
+        "            \"agencyName\": \"\",",
+        "            \"territoryCode\": $data.selectedTerritory,",
+        "            \"territoryName\": \"\",",
+        "            \"commentSmart\":\"\",",
+        "            \"userCommentOptional\":\"\",",
+        "            \"existingProp\":true,",
+        "            \"budgetRespected\": true",
+        "            }",
+        "        )",
+        "}else {",
+        "     result.propositionsInput.push(",
+        "            {",
+        "            \"commentSmart\":\"\",",
+        "            \"userCommentOptional\":\"\",",
+        "            \"budgetRespected\": true",
+        "            }",
+        "        )",
+        "}",
+        "",
+        "return \tresult;"
+      ],
+      "exposed" : false
+    },
+    "materialIdParam" : {
+      "type" : "urlparameter",
+      "value" : [
+        "materialId"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "urlparameter",
+      "value" : [
+        "selectedAgency"
+      ],
+      "exposed" : false
+    },
+    "getProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{nomProcessADemarrer}}&o=deploymentDate%20DESC&f=activationState=ENABLED&f=user_id={{getSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "isAllowedToStart" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getProcessDefinition!==undefined && $data.getProcessDefinition.length >0"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "urlparameter",
+      "value" : [
+        "selectedTerritory"
+      ],
+      "exposed" : false
+    },
+    "urlProcessInstanciation" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition){",
+        "   return \"../API/bpm/process/\"+$data.getProcessDefinition[0].id+\"/instantiation\";",
+        "} "
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var listPropositions = $data.formInput.propositionsInput",
+        "if (listPropositions !== undefined && listPropositions.length>0){",
+        "     ",
+        "    var agencyCode = listPropositions[0].agencyCode",
+        "    var agencyName = listPropositions[0].agencyName",
+        "    ",
+        "    var territoryCode = listPropositions[0].territoryCode",
+        "    var territoryName = listPropositions[0].territoryName",
+        "",
+        "",
+        "    for (var i = 0; i < listPropositions.length; i++) {",
+        "        ",
+        "        listPropositions[i].agencyCode = agencyCode",
+        "        listPropositions[i].agencyName = agencyName",
+        "        listPropositions[i].territoryCode = territoryCode",
+        "        listPropositions[i].territoryName = territoryName",
+        "",
+        "        if (listPropositions[i].typeMaterial === undefined){",
+        "              listPropositions[i].typeMaterial =  \"\"",
+        "        }",
+        "        if (listPropositions[i].existing === \"newMaterial\"){",
+        "              listPropositions[i].materialNumber =  \"\"",
+        "        }",
+        "        if (listPropositions[i].typeAcquisition === undefined) {",
+        "            listPropositions[i].typeAcquisition = \"\";",
+        "        }",
+        "        // CFR 16/11/2020 - BPM-329",
+        "        listPropositions[i].requestSource = \"B\";",
+        "        ",
+        "        // CFR 23/08/2021 - BPM 641 : New contract field to duplicate attachments",
+        "        listPropositions[i].existingAttachments = [];",
+        "    }",
+        "}",
+        "",
+        "",
+        "return {",
+        "\t'propositionsInput': listPropositions",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "errorMessage" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "nomProcessADemarrer" : {
+      "type" : "constant",
+      "value" : [
+        "POP3P_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "existingPropParam" : {
+      "type" : "urlparameter",
+      "value" : [
+        "existingProp"
+      ],
+      "exposed" : false
+    },
+    "selectedEntityCode" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "invalidAmount" : {
+      "type" : "constant",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "3b8b51c5-9cac-49b1-bed9-f1b5d7f1f42e",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

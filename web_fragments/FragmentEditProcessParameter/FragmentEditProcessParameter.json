@@ -1,0 +1,1089 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "FragmentEditProcessParameter",
+  "name" : "FragmentEditProcessParameter",
+  "lastUpdate" : 1671627912006,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "apiUrl" : {
+            "type" : "interpolation",
+            "value" : "{{ urlGetProcessDefinition }}"
+          },
+          "successResponse" : {
+            "type" : "variable",
+            "value" : "ProcessDefinition"
+          },
+          "errorResponse" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Processus {{ ProcessName}} non trouvé"
+          },
+          "errorText" : {
+            "type" : "interpolation",
+            "value" : "Processus {{ ProcessName}} non trouvé"
+          }
+        },
+        "reference" : "fc748343-f88f-41f9-bb74-abc9331fd7f3",
+        "hasValidationError" : false,
+        "id" : "customShowEligibleMaterialLoader"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "ProcessDefinition==null"
+          },
+          "apiUrl" : {
+            "type" : "interpolation",
+            "value" : "{{urlGetProcessParameter}}"
+          },
+          "successResponse" : {
+            "type" : "variable",
+            "value" : "parameterRecord"
+          },
+          "errorResponse" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Paramètre non trouvé sur le processus {{ ProcessName}}"
+          },
+          "errorText" : {
+            "type" : "interpolation",
+            "value" : "Echec de la récupération du paramètre sur le processus {{ ProcessName}}"
+          }
+        },
+        "reference" : "7c0c56e8-cbfe-4acb-aa43-0cdc80bb8ae8",
+        "hasValidationError" : false,
+        "id" : "customShowEligibleMaterialLoader"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "parameterRecord== null"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "dc8aad2c-e7da-4014-9bc8-b96cc05a4439",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 6,
+                "sm" : 8,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "expression",
+                  "value" : "editRecord.length==0"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "{{ ParameterLabel }}"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 6
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "{{ ParameterPlaceHolder }}"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "parameterRecord.value"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant",
+                  "value" : 0
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "442afdb4-4fea-42ff-a4fc-e7e7a3796cc8",
+              "hasValidationError" : false,
+              "id" : "customInputWatchModelChange"
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 3,
+                "sm" : 2,
+                "md" : 1,
+                "lg" : 1
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "90b1bfd9-83a6-4dac-9fa9-122ae086fe0a",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "editRecord.length>0"
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "primary"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "Add to collection"
+                      },
+                      "assign" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "url" : {
+                        "type" : "interpolation"
+                      },
+                      "responseStatusCode" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "closeOnSuccess" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "editRecord"
+                      },
+                      "modalId" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "expression",
+                        "value" : "parameterRecord"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "d1593b7b-28d6-4c95-b43b-0517c6fe7b27",
+                    "hasValidationError" : false,
+                    "id" : "pbButton"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 3,
+                      "sm" : 2,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "editRecord.length==0"
+                      },
+                      "disabled" : {
+                        "type" : "expression",
+                        "value" : "parameterRecord.value == editRecord[0].value"
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "success"
+                      },
+                      "action1" : {
+                        "type" : "constant",
+                        "value" : "Add to collection"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "dataFromSuccess2" : {
+                        "type" : "variable",
+                        "value" : "successUpdate"
+                      },
+                      "dataFromSuccess3" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "action2" : {
+                        "type" : "expression",
+                        "value" : "updateParameterMethod"
+                      },
+                      "action3" : {
+                        "type" : "constant",
+                        "value" : "Remove from collection 2"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "updateRecord"
+                      },
+                      "valueToAdd" : {
+                        "type" : "expression",
+                        "value" : "parameterRecord.value"
+                      },
+                      "collectionPositionAdd" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "url" : {
+                        "type" : "interpolation",
+                        "value" : "{{urlGetProcessParameter}}"
+                      },
+                      "dataToSend" : {
+                        "type" : "expression",
+                        "value" : "updateRecordData"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : "errorUpdate"
+                      },
+                      "dataFromSuccess1" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "taskRootCaseId" : {
+                        "type" : "constant"
+                      },
+                      "startProcessDefinitionId" : {
+                        "type" : "constant"
+                      },
+                      "maxDelayForAction" : {
+                        "type" : "constant",
+                        "value" : 10
+                      },
+                      "action4" : {
+                        "type" : "constant",
+                        "value" : "Remove from collection"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess4" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "collectionPositionRemove" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "collectionRemoveIndex" : {
+                        "type" : "constant"
+                      },
+                      "removeItem" : {
+                        "type" : "constant"
+                      },
+                      "delayBeforeLastAction" : {
+                        "type" : "constant",
+                        "value" : 7
+                      },
+                      "collectionToModify2" : {
+                        "type" : "variable",
+                        "value" : "editRecord"
+                      },
+                      "collection2PositionRemove" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "maxRetryCount" : {
+                        "type" : "constant",
+                        "value" : 20
+                      },
+                      "valueToSet" : {
+                        "type" : "constant"
+                      },
+                      "parameterName" : {
+                        "type" : "expression",
+                        "value" : "ParameterName"
+                      },
+                      "processNamesList" : {
+                        "type" : "expression",
+                        "value" : "listOfProcessesToUpdate"
+                      }
+                    },
+                    "reference" : "815a7552-87bc-4d54-a010-51be964b45e9",
+                    "hasValidationError" : false,
+                    "id" : "customButtonMultipleActions"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "editRecord.length==0"
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "warning"
+                      },
+                      "action1" : {
+                        "type" : "constant",
+                        "value" : "Set value"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      },
+                      "dataFromSuccess2" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "dataFromSuccess3" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "action2" : {
+                        "type" : "constant",
+                        "value" : "Remove from collection"
+                      },
+                      "action3" : {
+                        "type" : "constant",
+                        "value" : "-"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "editRecord"
+                      },
+                      "valueToAdd" : {
+                        "type" : "expression",
+                        "value" : ""
+                      },
+                      "collectionPositionAdd" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "url" : {
+                        "type" : "interpolation"
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "dataFromSuccess1" : {
+                        "type" : "variable",
+                        "value" : "parameterRecord"
+                      },
+                      "taskRootCaseId" : {
+                        "type" : "constant"
+                      },
+                      "startProcessDefinitionId" : {
+                        "type" : "constant"
+                      },
+                      "maxDelayForAction" : {
+                        "type" : "constant",
+                        "value" : 5
+                      },
+                      "action4" : {
+                        "type" : "constant",
+                        "value" : "-"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess4" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "collectionPositionRemove" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "collectionRemoveIndex" : {
+                        "type" : "constant"
+                      },
+                      "delayBeforeLastAction" : {
+                        "type" : "constant"
+                      },
+                      "collectionToModify2" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "collection2PositionRemove" : {
+                        "type" : "constant",
+                        "value" : "First"
+                      },
+                      "maxRetryCount" : {
+                        "type" : "constant",
+                        "value" : 20
+                      },
+                      "valueToSet" : {
+                        "type" : "expression",
+                        "value" : "editRecord[0]"
+                      }
+                    },
+                    "reference" : "a889444f-7d84-4e26-9c70-df6e432c5b6a",
+                    "hasValidationError" : false,
+                    "id" : "customButtonMultipleActions"
+                  }
+                ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 5,
+                "lg" : 5
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "79d91b1a-a6a0-4be2-8ea3-442f519ec27e",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "ProcessDefinition == null"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<i>{{descriptionParameter}}</i>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "df6b4410-5227-4f3a-8cda-a2b7230829ac",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 6,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "5de34f99-7130-44bb-94ee-4c78ea404c2f",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 8,
+                "lg" : 8
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "updateRecord.length==0"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "e9504b69-24d9-441c-903e-00be680a714a",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "alert alert-info"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "(errorUpdate!= null) || (successUpdate!= null)"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Mise à jour en cours{{msgMultipleProcessesUpdate}}..."
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "9d97e84a-a753-49e2-b0c3-b4f3782cc4c2",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "alert alert-danger"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "errorUpdate==null"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Echec de la mise à jour : {{ errorUpdate}}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "4dcdd4b3-ece6-4744-a493-84ffbbd5f1a5",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "alert alert-success"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "successUpdate==null"
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Modification enregistrée{{msgMultipleProcessesUpdate}}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "9220eb50-5843-48c0-9fa6-3da8028a34c0",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "ParameterLabel" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "ParameterName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlGetProcessParameter" : {
+      "type" : "expression",
+      "value" : [
+        "var url = $data.urlGetProcessParameter;",
+        "",
+        "try {",
+        "    if ($data.ProcessDefinition != null) {",
+        "        if (Array.isArray($data.ProcessDefinition) ",
+        "            && ($data.ProcessDefinition.length > 0)",
+        "            && (typeof $data.ProcessDefinition[0].id !== 'undefined')) {",
+        "                var process_id = $data.ProcessDefinition[0].id;",
+        "                url = \"../API/bpm/processParameter/\" + process_id + \"/\" + $data.ParameterName;",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception urlGetProcessParameter: ' + e);",
+        "}",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "ProcessDefinition" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?s={{processName}}&o=deploymentDate%20DESC&f=activationState=ENABLED"
+      ],
+      "exposed" : false
+    },
+    "ParameterPlaceHolder" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "ProcessName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "errorUpdate" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "editRecord" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "updateRecord" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "updateRecordData" : {
+      "type" : "expression",
+      "value" : [
+        "if ((typeof $data.updateRecord !== 'undefined') ",
+        "    && (Array.isArray($data.updateRecord))",
+        "    && ($data.updateRecord.length > 0)) {",
+        "    var data = {\"value\": $data.updateRecord[0]};",
+        "",
+        "    return data;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "successUpdate" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "descriptionParameter" : {
+      "type" : "expression",
+      "value" : [
+        "var desc = $data.descriptionParameter;",
+        "",
+        "try {",
+        "    if ($data.ProcessDefinition != null) {",
+        "        if (Array.isArray($data.ProcessDefinition) ",
+        "            && ($data.ProcessDefinition.length > 0)",
+        "            && (typeof $data.ProcessDefinition[0].name !== 'undefined')) {",
+        "            desc = 'Paramètre du processus ' + $data.ProcessDefinition[0].name + ' version ' + $data.ProcessDefinition[0].version;",
+        "            console.log('descriptionParameter=' + desc);",
+        "        } else {",
+        "            console.log('descriptionParameter: no process name');",
+        "        }",
+        "    } else {",
+        "        console.log('descriptionParameter: no process definition');",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception descriptionParameter :\" + e);",
+        "}",
+        "",
+        "return desc;"
+      ],
+      "exposed" : false
+    },
+    "parameterRecord" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlGetProcessDefinition" : {
+      "type" : "expression",
+      "value" : [
+        "var url = $data.urlGetProcessDefinition;",
+        "",
+        "try {",
+        "    if ($data.ProcessName != null) {",
+        "        url = '../API/bpm/process?s=' + $data.ProcessName + '&o=deploymentDate%20DESC&f=activationState=ENABLED';",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception urlGetProcessParameter: ' + e);",
+        "}",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "listOfProcessesToUpdate" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "msgMultipleProcessesUpdate" : {
+      "type" : "expression",
+      "value" : [
+        "var msg='';",
+        "",
+        "if ($data.listOfProcessesToUpdate != null) {",
+        "    msg = ' (mise à jour sur ' + $data.listOfProcessesToUpdate.length + ' processus)';",
+        "}",
+        "",
+        "return msg;"
+      ],
+      "exposed" : false
+    },
+    "updateParameterMethod" : {
+      "type" : "expression",
+      "value" : [
+        "var method = 'PUT';",
+        "",
+        "if (($data.listOfProcessesToUpdate != null) ",
+        "    && ($data.listOfProcessesToUpdate.length > 0)) {",
+        "    method = 'Set process parameter';",
+        "}",
+        "return method;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

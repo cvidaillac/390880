@@ -1,0 +1,332 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "MyTest",
+  "name" : "MyTest",
+  "lastUpdate" : 1671627900839,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "5cd25dba-89b4-43bf-aacd-5963ed2b7702",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Submit"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "Submit task"
+                },
+                "url" : {
+                  "type" : "interpolation"
+                },
+                "dataToSend" : {
+                  "type" : "constant"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "dataFromError" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                },
+                "confirmMessage" : {
+                  "type" : "constant",
+                  "value" : "Arreter"
+                }
+              },
+              "reference" : "ada06446-8983-4dc4-ab17-d44e8ff6b299",
+              "hasValidationError" : false,
+              "id" : "customConfirmButton"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Proposition",
+                    "Tache en cours",
+                    "Numéro de matériel",
+                    "Exercice",
+                    "Territoire",
+                    "Entité",
+                    "Secteur",
+                    "Site",
+                    "Agence",
+                    "Genre matériel",
+                    "Montant",
+                    "Motif de la demande",
+                    "Statut",
+                    "Échéance"
+                  ]
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Variable"
+                },
+                "apiUrl" : {
+                  "type" : "constant",
+                  "value" : "../API/"
+                },
+                "params" : {
+                  "type" : "constant"
+                },
+                "content" : {
+                  "type" : "expression",
+                  "value" : "Json"
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "propositionId",
+                    "nameTask",
+                    "materialNumber",
+                    "budgetYear",
+                    "territoryName",
+                    "entiteName",
+                    "sectorName",
+                    "siteName",
+                    "agencyName",
+                    "typeMaterial",
+                    "amount",
+                    "typeProposition",
+                    "propositionStatus",
+                    "dueDate | uiDate:'short'"
+                  ]
+                },
+                "sortColumns" : {
+                  "type" : "constant"
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "pageSize" : {
+                  "type" : "constant",
+                  "value" : 10
+                },
+                "filter" : {
+                  "type" : "constant"
+                },
+                "askInfoForProposition" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "urlGenerate" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "commande" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "e5eb0172-40c4-45d9-b122-8a66d2480b6d",
+              "hasValidationError" : false,
+              "id" : "customPop3pDxxHumanTaskListing"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "591ab79a-0506-4461-acd1-4b06bb576e03",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "1cd3bb10-05b5-4eec-b2d8-ecedb09dadff",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "Json" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    {\r",
+        "        \"territoryName\": \"CENTRE - Centre\",\r",
+        "        \"budgetYear\": 2019,\r",
+        "        \"entiteName\": \"11650 - BMCE SA\",\r",
+        "        \"nameTask\": \"Recherche d'acqu\\u00e9reur\",\r",
+        "        \"sectorCode\": \"C57\",\r",
+        "        \"dueDate\": null,\r",
+        "        \"siteName\": \"S1080 - B\\u00c9TON CHER 18\",\r",
+        "        \"agencyCode\": \"3154\",\r",
+        "        \"niveauApprob\": \"ENTITE\",\r",
+        "        \"materialNumber\": \"9012682 - Chargeuse\",\r",
+        "        \"caseId\": 1126,\r",
+        "        \"typeWorkflowTargetAgency\": \"DXX\",\r",
+        "        \"rootCaseId\": 1115,\r",
+        "        \"propositionStatus\": \"DAV - Vente en cours\",\r",
+        "        \"amount\": 0.0,\r",
+        "        \"siteCode\": \"S1080\",\r",
+        "        \"entiteCode\": \"11650\",\r",
+        "        \"territoryCode\": \"CENTRE\",\r",
+        "        \"typeMaterial\": \"Chargeuse\",\r",
+        "        \"typeProposition\": \"A vendre\",\r",
+        "        \"sectorName\": \"C57 - CENTRALES BETON\",\r",
+        "        \"agencyName\": \"3154 - BOURGES ST GERMAIN BPE POINT P\",\r",
+        "        \"typeWorkflow\": \"DAV\",\r",
+        "        \"propositionId\": 262,\r",
+        "        \"taskId\": 5580\r",
+        "    },\r",
+        "    {\r",
+        "        \"territoryName\": \"CENTRE - Centre\",\r",
+        "        \"budgetYear\": 2019,\r",
+        "        \"entiteName\": \"11650 - BMCE SA\",\r",
+        "        \"nameTask\": \"D\\u00e9termination du prix de vente\",\r",
+        "        \"sectorCode\": \"C57\",\r",
+        "        \"dueDate\": null,\r",
+        "        \"siteName\": \"S1080 - B\\u00c9TON CHER 18\",\r",
+        "        \"agencyCode\": \"3154\",\r",
+        "        \"niveauApprob\": \"ENTITE\",\r",
+        "        \"materialNumber\": \"9012682 - Chargeuse\",\r",
+        "        \"caseId\": 1126,\r",
+        "        \"typeWorkflowTargetAgency\": \"DXX\",\r",
+        "        \"rootCaseId\": 1115,\r",
+        "        \"propositionStatus\": \"DAV - Vente en cours\",\r",
+        "        \"amount\": 0.0,\r",
+        "        \"siteCode\": \"S1080\",\r",
+        "        \"entiteCode\": \"11650\",\r",
+        "        \"territoryCode\": \"CENTRE\",\r",
+        "        \"typeMaterial\": \"Chargeuse\",\r",
+        "        \"typeProposition\": \"A vendre\",\r",
+        "        \"sectorName\": \"C57 - CENTRALES BETON\",\r",
+        "        \"agencyName\": \"3154 - BOURGES ST GERMAIN BPE POINT P\",\r",
+        "        \"typeWorkflow\": \"DAV\",\r",
+        "        \"propositionId\": 262,\r",
+        "        \"taskId\": 5581\r",
+        "    },\r",
+        "    {\r",
+        "        \"territoryName\": \"CENTRE - Centre\",\r",
+        "        \"budgetYear\": 2019,\r",
+        "        \"entiteName\": \"11650 - BMCE SA\",\r",
+        "        \"nameTask\": \"Facturation par entit\\u00e9\",\r",
+        "        \"sectorCode\": \"C57\",\r",
+        "        \"dueDate\": null,\r",
+        "        \"siteName\": \"S1080 - B\\u00c9TON CHER 18\",\r",
+        "        \"agencyCode\": \"3154\",\r",
+        "        \"niveauApprob\": \"ENTITE\",\r",
+        "        \"materialNumber\": \"9012682 - Chargeuse\",\r",
+        "        \"caseId\": 1126,\r",
+        "        \"typeWorkflowTargetAgency\": \"DXX\",\r",
+        "        \"rootCaseId\": 1115,\r",
+        "        \"propositionStatus\": \"DAV - Vente en cours\",\r",
+        "        \"amount\": 0.0,\r",
+        "        \"siteCode\": \"S1080\",\r",
+        "        \"entiteCode\": \"11650\",\r",
+        "        \"territoryCode\": \"CENTRE\",\r",
+        "        \"typeMaterial\": \"Chargeuse\",\r",
+        "        \"typeProposition\": \"A vendre\",\r",
+        "        \"sectorName\": \"C57 - CENTRALES BETON\",\r",
+        "        \"agencyName\": \"3154 - BOURGES ST GERMAIN BPE POINT P\",\r",
+        "        \"typeWorkflow\": \"DAV\",\r",
+        "        \"propositionId\": 262,\r",
+        "        \"taskId\": 5582\r",
+        "    }\r",
+        "]"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "62c6f493-faf7-473a-aa9a-37012a39e33e",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

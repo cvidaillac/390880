@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_mIZdgHc3Eem7INDY6fry_A" name="dataMigrationProcess" version="3.0" author="A1073231" bonitaVersion="7.14.6" bonitaModelVersion="7.12.0-004" configId="ACED0005740024646174614D6967726174696F6E50726F63657373372E382E332D303031372E382E347370">
+    <elements xmi:type="process:Pool" xmi:id="_mIZdgXc3Eem7INDY6fry_A" name="propositionDataMigration" version="3.0">
+      <elements xmi:type="process:Lane" xmi:id="_mIZdgnc3Eem7INDY6fry_A" name="SMART" actor="_mIZdo3c3Eem7INDY6fry_A">
+        <elements xmi:type="process:StartEvent" xmi:id="_mIZdg3c3Eem7INDY6fry_A" name="Start1" outgoing="_mIZdoHc3Eem7INDY6fry_A">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_mIZdhXc3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_mIZdhnc3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_mIZdh3c3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_mIZdiHc3Eem7INDY6fry_A" name="End1" incoming="_mIZdoHc3Eem7INDY6fry_A">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_mIZdinc3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_mIZdi3c3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_mIZdjHc3Eem7INDY6fry_A" name="" content="" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_mIZdlHc3Eem7INDY6fry_A" name="proposition" multiple="true" dataType="_mIaE6nc3Eem7INDY6fry_A" className="com.sgdbf.model.Proposition">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_psPfIKJiEem_G-RwSUEqAw" name="initProposition()" content="import com.bonitasoft.engine.api.APIAccessor;&#xD;&#xA;&#xD;&#xA;def propositionList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;propositionInput.each{&#xD;&#xA;&#x9;//Add a new composed Proposition instance&#xD;&#xA;&#x9;propositionList.add({ currentPropositionInput ->&#xD;&#xA;&#x9;&#x9;def propositionVar = new com.sgdbf.model.Proposition()&#xD;&#xA;&#x9;&#x9;propositionVar.creationDate = currentPropositionInput.creationDate&#xD;&#xA;&#x9;&#x9;//propositionVar.creatorId = currentPropositionInput.creatorId.toLong()&#xD;&#xA;&#x9;&#x9;try{&#xD;&#xA;&#x9;&#x9;propositionVar.creatorId = apiAccessor.getIdentityAPI().getUserByUserName(currentPropositionInput.creatorId.toString()).getId()&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;catch(Exception e)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;propositionVar.creatorId = currentPropositionInput.creatorId.toLong()&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;propositionVar.creatorName = currentPropositionInput.creatorName&#xD;&#xA;&#x9;&#x9;propositionVar.agencyCode = currentPropositionInput.agencyCode&#xD;&#xA;&#x9;&#x9;propositionVar.agencyName = currentPropositionInput.agencyName&#xD;&#xA;&#x9;&#x9;propositionVar.siteCode = currentPropositionInput.siteCode&#xD;&#xA;&#x9;&#x9;propositionVar.siteName = currentPropositionInput.siteName&#xD;&#xA;&#x9;&#x9;propositionVar.sectorCode = currentPropositionInput.sectorCode&#xD;&#xA;&#x9;&#x9;propositionVar.sectorName = currentPropositionInput.sectorName&#xD;&#xA;&#x9;&#x9;propositionVar.entiteCode = currentPropositionInput.entiteCode&#xD;&#xA;&#x9;&#x9;propositionVar.entiteName = currentPropositionInput.entiteName&#xD;&#xA;&#x9;&#x9;propositionVar.territoryCode = currentPropositionInput.territoryCode&#xD;&#xA;&#x9;&#x9;propositionVar.territoryName = currentPropositionInput.territoryName&#xD;&#xA;&#x9;&#x9;propositionVar.budgetYear = currentPropositionInput.budgetYear&#xD;&#xA;&#x9;&#x9;propositionVar.initialBudgetYear = currentPropositionInput.initialBudgetYear&#xD;&#xA;&#x9;&#x9;propositionVar.materialNumber = currentPropositionInput.materialNumber&#xD;&#xA;&#x9;&#x9;propositionVar.typeMaterial = currentPropositionInput.typeMaterial&#xD;&#xA;&#x9;&#x9;propositionVar.typeMaterialName = currentPropositionInput.typeMaterialName&#xD;&#xA;&#x9;&#x9;propositionVar.subTypeMaterial = currentPropositionInput.subTypeMaterial&#xD;&#xA;&#x9;&#x9;propositionVar.subTypeMaterialName = currentPropositionInput.subTypeMaterialName&#xD;&#xA;&#x9;&#x9;propositionVar.generalStatusMaterial = currentPropositionInput.generalStatusMaterial&#xD;&#xA;&#x9;&#x9;propositionVar.materialFamily = currentPropositionInput.materialFamily&#xD;&#xA;&#x9;&#x9;propositionVar.budgetRespected = currentPropositionInput.budgetRespected&#xD;&#xA;&#x9;&#x9;propositionVar.typeProposition = currentPropositionInput.typeProposition&#xD;&#xA;&#x9;&#x9;propositionVar.commentSmart = currentPropositionInput.commentSmart&#xD;&#xA;&#x9;&#x9;propositionVar.typeAcquisition = currentPropositionInput.typeAcquisition&#xD;&#xA;&#x9;&#x9;propositionVar.propositionAmount = currentPropositionInput.propositionAmount&#xD;&#xA;&#x9;&#x9;propositionVar.monthlyAmount = currentPropositionInput.monthlyAmount&#xD;&#xA;&#x9;&#x9;propositionVar.monthlyPropositionAmount = currentPropositionInput.monthlyPropositionAmount&#xD;&#xA;&#x9;&#x9;propositionVar.estimatedDeliveryDate = currentPropositionInput.estimatedDeliveryDate&#xD;&#xA;&#x9;&#x9;propositionVar.sponsor = currentPropositionInput.sponsor&#xD;&#xA;&#x9;&#x9;propositionVar.propositionStatus = currentPropositionInput.propositionStatus&#xD;&#xA;&#x9;&#x9;propositionVar.propositionStatusTargetAgency = currentPropositionInput.propositionStatusTargetAgency&#xD;&#xA;&#x9;&#x9;propositionVar.approversActions = {&#xD;&#xA;&#x9;&#x9;&#x9;def approverActionList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentPropositionInput.approversActions.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed ApproverAction instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;approverActionList.add({ currentApproverActionInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def approverActionVar = new com.sgdbf.model.ApproverAction()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.approverId = currentApproverActionInput.approverId.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.approverName = currentApproverActionInput.approverName&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.decision = currentApproverActionInput.decision&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.comments = currentApproverActionInput.comments&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.approverRole = currentApproverActionInput.approverRole&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;approverActionVar.dateAction = currentApproverActionInput.dateAction&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return approverActionVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return approverActionList}()&#xD;&#xA;&#x9;&#x9;propositionVar.caseId = currentPropositionInput.caseId.toLong()&#xD;&#xA;&#x9;&#x9;propositionVar.propositionAttachments = {&#xD;&#xA;&#x9;&#x9;&#x9;def attachmentList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentPropositionInput.propositionAttachments.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed Attachment instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;attachmentList.add({ currentAttachmentInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def attachmentVar = new com.sgdbf.model.Attachment()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.docId = currentAttachmentInput.docId&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.mimeType = currentAttachmentInput.mimeType&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.author = currentAttachmentInput.author&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.docUrl = currentAttachmentInput.docUrl&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.docFileName = currentAttachmentInput.docFileName&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;attachmentVar.status = currentAttachmentInput.status&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return attachmentVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return attachmentList}()&#xD;&#xA;&#x9;&#x9;propositionVar.comments = {&#xD;&#xA;&#x9;&#x9;&#x9;def userCommentList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentPropositionInput.comments.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed UserComment instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userCommentList.add({ currentUserCommentInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def userCommentVar = new com.sgdbf.model.UserComment()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;userCommentVar.dateAdded = currentUserCommentInput.dateAdded&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;userCommentVar.userId = currentUserCommentInput.userId.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;userCommentVar.userName = currentUserCommentInput.userName&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;userCommentVar.userComment = currentUserCommentInput.userComment&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return userCommentVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return userCommentList}()&#xD;&#xA;&#x9;&#x9;propositionVar.existing = currentPropositionInput.existing&#xD;&#xA;&#x9;&#x9;propositionVar.pitchSmart = currentPropositionInput.pitchSmart&#xD;&#xA;&#x9;&#x9;propositionVar.completeInfoMessage = currentPropositionInput.completeInfoMessage&#xD;&#xA;&#x9;&#x9;propositionVar.timeLines = {&#xD;&#xA;&#x9;&#x9;&#x9;def timeLineList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentPropositionInput.timeLines.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add aggregated TimeLine instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;timeLineList.add({ currentTimeLineInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def timeLineVar = timeLineDAO.findByPersistenceId(currentTimeLineInput.persistenceId.toLong())&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.CodeClef = currentTimeLineInput.CodeClef&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.CodeWorkflow = currentTimeLineInput.CodeWorkflow&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.AnneeBudgetaire = currentTimeLineInput.AnneeBudgetaire&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.IdProposition = currentTimeLineInput.IdProposition.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.Motif = currentTimeLineInput.Motif&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.Statut = currentTimeLineInput.Statut&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.Acteur = currentTimeLineInput.Acteur&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.IdentifiantActeur = currentTimeLineInput.IdentifiantActeur.toLong()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.DateCreation = currentTimeLineInput.DateCreation&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;timeLineVar.Tache = currentTimeLineInput.Tache&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return timeLineVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return timeLineList}()&#xD;&#xA;&#x9;&#x9;propositionVar.noApprover = currentPropositionInput.noApprover&#xD;&#xA;&#x9;&#x9;propositionVar.smarteComplement = currentPropositionInput.smarteComplement&#xD;&#xA;&#x9;&#x9;propositionVar.nbMonth = currentPropositionInput.nbMonth&#xD;&#xA;&#x9;&#x9;propositionVar.transferAgencyCode = currentPropositionInput.transferAgencyCode&#xD;&#xA;&#x9;&#x9;propositionVar.transferAgencyName = currentPropositionInput.transferAgencyName&#xD;&#xA;&#x9;&#x9;propositionVar.transferSiteCode = currentPropositionInput.transferSiteCode&#xD;&#xA;&#x9;&#x9;propositionVar.transferSiteName = currentPropositionInput.transferSiteName&#xD;&#xA;&#x9;&#x9;propositionVar.transferSectorCode = currentPropositionInput.transferSectorCode&#xD;&#xA;&#x9;&#x9;propositionVar.transferSectorName = currentPropositionInput.transferSectorName&#xD;&#xA;&#x9;&#x9;propositionVar.transferEntityCode = currentPropositionInput.transferEntityCode&#xD;&#xA;&#x9;&#x9;propositionVar.transferEntityName = currentPropositionInput.transferEntityName&#xD;&#xA;&#x9;&#x9;propositionVar.transferTerritoryCode = currentPropositionInput.transferTerritoryCode&#xD;&#xA;&#x9;&#x9;propositionVar.transferTerritoryName = currentPropositionInput.transferTerritoryName&#xD;&#xA;&#x9;&#x9;propositionVar.typeWorkflow = currentPropositionInput.typeWorkflow&#xD;&#xA;&#x9;&#x9;propositionVar.typeWorkflowTargetAgency = currentPropositionInput.typeWorkflowTargetAgency&#xD;&#xA;&#x9;&#x9;propositionVar.propositionFilter = currentPropositionInput.propositionFilter&#xD;&#xA;&#x9;&#x9;propositionVar.niveauApprob = currentPropositionInput.niveauApprob&#xD;&#xA;&#x9;&#x9;propositionVar.niveauApprobTargetAgency = currentPropositionInput.niveauApprobTargetAgency&#xD;&#xA;&#x9;&#x9;propositionVar.commandes = {&#xD;&#xA;&#x9;&#x9;&#x9;def commandeList = []&#xD;&#xA;&#x9;&#x9;&#x9;//For each item collected in multiple input&#xD;&#xA;&#x9;&#x9;&#x9;currentPropositionInput.commandes.each{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Add a new composed Commande instance&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;commandeList.add({ currentCommandeInput ->&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;def commandeVar = new com.sgdbf.model.Commande()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.nameFournisseur = currentCommandeInput.nameFournisseur&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.designationAchat = currentCommandeInput.designationAchat&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.estimateDate = currentCommandeInput.estimateDate&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.numberLyre = currentCommandeInput.numberLyre&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.dateApproved = currentCommandeInput.dateApproved&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;commandeVar.status = currentCommandeInput.status&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;return commandeVar&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}(it))&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;return commandeList}()&#xD;&#xA;&#x9;&#x9;propositionVar.useFirstWorkflowData = currentPropositionInput.useFirstWorkflowData&#xD;&#xA;&#x9;&#x9;propositionVar.statusMacroEtapes = currentPropositionInput.statusMacroEtapes&#xD;&#xA;&#x9;&#x9;propositionVar.commentBOTransmettreBO = currentPropositionInput.commentBOTransmettreBO&#xD;&#xA;&#x9;&#x9;propositionVar.percentage = currentPropositionInput.percentage&#xD;&#xA;&#x9;&#x9;return propositionVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return propositionList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_psPfIaJiEem_G-RwSUEqAw" name="propositionInput" type="COMPLEX" multiple="true"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_psPfIqJiEem_G-RwSUEqAw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_psPfI6JiEem_G-RwSUEqAw" name="timeLineDAO" content="timeLineDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.sgdbf.model.TimeLineDAO" returnTypeFixed="true"/>
+        </defaultValue>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_mIZdmnc3Eem7INDY6fry_A" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_mIZdm3c3Eem7INDY6fry_A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_mIZdnXc3Eem7INDY6fry_A" type="NONE">
+        <targetForm xmi:type="expression:Expression" xmi:id="_mIZdnnc3Eem7INDY6fry_A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_mIZdoHc3Eem7INDY6fry_A" target="_mIZdiHc3Eem7INDY6fry_A" source="_mIZdg3c3Eem7INDY6fry_A">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_mIZdoXc3Eem7INDY6fry_A"/>
+        <condition xmi:type="expression:Expression" xmi:id="_mIZdonc3Eem7INDY6fry_A" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_mIZdo3c3Eem7INDY6fry_A" name="SMART"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_mIZdpHc3Eem7INDY6fry_A" name="sgdbf-uat" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_mIZdpXc3Eem7INDY6fry_A">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_mIZdpnc3Eem7INDY6fry_A" name="SMART">
+            <groups xmi:type="actormapping:Groups" xmi:id="_mIZdp3c3Eem7INDY6fry_A"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_mIZdqHc3Eem7INDY6fry_A"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_mIZdqXc3Eem7INDY6fry_A"/>
+            <users xmi:type="actormapping:Users" xmi:id="_mIZdqnc3Eem7INDY6fry_A"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdq3c3Eem7INDY6fry_A" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdrHc3Eem7INDY6fry_A" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdrXc3Eem7INDY6fry_A" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdrnc3Eem7INDY6fry_A" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdr3c3Eem7INDY6fry_A" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdsHc3Eem7INDY6fry_A" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdsXc3Eem7INDY6fry_A" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdsnc3Eem7INDY6fry_A" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZds3c3Eem7INDY6fry_A" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdtHc3Eem7INDY6fry_A" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSeksB9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSeksR9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSeksh9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSeksx9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSektB9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSektR9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekth9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSektx9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekuB9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekuR9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN0G-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN0W-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN0m-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN02-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN1G-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN1W-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN1m-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN12-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdtXc3Eem7INDY6fry_A" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdtnc3Eem7INDY6fry_A" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdt3c3Eem7INDY6fry_A" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZduHc3Eem7INDY6fry_A" key="ConfigFile.groovy" value="ConfigFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZduXc3Eem7INDY6fry_A" key="MailContent.groovy" value="MailContent.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdunc3Eem7INDY6fry_A" key="MailTemplate.groovy" value="MailTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdu3c3Eem7INDY6fry_A" key="PropositionTemplate.groovy" value="PropositionTemplate.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdvHc3Eem7INDY6fry_A" key="TestScript.groovy" value="TestScript.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_mIZdvXc3Eem7INDY6fry_A" key="UserDetails.groovy" value="UserDetails.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekuh9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/ActivityState.groovy" value="com/sgdbf/pop3p/groovy/ActivityState.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekux9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" value="com/sgdbf/pop3p/groovy/AnalyzeWebServiceResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekvB9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" value="com/sgdbf/pop3p/groovy/CheckConnectorExecution.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekvR9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" value="com/sgdbf/pop3p/groovy/EnvironmentParameters.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekvh9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LogFile.groovy" value="com/sgdbf/pop3p/groovy/LogFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekvx9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" value="com/sgdbf/pop3p/groovy/LyrePreOrderCreationResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekwB9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUser.groovy" value="com/sgdbf/pop3p/groovy/LyreUser.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekwR9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" value="com/sgdbf/pop3p/groovy/LyreUserProfiles.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekwh9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" value="com/sgdbf/pop3p/groovy/LyreUsersResponse.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_jSekwx9rEey3_r-hyI8vrQ" key="com/sgdbf/pop3p/groovy/MailRecipient.groovy" value="com/sgdbf/pop3p/groovy/MailRecipient.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN2G-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/BDMUtility.groovy" value="com/sgdbf/pop3p/groovy/BDMUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN2W-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelData.groovy" value="com/sgdbf/pop3p/groovy/ExcelData.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN2m-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ExcelFile.groovy" value="com/sgdbf/pop3p/groovy/ExcelFile.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN22-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FileUtility.groovy" value="com/sgdbf/pop3p/groovy/FileUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN3G-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" value="com/sgdbf/pop3p/groovy/FrenchBusinessDays.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN3W-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" value="com/sgdbf/pop3p/groovy/LocaleUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN3m-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/StringUtility.groovy" value="com/sgdbf/pop3p/groovy/StringUtility.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_vjjN32-FEey7IpcoEkoV4w" key="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" value="com/sgdbf/pop3p/groovy/ValidationDueDateCalculation.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdvnc3Eem7INDY6fry_A" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mIZdv3c3Eem7INDY6fry_A" id="OTHER"/>
+      </configurations>
+      <contract xmi:type="process:Contract" xmi:id="_mIZdwHc3Eem7INDY6fry_A">
+        <inputs xmi:type="process:ContractInput" xmi:id="_An4vcHe5Eem7INDY6fry_A" name="propositionInput" type="COMPLEX" multiple="true">
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WgHe5Eem7INDY6fry_A" name="creationDate" type="LOCALDATETIME"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WgXe5Eem7INDY6fry_A" name="creatorId"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wgne5Eem7INDY6fry_A" name="creatorName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wg3e5Eem7INDY6fry_A" name="agencyCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WhHe5Eem7INDY6fry_A" name="agencyName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WhXe5Eem7INDY6fry_A" name="siteCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Whne5Eem7INDY6fry_A" name="siteName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wh3e5Eem7INDY6fry_A" name="sectorCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WiHe5Eem7INDY6fry_A" name="sectorName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WiXe5Eem7INDY6fry_A" name="entiteCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wine5Eem7INDY6fry_A" name="entiteName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wi3e5Eem7INDY6fry_A" name="territoryCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WjHe5Eem7INDY6fry_A" name="territoryName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WjXe5Eem7INDY6fry_A" name="budgetYear" type="INTEGER"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wjne5Eem7INDY6fry_A" name="initialBudgetYear" type="INTEGER"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wj3e5Eem7INDY6fry_A" name="materialNumber"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WkHe5Eem7INDY6fry_A" name="typeMaterial"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WkXe5Eem7INDY6fry_A" name="typeMaterialName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wkne5Eem7INDY6fry_A" name="subTypeMaterial"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wk3e5Eem7INDY6fry_A" name="subTypeMaterialName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WlHe5Eem7INDY6fry_A" name="generalStatusMaterial"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WlXe5Eem7INDY6fry_A" name="materialFamily"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wlne5Eem7INDY6fry_A" name="budgetRespected" type="BOOLEAN"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wl3e5Eem7INDY6fry_A" name="typeProposition"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WmHe5Eem7INDY6fry_A" name="commentSmart"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WmXe5Eem7INDY6fry_A" name="typeAcquisition"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wmne5Eem7INDY6fry_A" name="propositionAmount" type="DECIMAL"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wm3e5Eem7INDY6fry_A" name="monthlyAmount" type="DECIMAL"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WnHe5Eem7INDY6fry_A" name="monthlyPropositionAmount" type="DECIMAL"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WnXe5Eem7INDY6fry_A" name="estimatedDeliveryDate" type="LOCALDATE"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wnne5Eem7INDY6fry_A" name="sponsor"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wn3e5Eem7INDY6fry_A" name="propositionStatus"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WoHe5Eem7INDY6fry_A" name="propositionStatusTargetAgency"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WoXe5Eem7INDY6fry_A" name="approversActions" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wone5Eem7INDY6fry_A" name="approverId"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wo3e5Eem7INDY6fry_A" name="approverName"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WpHe5Eem7INDY6fry_A" name="decision"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WpXe5Eem7INDY6fry_A" name="comments"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wpne5Eem7INDY6fry_A" name="approverRole"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wp3e5Eem7INDY6fry_A" name="dateAction" type="LOCALDATETIME"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WqHe5Eem7INDY6fry_A" name="caseId"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WqXe5Eem7INDY6fry_A" name="propositionAttachments" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wqne5Eem7INDY6fry_A" name="docId"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wq3e5Eem7INDY6fry_A" name="mimeType"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WrHe5Eem7INDY6fry_A" name="author"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WrXe5Eem7INDY6fry_A" name="docUrl"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wrne5Eem7INDY6fry_A" name="docFileName"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wr3e5Eem7INDY6fry_A" name="status"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WsHe5Eem7INDY6fry_A" name="comments" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WsXe5Eem7INDY6fry_A" name="dateAdded" type="OFFSETDATETIME"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wsne5Eem7INDY6fry_A" name="userId"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Ws3e5Eem7INDY6fry_A" name="userName"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WtHe5Eem7INDY6fry_A" name="userComment"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WtXe5Eem7INDY6fry_A" name="existing"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wtne5Eem7INDY6fry_A" name="pitchSmart"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wt3e5Eem7INDY6fry_A" name="completeInfoMessage"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WuHe5Eem7INDY6fry_A" name="timeLines" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WuXe5Eem7INDY6fry_A" name="persistenceId"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wune5Eem7INDY6fry_A" name="CodeClef"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wu3e5Eem7INDY6fry_A" name="CodeWorkflow"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WvHe5Eem7INDY6fry_A" name="AnneeBudgetaire" type="INTEGER"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WvXe5Eem7INDY6fry_A" name="IdProposition"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wvne5Eem7INDY6fry_A" name="Motif"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wv3e5Eem7INDY6fry_A" name="Statut"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WwHe5Eem7INDY6fry_A" name="Acteur"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5WwXe5Eem7INDY6fry_A" name="IdentifiantActeur"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Wwne5Eem7INDY6fry_A" name="DateCreation" type="OFFSETDATETIME"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5Ww3e5Eem7INDY6fry_A" name="Tache"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WxHe5Eem7INDY6fry_A" name="noApprover" type="BOOLEAN"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WxXe5Eem7INDY6fry_A" name="smarteComplement"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wxne5Eem7INDY6fry_A" name="nbMonth" type="INTEGER"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wx3e5Eem7INDY6fry_A" name="transferAgencyCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WyHe5Eem7INDY6fry_A" name="transferAgencyName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WyXe5Eem7INDY6fry_A" name="transferSiteCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wyne5Eem7INDY6fry_A" name="transferSiteName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wy3e5Eem7INDY6fry_A" name="transferSectorCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WzHe5Eem7INDY6fry_A" name="transferSectorName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5WzXe5Eem7INDY6fry_A" name="transferEntityCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wzne5Eem7INDY6fry_A" name="transferEntityName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5Wz3e5Eem7INDY6fry_A" name="transferTerritoryCode"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W0He5Eem7INDY6fry_A" name="transferTerritoryName"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W0Xe5Eem7INDY6fry_A" name="typeWorkflow"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W0ne5Eem7INDY6fry_A" name="typeWorkflowTargetAgency"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W03e5Eem7INDY6fry_A" name="propositionFilter"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W1He5Eem7INDY6fry_A" name="niveauApprob"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W1Xe5Eem7INDY6fry_A" name="niveauApprobTargetAgency"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W1ne5Eem7INDY6fry_A" name="commandes" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W13e5Eem7INDY6fry_A" name="nameFournisseur"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W2He5Eem7INDY6fry_A" name="designationAchat"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W2Xe5Eem7INDY6fry_A" name="estimateDate" type="LOCALDATE"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W2ne5Eem7INDY6fry_A" name="numberLyre"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W23e5Eem7INDY6fry_A" name="dateApproved" type="BOOLEAN"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_An5W3He5Eem7INDY6fry_A" name="status"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W3Xe5Eem7INDY6fry_A" name="useFirstWorkflowData" type="BOOLEAN"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W3ne5Eem7INDY6fry_A" name="statusMacroEtapes"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W33e5Eem7INDY6fry_A" name="commentBOTransmettreBO"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_An5W4He5Eem7INDY6fry_A" name="percentage" type="DECIMAL"/>
+        </inputs>
+      </contract>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_mIaE03c3Eem7INDY6fry_A">
+        <name xmi:type="expression:Expression" xmi:id="_mIaE1Hc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_mIaE1Xc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_mIaE1nc3Eem7INDY6fry_A">
+        <name xmi:type="expression:Expression" xmi:id="_mIaE13c3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_mIaE2Hc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_mIaE2Xc3Eem7INDY6fry_A">
+        <name xmi:type="expression:Expression" xmi:id="_mIaE2nc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_mIaE23c3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_mIaE3Hc3Eem7INDY6fry_A">
+        <name xmi:type="expression:Expression" xmi:id="_mIaE3Xc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_mIaE3nc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_mIaE33c3Eem7INDY6fry_A">
+        <name xmi:type="expression:Expression" xmi:id="_mIaE4Hc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_mIaE4Xc3Eem7INDY6fry_A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_mIaE4nc3Eem7INDY6fry_A" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_mIaE43c3Eem7INDY6fry_A" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_mIaE5Hc3Eem7INDY6fry_A" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_mIaE5Xc3Eem7INDY6fry_A" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_mIaE5nc3Eem7INDY6fry_A" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_mIaE53c3Eem7INDY6fry_A" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_mIaE6Hc3Eem7INDY6fry_A" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_mIaE6Xc3Eem7INDY6fry_A" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_mIaE6nc3Eem7INDY6fry_A" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_mIaE63c3Eem7INDY6fry_A" type="Process" element="_mIZdgHc3Eem7INDY6fry_A" name="MyDiagram6" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_mIaE7Hc3Eem7INDY6fry_A" type="2007" element="_mIZdgXc3Eem7INDY6fry_A">
+      <children xmi:type="notation:DecorationNode" xmi:id="_mIaE7Xc3Eem7INDY6fry_A" type="5008" element="_mIZdgXc3Eem7INDY6fry_A"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_mIaE7nc3Eem7INDY6fry_A" type="7001" element="_mIZdgXc3Eem7INDY6fry_A">
+        <children xmi:type="notation:Node" xmi:id="_mIaE73c3Eem7INDY6fry_A" type="3007" element="_mIZdgnc3Eem7INDY6fry_A">
+          <children xmi:type="notation:DecorationNode" xmi:id="_mIaE8Hc3Eem7INDY6fry_A" type="5007" element="_mIZdgnc3Eem7INDY6fry_A"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_mIaE8Xc3Eem7INDY6fry_A" type="7002" element="_mIZdgnc3Eem7INDY6fry_A">
+            <children xmi:type="notation:Shape" xmi:id="_mIaE8nc3Eem7INDY6fry_A" type="3002" element="_mIZdg3c3Eem7INDY6fry_A" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mIaE83c3Eem7INDY6fry_A" type="5024" element="_mIZdg3c3Eem7INDY6fry_A">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mIaE9Hc3Eem7INDY6fry_A" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIaE9Xc3Eem7INDY6fry_A" x="98" y="105"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_mIaE9nc3Eem7INDY6fry_A" type="3062" element="_mIZdiHc3Eem7INDY6fry_A" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_mIaE93c3Eem7INDY6fry_A" type="5090" element="_mIZdiHc3Eem7INDY6fry_A">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mIaE-Hc3Eem7INDY6fry_A" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIaE-Xc3Eem7INDY6fry_A" x="594" y="105"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_mIaE-nc3Eem7INDY6fry_A"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_mIaE-3c3Eem7INDY6fry_A" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_mIaE_Hc3Eem7INDY6fry_A"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_mIaE_Xc3Eem7INDY6fry_A"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIaE_nc3Eem7INDY6fry_A"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_mIaE_3c3Eem7INDY6fry_A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_mIaFAHc3Eem7INDY6fry_A" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_mIaFAXc3Eem7INDY6fry_A"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_mIaFAnc3Eem7INDY6fry_A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIaFA3c3Eem7INDY6fry_A" width="1680" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_mIaFBHc3Eem7INDY6fry_A"/>
+    <edges xmi:type="notation:Connector" xmi:id="_mIaFBXc3Eem7INDY6fry_A" type="4001" element="_mIZdoHc3Eem7INDY6fry_A" source="_mIaE8nc3Eem7INDY6fry_A" target="_mIaE9nc3Eem7INDY6fry_A" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_mIaFBnc3Eem7INDY6fry_A" type="6001" element="_mIZdoHc3Eem7INDY6fry_A">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mIaFB3c3Eem7INDY6fry_A" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_mIaFCHc3Eem7INDY6fry_A" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mIaFCXc3Eem7INDY6fry_A" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

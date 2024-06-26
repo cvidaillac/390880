@@ -1,0 +1,64 @@
+.sub_category_title {
+    width : 100%;
+	color: #FFF;
+	background: linear-gradient(to right, #172126, white);
+	-webkit-text-decoration-color: #9d9d9d;
+	text-decoration-color: #9d9d9d;
+
+}
+
+
+.sub_category_title:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0px;
+  right: -3px;
+  height: 3px;
+  
+  
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#DA2D40), to(transparent));
+  background-image: -webkit-linear-gradient(left, #DA2D40, transparent);
+  background-image: -moz-linear-gradient(left, #DA2D40, transparent);
+  background-image: -o-linear-gradient(left, #DA2D40, transparent);
+}
+
+
+.sub_category_sub_title {
+	text-decoration-color: #9d9d9d;
+	padding: 10px;
+	
+}
+.sub_category_block {
+	padding: 0.1em 20px;
+}
+
+.sub_category_block_inner {
+	margin: 0px 0px 10px 0px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 0px 0px 10px 0px;
+	padding: 0.1em 20px;
+
+}
+
+
+/**
+  * Display the data as a flex
+  */
+
+td {
+    padding-bottom: 8px;
+}
+
+
+td.objectLabel {
+	
+}
+
+td.objectvalue {
+    font-weight: bold;
+}
+
+

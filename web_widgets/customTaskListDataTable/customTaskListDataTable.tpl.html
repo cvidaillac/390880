@@ -1,0 +1,78 @@
+<div class="table-responsive">
+    <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table table-striped" ng-class="{'table-hover': ctrl.isSelectable()}">
+        <thead background-color:lavender;>
+            <tr>
+                <th ng-repeat="header in properties.headers">
+                    <div ng-if="ctrl.isColumnSortable($index)" bo-sorter="{{properties.columnsKey[$index]}}">
+                            {{ header | uiTranslate }}
+                    </div>
+                    <div ng-if="!ctrl.isColumnSortable($index)">
+                        {{ header | uiTranslate }}
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+
+            <td ng-repeat="column in properties.columnsKey track by $index">
+                <span ng-if="column.includes('expectedEndDate')">
+
+                    <!--Oracle-->
+                    <!--
+                    <span ng-class="($eval(column, row) != null && ($eval(column, row)|uiDate:'short' < currentDate|uiDate:'short')) ? 'badge badge-warning' : ''">
+                        {{ $eval(column, row) |  uiDate:'short' }}
+                    </span>
+                    -->
+                    
+                    <!--H2-->
+                    <span ng-if="$eval(column, row) != null" ng-class="($eval(column, row) != null && (($eval(column, row) | date: 'yyyy-MM-ddTHH:mm:ss+0000') < currentDate)) ? 'badge badge-warning' : 'badge badge-success'">
+                        {{ $eval(column, row) | uiDate:'short' }}
+                    </span> 
+
+
+                </span>
+                <span ng-if="!column.includes('expectedEndDate') && column != 'reachedStateDate'"> 
+                    {{ $eval(column, row) | uiTranslate }}                   
+                </span>
+                <!-- BPM-675-->
+                <div ng-if="(column === 'reachedStateDate' )">
+                            {{ $eval(column, row) | date: 'dd/MM/yyyy HH:mm' }} 
+                    </div>
+            </td>
+        </tr>
+        </tbody>
+        <tbody ng-if="!ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td> {{ row | uiTranslate }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="hidden-xs"
+         ng-repeat="options in [{'maxSize': 5, 'rotate': false}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    <div class="visible-xs text-center"
+         ng-repeat="options in [{'maxSize': 3, 'rotate': true}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+
+    <script type="text/ng-template" id="/dataTable/pagination.html">
+        <pagination ng-if="ctrl.pagination.total > properties.pageSize"
+                    total-items="ctrl.pagination.total"
+                    items-per-page="properties.pageSize"
+                    direction-links="true"
+                    boundary-links="true"
+                    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    rotate="{{options.rotate}}"
+                    max-size="{{options.maxSize}}"
+                    ng-model="ctrl.pagination.currentPage"
+                    ng-change="ctrl.paginationHandler()">
+        </pagination>
+    </script>
+</div>

@@ -1,0 +1,404 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "8d9a9132-635d-4604-b63e-711933a32b41",
+  "name" : "DisplayExportFile",
+  "lastUpdate" : 1671627896589,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "bg-primary"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Data exported"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 4"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "ed9bdcde-6d7a-40dc-85a7-b71a322a6acc",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "The following file contains the exported data :"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "d2fdf485-38f9-4af7-8c3e-da62b1ef112e",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Excel Document : {{exportFile.fileName}}"
+          },
+          "targetUrl" : {
+            "type" : "expression",
+            "value" : "exportFileUrl"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_blank"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "link"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "URL"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "constant"
+          },
+          "processVersion" : {
+            "type" : "constant"
+          },
+          "taskId" : {
+            "type" : "constant"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "8c24009d-cd69-4b25-97f7-ec7f0f50e235",
+        "hasValidationError" : false,
+        "id" : "pbLink"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "OK"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formOutput"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Submit task"
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "valueToAdd" : {
+            "type" : "expression"
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : "formSubmitDisplayFileSuccess"
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "formSubmitDisplayFileError"
+          }
+        },
+        "reference" : "641aa923-d6f4-480f-b826-fa0bee3516c5",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "timeToWait" : {
+            "type" : "constant",
+            "value" : 1000
+          },
+          "submitButtonSuccessfulResponseValue" : {
+            "type" : "expression",
+            "value" : "formSubmitDisplayFileSuccess"
+          },
+          "numberOfRetries" : {
+            "type" : "constant",
+            "value" : 8
+          },
+          "bonitaWebAppName" : {
+            "type" : "constant",
+            "value" : "bonita"
+          },
+          "taskId" : {
+            "type" : "expression",
+            "value" : "taskId"
+          },
+          "messageDisplayed" : {
+            "type" : "constant",
+            "value" : "Export completed"
+          },
+          "closeDialogWindow" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "fallbackURL" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "noMoreTask" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "showProgress" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "showProgressProcessVariable" : {
+            "type" : "constant",
+            "value" : "progressMessage"
+          },
+          "progressVariableInChildProcess" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "069b0bb2-d41b-4c70-8a7e-0ec0003c7025",
+        "hasValidationError" : false,
+        "id" : "customRedirectNextTask"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "9eb49545-ab97-46c1-a405-5fe5393b1298",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "exportFile" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseDocument/{{documentStorageId.value}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{ }"
+      ],
+      "exposed" : false
+    },
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/humanTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "documentStorageId" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseVariable/{{caseId}}/documentStorageId"
+      ],
+      "exposed" : false
+    },
+    "formSubmitDisplayFileSuccess" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "caseId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.task.caseId;"
+      ],
+      "exposed" : false
+    },
+    "formSubmitDisplayFileError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "exportFileUrl" : {
+      "type" : "expression",
+      "value" : [
+        "return \"/bonita/portal/\" + $data.exportFile.url;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "8d9a9132-635d-4604-b63e-711933a32b41",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

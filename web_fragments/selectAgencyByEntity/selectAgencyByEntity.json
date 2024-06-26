@@ -1,0 +1,505 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "selectAgencyByEntity",
+  "name" : "selectAgencyByEntity",
+  "lastUpdate" : 1671627904228,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "expression",
+            "value" : "! listEntities || listEntities.data.length==0"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Entité concernée"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 6
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "Sélectionner une entité"
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listEntities.data"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "entityName + \"-\" + entityCode"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "selectedEntity"
+          }
+        },
+        "reference" : "9e3e66cb-cd9c-479e-ab47-fd1fc69483ec",
+        "hasValidationError" : false,
+        "id" : "customAutocompleteWithoutAutoSuggestion"
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "3d95f421-2b30-4e06-9495-b362631c2d35",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!selectedEntity || ( selectedEntity && listAgenciesByEntity && listAgenciesByEntity.data.length>0)"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "iconSize" : {
+                  "type" : "constant"
+                }
+              },
+              "reference" : "c96a9b64-2a80-45f6-8055-26f6ee38467c",
+              "hasValidationError" : false,
+              "id" : "customLoadingSpinner"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "listAgenciesByEntity == undefined"
+                },
+                "readOnly" : {
+                  "type" : "expression",
+                  "value" : "selectedEntity ==null"
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Agence concernée"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "listAgenciesByEntity.data"
+                },
+                "displayedKey" : {
+                  "type" : "constant",
+                  "value" : "agencyName + \"-\" + agencyCode"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "agency"
+                }
+              },
+              "reference" : "9e12400d-6672-4a3d-9e28-384664fa40a4",
+              "hasValidationError" : false,
+              "id" : "customAutocompleteWithoutAutoSuggestion"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "hideAgencyMsg"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<font color=\"red\">Aucune agence trouvée pour cette entité</font>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "ff4008ac-8288-4d4d-8924-4d6b7caaf1ab",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "listEntities != null"
+          },
+          "alignment" : {
+            "type" : "constant"
+          },
+          "iconSize" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "e4d0645d-4832-4e3b-8cb4-50a9d799ade5",
+        "hasValidationError" : false,
+        "id" : "customLoadingSpinner"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "alert alert-danger"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "( listEntities != null) && (detailedLyreError == \"\")"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Erreur : Récupération des entité impossible, échec de la connexion à Lyre {{ detailedLyreError }}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "2e1ceb22-0382-43f9-aca8-8c500bd366ab",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "clearAgencyVal" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.selectedEntity.indexOf('-') == -1)",
+        "{",
+        "    $data.agency = \"\";",
+        "}",
+        "else",
+        "{",
+        "    var flag = false;",
+        "    ",
+        "    for(var i = 0;i<$data.listEntities.data.length;i++)",
+        "    {",
+        "        if($data.selectedEntity == $data.listEntities.data[i].entityName + \"-\" + $data.listEntities.data[i].entityCode)",
+        "        {",
+        "            flag = true;",
+        "        }",
+        "    }",
+        "    ",
+        "    if(flag === false)",
+        "    {",
+        "        $data.agency = \"\";",
+        "",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedAgencyName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "agency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "setResult" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.listAgenciesByEntity !== undefined) {",
+        "    ",
+        "    var lastIndex = $data.agency.lastIndexOf('-');",
+        "    //var agencyname = $data.agency.substring(0,lastIndex);",
+        "     var agencycode = $data.agency.substring(lastIndex+1);",
+        "    ",
+        "    for(var i = 0 ; i < $data.listAgenciesByEntity.data.length ; i++ ) {",
+        "        var findAgency = false;",
+        "        if($data.listAgenciesByEntity.data[i].agencyCode === agencycode) {",
+        "            $data.selectedAgency = $data.listAgenciesByEntity.data[i].agencyCode;",
+        "            $data.selectedAgencyName = $data.listAgenciesByEntity.data[i].agencyName;",
+        "            $data.selectedTerritory = $data.listAgenciesByEntity.data[i].territotyCode;",
+        "            $data.selectedTerritoryName = $data.listAgenciesByEntity.data[i].territoryName;",
+        "            findAgency = true;",
+        "            break;",
+        "        }",
+        "        if(!findAgency) {",
+        "           $data.selectedAgency = null;",
+        "           $data.selectedAgencyName = null;",
+        "           $data.selectedTerritory = null;",
+        "           $data.selectedTerritoryName = null;",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlGetAgenciesByEntity" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.selectedEntity)",
+        "{",
+        "    return \"../API/extension/entities?q=getAgenciesByEntity&entity=\"+$data.selectedEntity.split('-')[1];",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "detailedLyreError" : {
+      "type" : "expression",
+      "value" : [
+        "var error_msg=\"\";",
+        "",
+        "try {",
+        "    if ($data.listEntities !== null) {",
+        "        console.debug(\"detailedLyreError : listTerritories is not null\");",
+        "        if ((typeof $data.listEntities.data === \"object\")",
+        "            && (!Array.isArray($data.listEntities.data))) {",
+        "            console.debug(\"detailedLyreError : listTerritories is an object\");",
+        "            if ((typeof $data.listEntities.data.message !== \"undefined\")",
+        "                && ($data.listEntities.data.message !== \"\")) {",
+        "                error_msg = \" (\" + $data.listEntities.data.message + \")\";",
+        "                console.info(\"detailedLyreError : \" + error_msg);",
+        "            }",
+        "        }",
+        "    } else {",
+        "        console.debug(\"detailedLyreError : listTerritories is null\");",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception detailedLyreError: \" + e);",
+        "}",
+        "",
+        "return error_msg;"
+      ],
+      "exposed" : false
+    },
+    "selectedEntity" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "hideAgencyMsg" : {
+      "type" : "expression",
+      "value" : [
+        "if(typeof $data.selectedEntity == 'undefined')",
+        "{",
+        "    return true;",
+        "}",
+        "else if(typeof $data.selectedEntity != 'undefined')",
+        "{",
+        "    if($data.selectedEntity.indexOf(\"-\") == -1)",
+        "        return true;",
+        "    else{",
+        "        if(typeof $data.listAgenciesByEntity != 'undefined' && $data.listAgenciesByEntity.data.length > 0)",
+        "            return true;",
+        "    }",
+        "}",
+        "",
+        "return false;"
+      ],
+      "exposed" : false
+    },
+    "listEntities" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/entities?q=getEntities"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listAgenciesByEntity" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetAgenciesByEntity}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

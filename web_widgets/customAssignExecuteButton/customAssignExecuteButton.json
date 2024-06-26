@@ -1,0 +1,99 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Button",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Style",
+      "name" : "btnStyle",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Alignment",
+      "name" : "btnAlignment",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Assign Task URL",
+      "name" : "actionUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Task Assign Payload",
+      "name" : "requestPayload",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Task execution URL",
+      "name" : "executeUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Task Execution Payload",
+      "name" : "executePayload",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Success Response",
+      "name" : "successResponse",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Error Response",
+      "name" : "errorResponse",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Target URL",
+      "name" : "targetUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Disabled",
+      "name" : "disabled",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customAssignExecuteButton",
+  "name" : "AssignExecuteButton",
+  "lastUpdate" : 1671627876792,
+  "template" : "@customAssignExecuteButton.tpl.html",
+  "controller" : "@customAssignExecuteButton.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

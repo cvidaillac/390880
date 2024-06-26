@@ -1,0 +1,243 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "ca9701a5-7dc8-483a-998e-1485358fdc3a",
+  "name" : "PocStandaloneFilterPage",
+  "lastUpdate" : 1671627905014,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : "myListProducts"
+          }
+        },
+        "reference" : "a97edb2d-2753-46bd-87c4-1dc45d62e00f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "9f30ac33-2553-4170-b624-bf44d8827878",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Product : {{ $item.product }}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "0a2f1864-59c7-4e64-964d-fcd314eaaa34",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "{{ listAvailableMaterials | filter : {product : \"A\"} }}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "a1e0379f-2974-4916-80fe-0c598cc1c108",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "98113e28-a627-463e-98d1-079a42f7b04c",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "1ec42e27-6f3f-46d1-9657-6d11156a5531",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listAvailableMaterials" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {",
+        "        \"product\" : \"A\",",
+        "        \"targets\" : [\"B\", \"C\"]",
+        "    },",
+        "    {",
+        "        \"product\" : \"B\",",
+        "        \"targets\" : [\"C\", \"D\"]",
+        "    },",
+        "    {",
+        "        \"product\" : \"C\",",
+        "        \"targets\" : [\"A\", \"D\"]",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "myListProducts" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {",
+        "        \"product\" : \"A\"",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "setValues" : {
+      "type" : "expression",
+      "value" : [
+        "for (var product in $data.myListProducts) {",
+        "",
+        "    ",
+        "    $data.myListProducts[product].listProjectAvaliable = [];",
+        "    for (var target in $data.listAvailableMaterials) {",
+        "        if ($data.listAvailableMaterials[target].includes($data.myListProducts[product].product)) {",
+        "            $data.myListProducts[product].listProjectAvaliable = [];",
+        "            ",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "ca9701a5-7dc8-483a-998e-1485358fdc3a",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

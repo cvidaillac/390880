@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.12.4">
+    <businessObjects>
+        <businessObject qualifiedName="com.sgdbf.model.ApproverAction">
+            <fields>
+                <field type="LONG" length="255" name="approverId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="approverName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="decision" nullable="true" collection="false"/>
+                <field type="STRING" length="512" name="comments" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="approverRole" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="dateAction" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.Attachment">
+            <fields>
+                <field type="STRING" length="255" name="docId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="mimeType" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="author" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="docUrl" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="docFileName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.Commande">
+            <fields>
+                <field type="STRING" length="255" name="nameFournisseur" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="designationAchat" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="estimateDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="numberLyre" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="dateApproved" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.LogFailedTasks">
+            <fields>
+                <field type="STRING" length="255" name="processName" nullable="false" collection="false"/>
+                <field type="STRING" length="64" name="processVersion" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="taskName" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="failedConnectorId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="taskId" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="caseId" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="failedConnectorName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="failedConnectorType" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="failedConnectorError" nullable="true" collection="false"/>
+                <field type="STRING" length="64" name="failedConnectorLastStatus" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="failureDetectionDate" nullable="false" collection="false"/>
+                <field type="STRING" length="64" name="status" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="nbRetries" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="lastRetryDate" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="nextRetryDate" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isRetrying" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="UNIQUE_CONSTRAINT_1">
+                    <fieldNames>
+                        <fieldName>taskId</fieldName>
+                        <fieldName>failedConnectorId</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="findFailedTasksToRetryNow" content="SELECT l &#10;FROM LogFailedTasks l &#10;WHERE l.isRetrying = true&#13;&#10;AND substring(l.nextRetryDate, 0, 16) &lt;=  to_char(timezone('GMT', CURRENT_TIMESTAMP),'YYYY-MM-DD&quot;T&quot;HH24:MI') &#13;&#10;ORDER BY l.nextRetryDate ASC" returnType="java.util.List">
+                    <queryParameters/>
+                </query>
+                <query name="findByIsRetryingOrderedByFailureDetectionDateDesc" content="SELECT l &#13;&#10;FROM LogFailedTasks l &#13;&#10;WHERE l.isRetrying = :isRetrying&#13;&#10;ORDER BY l.failureDetectionDate DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="isRetrying" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes>
+                <index name="INDEX_LOGTASKS_1">
+                    <fieldNames>
+                        <fieldName>isRetrying</fieldName>
+                        <fieldName>nextRetryDate</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_LOGTASKS_2">
+                    <fieldNames>
+                        <fieldName>taskId</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_LOGTASKS_3">
+                    <fieldNames>
+                        <fieldName>status</fieldName>
+                        <fieldName>failureDetectionDate</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.LogTasksMonitoring">
+            <fields>
+                <field type="OFFSETDATETIME" length="255" name="startTime" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="endTime" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbRetryingTasks" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbNewFailedTasksDetected" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbFailedTasksRetried" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbFailedTasksPassed" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isRunning" nullable="false" collection="false"/>
+                <field type="STRING" length="64" name="status" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="monitoringCaseId" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isManual" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="errorMessage" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findOrderedByStartTimeDesc" content="SELECT l &#10;FROM LogTasksMonitoring l &#10;ORDER BY  startTime DESC" returnType="java.util.List">
+                    <queryParameters/>
+                </query>
+            </queries>
+            <indexes>
+                <index name="INDEX_TASKMON_1">
+                    <fieldNames>
+                        <fieldName>isRunning</fieldName>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_TASKMON_2">
+                    <fieldNames>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_TASKMON_3">
+                    <fieldNames>
+                        <fieldName>status</fieldName>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_TASKMON_4">
+                    <fieldNames>
+                        <fieldName>monitoringCaseId</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_TASKMON_5">
+                    <fieldNames>
+                        <fieldName>isManual</fieldName>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.LogUsersSynchroJob">
+            <fields>
+                <field type="OFFSETDATETIME" length="255" name="startTime" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="endTime" nullable="true" collection="false"/>
+                <field type="STRING" length="64" name="status" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="report" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbUsersCreated" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbUsersUpdated" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="processingCaseId" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="nbUsersDisabled" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbProfilesRemoved" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findOrderedByStartTimeDesc" content="SELECT l &#10;FROM LogUsersSynchroJob l &#10;ORDER BY l.startTime DESC" returnType="java.util.List">
+                    <queryParameters/>
+                </query>
+            </queries>
+            <indexes>
+                <index name="INDEX_USERSYN_1">
+                    <fieldNames>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_USERSYN_2">
+                    <fieldNames>
+                        <fieldName>status</fieldName>
+                        <fieldName>startTime</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.Proposition">
+            <fields>
+                <field type="LOCALDATETIME" length="255" name="creationDate" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="creatorId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="creatorName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="agencyCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="agencyName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="siteCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="siteName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="sectorCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="sectorName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="entiteCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="entiteName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="territoryCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="territoryName" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="budgetYear" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="initialBudgetYear" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="materialNumber" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeMaterial" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeMaterialName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="subTypeMaterial" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="subTypeMaterialName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="generalStatusMaterial" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="materialFamily" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="budgetRespected" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeProposition" nullable="true" collection="false"/>
+                <field type="STRING" length="512" name="commentSmart" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeAcquisition" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="propositionAmount" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="monthlyAmount" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="monthlyPropositionAmount" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="estimatedDeliveryDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="sponsor" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="propositionStatus" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="propositionStatusTargetAgency" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.sgdbf.model.ApproverAction" fetchType="EAGER" name="approversActions" nullable="true" collection="true"/>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.sgdbf.model.Attachment" fetchType="EAGER" name="propositionAttachments" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.sgdbf.model.UserComment" fetchType="EAGER" name="comments" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="existing" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="pitchSmart" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="completeInfoMessage" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.sgdbf.model.TimeLine" fetchType="EAGER" name="timeLines" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="noApprover" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="smarteComplement" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="nbMonth" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferAgencyCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferAgencyName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferSiteCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferSiteName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferSectorCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferSectorName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferEntityCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferEntityName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferTerritoryCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="transferTerritoryName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeWorkflow" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="typeWorkflowTargetAgency" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="propositionFilter" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="niveauApprob" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="niveauApprobTargetAgency" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.sgdbf.model.Commande" fetchType="EAGER" name="commandes" nullable="true" collection="true"/>
+                <field type="BOOLEAN" length="255" name="useFirstWorkflowData" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="statusMacroEtapes" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="commentBOTransmettreBO" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="percentage" nullable="true" collection="false"/>
+                <field type="STRING" length="1" name="requestSource" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dddRenewStartDate" nullable="true" collection="false"/>
+                <field type="STRING" length="64" name="dddRenewStatus" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="dddRenewChildPropositionId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="parentPropositionId" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="actualRequestAmount" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isBudgetPropositionApproved" nullable="true" collection="false"/>
+                <field type="STRING" length="512" name="lyrePreOrderCreationStatus" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="currentEnergyCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="currentEnergyName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="futureEnergyCode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="futureEnergyName" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="currentRetrofitable" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="futureRetrofitable" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="currentBiofuelB100" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="futureBiofuelB100" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="currentBiofuelXTL" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="futureBiofuelXTL" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findByListOfPersistenceIds" content="SELECT p &#13;&#10;FROM Proposition p &#13;&#10;WHERE p.persistenceId in :listOfPersistenceIds&#13;&#10;ORDER BY p.persistenceId DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="listOfPersistenceIds" className="[Ljava.lang.Long;">
+                            <description></description>
+                        </queryParameter>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.TimeLine">
+            <fields>
+                <field type="STRING" length="255" name="CodeClef" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="CodeWorkflow" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="AnneeBudgetaire" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="IdProposition" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="Motif" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="Statut" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="Acteur" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="IdentifiantActeur" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="DateCreation" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="Tache" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="propositionStatus" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="statusMacroEtapes" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="actualRequestAmount" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="taskDueDate" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="getByPropId" content="SELECT t&#13;&#10;FROM TimeLine t&#13;&#10;WHERE t.IdProposition= :IdProposition&#13;&#10;ORDER BY t.persistenceId DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="IdProposition" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes>
+                <index name="INDEX_1">
+                    <fieldNames>
+                        <fieldName>IdProposition</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+        <businessObject qualifiedName="com.sgdbf.model.UserComment">
+            <fields>
+                <field type="OFFSETDATETIME" length="255" name="dateAdded" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="userId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="userName" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="userComment" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

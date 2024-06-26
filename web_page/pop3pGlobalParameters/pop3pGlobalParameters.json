@@ -1,0 +1,430 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "pop3pGlobalParameters",
+  "name" : "pop3pGlobalParameters",
+  "lastUpdate" : 1671627912012,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "bg-primary"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Paramètres globaux"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 3"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "c46c2e77-95f7-409a-9c27-1131c2a2a6a5",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "b8753126-c012-4a0d-84f0-47ed48ecfd80",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "bg-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Délais pour la réalisation des tâches de validation"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "741e52bd-7e86-48bd-a2b6-9b02c098b1d2",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "01e3a197-a17e-4a03-aaef-017a052635e5",
+              "hasValidationError" : false,
+              "id" : "FragmentEditProcessParameter",
+              "binding" : {
+                "ParameterLabel" : "\"Délai en jours pour les tâches d'approbation de DAD, DDD, DAV\"",
+                "ParameterName" : "\"dxxValidationDueDateDelay\"",
+                "ProcessDefinition" : "processDefinition_DxxDueDate",
+                "ParameterPlaceHolder" : "\"Delay in days for DAD, DDD and DAV\"",
+                "ProcessName" : "processName_BudgetInit"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "3133bfce-bd07-4d0d-bbbe-cecd7f101958",
+              "hasValidationError" : false,
+              "id" : "FragmentEditProcessParameter",
+              "binding" : {
+                "ParameterLabel" : "\"Délai en jours pour les tâches d'approbation de DADR\"",
+                "ParameterName" : "\"dxxValidationDueDateDelay\"",
+                "ProcessDefinition" : "processDefinition_DADRDueDate",
+                "ParameterPlaceHolder" : "\"Delay in days for DADR\"",
+                "ProcessName" : "processName_DADRDueDate"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "d9aa4bf6-9549-48fb-b28d-b94d3064a17f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "bg-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Mode test"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "a6ab9138-6cde-4f3c-8cf2-7dde31e935b0",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "03093945-b897-456c-8af9-7947c94fe708",
+              "hasValidationError" : false,
+              "id" : "FragmentEditProcessParameter",
+              "binding" : {
+                "ParameterLabel" : "\"Destinataires des emails en mode Test\"",
+                "ParameterName" : "\"testRecipientsList\"",
+                "ProcessDefinition" : "",
+                "ParameterPlaceHolder" : "\"Email recipients for test mode\"",
+                "ProcessName" : "processName_BudgetInit",
+                "listOfProcessesToUpdate" : "emailRecipients_processNamesList"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "abb86629-1c1b-40cd-b436-ec3947660b8e",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "bg-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Notifications des tâches en erreur"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "93d7573e-03db-40c5-ab26-8a1e3f0a93a3",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "fe06ce90-2bce-498f-bd64-4ee147685533",
+              "hasValidationError" : false,
+              "id" : "FragmentEditProcessParameter",
+              "binding" : {
+                "ParameterLabel" : "\"Destinataires du rapport des tâches en erreur\"",
+                "ParameterName" : "\"failedTasksReportRecipients\"",
+                "ProcessDefinition" : "processDefinition_ReportFailedTasks",
+                "ParameterPlaceHolder" : "",
+                "ProcessName" : "processName_ReportFailedTasks"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "612fe8b0-c405-4ecd-a8b5-c7cc464d2371",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "dfd7b3b4-6aa8-4f43-b8ba-222a42bd7a13",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "processName_DADRDueDate" : {
+      "type" : "constant",
+      "value" : [
+        "Pop3P_DADR_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "processName_ReportFailedTasks" : {
+      "type" : "constant",
+      "value" : [
+        "MonitorFailedTasks"
+      ],
+      "exposed" : false
+    },
+    "processName_BudgetInit" : {
+      "type" : "constant",
+      "value" : [
+        "POP3P_BudgetProposition_Init"
+      ],
+      "exposed" : false
+    },
+    "emailRecipients_processNamesList" : {
+      "type" : "json",
+      "value" : [
+        "[\"POP3P_BudgetProposition_Init\",\r",
+        "\"POP3P_BudgetProposition\", \"POP3P_PropositionValidation\", \r",
+        "\"POP3P_ValidationProcess\", \"Pop3P_DADR_BudgetProposition\",\r",
+        "\"Pop3P_DADR_PropositionValidation\", \"POP3P_DxxProposition\",\r",
+        "\"POP3P_DxxMainValidation\", \"POP3P_DxxSpecificTasks\"]"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "c19ee68b-b7e1-408a-88bd-5d6a8d4cf6f4",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

@@ -1,0 +1,27 @@
+
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+<style>
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spinWebkit 1s infinite linear;
+    -moz-animation: spinMoz 1s infinite linear;
+
+}
+
+@-webkit-keyframes spinWebkit {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+@keyframes spinMoz {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+</style>
+
+<div class="text-{{ properties.alignment }}" style="font-size: {{properties.iconSize}}em;">
+    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+</div>

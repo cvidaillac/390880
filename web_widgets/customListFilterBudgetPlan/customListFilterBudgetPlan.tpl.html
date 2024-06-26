@@ -1,0 +1,181 @@
+<ng-form name="FilterForm">
+        <div class="row" ng-show="ctrl.isCollapsed">
+            <div class="col form-group col-xs-8  col-sm-8  col-md-4  col-lg-4" ng-if="properties.filtersCheckbox">
+                <i>{{ ctrl.checkboxSummaryText }}</i>
+            </div>
+             <div class="col-md component col-md-5  col-lg-5" >
+                 <i>{{ ctrl.filtersSummaryText }}</i>
+             </div>
+            <div class="col component col-xs-4  col-sm-4  col-md-3  col-lg-3" >
+                <div class="form-group container-fluid">
+                    <div class="row">
+                        <div class="col text-cente">
+                            <button class="btn btn-secondary" type="button" ng-show="ctrl.showHideButton" ng-click="ctrl.toggleCollapseButon();">
+                                {{ ctrl.hideButtonLabel }} les filtres</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" ng-show="! ctrl.isCollapsed">
+            <div class="col form-group col-xs-8  col-sm-4  col-md-3  col-lg-3" ng-if="properties.filtersCheckbox">
+                <div class="container center">
+                    <div class="row">
+                        <label class="control-label col-xs-12"  ng-bind-html="ctrl.chekboxLabel | uiTranslate">
+                        </label>
+                        <div class="col-xs-12">
+                            <div class="container">
+                                <div class="row">
+                                    <div  class="col-xs-3" >
+                                        <div class="form-group form-horizontal">
+                                            <label class="control-label control-label--required col-xs-6" >Année début</label>
+                                            <div class="col-xs-6">
+                                                <input  type="number"
+                                                        class="form-control"
+                                                        name="yearStart"
+                                                        min="{{ctrl.minYearStart}}"
+                                                        step="1"
+                                                        ng-minlength="4"
+                                                        ng-maxlength="4"
+                                                        ng-model="properties.yearStart"
+                                                        ng-change="ctrl.yearStartChanged(properties.yearStart)"
+                                                        required >
+                                            </div>
+                                            <div ng-messages="FilterForm.yearStart.$dirty && FilterForm.yearStart.$error" class="text-danger" role="alert">
+                                                <div ng-message="required">Valeur manquante pour l'année début</div>
+                                                <div ng-message="minlength">L'année début doit être sur 4 digits</div>
+                                                <div ng-message="maxlength">L'année début doit être sur 4 digits</div>
+                                                <div ng-message="min">L'année début doit être supérieure ou égal à {{ctrl.minYearStart}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div  class="col-xs-3" >
+                                        <div class="form-group form-horizontal">
+                                            <label class="control-label control-label--required col-xs-6" >Année fin</label>
+                                            <div class="col-xs-6">
+                                                <input  type="number"
+                                                        class="form-control"
+                                                        name="yearEnd"
+                                                        min="{{properties.yearStart}}"
+                                                        step="1"
+                                                        ng-minlength="4"
+                                                        ng-maxlength="4"
+                                                        ng-model="properties.yearEnd"
+                                                        required >
+                                            </div>
+                                            <div ng-messages="FilterForm.yearEnd.$dirty && FilterForm.yearEnd.$error" class="text-danger" role="alert">
+                                                <div ng-message="required">Valeur manquante pour l'année fin </div>
+                                                <div ng-message="minlength">L'année fin doit être sur 4 digits</div>
+                                                <div ng-message="maxlength">L'année fin doit être sur 4 digits</div>
+                                                <div ng-message="min">L'année fin doit être supérieure ou égal à {{properties.yearStart}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>        
+                                
+                                <div class="row" ng-repeat="option in properties.filtersCheckbox.choices track by $index">
+                                    <div  class="radio radio-button-margin col-xs-2" >
+                                        <label>
+                                            <input
+                                                    type="checkbox"
+                                                    name="{{ option.data }}"
+                                                    ng-model="option.value"
+                                                    ng-value="option.checkedValue"
+                                                    ng-change="ctrl.updateCheckbox(option, $index)"
+                                                    ng-required="value.length==0">
+                                                {{ option.label | uiTranslate }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col component col-xs-12  col-sm-5  col-md-6  col-lg-6" >
+                <div>
+                   <div class="form-group row" >
+                        <div ng-if="!filter.isDisable" ng-repeat="filter in properties.filtersLabels" class="col component col-xs-12  col-sm-12  col-md-6  col-lg-6 ng-scope">
+                            <label for="{{ filter.data }}"> {{ filter.label }} </label>
+                            <span class="badge badge-info" ng-if="filter.operator==='L'"> contient</span>
+                            <span class="badge badge-info" ng-if="filter.operator==='S'"> commence par</span>
+                            <span class="badge badge-info" ng-if="filter.operator !=='L' && filter.operator !== 'S' && filter.type !=='selectMulti' && filter.type!=='radio'"> égal</span>
+                            <span class="badge badge-error" ng-if="(filter.type==='selectMulti') && (ctrl.multiSelectIndexes) && (ctrl.multiSelectIndexes.length>0)" ng-click="ctrl.resetValueMulti(filter)"> x</span> <span class="badge badge-info" ng-if="(filter.type==='selectMulti') && (ctrl.multiSelectIndexes) && (ctrl.multiSelectIndexes.length>0)" ng-repeat="selectedOption in ctrl.multiSelectIndexes">{{ filter.values[selectedOption].value }}</span>
+                            <span class="badge badge-error" ng-if="(searchBuffer[filter.data]) && (filter.type!=='selectMulti') && (filter.type!=='radio')" ng-click="ctrl.resetValue(filter)"> x</span>
+            
+                            <div ng-if="filter.type==='text' || filter.type==='date'">
+                                <input type="text" class="form-control" name="{{ filter.data }}" placeholder="{{ filter.placeholder }}" 
+                                    ng-model="searchBuffer[filter.data]" >
+                                    <datalist id="{{ filter.data }}">
+                                        <!--availableDatas[filter.data]-->
+                                        <option ng-if="filter.type==='date'" ng-repeat="data in filter.values" > {{data}}</option>
+                                    </datalist>
+                            </div>
+                            <!--auto-complete="ctrl.autoCompleteOptions" to be added in order to have autoComplete feature-->
+                             <div ng-if="filter.type==='selectMulti'">
+            <!--                     ng-init="searchBuffer[filter.data]=1"-->
+                                <select name="{{ filter.data }}" class="form-control" ng-model="ctrl.multiSelectIndexes" multiple>
+            <!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+            
+                                    <option ng-if="data.value === filter.values[0].value" ng-repeat="data in filter.values" value="{{$index}}" >{{ data.label }}</option>
+                                    <option ng-if="data.value !== filter.values[0].value" ng-repeat="data in filter.values" value="{{$index}}">{{ data.label }}</option>
+                                </select>
+                            </div>
+                            
+                            <div ng-if="filter.type==='select'">
+            <!--                     ng-init="searchBuffer[filter.data]=1"-->
+                                <select name="{{ filter.data }}" class="form-control" ng-model="searchBuffer[filter.data]" ng-init="searchBuffer[filter.data]=filter.values[0]" >
+            <!--                        <option ng-repeat="data in filter.values" >{{ data }}</option>-->
+            
+            
+                                    <option ng-if="data === filter.values[0]" ng-repeat="data in filter.values" selected >{{ data }}</option>
+                                    <option ng-if="data !== filter.values[0]" ng-repeat="data in filter.values" >{{ data }}</option>
+                                </select>
+                            </div>
+
+                            <div ng-if="filter.type==='radio'">
+                                <div  class="radio radio-button-margin" >
+                                    <label ng-repeat="data in filter.values" class="col-xs-12">
+                                        <input type="radio" name="{{ filter.data }}" value="{{data.value}}" id="{{filter.data}}_{{$index}}" 
+                                            ng-model="searchBuffer[filter.data]">
+                                        {{data.label}}
+                                    </label>
+                                </div>
+                            </div>
+            
+                        </div>
+                         <br/>
+        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col component col-xs-4  col-sm-3  col-md-3  col-lg-3" >
+                <div class="form-group container-fluid">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button class="btn btn-secondary btn-margin-vertical-10" type="button" ng-show="ctrl.showHideButton" ng-click="ctrl.toggleCollapseButon();">
+                                    {{ ctrl.hideButtonLabel }} les filtres</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button ng-click="ctrl.resetFilters()" type="button" class="btn btn-danger btn-margin-vertical-10" ng-disabled="ctrl.isRunning">Effacer les filtres</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button ng-click="ctrl.startFilters()" type="button" class="btn btn-primary btn-margin-vertical-10" ng-disabled="FilterForm.$invalid || ctrl.isMissingMandatoryFields() || ctrl.isRunning">Calculer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+</ng-form>

@@ -1,0 +1,363 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "c48e7f08-55e3-4e18-98a4-42fa7d0dd97e",
+  "name" : "displayProposition",
+  "lastUpdate" : 1671627883391,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 4,
+          "sm" : 7,
+          "md" : 8,
+          "lg" : 9
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "cf5beb39-3412-4140-8bda-c22dfd43d3ad",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [ ]
+        ]
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 8,
+          "sm" : 5,
+          "md" : 4,
+          "lg" : 3
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "614ebbc1-6024-4c81-a21b-e087d70f9279",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 2,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "2a12febb-778f-46e8-91f1-bed37cf61599",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 5,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "top-button"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "expression",
+                  "value" : "(! isMaterialDisplayed) && (! isExistingMaterial)"
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Imprimer..."
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "info"
+                }
+              },
+              "reference" : "c4d455e0-88e2-40aa-a34a-584e88022ee3",
+              "hasValidationError" : false,
+              "id" : "customButtonPrint"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 5,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "propositionInput"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "label" : {
+                  "type" : "constant",
+                  "value" : "Fermer"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "displayDetailProposition" : {
+                  "type" : "variable",
+                  "value" : "displayDetailProposition"
+                }
+              },
+              "reference" : "bb31578d-b741-4347-a5c4-0b2a6a14b1dc",
+              "hasValidationError" : false,
+              "id" : "customClosePopup"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "fe3bc8e1-0e23-4d76-a93d-7abe84e5e0cd",
+        "hasValidationError" : false,
+        "id" : "96ff9112-5e4f-4b05-b18a-ab6d2aced5a2",
+        "binding" : {
+          "displayDetailProposition" : "",
+          "getSession" : "getSession",
+          "propositionInput" : "propositionInput",
+          "selectedProposition" : "selectedProposition",
+          "searchCase" : "searchCase",
+          "commentValue" : "commentValue",
+          "urlAPISendComment" : "urlAPISendComment",
+          "commentToSend" : "commentToSend",
+          "addCommentResult" : "addCommentResult",
+          "addCommentError" : "addCommentError",
+          "getComments" : "getComments",
+          "urlFindPropositionHistory" : "urlFindPropositionHistory",
+          "isMaterialDisplayed" : "isMaterialDisplayed"
+        }
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getCommentsURL" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId){",
+        "    return \"../API/bdm/businessData/com.sgdbf.model.Proposition/\"",
+        "        + $data.propositionInput.persistenceId",
+        "        +\"/comments\";",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "urlAPISendComment" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/sendCommentCustomAPI"
+      ],
+      "exposed" : false
+    },
+    "addCommentResult" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "commentToSend" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.propositionInput && $data.propositionInput.persistenceId ",
+        "    && $data.commentValue &&$data.propositionInput.caseId){",
+        "    return {",
+        "    \t'propositionId': \"\"+$data.propositionInput.persistenceId,",
+        "    \t'comment': $data.commentValue,",
+        "    \t'caseId' : \"\"+$data.propositionInput.caseId,",
+        "    \t'senderId' : \"\"+$data.getSession.user_id, ",
+        "    \t'processDefinitionId' : $data.searchCase.processDefinitionId",
+        "    };",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "searchCase" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/case/{{propositionInput.caseId}}"
+      ],
+      "exposed" : false
+    },
+    "propositionInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlProcessationInstanciation" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.getProcessDefinition){",
+        "   return \"../../newProposition/API/bpm/process/\"+$data.getProcessDefinition[0].id+\"/instantiation\";",
+        "} "
+      ],
+      "exposed" : false
+    },
+    "displayDetailProposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "commentValue" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "addCommentError" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "getComments" : {
+      "type" : "url",
+      "value" : [
+        "{{getCommentsURL}}"
+      ],
+      "exposed" : false
+    },
+    "urlFindPropositionHistory" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/bdm/businessData/com.sgdbf.model.TimeLine?p=0&c=100&\"",
+        "+ \"q=getByPropId&f=IdProposition=\"+$data.propositionInput.persistenceId"
+      ],
+      "exposed" : false
+    },
+    "getSession" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "closePopUp" : {
+      "type" : "expression",
+      "value" : [
+        "$data.selectedProposition={}",
+        "if ($data.addCommentResult){",
+        "    //Comment successfully added",
+        "    $data.propositionInput= {},",
+        "    $data.addCommentResult = \"\"",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "isMaterialDisplayed" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isExistingMaterial" : {
+      "type" : "expression",
+      "value" : [
+        "var is_existing=false;",
+        "",
+        "try {",
+        "    if ($data.propositionInput) {",
+        "        if (typeof $data.propositionInput.existing !== \"undefined\") {",
+        "            is_existing = ($data.propositionInput.existing !== \"newMaterial\") ? false : true;",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isExistingMaterial: \" + e);",
+        "}",
+        "return is_existing;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

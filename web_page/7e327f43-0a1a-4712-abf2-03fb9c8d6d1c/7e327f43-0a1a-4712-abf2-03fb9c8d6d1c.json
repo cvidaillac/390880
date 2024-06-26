@@ -1,0 +1,124 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "7e327f43-0a1a-4712-abf2-03fb9c8d6d1c",
+  "name" : "demandePoste",
+  "lastUpdate" : 1671627893421,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "d522ea9a-b116-408a-9fef-a545f9c58b34",
+        "hasValidationError" : false,
+        "id" : "3c68ed4f-c29b-4573-bab9-33269b449943",
+        "binding" : {
+          "colomnTable" : "",
+          "formInput" : "formInput",
+          "formOutput" : "formOutput"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "151cf6f8-6486-4191-8cc0-d89703e80d21",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "b9b51320-c87f-4356-9e4a-e270526bddc6",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"fichePostePJDocumentInput\" : null,\r",
+        "  \"fichePosteInput\" : {\r",
+        "    \"directionConcernee\" : \"\",\r",
+        "    \"serviceConcerne\" : \"\",\r",
+        "    \"dsi\" : \"\",\r",
+        "    \"domaineCATMAN\" : \"\",\r",
+        "    \"emploi\" : \"\",\r",
+        "    \"lieuTravail\" : \"\",\r",
+        "    \"dateEnvisagee\" : null,\r",
+        "    \"remplacementOuCreation\" : \"\",\r",
+        "    \"budgete\" : \"\",\r",
+        "    \"typeContrat\" : \"\",\r",
+        "    \"dureeMotif\" : \"\",\r",
+        "    \"rattachementHierarchique\" : \"\",\r",
+        "    \"remunerationEnvisagee\" : \"\",\r",
+        "    \"filiere\" : \"\",\r",
+        "    \"echelon\" : \"\",\r",
+        "    \"niveau\" : \"\",\r",
+        "    \"formationInitialeSouhaitee\" : \"\",\r",
+        "    \"profilSouhaite\" : \"\",\r",
+        "    \"descriptionMission\" : \"\",\r",
+        "    \"recrutementOuDemande\" : \"\",\r",
+        "    \"serviceEmetteurNom\" : \"\",\r",
+        "    \"serviceEmetteurDate\" : null,\r",
+        "    \"validationDirecteur\" : false,\r",
+        "    \"validationMembreComex\" : false,\r",
+        "    \"validationDRH\" : false,\r",
+        "    \"idFichePoste\" : \"\",\r",
+        "    \"dernierStatut\" : \"\",\r",
+        "    \"idPieceFichePoste\" : \"\",\r",
+        "    \"commentaireDirecteur\" : \"\",\r",
+        "    \"commentaireMembreComex\" : \"\",\r",
+        "    \"commentaireDRH\" : \"\"\r",
+        "  }\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "$data.formInput.fichePosteInput.idFichePoste=new Date().getTime();",
+        "$data.formInput.fichePosteInput.serviceEmetteurDate=new Date();",
+        "",
+        "return {",
+        "\t'fichePosteInput': $data.formInput.fichePosteInput,",
+        "\t'fichePostePJDocumentInput': $data.formInput.fichePostePJDocumentInput",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "testTimeUniqueID" : {
+      "type" : "expression",
+      "value" : [
+        "//return new Date().getTime();",
+        "return new Date(1524582676574);"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "7e327f43-0a1a-4712-abf2-03fb9c8d6d1c",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

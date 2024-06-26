@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>iamConnector</id>
+  <version>1.0.0</version>
+  <input mandatory="true" name="url" type="java.lang.String"/>
+  <input mandatory="true" name="domaine" type="java.lang.String"/>
+  <input mandatory="true" name="username" type="java.lang.String"/>
+  <input mandatory="true" name="password" type="java.lang.String"/>
+  <output name="result" type="java.util.Map"/>
+  <page id="Setup">
+    <widget xsi:type="definition:Text" id="yxyUrl" inputName="url"/>
+    <widget xsi:type="definition:Text" id="txtDomaine" inputName="domaine"/>
+    <widget xsi:type="definition:Text" id="txtUsername" inputName="username"/>
+    <widget xsi:type="definition:Password" id="Password" inputName="password"/>
+  </page>
+  <jarDependency>gson-2.8.2.jar</jarDependency>
+</definition:ConnectorDefinition>

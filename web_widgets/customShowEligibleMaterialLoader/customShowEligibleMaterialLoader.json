@@ -1,0 +1,53 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Api to call",
+      "name" : "apiUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Success Response",
+      "name" : "successResponse",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Error Response",
+      "name" : "errorResponse",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Text",
+      "name" : "text",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Error message when there is a web service error",
+      "name" : "errorText",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Trigger the query",
+      "name" : "triggerQuery",
+      "help" : "If set, query is triggered only when value is 'Yes'",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customShowEligibleMaterialLoader",
+  "name" : "ShowEligibleMaterialLoader",
+  "lastUpdate" : 1671627880355,
+  "template" : "@customShowEligibleMaterialLoader.tpl.html",
+  "controller" : "@customShowEligibleMaterialLoader.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

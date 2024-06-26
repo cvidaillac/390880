@@ -1,0 +1,421 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "0a9e4dac-cb43-4f56-a18d-447975d578d0",
+  "name" : "overviewMappingUsers",
+  "lastUpdate" : 1671627877037,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "5bce77e3-a31f-4cb6-8805-a520e197d1af",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "b5131ef2-5225-4eda-9ca1-b1c6bfb5c18c",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "6524924f-f141-443e-817a-5648dc3ba34a",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "Bar"
+                            },
+                            "data" : {
+                              "type" : "expression",
+                              "value" : "dataChart"
+                            },
+                            "labels" : {
+                              "type" : "constant",
+                              "value" : [
+                                "Total utilisateurs",
+                                "Utilisateurs ajoutés",
+                                "Utilisateurs existants",
+                                "Utilisateurs inexistants"
+                              ]
+                            },
+                            "setLabels" : {
+                              "type" : "constant",
+                              "value" : [
+                                "Default set label"
+                              ]
+                            },
+                            "legendHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "colors" : {
+                              "type" : "constant"
+                            },
+                            "options" : {
+                              "type" : "constant"
+                            }
+                          },
+                          "reference" : "391f8611-0401-4080-b4e0-206b639a655c",
+                          "hasValidationError" : false,
+                          "id" : "pbChart"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Nombre total d'utilisateurs: {{utilisateursTotal}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "fbca4962-2afa-438e-937b-1f21ef9e8992",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Nombre d'utilisateurs ajoutés: {{utilisateurAjoutes}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "305ed204-ae42-4098-bda3-317c6a080a29",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Nombre d'utilisateurs existants dans bonita: {{utilisateursExistants}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "36a2f048-5db1-4d1b-b2f7-667230d02ef9",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Nombre d'utilisateurs inexistants dans bonita: {{utilisateursNonExistants}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "aad12806-5c47-4267-86a7-66b99301656a",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Date: {{dateAjout|uiDate}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "d505cfeb-de68-43f3-86fb-b9bb65f601da",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "5f2c66a1-3498-472d-a01e-4806e9308262",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "0051a5d6-9243-4eaf-8b01-e0e4d6841c8c",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "utilisateursExistants" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getStatistique[0].utilisateursExistants;"
+      ],
+      "exposed" : false
+    },
+    "utilisateursTotal" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getStatistique[0].utilisateursTotal;"
+      ],
+      "exposed" : false
+    },
+    "dataChart" : {
+      "type" : "expression",
+      "value" : [
+        "/*var utilisateurAjoutes = Number($data.getStatistique[0].utilisateursAjoutes);\r",
+        "var utilisateursExistants = Number($data.getStatistique[0].utilisateursExistants);\r",
+        "var utilisateursNonExistants =\tNumber($data.getStatistique[0].utilisateursNonExistants);\r",
+        "var utilisateursTotal = Number($data.getStatistique[0].utilisateursTotal);\r",
+        "\r",
+        "var arr = [];\r",
+        "\r",
+        "arr.push(utilisateurAjoutes);\r",
+        "arr.push(utilisateursExistants);\r",
+        "arr.push(utilisateursNonExistants);\r",
+        "arr.push(utilisateursTotal);\r",
+        "var jsonArray = JSON.stringify(arr);*/\r",
+        "//return jsonArray;\r",
+        "//var test = [2,10,22,12];\r",
+        "//var myJSON = JSON.stringify(test);\r",
+        "return [Number($data.getStatistique[0].utilisateursTotal),Number($data.getStatistique[0].utilisateursAjoutes),Number($data.getStatistique[0].utilisateursExistants),Number($data.getStatistique[0].utilisateursNonExistants)];\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "utilisateursNonExistants" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getStatistique[0].utilisateursNonExistants;"
+      ],
+      "exposed" : false
+    },
+    "getStatistique" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.sgdbf.model.Statistique?q=findByProcessInstanceID&p=0&c=10&f=processInstanceID={{caseId}}"
+      ],
+      "exposed" : false
+    },
+    "caseId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "dateAjout" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getStatistique[0].dateAjout;"
+      ],
+      "exposed" : false
+    },
+    "utilisateurAjoutes" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.getStatistique[0].utilisateursAjoutes;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "0a9e4dac-cb43-4f56-a18d-447975d578d0",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

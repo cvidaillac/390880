@@ -1,0 +1,27 @@
+<div class="alert alert-danger" ng-show="myRequired.length">
+    Les champs suivants doivent être remplis obligatoirement : 
+    <div ng-repeat="(index, value) in myRequired">
+        <ul>
+            <li><b>{{getLabel(value.$name)}}</b>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="alert alert-danger" ng-show="myErrorsNumber.length">
+    Les champs suivants sont mal formés (caractère ‘virgule’ interdit ou centimes non renseignés) : 
+    <div ng-repeat="(index, value) in myErrorsNumber">
+        <ul>
+            <li><b>{{getLabel(value.$name)}}</b>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="alert alert-danger" ng-show="myErrorsEmail.length">
+    Les champs suivants sont mal formés : 
+    <div ng-repeat="(index, value) in myErrorsEmail">
+        <ul>
+            <li><b>{{getLabel(value.$name)}}</b>
+            </li>
+        </ul>
+    </div>
+</div>

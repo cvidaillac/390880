@@ -1,0 +1,104 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "fa48f75b-cdfd-46e3-98d3-a133ad902219",
+  "name" : "WfAdobeSignEnCours",
+  "lastUpdate" : 1671627910320,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "9eed78df-fea6-42c5-814b-1d1d7b2cc6dd",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "URL" : {
+                  "type" : "constant",
+                  "value" : "/bonita/apps/DigitalSignature/historique/"
+                },
+                "waitText" : {
+                  "type" : "expression",
+                  "value" : "Attendre"
+                },
+                "alertStyle" : {
+                  "type" : "constant",
+                  "value" : "info"
+                }
+              },
+              "reference" : "dde1fa28-87d4-41f5-8f11-67b0865d7263",
+              "hasValidationError" : false,
+              "id" : "customRedirectBrowserEng"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "f7e6c950-508d-47d9-a23b-c2f451e10a52",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "de4e4030-5870-49b3-99b7-f6f6cd80a285",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "Attendre" : {
+      "type" : "constant",
+      "value" : [
+        "Votre demande a été envoyé. Aller sur la page d'historique pour suivre votre demande. Merci"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "fa48f75b-cdfd-46e3-98d3-a133ad902219",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

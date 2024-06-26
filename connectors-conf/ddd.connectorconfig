@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" definitionId="sap-jco3-callfunction" version="1.0.0" name="ddd" modelVersion="7.12.0-004">
+  <parameters key="serverType">
+    <expression xsi:type="expression:Expression" name="ApplicationServer" content="ApplicationServer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="client">
+    <expression xsi:type="expression:Expression" name="00" content="00" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="user">
+    <expression xsi:type="expression:Expression" name="A1073231" content="A1073231" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" name="Tchibri,123" content="Tchibri,123" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="language">
+    <expression xsi:type="expression:Expression" name="EN" content="EN" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="host">
+    <expression xsi:type="expression:Expression" name="ampsv020ecc4d.p1.saint-gobain.net" content="ampsv020ecc4d.p1.saint-gobain.net" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="systemNumber">
+    <expression xsi:type="expression:Expression" name="00" content="00" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="systemId">
+    <expression xsi:type="expression:Expression" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="groupName">
+    <expression xsi:type="expression:Expression" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="destinationName">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="destinationData">
+    <expression xsi:type="expression:Expression" content="" returnType="java.util.List" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="functionName">
+    <expression xsi:type="expression:Expression" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="commitOnSuccess">
+    <expression xsi:type="expression:Expression" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="rollbackOnFailure">
+    <expression xsi:type="expression:Expression" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="inputParameters">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="outputParameters">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="htmlOutput">
+    <expression xsi:type="expression:Expression" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

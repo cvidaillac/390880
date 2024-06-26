@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>Pop3pGetHierarchy</id>
+  <version>1.0.0</version>
+  <category icon="ws.png" id="webservices"/>
+  <input name="wsdlURL" type="java.lang.String"/>
+  <input name="cookie" type="java.lang.String"/>
+  <input name="codeWorkflow" type="java.lang.String"/>
+  <input name="familleMat" type="java.lang.String"/>
+  <input name="codeNoeudMat" type="java.lang.String"/>
+  <input name="montantProposition" type="java.lang.String"/>
+  <output name="result" type="java.util.List"/>
+  <page id="inputPage">
+    <widget xsi:type="definition:Text" id="wsdlURL" inputName="wsdlURL"/>
+    <widget xsi:type="definition:Text" id="cookie" inputName="cookie"/>
+    <widget xsi:type="definition:Text" id="codeWorkflow" inputName="codeWorkflow"/>
+    <widget xsi:type="definition:Text" id="familleMat" inputName="familleMat"/>
+    <widget xsi:type="definition:Text" id="codeNoeudMat" inputName="codeNoeudMat"/>
+    <widget xsi:type="definition:Text" id="montantProposition" inputName="montantProposition"/>
+  </page>
+  <jarDependency>clientBudgePop-1.0.10.jar</jarDependency>
+</definition:ConnectorDefinition>

@@ -1,0 +1,92 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Data for table",
+      "name" : "data",
+      "help" : "A JSON representation of the data",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Theme for table",
+      "name" : "theme",
+      "type" : "choice",
+      "defaultValue" : "blue",
+      "choiceValues" : [
+        "red",
+        "blue",
+        "green",
+        "orange",
+        "black",
+        "white"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Show toolbar?",
+      "name" : "toolbar",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Fields",
+      "name" : "fields",
+      "help" : "Fields as described in a JSON object. Minimum format is ['name': 'name', 'caption': 'caption' ]",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Rows",
+      "name" : "rows",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Columns",
+      "name" : "columns",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Column data",
+      "name" : "columnData",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customPivotTable",
+  "name" : "pivotTable",
+  "lastUpdate" : 1671627888716,
+  "template" : "@customPivotTable.tpl.html",
+  "controller" : "@customPivotTable.ctrl.js",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "46946f8e-11d0-42a0-8679-1572b2bb846e",
+      "name" : "react.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "4a519e4c-69e1-4b3f-8833-716193641781",
+      "name" : "orb.min.js",
+      "type" : "js",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "889dbbd5-073e-489c-a748-91a57bbc1ac2",
+      "name" : "orb.min.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

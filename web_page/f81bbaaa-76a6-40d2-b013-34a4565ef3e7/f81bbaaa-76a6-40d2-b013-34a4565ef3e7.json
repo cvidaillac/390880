@@ -1,0 +1,324 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "f81bbaaa-76a6-40d2-b013-34a4565ef3e7",
+  "name" : "TEMPFormStartTransition",
+  "lastUpdate" : 1671627910291,
+  "rows" : [
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "97c8072c-7565-4faa-877e-c9806a520c49",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "03ce0d39-fd07-450a-842f-395563d55611",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "widgetId" : {
+                    "type" : "constant",
+                    "value" : "pbInput"
+                  },
+                  "isDisplayed" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "label" : {
+                    "type" : "constant",
+                    "value" : "Id Proposition"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readonly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "placeholder" : {
+                    "type" : "constant"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "class" : {
+                    "type" : "constant",
+                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.idProposition"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  }
+                },
+                "reference" : "c527e0a9-f80b-4093-aded-8d8bf43e899c",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "widgetId" : {
+                    "type" : "constant",
+                    "value" : "pbButton"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "isDisplayed" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "constant",
+                    "value" : "Submit"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readonly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "/bonita"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Start process"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "class" : {
+                    "type" : "constant",
+                    "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "7808b0de-5788-46c4-bd30-b6f581ddd6bf",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "cd7d9d39-09a5-4e3b-a735-33bf7b68c2e5",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "e602f2c3-9469-4a50-a030-1879fd6f7d17",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"idProposition\" : \"\",\r",
+        "  \"idSmart\" : \"\",\r",
+        "  \"newPropositionInput\" : {\r",
+        "    \"creationDate\" : null,\r",
+        "    \"creatorId\" : \"\",\r",
+        "    \"creatorName\" : \"\",\r",
+        "    \"agencyCode\" : \"\",\r",
+        "    \"agencyName\" : \"\",\r",
+        "    \"siteCode\" : \"\",\r",
+        "    \"siteName\" : \"\",\r",
+        "    \"sectorCode\" : \"\",\r",
+        "    \"sectorName\" : \"\",\r",
+        "    \"territoryCode\" : \"\",\r",
+        "    \"territoryName\" : \"\",\r",
+        "    \"budgetYear\" : 0,\r",
+        "    \"initialBudgetYear\" : 0,\r",
+        "    \"materialNumber\" : \"\",\r",
+        "    \"typeMaterial\" : \"\",\r",
+        "    \"generalStatusMaterial\" : \"\",\r",
+        "    \"budgetRespected\" : false,\r",
+        "    \"typeProposition\" : \"\",\r",
+        "    \"commentSmart\" : \"\",\r",
+        "    \"typeAcquisition\" : \"\",\r",
+        "    \"propositionAmount\" : 0,\r",
+        "    \"monthlyAmount\" : 0,\r",
+        "    \"monthlyPropositionAmount\" : 0,\r",
+        "    \"estimatedDeliveryDate\" : null,\r",
+        "    \"sponsor\" : \"\",\r",
+        "    \"propositionStatus\" : \"\",\r",
+        "    \"approversActions\" : [ ],\r",
+        "    \"caseId\" : \"\",\r",
+        "    \"propositionAttachments\" : [ ],\r",
+        "    \"comments\" : [ ],\r",
+        "    \"existing\" : \"\",\r",
+        "    \"subTypeMaterial\" : \"\",\r",
+        "    \"pitchSmart\" : \"\",\r",
+        "    \"completeInfoMessage\" : \"\",\r",
+        "    \"timeLines\" : [ ],\r",
+        "    \"noApprover\" : false,\r",
+        "    \"smarteComplement\" : \"\",\r",
+        "    \"nbMonth\" : 0,\r",
+        "    \"transferAgencyCode\" : \"\",\r",
+        "    \"transferAgencyName\" : \"\",\r",
+        "    \"transferSiteCode\" : \"\",\r",
+        "    \"transferSiteName\" : \"\",\r",
+        "    \"transferSectorCode\" : \"\",\r",
+        "    \"transferSectorName\" : \"\",\r",
+        "    \"transferTerritoryCode\" : \"\",\r",
+        "    \"transferTerritoryName\" : \"\",\r",
+        "    \"typeWorkflow\" : \"\",\r",
+        "    \"typeWorkflowTargetAgency\" : \"\",\r",
+        "    \"propositionFilter\" : \"\",\r",
+        "    \"niveauApprob\" : \"\",\r",
+        "    \"commandes\" : [ ]\r",
+        "  }\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "\t'idProposition': $data.formInput.idProposition,",
+        "\t'idSmart': $data.formInput.idSmart,",
+        "\t'newPropositionInput': $data.formInput.newPropositionInput",
+        "};"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "f81bbaaa-76a6-40d2-b013-34a4565ef3e7",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

@@ -1,0 +1,102 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Required",
+      "name" : "required",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Read-only",
+      "name" : "readOnly",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label hidden",
+      "name" : "labelHidden",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Label",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Label position",
+      "name" : "labelPosition",
+      "type" : "choice",
+      "defaultValue" : "top",
+      "choiceValues" : [
+        "left",
+        "top"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Label width",
+      "name" : "labelWidth",
+      "type" : "integer",
+      "defaultValue" : 4,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Placeholder",
+      "name" : "placeholder",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Value To Save",
+      "name" : "valueToSave",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Have default value",
+      "name" : "haveDefaultVal",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Is Invalid number",
+      "name" : "invalidNum",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customFrenchNumberFormatText",
+  "name" : "FrenchNumberFormatText",
+  "lastUpdate" : 1671627880310,
+  "template" : "@customFrenchNumberFormatText.tpl.html",
+  "controller" : "@customFrenchNumberFormatText.ctrl.js",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "b7c381a3-8391-4b69-b188-f92975aa8027",
+      "name" : "stylesheet.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

@@ -1,0 +1,177 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Display Value formatted with currency",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Required",
+      "name" : "required",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Read-only",
+      "name" : "readOnly",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label hidden",
+      "name" : "labelHidden",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Label",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Label position",
+      "name" : "labelPosition",
+      "type" : "choice",
+      "defaultValue" : "top",
+      "choiceValues" : [
+        "left",
+        "top"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Label width",
+      "name" : "labelWidth",
+      "type" : "integer",
+      "defaultValue" : 4,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Placeholder",
+      "name" : "placeholder",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Value To Save",
+      "name" : "valueToSave",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Have default value",
+      "name" : "haveDefaultVal",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Error Text",
+      "name" : "errorText",
+      "help" : "Text displayed in case of web service error",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "List of parameters to determine the suggested values",
+      "name" : "suggestionParameters",
+      "help" : "Collection of parameters used as input of the suggestion web service",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Suggested Values API Url",
+      "name" : "apiUrl",
+      "help" : "URL called to load suggested values",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Returned key",
+      "name" : "returnedKey",
+      "help" : "Key stored when selecting a value",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Displayed key",
+      "name" : "displayedKey",
+      "help" : "Object property corresponding to the label shown in the select box",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show suggestions",
+      "name" : "showSuggestedValues",
+      "help" : "Display suggested values",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show info message when empty response from web service",
+      "name" : "showMsgWhenEmpty",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Message displayed for an empty response",
+      "name" : "emptyMsgText",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value added in select box for manual selection",
+      "name" : "manualSelectionValue",
+      "help" : "Object that must contain the key and value properties",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Default initial value",
+      "name" : "defaultValue",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Message displayed when setting default value",
+      "name" : "defaultValueMsgText",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Is Invalid number",
+      "name" : "invalidNum",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customAmountWithSuggestedValues",
+  "name" : "AmountWithSuggestedValues",
+  "lastUpdate" : 1671627880388,
+  "template" : "@customAmountWithSuggestedValues.tpl.html",
+  "controller" : "@customAmountWithSuggestedValues.ctrl.js",
+  "custom" : true,
+  "assets" : [
+    {
+      "id" : "62f09b4c-85f2-4600-a6cc-18e1833c6c01",
+      "name" : "stylesheet.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

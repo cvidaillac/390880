@@ -1,0 +1,133 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "9bbc86e5-7239-4d16-97fe-74ca415438f0",
+  "name" : "pop3pSearchPropositionsPageLAC",
+  "lastUpdate" : 1671627897797,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "30614047-1c65-4855-a60c-669b4ea2327a",
+        "hasValidationError" : false,
+        "id" : "FragmentSearchProposition",
+        "binding" : {
+          "withExportButton" : "true",
+          "withDuplicateButton" : "false",
+          "getSession" : "getSession",
+          "userRole" : "userRole",
+          "authorizedGroups" : "authorizedGroups"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "97c43661-5974-444c-9348-ab6ebe9b6a2c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "e1ca25ca-2c08-4ad2-bc8d-5015900c4355",
+      "name" : "export-button.css",
+      "type" : "css",
+      "order" : 5,
+      "external" : false
+    },
+    {
+      "id" : "5acb7804-c9ad-44d7-a65a-6c4ba7bc9b92",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "8c010d40-40c3-44d4-a2f5-877e39dc1985",
+      "name" : "modalPropositionPrint.css",
+      "type" : "css",
+      "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "744f435c-9395-429d-8cbd-4777415eddb9",
+      "name" : "Logo.png",
+      "type" : "img",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "31e95f76-be75-4868-8199-48fe6e3d7a9c",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "a0d4e40a-6290-4613-a4b1-b7ee048c33df",
+      "name" : "jquery-confirm[1].css",
+      "type" : "css",
+      "order" : 4,
+      "external" : false
+    },
+    {
+      "id" : "0b065d61-9395-4616-8dda-1bff39335211",
+      "name" : "excel-icon.png",
+      "type" : "img",
+      "order" : 7,
+      "external" : false
+    },
+    {
+      "id" : "077fa61e-8dd4-4a37-b232-12950953d9c7",
+      "name" : "jquery-confirm[1].js",
+      "type" : "js",
+      "order" : 3,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "authorizedGroups" : {
+      "type" : "json",
+      "value" : [
+        "[\"GROUPE_LAC\"]"
+      ],
+      "exposed" : false
+    },
+    "userRole" : {
+      "type" : "constant",
+      "value" : [
+        "lac"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "9bbc86e5-7239-4d16-97fe-74ca415438f0",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

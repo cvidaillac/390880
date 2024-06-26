@@ -1,0 +1,1375 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "403b7ad7-a3c1-42a0-815c-39a640d30929",
+  "name" : "pop3pDetailMaterialFrag",
+  "lastUpdate" : 1671627901719,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "body"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "67b62902-055d-48d6-98a6-5b664e8721fe",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block_inner"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "fd603b9a-635c-4207-8d32-3fa70e4de6a4",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "Detail des données contrat"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Materiel - {{ selectedMaterial[0].lyreNumber}}"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "6318c9e4-525a-46d4-a66a-2b602758e7e2",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block_inner"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "18ca053f-e4f6-48eb-8563-7ec8ec0e1efe",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "sub_category_title"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Detail des données contrat"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "122f6626-562d-42c6-a969-f8914a7590c4",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Valeur d'achat HT : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].valeurAchat_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Valeur d'achat HT remisé : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].valeurAchatRem_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Loyer mensuel d'acquisition HT : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.montantMens_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Loyer mensuel maintenance HT : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.montantMens_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Loyer mensuel conducteur HT :&nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.montantMensCond_str }}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Total des contrats HT : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].monthlyAmount_str}}</td>\n\n    </tr>\n</table>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "56a16e62-f6c5-41b9-b085-708373d0a00c",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Status du renouvellement : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].statut}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Ref. nouveau mat. : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].refNouvMat}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Date d'action : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].dateLivrNouvMat}} </td>\n</tr>\n<tr>\n        <td class=\"objectLabel\">Valeur reprise en fin de LOCFI : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].valeurFinLOCFI_str}} </td>\n    </tr>\n</table>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "39c49634-5716-426f-bcf6-560049a412c9",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "29d8c9cd-8d1e-49ec-b7a7-ee5181c6d109",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "sub_category_block_inner"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "719df9f9-cbcb-4ef6-9077-c5bf41a7485d",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "sub_category_title"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Identification du matériel"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 4"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "bfcd719f-6ed2-4c4d-9f27-4919bfe6d7a2",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Genre : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].genreLabel}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Sous-genre : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].ssGenreLabel}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Marque : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].marqueID}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Code Modèle : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].modelName}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Carrosserie : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].carrosserie}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">PTAC : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].cg.PTAC}}</td> \n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Poids total de la machine : &nbsp</td>\n        <td class=\"objectvalue\"> {{ selectedMaterial[0].cg.PV }} </td>\n    </tr>\n\n</table>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            }
+                          },
+                          "reference" : "41c78e69-0962-483a-abec-212389437ba6",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        },
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Date de 1ère mise en circulation : &nbsp</td>\n        <td class=\"objectvalue\"> {{ selectedMaterial[0].dtMisc }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Date d'entrée du matériel :&nbsp </td>\n        <td class=\"objectvalue\"> {{ selectedMaterial[0].entryDate }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Libellé du code modèle :&nbsp </td>\n        <td class=\"objectvalue\"> {{ selectedMaterial[0].modelName }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Energie : &nbsp</td>\n        <td class=\"objectvalue\"> {{ selectedMaterial[0].caracteristiques.ValueEnergie }} </td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\">Biocarburant: </td>\n        <td class=\"objectvalue\">{{biofuelDetails}}</td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\">Retrofitable: </td>\n        <td class=\"objectvalue\">{{retrofitDetails}}</td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\">Crit'Air: </td>\n        <td class=\"objectvalue\">{{critairDetails}}</td>\n    </tr>\n</table>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            }
+                          },
+                          "reference" : "e63a18a3-dcb8-4023-9c6e-c9f53bb5c33b",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "52e97243-2e17-4444-a3d5-a91d553dcb00",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "sub_category_block_inner"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "a714cb9e-2b6a-428b-b674-c2cdf74414fb",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "sub_category_title"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Compteur / Horamètre"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 4"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "c8d8d505-2c12-441b-ae7d-e5177e5c86be",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\"> Compteur ou horamètre en cours : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].comptCour}} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Cumul depuis le début de l'année : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].cumulAnnee}} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Engagement moyen (h ou km) : &nbsp</td>\n        <td class=\"objectvalue\">{{ }} </td>\n    </tr>\n</table>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            }
+                          },
+                          "reference" : "fcd1a685-db9e-4e12-a396-8edcb5771357",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        },
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Date du dernier relevé : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].dtDerRelev}} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Compteur ou horamètre année passée : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].comptAnnPass}} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Consommation moyenne : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].consoMoy}} </td>\n\n    </tr>\n</table>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            }
+                          },
+                          "reference" : "41d41d22-5ea4-4060-8b4b-4e26ca1f51a4",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "9a1d57b2-1893-4100-87b2-0ac6d23addc7",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "sub_category_block_inner"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "2e03ee4a-a09f-4546-9d94-a59d39b88941",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "sub_category_title"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Données contrat"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 4"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "7e05430e-b14f-4729-907e-7e9fa6e7e8c6",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable"
+                            }
+                          },
+                          "reference" : "1b5f3d63-26f8-41f4-9e49-36bc040a31da",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "sub_category_sub_title"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "Détail contrat d'acquisition ou location"
+                                  },
+                                  "level" : {
+                                    "type" : "constant",
+                                    "value" : "Level 4"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  }
+                                },
+                                "reference" : "9a407e9c-3318-4b6c-85a5-80155eb4a847",
+                                "hasValidationError" : false,
+                                "id" : "pbTitle"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\"> Statut : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.statut}} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> No de contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.numContrat }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Type Acquisition ou Location : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.typeAcqui }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Tiers financeur : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.nomTiersFinanceur }}  </p>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Tiers distributeur : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.nomTiersFournisseur }}  </p>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Contact et N° de telephone : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.numTel  }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Date d'entrée ou livraison :&nbsp </td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.dtEntree }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Nombre de mois d'utilisation : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.nbMois }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Compteur début : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.compteurDebut }} </td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\"> Engagement : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].engagement}} </td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\"> Date début contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.dtEntree.split(\" \")[0] }} </td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\"> Date fin contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.dtFinContrat.split(\" \")[0] }} </td>\n    </tr>\n</table>"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  },
+                                  "allowHTML" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : ""
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 4
+                                  }
+                                },
+                                "reference" : "6b987c2f-42c5-45ea-a07c-08e39b901e83",
+                                "hasValidationError" : false,
+                                "id" : "pbText"
+                              }
+                            ]
+                          ]
+                        },
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 6,
+                            "lg" : 6
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable"
+                            }
+                          },
+                          "reference" : "2f5935e8-f711-4dcf-ae3e-08cdd48f136f",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "sub_category_sub_title"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "Détail contrat de maintenance"
+                                  },
+                                  "level" : {
+                                    "type" : "constant",
+                                    "value" : "Level 4"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  }
+                                },
+                                "reference" : "ae1ccb5b-e762-4ae8-a56d-34a1e2f5fa42",
+                                "hasValidationError" : false,
+                                "id" : "pbTitle"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Statut :&nbsp </td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.statut}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">No de contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.numContrat }}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Contrat entretien type : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.contratType}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Nom tiers : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.nomTiers }} </ttd>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Contact et N° de telephone :&nbsp </td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.numTel  }}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Date début contrat :&nbsp </td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.dtEntree.split(\" \")[0] }}</td>\n    </tr>\n<tr>\n        <td class=\"objectLabel\">Date théorique de fin de contrat :&nbsp </td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratmaint.dtFinContrat.split(\" \")[0] }}</td>\n    </tr>\n\n    <tr>\n        <td class=\"objectLabel\">Compteur contractuel (ou mensuel si LLDAC en préfac) : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].contratacqui.compteurContractuel }}</td>\n    </tr>\n\n</table>"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  },
+                                  "allowHTML" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : ""
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 4
+                                  }
+                                },
+                                "reference" : "ddfab71e-11d3-48aa-ac1e-a720d04d6e7c",
+                                "hasValidationError" : false,
+                                "id" : "pbText"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "cc57ea59-c9ab-410f-9d2f-1bb39064eab8",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "sub_category_block"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "ee8a0489-06b2-438d-bc53-c3d190a3aaea",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "sub_category_block_inner"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "91a072e7-56b0-40e8-aaa8-39530bd587a1",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "sub_category_title"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "Cumul tous matériels depuis la reprise POP 3P"
+                            },
+                            "level" : {
+                              "type" : "constant",
+                              "value" : "Level 4"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            }
+                          },
+                          "reference" : "3ea59861-39b7-483f-99c2-52e673ed52a8",
+                          "hasValidationError" : false,
+                          "id" : "pbTitle"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "text" : {
+                              "type" : "interpolation",
+                              "value" : "<table>\n    <tr>\n        <td class=\"objectLabel\">Location : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].ctsContrats.LOCATION_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Maintenance : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].ctsContrats.MAINTENANCE_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Conducteur : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].ctsContrats.CONDUCTEUR_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Cumul des couts du contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].cumulCtsContrats_str}}</td>\n    </tr>\n    <tr>\n        <td class=\"objectLabel\">Cumul des couts hors contrat : &nbsp</td>\n        <td class=\"objectvalue\">{{selectedMaterial[0].cumulCtsHorsContrats_str}}</td>\n    </tr>\n</table>"
+                            },
+                            "alignment" : {
+                              "type" : "constant",
+                              "value" : "left"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            }
+                          },
+                          "reference" : "ce5db293-a16b-4066-a6a6-a5fbdfedb89f",
+                          "hasValidationError" : false,
+                          "id" : "pbText"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "e321fe82-ea58-4b4c-ae1f-36f96e737678",
+        "hasValidationError" : false,
+        "id" : "7aa274b7-3318-42b0-98d9-e6b1d22e16a1",
+        "binding" : {
+          "keyEnergie" : "selectedMaterial[0].caracteristiques.ENERGIE",
+          "ValueEnergie" : "selectedMaterial[0].caracteristiques.ValueEnergie",
+          "keyGenre" : "selectedMaterial[0].genreID",
+          "valueGenre" : "selectedMaterial[0].genreLabel",
+          "keySSGenre" : "selectedMaterial[0].ssGenreID",
+          "valueSSGenre" : "selectedMaterial[0].ssGenreLabel"
+        }
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "convertCurrencyToTexte" : {
+      "type" : "expression",
+      "value" : [
+        "var returnText = function test(dataInput) {\r",
+        "\r",
+        "    var string = dataInput;\r",
+        "    var stringFrance = string.replace(\",\",\".\");\r",
+        "    var number = parseFloat(stringFrance);\r",
+        "    var numberRound = number.toFixed(2);\r",
+        "    var currency = numberRound.toString().replace(\".\",\",\");\r",
+        "    var space = currency.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \" \");\r",
+        "    var euro = \" €\";\r",
+        "    var result = space + euro;\r",
+        "    \r",
+        "    return result;\r",
+        "}\r",
+        "\r",
+        "return returnText;"
+      ],
+      "exposed" : false
+    },
+    "convertValues" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedMaterial && $data.selectedMaterial.length > 0) {\r",
+        "    \r",
+        "    $data.selectedMaterial[0].ctsContrats.CONDUCTEUR_str = ($data.selectedMaterial[0].ctsContrats.CONDUCTEUR) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].ctsContrats.CONDUCTEUR) : \"\";\r",
+        "    $data.selectedMaterial[0].contratacqui.montantMens_str = ($data.selectedMaterial[0].contratacqui.montantMens) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].contratacqui.montantMens) : \"\";\r",
+        "    $data.selectedMaterial[0].contratacqui.montantMensCond_str = ($data.selectedMaterial[0].contratacqui.montantMensCond) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].contratacqui.montantMensCond) : \"\";\r",
+        "    $data.selectedMaterial[0].contratmaint.montantMens_str = ($data.selectedMaterial[0].contratmaint.montantMens) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].contratmaint.montantMens) : \"\";\r",
+        "    $data.selectedMaterial[0].ctsContrats.LOCATION_str = ($data.selectedMaterial[0].ctsContrats.LOCATION) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].ctsContrats.LOCATION) : \"\";\r",
+        "    $data.selectedMaterial[0].ctsContrats.MAINTENANCE_str = ($data.selectedMaterial[0].ctsContrats.MAINTENANCE) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].ctsContrats.MAINTENANCE) : \"\";\r",
+        "    $data.selectedMaterial[0].cumulCtsContrats_str = ($data.selectedMaterial[0].cumulCtsContrats) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].cumulCtsContrats) : \"\";\r",
+        "    $data.selectedMaterial[0].cumulCtsHorsContrats_str = ($data.selectedMaterial[0].cumulCtsHorsContrats) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].cumulCtsHorsContrats) : \"\";\r",
+        "    $data.selectedMaterial[0].valeurAchat_str = ($data.selectedMaterial[0].valeurAchat) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].valeurAchat) : \"\";\r",
+        "    $data.selectedMaterial[0].valeurAchatRem_str = ($data.selectedMaterial[0].valeurAchatRem) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].valeurAchatRem) : \"\";\r",
+        "    $data.selectedMaterial[0].valeurFinLOCFI_str = ($data.selectedMaterial[0].valeurFinLOCFI) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].valeurFinLOCFI) : \"\";\r",
+        "    $data.selectedMaterial[0].sommeCouts_str = ($data.selectedMaterial[0].sommeCouts) ? $data.convertCurrencyToTexte($data.selectedMaterial[0].sommeCouts) : \"\";\r",
+        "\r",
+        "    // acquisition + maintenance + conducteur\r",
+        "    var monthlyAmount = 0.0;\r",
+        "\r",
+        "    // maintenance\r",
+        "    if ($data.selectedMaterial[0].contratmaint && $data.selectedMaterial[0].contratmaint.montantMens)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratmaint.montantMens.replace(',', '.'));\r",
+        "\r",
+        "    // conducteur\r",
+        "    if ($data.selectedMaterial[0].contratacqui && $data.selectedMaterial[0].contratacqui.montantMensCond)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratacqui.montantMensCond.replace(',', '.'));\r",
+        "\r",
+        "    var monthlyPropositionAmount = monthlyAmount;\r",
+        "\r",
+        "    //acquisition\r",
+        "    if ($data.selectedMaterial[0].contratacqui && $data.selectedMaterial[0].contratacqui.montantMens)\r",
+        "        monthlyAmount += parseFloat($data.selectedMaterial[0].contratacqui.montantMens.replace(',', '.'));\r",
+        "\r",
+        "    $data.selectedMaterial[0].monthlyPropositionAmount_str = $data.convertCurrencyToTexte(\"\" + monthlyPropositionAmount);\r",
+        "    $data.selectedMaterial[0].monthlyAmount_str = $data.convertCurrencyToTexte(\"\" + monthlyAmount);\r",
+        "\r",
+        "\r",
+        "}\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "selectedMaterial" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "askToOpenData" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "askToOpen" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.askToOpenData.length === 1){\r",
+        "//    close()\r",
+        "\r",
+        "    window.top.close();\r",
+        "    $data.askToOpenData = []\r",
+        "}\r",
+        "\r",
+        "\r",
+        "\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "addToAskClose" : {
+      "type" : "json",
+      "value" : [
+        "{ \"close\" : \"true\" }"
+      ],
+      "exposed" : false
+    },
+    "biofuelDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var biofuel_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.b100 !== 'undefined') {",
+        "            var is_b100 = material.b100;",
+        "            biofuel_details = 'B100 : ' + ((is_b100 === true) ? 'Oui' : 'Non');",
+        "        }",
+        "        if (typeof material.xtl !== 'undefined') {",
+        "            var is_xtl = material.xtl;",
+        "            biofuel_details += ' - XTL : ' + ((is_b100 === true) ? 'Oui' : 'Non');",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception biofuelDetails: ' + e);",
+        "}",
+        "return biofuel_details;"
+      ],
+      "exposed" : false
+    },
+    "retrofitDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var retrofit_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.retrofitB100 !== 'undefined') {",
+        "            var is_retrofitable = material.retrofitB100;",
+        "            retrofit_details = (is_retrofitable === true) ? 'Oui' : 'Non';",
+        "        }",
+        "        if (typeof material.montantRetrofit !== 'undefined') {",
+        "            var montant_retrofit = material.montantRetrofit;",
+        "            if (montant_retrofit) {",
+        "                retrofit_details += ', montant retrofit: ' + montant_retrofit;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception retrofitDetails: ' + e);",
+        "}",
+        "return retrofit_details;"
+      ],
+      "exposed" : false
+    },
+    "critairDetails" : {
+      "type" : "expression",
+      "value" : [
+        "var critair_details='';",
+        "",
+        "try {",
+        "    if (($data.selectedMaterial) && ($data.selectedMaterial.length > 0)) {",
+        "        var material = $data.selectedMaterial[0];",
+        "        if (typeof material.critair !== 'undefined') {",
+        "            if (material.critair) {",
+        "                critair_details = material.critair;",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error('Exception critairDetails: ' + e);",
+        "}",
+        "return critair_details;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

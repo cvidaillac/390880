@@ -1,0 +1,604 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "14a9dd4c-8142-4e62-a030-90528f64bbe7",
+  "name" : "fragInitPropositionsInputDADR",
+  "lastUpdate" : 1671627903980,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "existingProp"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "117ce98e-4b57-4252-abd0-d5c87f9a17fb",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "703c4950-9ae4-4d82-bc3a-bfe0a64952e9",
+              "hasValidationError" : false,
+              "id" : "selectAgencyByEntity",
+              "binding" : {
+                "selectedTerritory" : "selectedTerritory",
+                "selectedAgency" : "selectedAgency",
+                "selectedAgencyName" : "selectedAgencyName",
+                "selectedTerritoryName" : "selectedTerritoryName"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "selectedAgency"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<i><b><font color=\"orange\">Sélectionnez l'entité et l'agence concernées avant de saisir les demandes de réparations</font></b></i>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "37aab9b3-5fb9-41e7-86ed-60857dbc1c25",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!selectedAgency"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "6e47418d-6c2e-4510-be0a-3e769bd61f99",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "!selectedAgency"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "1f2f0431-f34c-4593-8ff1-7fd504bad90c",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 8,
+                      "lg" : 8
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Type de  matériel concerné"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 6
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation",
+                        "value" : "actif ou inactif ?"
+                      },
+                      "availableValues" : {
+                        "type" : "expression",
+                        "value" : "listMaterialsType"
+                      },
+                      "displayedKey" : {
+                        "type" : "constant",
+                        "value" : "label"
+                      },
+                      "returnedKey" : {
+                        "type" : "constant",
+                        "value" : "value"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "materialType"
+                      }
+                    },
+                    "reference" : "4ecaefc7-e294-4836-9e09-a2ea4c972adf",
+                    "hasValidationError" : false,
+                    "id" : "pbSelect"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : "formInput.propositionsInput"
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "readonly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "propositionPanel"
+                },
+                "widgetId" : {
+                  "type" : "constant"
+                },
+                "isDisplayed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "constant"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "class" : {
+                  "type" : "constant",
+                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "! isSelectedMaterialType"
+                }
+              },
+              "reference" : "d5fd1612-1aee-43dc-8e6b-89c79f4213f9",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "573e4ecc-ffcc-4ba9-a8d5-51c9d9cd9b9b",
+                    "hasValidationError" : false,
+                    "id" : "33b4dce7-774e-4f77-8f30-82acd45d7a72",
+                    "binding" : {
+                      "proposition" : "$item",
+                      "listMaterials" : "listMaterials",
+                      "index" : "$index",
+                      "selectedAgency" : "selectedAgency"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listeMotifsExisting" : {
+      "type" : "expression",
+      "value" : [
+        "return [\r",
+        "    {\"val\":\"Rachat LocFi\",\"disp\":\"Rachat LocFi\"}, \r",
+        "    {\"val\":\"A renouveler\",\"disp\":\"A renouveler\"},\r",
+        "    {\"val\":\"A vendre\",\"disp\":\"A vendre\"},\r",
+        "    {\"val\":\"A restituer\",\"disp\":\"A restituer\"},\r",
+        "    {\"val\":\"A rebuter\",\"disp\":\"A rebuter\"},\r",
+        "    {\"val\":\"Transfert\",\"disp\":\"Transfert\"},\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "BudgetHorsBuget" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "{\r",
+        "    \"label\": \"Budget\",\r",
+        "    \"value\": true\r",
+        "},\r",
+        "{\r",
+        "    \"label\": \"Hors Buget\",\r",
+        "    \"value\": false\r",
+        "}]"
+      ],
+      "exposed" : false
+    },
+    "isSelectedMaterialType" : {
+      "type" : "expression",
+      "value" : [
+        "var is_selected=false;",
+        "",
+        "try {",
+        "    if ((typeof $data.materialType !== \"undefined\")",
+        "        && ($data.materialType != null)",
+        "        && ($data.materialType != \"\")) {",
+        "        is_selected = true;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isSelectedMaterialType : \" + e);",
+        "}",
+        "return is_selected;"
+      ],
+      "exposed" : false
+    },
+    "urlGetMaterials" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedAgency){\r",
+        "    if ((typeof $data.materialType !== \"undefined\") && ($data.materialType !== null) && ($data.materialType !== \"\")) {\r",
+        "        var param_matInactifs = \"\";\r",
+        "        if ($data.materialType != \"active\") {\r",
+        "            param_matInactifs =\"&f=matInactifs=\" + $data.materialType;\r",
+        "        }\r",
+        "        return \"../API/extension/pop3pclientSoap?method=getAgencyMaterials&f=agencyCode=\" + $data.selectedAgency + param_matInactifs + \"&f=appCode=SAV\";\r",
+        "    }\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listTerritories" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/lyreClient?method=getTerritories"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedAgencyName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isExisting" : {
+      "type" : "json",
+      "value" : [
+        " [\r",
+        "     {\"val\":\"existingMaterial\",\"disp\":\"existant\"},\r",
+        "     {\"val\":\"newMaterial\",\"disp\":\"nouveau\"}\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "materialType" : {
+      "type" : "constant",
+      "value" : [
+        "active"
+      ],
+      "exposed" : false
+    },
+    "existingProp" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setAgencyCode" : {
+      "type" : "expression",
+      "value" : [
+        "for (var i = 0; i < $data.formInput.propositionsInput.length; i++) {",
+        "  $data.formInput.propositionsInput[i].agencyCode = $data.selectedAgency",
+        "  ",
+        "  if ($data.selectedAgencyName){",
+        "        $data.formInput.propositionsInput[i].agencyName = $data.selectedAgencyName.replace(/\\+/g, \" \");",
+        "  }",
+        "  ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "newProposition" : {
+      "type" : "expression",
+      "value" : [
+        "var currentdate = new Date();\r",
+        "\r",
+        "\r",
+        "\r",
+        "if ($data.selectedAgency){\r",
+        "    return {\r",
+        "    \"persistenceId\":\"\",\r",
+        "    \"agencyCode\":$data.selectedAgency,\r",
+        "\t\"agencyName\":\"\",\r",
+        "    \"siteCode\":\"\",\r",
+        "\t\"territoryCode\": $data.selectedTerritory,\r",
+        "\t\"territoryName\": \"\",\r",
+        "\t\"budgetYear\": parseInt(currentdate.getFullYear()),\r",
+        "\t\"materialNumber\": \"\",\r",
+        "\t\"typeMaterial\": \"\",\r",
+        "\t\"generalStatusMaterial\": \"Roulant\",\r",
+        "\t\"budgetRespected\": true,\r",
+        "    \"typeProposition\": \"\",\r",
+        "\t\"commentSmart\": \"\",\r",
+        "\t\"typeAcquisition\": \"\",\r",
+        "\t\"propositionAmount\": null,\r",
+        "\t\"monthlyPropositionAmount\": null,\r",
+        "\t\"estimatedDeliveryDate\": null,\r",
+        "\t\"sponsor\": \"\",\r",
+        "\t\"userCommentOptional\":\"\",\r",
+        "\t\"attachmentsContract\":[]\r",
+        "    };\r",
+        "}\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "listAgenciesByTerritory" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetAgencies}}"
+      ],
+      "exposed" : false
+    },
+    "listMaterialsType" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {\"label\": \"Actif\", \"value\": \"active\"},",
+        "    {\"label\": \"Inactif\", \"value\": \"inactive\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listeMotifsNew" : {
+      "type" : "expression",
+      "value" : [
+        "return [\r",
+        "    {\"val\":\"Nouveau matériel\",\"disp\":\"Nouveau matériel\"},\r",
+        "    {\"val\":\"Nouvel équipement\",\"disp\":\"Nouvel équipement\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setTerritoryName" : {
+      "type" : "expression",
+      "value" : [
+        "for (var i = 0; i < $data.formInput.propositionsInput.length; i++) {",
+        "  $data.formInput.propositionsInput[i].territoryCode = $data.selectedTerritory",
+        "  ",
+        "  if ($data.selectedTerritoryName){",
+        "    $data.formInput.propositionsInput[i].territoryName = $data.selectedTerritoryName.replace(/\\+/g, \" \");",
+        "  }",
+        "      ",
+        " }"
+      ],
+      "exposed" : false
+    },
+    "listMaterials" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetMaterials}}"
+      ],
+      "exposed" : false
+    },
+    "getBudgetYears" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 11; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result"
+      ],
+      "exposed" : false
+    },
+    "urlGetAgencies" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedTerritory){\r",
+        "    return \"../API/extension/lyreClient?method=getTerritoryAgencies&territoryId=\"+$data.selectedTerritory;\r",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

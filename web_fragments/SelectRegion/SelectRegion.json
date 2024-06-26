@@ -1,0 +1,200 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "SelectRegion",
+  "name" : "SelectRegion",
+  "lastUpdate" : 1671627905917,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Région concernée"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "Selectionner une région"
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listRegions"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "regionDisplay"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "region"
+          },
+          "selectedObject" : {
+            "type" : "variable",
+            "value" : "selectedRegion"
+          },
+          "triggerClearValue" : {
+            "type" : "variable",
+            "value" : "triggerClearRegion"
+          }
+        },
+        "reference" : "ee51fbc5-b772-4d9d-83b0-5c59e5a2cd17",
+        "hasValidationError" : false,
+        "id" : "customAutocompleteWithoutAutoSuggestion"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "apiUrl" : {
+            "type" : "interpolation",
+            "value" : "{{ urlGetRegions }}"
+          },
+          "successResponse" : {
+            "type" : "variable",
+            "value" : "listRegionsResult"
+          },
+          "errorResponse" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Aucune région trouvée !"
+          },
+          "errorText" : {
+            "type" : "interpolation",
+            "value" : "Erreur : Récupération des régions impossible, échec de la connexion à Lyre"
+          },
+          "triggerQuery" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "9c1f7fec-f369-41cc-acf2-46a67ffcfde6",
+        "hasValidationError" : false,
+        "id" : "customShowEligibleMaterialLoader"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "selectedRegion" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlGetRegions" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/getRegions"
+      ],
+      "exposed" : false
+    },
+    "listRegionsResult" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "region" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "listRegions" : {
+      "type" : "expression",
+      "value" : [
+        "var list_regions;\r",
+        "\r",
+        "try {\r",
+        "    if (($data.listRegionsResult) && (typeof $data.listRegionsResult.regions !== \"undefined\")) {\r",
+        "        if (($data.listRegions !== undefined)\r",
+        "            && Array.isArray($data.listRegions)\r",
+        "            && ($data.listRegions.length === $data.listRegionsResult.regions.length)) {\r",
+        "            list_regions = $data.listRegions;\r",
+        "            \r",
+        "        } else {\r",
+        "            list_regions = [];\r",
+        "            for (var i=0; i<$data.listRegionsResult.regions.length; i++) {\r",
+        "                var one_row = $data.listRegionsResult.regions[i];\r",
+        "                var one_region = {\r",
+        "                    \"regionName\" : one_row.regionName,\r",
+        "                    \"regionCode\" : one_row.regionId,\r",
+        "                    \"regionDisplay\" : one_row.regionName + \" - \" + one_row.regionId\r",
+        "                }\r",
+        "                list_regions.push(one_region);\r",
+        "            }\r",
+        "        }\r",
+        "    }\r",
+        "} catch(e) {\r",
+        "    console.error(\"Exception listRegions : \" + e);\r",
+        "}\r",
+        "\r",
+        "return list_regions;"
+      ],
+      "exposed" : false
+    },
+    "triggerClearRegion" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

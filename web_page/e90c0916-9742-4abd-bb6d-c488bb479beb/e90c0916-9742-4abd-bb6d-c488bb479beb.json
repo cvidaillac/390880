@@ -1,0 +1,140 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "e90c0916-9742-4abd-bb6d-c488bb479beb",
+  "name" : "pop3pSearchPropositionsPage",
+  "lastUpdate" : 1671627910063,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "6acd25b4-fa92-4878-80d6-1015d9568fb1",
+        "hasValidationError" : false,
+        "id" : "FragmentSearchProposition",
+        "binding" : {
+          "withExportButton" : "true",
+          "withDuplicateButton" : "true",
+          "getSession" : "getSession",
+          "userRole" : "userRole",
+          "authorizedGroups" : "authorizedGroups"
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "97c43661-5974-444c-9348-ab6ebe9b6a2c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "5acb7804-c9ad-44d7-a65a-6c4ba7bc9b92",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "9342469a-5c23-4421-bdf9-ca6620429454",
+      "name" : "excel-icon.png",
+      "type" : "img",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "eff8c094-ed12-412b-803b-049139482e2d",
+      "name" : "modalPropositionPrint.css",
+      "type" : "css",
+      "order" : 10,
+      "external" : false
+    },
+    {
+      "id" : "31e95f76-be75-4868-8199-48fe6e3d7a9c",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "9239d32e-532b-4201-a95f-8f303178a7f8",
+      "name" : "jquery-confirm.js",
+      "type" : "js",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "6f034a18-c456-4b70-bc44-e56b8b933fcf",
+      "name" : "jquery-confirm.css",
+      "type" : "css",
+      "order" : 4,
+      "external" : false
+    },
+    {
+      "id" : "633d131f-58ff-44d6-b507-5f3921b88e55",
+      "name" : "Logo.png",
+      "type" : "img",
+      "order" : 11,
+      "external" : false
+    },
+    {
+      "id" : "f195252e-cc50-499b-bfae-c0f8d30a4212",
+      "name" : "export-button.css",
+      "type" : "css",
+      "order" : 9,
+      "external" : false
+    },
+    {
+      "id" : "98cbdff3-a433-43e5-a910-2f8333d4c7ed",
+      "name" : "glyphicon-spinner.css",
+      "type" : "css",
+      "order" : 5,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "getSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "userRole" : {
+      "type" : "constant",
+      "value" : [
+        "smarte"
+      ],
+      "exposed" : false
+    },
+    "authorizedGroups" : {
+      "type" : "json",
+      "value" : [
+        "[\"APP_BPM_SGDB_FRANCE_POP3P_USERS\"]"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "e90c0916-9742-4abd-bb6d-c488bb479beb",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

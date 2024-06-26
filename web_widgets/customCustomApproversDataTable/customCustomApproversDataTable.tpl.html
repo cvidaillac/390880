@@ -1,0 +1,63 @@
+<div class="table-responsive">
+    <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table table-striped" ng-class="{'table-hover': ctrl.isSelectable()}">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="string"></th>
+                <th ng-repeat="header in properties.headers">
+                    <div ng-if="ctrl.isColumnSortable($index)" bo-sorter="{{properties.columnsKey[$index]}}">
+                            {{ header | uiTranslate }}
+                    </div>
+                    <div ng-if="!ctrl.isColumnSortable($index)">
+                        {{ header | uiTranslate }}
+                    </div>
+                </th>
+ 
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td><input type="checkbox" ng-model="string"></td>
+            <td ng-repeat="column in properties.columnsKey track by $index">
+                {{ $eval(column, row) | uiTranslate }}
+            </td>
+            <td><button class="btn btn-success" ng-click="approve(row)"><span class="glyphicon glyphicon-ok"></span></button> </td>
+            <td><button class="btn btn-danger" ng-click="reject(row)"><span class="glyphicon glyphicon-remove"></span></button> </td>
+            <td><button class="btn btn-warning" ng-click="askCompletion(row)"><span class="glyphicon glyphicon-question-sign"></span></button> </td>
+        </tr>
+        </tbody>
+        <tbody ng-if="!ctrl.hasMultiColumns()">
+        <tr ng-repeat="row in ctrl.results" ng-click="ctrl.selectRowHandler(row)"
+            ng-class="{'info': row === properties.selectedRow}">
+            <td> {{ row | uiTranslate }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success" ng-click="approve(row)"><span class="glyphicon glyphicon-ok"></span> Valider ces propositions</button>  
+    <button class="btn btn-danger" ng-click="approve(row)"><span class="glyphicon glyphicon-remove"></span> Refuser ces propositions</button>
+    <div class="hidden-xs"
+         ng-repeat="options in [{'maxSize': 5, 'rotate': false}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+    <div class="visible-xs text-center"
+         ng-repeat="options in [{'maxSize': 3, 'rotate': true}]"
+         ng-include="'/dataTable/pagination.html'" >
+    </div>
+
+    <script type="text/ng-template" id="/dataTable/pagination.html">
+        <pagination ng-if="ctrl.pagination.total > properties.pageSize"
+                    total-items="ctrl.pagination.total"
+                    items-per-page="properties.pageSize"
+                    direction-links="true"
+                    boundary-links="true"
+                    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    rotate="{{options.rotate}}"
+                    max-size="{{options.maxSize}}"
+                    ng-model="ctrl.pagination.currentPage"
+                    ng-change="ctrl.paginationHandler()">
+        </pagination>
+    </script>
+</div>

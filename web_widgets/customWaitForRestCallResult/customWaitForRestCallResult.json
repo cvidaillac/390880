@@ -1,0 +1,57 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Retry interval in milliseconds",
+      "name" : "retryInterval",
+      "type" : "integer",
+      "defaultValue" : 50,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Maximum number of REST calls",
+      "name" : "maxNumberOfRetries",
+      "type" : "integer",
+      "defaultValue" : 100,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Variable checked to stop REST calls",
+      "name" : "variableCheckedAtInterval",
+      "help" : "REST calls when the variable no longer returns a null value",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Retry count",
+      "name" : "retryCount",
+      "help" : "Returns the current number of retries",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "URL called",
+      "name" : "urlCalled",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Rest call result",
+      "name" : "restCallResult",
+      "help" : "The result of the REST call is stored in this variable",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "id" : "customWaitForRestCallResult",
+  "name" : "waitForRestCallResult",
+  "lastUpdate" : 1671627903599,
+  "template" : "@customWaitForRestCallResult.tpl.html",
+  "controller" : "@customWaitForRestCallResult.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

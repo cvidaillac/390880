@@ -1,0 +1,834 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "932c520e-60ba-4511-b264-c86164bec5c8",
+  "name" : "fragInnerDatesPlanningBudgetaire",
+  "lastUpdate" : 1671627915295,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!(selectedAgency && selectedBudgetYear) || datesPlanning"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "iconSize" : {
+            "type" : "constant",
+            "value" : "2"
+          }
+        },
+        "reference" : "a8104a3f-51a1-4844-8546-6ade18a7b0d7",
+        "hasValidationError" : false,
+        "id" : "customLoadingSpinner"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!datesPlanning"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "5026d9fe-2d2f-4b64-8bcb-b86d92f672dd",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Enregistrer ces dates"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "POST"
+                },
+                "url" : {
+                  "type" : "interpolation",
+                  "value" : "{{urlAPIUpdatePlannings}}"
+                },
+                "dataToSend" : {
+                  "type" : "expression",
+                  "value" : "returnedDates"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : "successfulResponse"
+                },
+                "dataFromError" : {
+                  "type" : "variable"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "201289e3-eb15-4a3d-91fc-4d4dc0bc98f0",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ datesPlanning }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "7da8f156-a6ac-4dde-8dfc-f6fd149636fe",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "1f103d89-00f5-491b-9128-377e7314a11f",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [ ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Dates de présentations"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "76cf66d8-74f6-4b54-85c5-7144b5cda08c",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 4,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Enveloppes budgétaires"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "f2d04a20-c15b-4bfb-848e-f5f497374b82",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : "formInput"
+                }
+              },
+              "reference" : "1cf7ee7b-e0e3-4ed7-8f79-0bcf9fbe0c64",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "9f7a12ac-6dbe-46e8-bbaa-2f8142622e34",
+                    "hasValidationError" : false,
+                    "id" : "66cb91d4-aed9-4b6e-9d2e-37916162a50a",
+                    "binding" : {
+                      "noeud" : "$item"
+                    }
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "47fb38fa-42a0-4bbf-9453-c3d6e63ce98c",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "786c246b-a679-4507-9cc6-d736ca51c275",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 4,
+                            "lg" : 4
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable"
+                            }
+                          },
+                          "reference" : "9e4830ef-8a53-44b7-ab90-0ef01672a498",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [ ]
+                          ]
+                        },
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 8,
+                            "lg" : 8
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable"
+                            }
+                          },
+                          "reference" : "de6d3bc9-ccd4-4a34-bf3b-972c205b2aed",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 6,
+                                  "md" : 6,
+                                  "lg" : 6
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "readOnly" : {
+                                    "type" : "expression",
+                                    "value" : ""
+                                  },
+                                  "required" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "RF1"
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 6
+                                  },
+                                  "value" : {
+                                    "type" : "variable",
+                                    "value" : "rfDates.rf1"
+                                  },
+                                  "dateFormat" : {
+                                    "type" : "constant",
+                                    "value" : "dd/MM/yyyy"
+                                  },
+                                  "placeholder" : {
+                                    "type" : "interpolation",
+                                    "value" : "Enter a date (mm/dd/yyyy)"
+                                  },
+                                  "showToday" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "todayLabel" : {
+                                    "type" : "interpolation",
+                                    "value" : "Today"
+                                  }
+                                },
+                                "reference" : "6c5e55d0-b567-4c88-aa37-39b1ec471a19",
+                                "hasValidationError" : false,
+                                "id" : "pbDatePicker"
+                              },
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 6,
+                                  "md" : 6,
+                                  "lg" : 6
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "readOnly" : {
+                                    "type" : "expression",
+                                    "value" : ""
+                                  },
+                                  "required" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "RF2"
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 6
+                                  },
+                                  "value" : {
+                                    "type" : "variable",
+                                    "value" : "rfDates.rf2"
+                                  },
+                                  "dateFormat" : {
+                                    "type" : "constant",
+                                    "value" : "dd/MM/yyyy"
+                                  },
+                                  "placeholder" : {
+                                    "type" : "interpolation",
+                                    "value" : "Enter a date (mm/dd/yyyy)"
+                                  },
+                                  "showToday" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "todayLabel" : {
+                                    "type" : "interpolation",
+                                    "value" : "Today"
+                                  }
+                                },
+                                "reference" : "ede5b53c-895f-4374-996f-9a423d13b684",
+                                "hasValidationError" : false,
+                                "id" : "pbDatePicker"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 6,
+                                  "md" : 6,
+                                  "lg" : 6
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "readOnly" : {
+                                    "type" : "expression",
+                                    "value" : ""
+                                  },
+                                  "required" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "RF3"
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 6
+                                  },
+                                  "value" : {
+                                    "type" : "variable",
+                                    "value" : "rfDates.rf3"
+                                  },
+                                  "dateFormat" : {
+                                    "type" : "constant",
+                                    "value" : "dd/MM/yyyy"
+                                  },
+                                  "placeholder" : {
+                                    "type" : "interpolation",
+                                    "value" : "Enter a date (mm/dd/yyyy)"
+                                  },
+                                  "showToday" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "todayLabel" : {
+                                    "type" : "interpolation",
+                                    "value" : "Today"
+                                  }
+                                },
+                                "reference" : "4ee111e6-6140-439b-aebc-04f4b8775f73",
+                                "hasValidationError" : false,
+                                "id" : "pbDatePicker"
+                              },
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 6,
+                                  "md" : 6,
+                                  "lg" : 6
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "readOnly" : {
+                                    "type" : "expression",
+                                    "value" : ""
+                                  },
+                                  "required" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "RF4"
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 6
+                                  },
+                                  "value" : {
+                                    "type" : "variable",
+                                    "value" : "rfDates.rf4"
+                                  },
+                                  "dateFormat" : {
+                                    "type" : "constant",
+                                    "value" : "dd/MM/yyyy"
+                                  },
+                                  "placeholder" : {
+                                    "type" : "interpolation",
+                                    "value" : "Enter a date (mm/dd/yyyy)"
+                                  },
+                                  "showToday" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "todayLabel" : {
+                                    "type" : "interpolation",
+                                    "value" : "Today"
+                                  }
+                                },
+                                "reference" : "00483a37-c3ac-44a9-a7b7-d9594eed4c2b",
+                                "hasValidationError" : false,
+                                "id" : "pbDatePicker"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "rfDates" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "urlAPIUpdatePlannings" : {
+      "type" : "expression",
+      "value" : [
+        "return \"../API/extension/updateDates\";"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "getOnce" : {
+      "type" : "constant",
+      "value" : [
+        "false"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selectedBudgetYear" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "setValuesFormInput" : {
+      "type" : "expression",
+      "value" : [
+        "var payload = [];",
+        "",
+        "if(",
+        "    $data.getOnce === \"false\"",
+        "    && $data.datesPlanning ",
+        "    && $data.datesPlanning.length > 0",
+        "    ) {",
+        "    $data.getOnce = \"true\";",
+        "    console.log(\"$data.getOnce - 2 : \" + $data.getOnce);",
+        "",
+        "    $data.oldUrlValue = $data.urlGetDatesPlanning;",
+        "    ",
+        "    for (var i in $data.datesPlanning) {",
+        "        var bufferDate = {};",
+        "        bufferDate.nomNoeud = $data.datesPlanning[i].nomNoeud",
+        "        bufferDate.codeNoeud = $data.datesPlanning[i].codeNoeud",
+        "        bufferDate.enveloppeBudget = parseInt($data.datesPlanning[i].enveloppeBudget);",
+        "        bufferDate.niveau = $data.datesPlanning[i].niveau",
+        "        bufferDate.intitule = $data.datesPlanning[i].intitule",
+        "        bufferDate.datePresentation = $data.datesPlanning[i].datePresentation",
+        "        payload.push(bufferDate)",
+        "",
+        "        if(parseInt(i) === ($data.datesPlanning.length-1)) {",
+        "            $data.rfDates.rf1 = $data.datesPlanning[i].rf1;",
+        "            $data.rfDates.rf2 = $data.datesPlanning[i].rf2;",
+        "            $data.rfDates.rf3 = $data.datesPlanning[i].rf3;",
+        "            $data.rfDates.rf4 = $data.datesPlanning[i].rf4;",
+        "        }",
+        "    }",
+        "    $data.formInput = payload;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "datesPlanning" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

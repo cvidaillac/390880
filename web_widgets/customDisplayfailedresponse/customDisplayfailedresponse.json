@@ -1,0 +1,23 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "properties" : [
+    {
+      "label" : "Failed Response Value",
+      "name" : "failedResponseValue",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "expression"
+    }
+  ],
+  "id" : "customDisplayfailedresponse",
+  "name" : "displayfailedresponse",
+  "lastUpdate" : 1671627904608,
+  "template" : "@customDisplayfailedresponse.tpl.html",
+  "controller" : "@customDisplayfailedresponse.ctrl.js",
+  "custom" : true,
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

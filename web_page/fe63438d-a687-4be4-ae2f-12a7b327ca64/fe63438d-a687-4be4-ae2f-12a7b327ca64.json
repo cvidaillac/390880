@@ -1,0 +1,252 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "fe63438d-a687-4be4-ae2f-12a7b327ca64",
+  "name" : "DashboardApprover",
+  "lastUpdate" : 1671627910499,
+  "rows" : [
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "panel-attributs"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "3892b925-989e-4542-8cfb-255c499bc273",
+        "hasValidationError" : false,
+        "id" : "f1c2ef1c-1c08-49f3-890b-e70c861711d4",
+        "binding" : {
+          "profile" : "profile"
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<hr/>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "c56b2aad-59d7-49ff-b436-ef9ed6dffc60",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "panel-attributs"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "profile==\"SMARTE\""
+          }
+        },
+        "reference" : "4b395477-2a00-48df-a1ca-5589273b8d74",
+        "hasValidationError" : false,
+        "id" : "1ead55c4-5595-4460-80b2-3f67ea9d58dd",
+        "binding" : { }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<pre>profile: {{profile}}</pre>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "d4b27339-7a9d-480a-adff-4ceae56e5201",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "6bf31bde-8f4a-4b11-9faa-82bf90c8a8b1",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "fbe8257e-5d2d-453b-83dd-328e2c34a090",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "0e42a71a-a24a-4837-b93a-64f61adc3a8e",
+      "name" : "customModal.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "urlListProposition" : {
+      "type" : "expression",
+      "value" : [
+        "var url=\"\";",
+        "if ($data.profile!==undefined){",
+        "    url += \"../API/extension/listBudgetProposition?role=\" + $data.profile;",
+        "    if ($data.filters){",
+        "        if ($data.filters.year!==undefined && $data.filters.year.length==4){",
+        "            url += \"&year=\" + $data.filters.year;",
+        "        }",
+        "        if ($data.filters.territoryCode!==undefined && $data.filters.territoryCode.length>2){",
+        "            url += \"&territoryCode=\" + $data.filters.territoryCode;",
+        "        }",
+        "        ",
+        "        if ($data.filters.sectorCode!==undefined && $data.filters.sectorCode.length>2){",
+        "            url += \"&sectorCode=\" + $data.filters.sectorCode;",
+        "        }",
+        "        if ($data.filters.siteCode!==undefined && $data.filters.siteCode.length>2){",
+        "            url += \"&siteCode=\" + $data.filters.siteCode;",
+        "        }",
+        "        if ($data.filters.agencyCode!==undefined && $data.filters.agencyCode.length>2){",
+        "            url += \"&agencyCode=\" + $data.filters.agencyCode;",
+        "        }",
+        "        if ($data.filters.status!==undefined){",
+        "            url += \"&status=\" + $data.filters.status;",
+        "        }",
+        "        if ($data.filters.type!==undefined){",
+        "            url += \"&type=\" + $data.filters.type;",
+        "        }",
+        "    }",
+        " ",
+        "}",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "profile" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/userProfile"
+      ],
+      "exposed" : false
+    },
+    "nomProcessADemarrer" : {
+      "type" : "constant",
+      "value" : [
+        "BudgetProposition"
+      ],
+      "exposed" : false
+    },
+    "buttonLabel" : {
+      "type" : "constant",
+      "value" : [
+        "Nouvelle proposition"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "fe63438d-a687-4be4-ae2f-12a7b327ca64",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

@@ -1,0 +1,196 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "selectEntity",
+  "name" : "selectEntity",
+  "lastUpdate" : 1671627905911,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "expression",
+            "value" : "(! listEntities) || (listEntities.length==0)"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Entité concernée"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "Selectionner une entité"
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "listEntities"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "entityDisplay"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "entity"
+          },
+          "selectedObject" : {
+            "type" : "variable",
+            "value" : "selectedEntity"
+          },
+          "triggerClearValue" : {
+            "type" : "variable",
+            "value" : "triggerClearEntite"
+          }
+        },
+        "reference" : "580d869a-aff3-409f-b45c-edeb886d61ff",
+        "hasValidationError" : false,
+        "id" : "customAutocompleteWithoutAutoSuggestion"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "apiUrl" : {
+            "type" : "interpolation",
+            "value" : "{{ urlGetEntities }}"
+          },
+          "successResponse" : {
+            "type" : "variable",
+            "value" : "listEntitiesResult"
+          },
+          "errorResponse" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Aucune entité trouvée !"
+          },
+          "errorText" : {
+            "type" : "interpolation",
+            "value" : "Erreur : Récupération des entités impossible, échec de la connexion à Lyre"
+          }
+        },
+        "reference" : "134f2ce5-47d1-42db-aec8-4f714a0027c5",
+        "hasValidationError" : false,
+        "id" : "customShowEligibleMaterialLoader"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "selectedEntity" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "listEntities" : {
+      "type" : "expression",
+      "value" : [
+        "var list_entities;",
+        "",
+        "try {",
+        "    if (($data.listEntitiesResult) && (typeof $data.listEntitiesResult.data !== \"undefined\")) {",
+        "        if (($data.listEntities !== undefined)",
+        "            && Array.isArray($data.listEntities)",
+        "            && ($data.listEntities.length === $data.listEntitiesResult.data.length)) {",
+        "            list_entities = $data.listEntities;",
+        "            ",
+        "        } else {",
+        "            list_entities = [];",
+        "            for (var i=0; i<$data.listEntitiesResult.data.length; i++) {",
+        "                var one_row = $data.listEntitiesResult.data[i];",
+        "                var one_entity = {",
+        "                    \"entityName\" : one_row.entityName,",
+        "                    \"entityCode\" : one_row.entityCode,",
+        "                    \"entityDisplay\" : one_row.entityName + \" - \" + one_row.entityCode",
+        "                }",
+        "                list_entities.push(one_entity);",
+        "            }",
+        "        }",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception listEntities : \" + e);",
+        "}",
+        "",
+        "return list_entities;"
+      ],
+      "exposed" : false
+    },
+    "urlGetEntities" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/entities?q=getEntities"
+      ],
+      "exposed" : false
+    },
+    "listEntitiesResult" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "entity" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "triggerClearEntite" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}

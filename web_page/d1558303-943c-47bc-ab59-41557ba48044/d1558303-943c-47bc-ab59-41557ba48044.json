@@ -1,0 +1,982 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "d1558303-943c-47bc-ab59-41557ba48044",
+  "name" : "pop3pEligibleMaterials",
+  "lastUpdate" : 1676538636141,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : ""
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "42b6e880-4226-4861-b900-305929879efa",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Liste des matériels éligibles"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "b1872fc5-3192-4d7f-aafe-778462380c51",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "4c21dd1c-1d44-4d28-81c1-598cae90fe04",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "inline-select-radio"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Type de sélection :"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 6
+                      },
+                      "inline" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "availableValues" : {
+                        "type" : "expression",
+                        "value" : "typeSelectionLov"
+                      },
+                      "displayedKey" : {
+                        "type" : "constant",
+                        "value" : "label"
+                      },
+                      "returnedKey" : {
+                        "type" : "constant",
+                        "value" : "value"
+                      },
+                      "selectedValue" : {
+                        "type" : "variable",
+                        "value" : "typeSelection"
+                      }
+                    },
+                    "reference" : "fabd2055-b567-4e24-a5b6-6505b0da5d3a",
+                    "hasValidationError" : false,
+                    "id" : "pbRadioButtons"
+                  }
+                ]
+              ]
+            },
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 9,
+                "lg" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "c155063a-bbf6-48cf-965b-7c38292abbe1",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "44bfcd0a-57f6-426c-aeb6-84e61f30002c",
+                    "hasValidationError" : false,
+                    "id" : "dcc6c306-54ef-4a6b-94a9-991c3a9a1fcc",
+                    "binding" : {
+                      "selectedTerritory" : "selectedTerritory",
+                      "selectedAgency" : "selectedAgency",
+                      "selectedAgencyName" : "selectedAgencyName",
+                      "selectedTerritoryName" : "selectedTerritoryName",
+                      "selectedEntityCode" : "",
+                      "selectedEntityName" : "",
+                      "hidden" : "typeSelection !== \"AGENCE\""
+                    }
+                  }
+                ],
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "typeSelection !== \"ENTITE\""
+                      }
+                    },
+                    "reference" : "59112af0-4029-46c1-bb67-44b509855590",
+                    "hasValidationError" : false,
+                    "id" : "selectEntity",
+                    "binding" : {
+                      "selectedEntity" : "selectedEntity",
+                      "triggerClearEntite" : "triggerClearEntite"
+                    }
+                  }
+                ],
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "typeSelection !== \"REGION\""
+                      }
+                    },
+                    "reference" : "ec6c5ddd-ca45-4777-b799-bd4cf896ebb3",
+                    "hasValidationError" : false,
+                    "id" : "SelectRegion",
+                    "binding" : {
+                      "selectedRegion" : "selectedRegion",
+                      "triggerClearRegion" : "triggerClearRegion"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!selectedNode"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "2bb3bde5-7cd3-4140-8464-9a4aaa16c656",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "filtersLabels" : {
+                  "type" : "expression",
+                  "value" : "filtersLabels"
+                },
+                "urlGenerate" : {
+                  "type" : "variable",
+                  "value" : "urlGenerate"
+                },
+                "multipleSelect" : {
+                  "type" : "variable",
+                  "value" : "selectedEnergiesFilter"
+                },
+                "showFilters" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "triggerQuery" : {
+                  "type" : "variable",
+                  "value" : "triggerQuery"
+                },
+                "filtersCheckbox" : {
+                  "type" : "expression",
+                  "value" : "filtersCheckbox"
+                },
+                "showButtonHide" : {
+                  "type" : "expression",
+                  "value" : "isListDisplayed"
+                },
+                "allowOnlyOneCheckbox" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "08f2915c-d68e-4a3b-a29d-1188d60037b9",
+              "hasValidationError" : false,
+              "id" : "customListFilterEligibleMaterials"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!selectedNode"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "7430bac6-e16b-4807-b2fc-bcdcb124ee67",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "apiUrl" : {
+                  "type" : "interpolation",
+                  "value" : "{{urlGetEligibleMaterials}}"
+                },
+                "hideLoader" : {
+                  "type" : "variable",
+                  "value" : "hideLoader"
+                },
+                "successResponse" : {
+                  "type" : "variable",
+                  "value" : "listEligibleMaterials"
+                },
+                "errorResponse" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "hideSpinner" : {
+                  "type" : "variable",
+                  "value" : "hideLoader"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ emptyMsgText }}"
+                },
+                "errorText" : {
+                  "type" : "interpolation",
+                  "value" : "Echec de la connexion à Lyre"
+                },
+                "triggerQuery" : {
+                  "type" : "variable",
+                  "value" : "triggerQuery"
+                }
+              },
+              "reference" : "a6f2d419-896e-4237-a5b9-1d98c0999bca",
+              "hasValidationError" : false,
+              "id" : "customShowEligibleMaterialLoader"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "(listEligibleMaterials == null) || (listEligibleMaterials.length==0 )"
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "f96eef4e-4677-4d1d-ab49-c4b53371e291",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "fragment",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "76f9042b-a581-455d-8739-1fceb0e9af8d",
+                    "hasValidationError" : false,
+                    "id" : "4a0df99b-7f3f-4ea1-bbf0-1bdae5861e07",
+                    "binding" : {
+                      "getSession" : "session",
+                      "listEligibleMaterials" : "listEligibleMaterials",
+                      "selectedAgencyName" : "selectedAgencyName",
+                      "selectedTerritoryName" : "selectedTerritoryName",
+                      "selectedAgency" : "",
+                      "selectedTerritory" : "",
+                      "type" : "",
+                      "typeSelection" : "typeSelection"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "eab0b49b-6060-4204-9513-f05afa3c9edb",
+      "name" : "angular_boolean_filters.js",
+      "type" : "js",
+      "order" : 5,
+      "external" : false
+    },
+    {
+      "id" : "b4748538-bd4a-4424-84a9-d38ddc0d1529",
+      "name" : "csscloseModale.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "4f503492-8379-4c93-b783-41b1be80f8e1",
+      "name" : "excel-icon.png",
+      "type" : "img",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "e73136b3-2035-4c91-a845-f504d39039cb",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "1176d599-df21-40ff-a482-8d4954063cca",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "c7a23489-cf28-4cef-8e39-5439d2f8b009",
+      "name" : "customCSS.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "6961330f-97bc-4bd8-b69b-03548012f72a",
+      "name" : "export-button.css",
+      "type" : "css",
+      "order" : 4,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "filtersLabels" : {
+      "type" : "expression",
+      "value" : [
+        "//changes made by Amit for BPM-40",
+        "",
+        "var filters = [",
+        "\t{",
+        "\t\t\"data\" : \"marque\",",
+        "\t\t\"label\" : \"Marque\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"modele\",",
+        "\t\t\"label\" : \"Modèle\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"libelleGenre\",",
+        "\t\t\"label\" : \"Genre\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"libelleSousGenre\",",
+        "\t\t\"label\" : \"Sous-Genre\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"codeEnergie\",",
+        "\t\t\"label\" : \"Energie\",",
+        "\t\t\"type\" : \"selectMulti\",",
+        "\t\t\"values\": $data.listEnergiesLabels,",
+        "\t\t\"operator\":\"M\"      // M: Multiple values",
+        "\t}",
+        "];",
+        "",
+        "",
+        "// Décommenter une fois le webservice mis à jour.",
+        "/*\t{",
+        "\t\t\"data\" : \"territoryName\",",
+        "\t\t\"label\" : \"Territoire\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"entiteName\",",
+        "\t\t\"label\" : \"Entité\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"siteName\",",
+        "\t\t\"label\" : \"Site\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t},",
+        "\t{",
+        "\t\t\"data\" : \"agencyName\",",
+        "\t\t\"label\" : \"Agence\",",
+        "\t\t\"type\" : \"text\",",
+        "\t\t\"operator\":\"L\"",
+        "\t}",
+        "] ",
+        "*/",
+        "",
+        "return filters;"
+      ],
+      "exposed" : false
+    },
+    "emptyTableResult" : {
+      "type" : "expression",
+      "value" : [
+        "if(!$data.selectedNode)",
+        "{",
+        "    $data.listEligibleMaterials = [];",
+        "}",
+        "",
+        "// Clear previous choice when changing the selection type",
+        "if ($data.selectedAgency && ($data.typeSelection != \"AGENCE\")) {",
+        "    $data.selectedAgency = null;",
+        "    $data.selectedTerritory = null;",
+        "}",
+        "if ($data.selectedRegion && ($data.typeSelection != \"REGION\")) {",
+        "    $data.selectedRegion = null;",
+        "}",
+        "if ($data.selectedEntity && ($data.typeSelection != \"ENTITE\")) {",
+        "    $data.selectedEntity = null;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "selectedAgencyName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "isnumMatSelectedEmpty" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.numMatSelected === null || $data.numMatSelected === undefined;"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritoryName" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "listEligibleMaterials" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "urlGetEligibleMaterials" : {
+      "type" : "expression",
+      "value" : [
+        "var url = null;",
+        "",
+        "if (($data.typeSelection) && $data.urlGenerate) {",
+        "    if (($data.typeSelection === \"AGENCE\") && $data.selectedAgency) {",
+        "       url = \"../API/extension/pop3pclientSoap?method=getEligibleMaterials&f=sgidSmarte=\" + $data.session.user_name + \"&f=typeSelect=\" + $data.typeSelection + \"&f=codeNoeud=\"+$data.selectedAgency ",
+        "        + $data.urlGenerate; ",
+        "",
+        "    } else if (($data.typeSelection === \"ENTITE\") && $data.selectedEntity) {",
+        "       url = \"../API/extension/pop3pclientSoap?method=getEligibleMaterials&f=sgidSmarte=\" + $data.session.user_name + \"&f=typeSelect=\" + $data.typeSelection + \"&f=codeNoeud=\"+$data.selectedEntity.entityCode ",
+        "        + $data.urlGenerate;",
+        "        ",
+        "    } else if (($data.typeSelection === \"REGION\") && $data.selectedRegion) {",
+        "       url = \"../API/extension/pop3pclientSoap?method=getEligibleMaterials&f=sgidSmarte=\" + $data.session.user_name + \"&f=typeSelect=\" + $data.typeSelection + \"&f=codeNoeud=\"+$data.selectedRegion.regionCode ",
+        "        + $data.urlGenerate;",
+        "        ",
+        "    }",
+        "}",
+        "",
+        "return url;"
+      ],
+      "exposed" : false
+    },
+    "urlGenerate" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : false
+    },
+    "typeSelectionLov" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {\"label\": \"Par agence\", \"value\": \"AGENCE\"},",
+        "    {\"label\": \"Par région\", \"value\": \"REGION\"},",
+        "    {\"label\": \"Par entité\", \"value\": \"ENTITE\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "typeSelection" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "selectedNode" : {
+      "type" : "expression",
+      "value" : [
+        "var selected_node;",
+        "",
+        "if (($data.typeSelection === \"AGENCE\") && $data.selectedAgency) {",
+        "    if ($data.selectedNode !== $data.selectedAgency) {",
+        "        $data.listEligibleMaterials = null;",
+        "        $data.selectedEntity = null;",
+        "        $data.selectedRegion = null;",
+        "    }",
+        "    selected_node = $data.selectedAgency;",
+        "    ",
+        "} else if (($data.typeSelection === \"ENTITE\") && $data.selectedEntity) {",
+        "    if ($data.selectedNode !== $data.selectedEntity.entityCode) {",
+        "        $data.listEligibleMaterials = null;",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedRegion = null;",
+        "    }",
+        "    selected_node = $data.selectedEntity.entityCode;",
+        "    ",
+        "} else if (($data.typeSelection === \"REGION\") && $data.selectedRegion) {",
+        "    if ($data.selectedNode !== $data.selectedRegion.regionCode) {",
+        "        $data.listEligibleMaterials = null;",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedEntity = null;",
+        "    }",
+        "    selected_node = $data.selectedRegion.regionCode;",
+        "}",
+        "",
+        "return selected_node;"
+      ],
+      "exposed" : false
+    },
+    "selectedEntity" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "triggerQuery" : {
+      "type" : "constant",
+      "value" : [
+        "No"
+      ],
+      "exposed" : false
+    },
+    "selectedRegion" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "filtersCheckbox" : {
+      "type" : "expression",
+      "value" : [
+        "return { ",
+        "    \"label\" : \"Cause d'éligibilité\",",
+        "    \"choices\": [",
+        "        {   \"data\" : \"cout\",",
+        "            \"label\" : \"Coût\",",
+        "            \"checkedValue\" : \"TRUE\",",
+        "            \"uncheckedValue\" : \"FALSE\",",
+        "            \"defaultValue\" : \"FALSE\",",
+        "            \"relatedField\":[]",
+        "        },",
+        "        {   \"data\" : \"contrat\",",
+        "            \"label\" : \"Contrat\",",
+        "            \"checkedValue\" : \"TRUE\",",
+        "            \"uncheckedValue\" : \"FALSE\",",
+        "            \"defaultValue\" : \"FALSE\",",
+        "            \"relatedField\":[]",
+        "        },",
+        "        {   \"data\" : \"utilisation\",",
+        "            \"label\" : \"Utilisation\",",
+        "            \"checkedValue\" : \"TRUE\",",
+        "            \"uncheckedValue\" : \"FALSE\",",
+        "            \"defaultValue\" : \"FALSE\",",
+        "            \"relatedField\":[]",
+        "        },",
+        "        {   \"data\" : \"rachatLocfi\",",
+        "            \"label\" : \"Rachat de matériel\",",
+        "            \"checkedValue\" : \"TRUE\",",
+        "            \"uncheckedValue\" : \"FALSE\",",
+        "            \"defaultValue\" : \"FALSE\",",
+        "            \"relatedField\": [{ \"data\": \"exercice\", \"label\": \"Exercice\", \"values\": $data.listExerciceValues}]",
+        "        }",
+        "    ]",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "listExerciceValues" : {
+      "type" : "expression",
+      "value" : [
+        "var result = [];",
+        "",
+        "var now = new Date();",
+        "var year = now.getFullYear()",
+        "year = year-5",
+        "",
+        "for (var i = 0; i < 11; i++) {",
+        "  result.push(year + i);",
+        "}",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "isListDisplayed" : {
+      "type" : "expression",
+      "value" : [
+        "var is_displayed = false;",
+        "",
+        "try {",
+        "    if ($data.listEligibleMaterials && Array.isArray($data.listEligibleMaterials) && ($data.listEligibleMaterials.length > 0)) {",
+        "        is_displayed = true;",
+        "    }",
+        "} catch(e) {",
+        "    console.error(\"Exception isListDisplayed: \" + e);",
+        "}",
+        "",
+        "return is_displayed;"
+      ],
+      "exposed" : false
+    },
+    "emptyMsgText" : {
+      "type" : "expression",
+      "value" : [
+        "var empty_msg=\"<br><b>Aucun matériel correspondant aux critères n'est éligible <br>pour cette \";",
+        "",
+        "if ($data.typeSelection == \"REGION\") {",
+        "    empty_msg += \"région\";",
+        "    ",
+        "} else if ($data.typeSelection == \"ENTITE\") {",
+        "    empty_msg += \"entité\";",
+        "    ",
+        "} else {",
+        " empty_msg += \"agence\";",
+        "}",
+        "",
+        "empty_msg += \"</b>\";",
+        "return empty_msg;"
+      ],
+      "exposed" : false
+    },
+    "onChangeTypeSelection" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.typeSelection) {",
+        "    if ((typeof $data.onChangeTypeSelection !== \"undefined\")",
+        "        && ($data.typeSelection != $data.onChangeTypeSelection)) {",
+        "        // Type selection has changed, clear all values",
+        "        $data.selectedAgency = null;",
+        "        $data.selectedAgencyName = null;",
+        "        $data.selectedTerritory = null;",
+        "        $data.selectedTerritoryName = null;",
+        "        $data.selectedEntity = null;",
+        "        $data.selectedRegion = null;",
+        "        $data.triggerClearRegion = true;",
+        "        $data.triggerClearEntite = true;",
+        "        console.log(\"typeSelection changed to \" + $data.typeSelection);",
+        "    }",
+        "    ",
+        "    return $data.typeSelection;",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "triggerClearRegion" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "triggerClearEntite" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "urlGetEnergies" : {
+      "type" : "constant",
+      "value" : [
+        "../API/extension/pop3pLyreGetEnergies"
+      ],
+      "exposed" : false
+    },
+    "listEnergies" : {
+      "type" : "url",
+      "value" : [
+        "{{urlGetEnergies}}"
+      ],
+      "exposed" : false
+    },
+    "selectedEnergiesFilter" : {
+      "type" : "json",
+      "value" : [
+        "[]"
+      ],
+      "exposed" : false
+    },
+    "listEnergiesLabels" : {
+      "type" : "expression",
+      "value" : [
+        "var list_energies = [];",
+        "",
+        "try {",
+        "    if (($data.listEnergies) && (typeof $data.listEnergies.energies !== \"undefined\")) {",
+        "        for (var one_energy of $data.listEnergies.energies) {",
+        "            list_energies.push({\"label\": one_energy.libelleEnergie, \"value\": one_energy.codeEnergie});",
+        "        }",
+        "    }",
+        "",
+        "} catch(e) {",
+        "    console.error(\"Exception listEnergiesLabels: \" + e);",
+        "}",
+        "",
+        "return list_energies;"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "d1558303-943c-47bc-ab59-41557ba48044",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

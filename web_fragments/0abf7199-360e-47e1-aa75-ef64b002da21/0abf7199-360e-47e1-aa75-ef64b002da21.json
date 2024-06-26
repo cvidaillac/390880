@@ -1,0 +1,229 @@
+{
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
+  "id" : "0abf7199-360e-47e1-aa75-ef64b002da21",
+  "name" : "fragDisplayTerritoireAndAgence",
+  "lastUpdate" : 1671627881885,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Territoire concerné"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "displayTerritoryLabel"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          }
+        },
+        "reference" : "530a5eaa-0e62-4cac-b8b9-a28557dcba42",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Agence concernée"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "displayAgencyLabel"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          }
+        },
+        "reference" : "4ad9caf5-1644-476b-b8aa-1ac45367c45d",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ]
+  ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "displayTerritoryLabel" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedTerritory && $data.selectedTerritory.code && $data.selectedTerritory.name) {",
+        "    return $data.selectedTerritory.name + \" - \" + $data.selectedTerritory.code;",
+        "}",
+        "return \"\";"
+      ],
+      "exposed" : false
+    },
+    "selectedAgency" : {
+      "type" : "expression",
+      "value" : [
+        "var agencyData = {",
+        "    code : \"\",",
+        "    name : \"\"",
+        "}",
+        "",
+        "if ($data.proposition){",
+        "    agencyData.code = $data.proposition.agencyCode;",
+        "    agencyData.name = $data.proposition.agencyName",
+        "}",
+        "return agencyData;"
+      ],
+      "exposed" : false
+    },
+    "selectedTerritory" : {
+      "type" : "expression",
+      "value" : [
+        "var territoryData = {",
+        "    code : \"\",",
+        "    name : \"\"",
+        "}",
+        "",
+        "if ($data.proposition){",
+        "    territoryData.code = $data.proposition.territoryCode;",
+        "    territoryData.name = $data.proposition.territoryName;",
+        "}",
+        "",
+        "return territoryData;"
+      ],
+      "exposed" : false
+    },
+    "displayAgencyLabel" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedAgency && $data.selectedAgency.code ",
+        "    && $data.selectedAgency.name) {",
+        "    return $data.selectedAgency.name + \" - \" + $data.selectedAgency.code;    ",
+        "}",
+        "",
+        "return \"\""
+      ],
+      "exposed" : false
+    },
+    "proposition" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}
